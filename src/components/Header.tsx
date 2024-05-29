@@ -1,7 +1,8 @@
 import Link from "next/link"
+
 function Header() {
   return (
-    <div className="flex justify-between px-20 py-4">
+    <div className="flex justify-between px-20 py-4 fixed top-0 left-0 w-full z-20">
         <div>
             logo
         </div>
