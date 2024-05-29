@@ -28,6 +28,7 @@ body {
     text-wrap: balance;
   }
 
+
   /* Hide scrollbar for Chrome, Safari and Opera */
   .no-scrollbar::-webkit-scrollbar {
     display: none;
@@ -40,4 +41,41 @@ body {
     scrollbar-width: none;
     /* Firefox */
   }
+}
+
+/* font sizes */
+.title {
+  @apply text-xl md:text-2xl lg:text-3xl;
+  @apply font-bold;
+}
+
+.heading {
+  @apply text-lg md:text-xl lg:text-2xl;
+  @apply font-bold;
+}
+
+.subheading {
+  @apply text-base md:text-lg lg:text-xl;
+  /* @apply font-bold; */
+}
+
+.body {
+  @apply text-sm md:text-base lg:text-lg;
+}
+
+.caption {
+  @apply text-xs md:text-sm lg:text-base;
+  @apply tracking-wider;
+}
+
+/* layout */
+.page-container {
+  @apply max-w-screen-2xl;
+  @apply mx-auto;
+  @apply p-4 md:p-12;
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
 }
