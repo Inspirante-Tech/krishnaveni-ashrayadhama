@@ -1,10 +1,13 @@
 import Header from "@components/Header"
 import Footer from "@components/Footer"
 import Hero from "@components/Hero"
-import Testimonials from "@components/Testimonials";
+// import Testimonials from "@components/Testimonials";//
 import Contact from "@components/Contact";
 import Team from "~/components/Team";
 import FAQs from "~/components/FAQs";
+import Testimonials from "~/components/Testimonials/page";
+
+
 
 export default function Home() {
   return (
@@ -13,8 +16,8 @@ export default function Home() {
       <Hero/>
       <FAQs/>
       <Team/>
-      <Contact/>
-      <Testimonials/>
+      <Contact/>  
+       <Testimonials/>
       <Footer/>
     </main>
   );
