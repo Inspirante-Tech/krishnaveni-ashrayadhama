@@ -1,8 +1,32 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import Header from "@components/Header";
+
+import Header from "@components/Header/Header";
 import Footer from "@components/Footer/Footer";
 import "./globals.css";
+import {Exo_2, Inter, Noto_Sans,Roboto,Poppins } from 'next/font/google'
+
+export  const roboto = Roboto({
+  weight: ['400', '700'],
+  style: ['normal', 'italic'],
+  subsets: ['latin'],
+  display: 'swap',
+})
+export const titleFont = Exo_2({
+  weight: ["500", "600", "700"],
+  subsets: ["latin"],
+});
+
+export const textFont = Noto_Sans({
+  weight: ["500", "600", "700"],
+  subsets: ["latin"],
+});
+
+export  const poppins = Poppins({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-poppins',
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900']
+});
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,7 +43,7 @@ export default function RootLayout({
   return (
     <html lang="en">
 
-      <body className={`${inter.className} bg-primary-100`}>
+      <body className={`${inter.className} ${roboto.className} bg-primary-100`}>
         <Header />
           {children}
        <Footer/>
