@@ -1,6 +1,6 @@
 import { HeroimageUrls } from "~/constants";
 import Carousel from "./Carousel";
-import { Button } from "./ui/button";
+
 import Image from "next/image";
 
 function Hero() {
