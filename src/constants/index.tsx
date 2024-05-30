@@ -1,5 +1,41 @@
 import { v4 as uuidv4 } from "uuid";
 
+export const navigation = [
+  {
+    id: "0",
+    title: "About us",
+    url: "#About",
+  },
+  {
+    id: "1",
+    title: "Testimonials",
+    url: "#Testimonials",
+  },
+  {
+    id: "2",
+    title: "Specialities",
+    url: "#Specialities",
+  },
+  {
+    id: "3",
+    title: "Event",
+    url: "#Event",
+  },
+  {
+    id: "4",
+    title: "Donate",
+    url: "#Donate",
+    
+  },
+  {
+    id: "5",
+    title: "Faqs",
+    url: "#Faqs",
+    
+  },
+];
+
+
 export const testimonials = [
   {
     image:
