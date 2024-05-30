@@ -1,10 +1,6 @@
-// import Hero from "@components/Hero";
-
-import Contact from "@components/Contact";
-import Team from "~/components/Team";
 import Testimonials from "~/components/Testimonials/page";
 import Supporters from "~/components/Supporters/Supporters";
-import Hero from "~/components/Hero";
+import Hero from "~/components/Hero/Hero";
 import Fqas from "~/components/Fqas/Fqas";
 
 export default function Home() {
@@ -12,12 +8,11 @@ export default function Home() {
     <>
       <Hero />
       <main className="w-full px-16 md:px-40">
-        <Team />s
-        <Contact />
+        <Fqas />
+        <Supporters />
+        <Testimonials />
       </main>
-      <Fqas/>
-      <Supporters />
-      <Testimonials />
+
     </>
   );
 }
