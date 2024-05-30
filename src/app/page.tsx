@@ -1,7 +1,7 @@
 import Header from "@components/Header"
-import Footer from "@components/Footer"
+import Footer from "~/components/Footer/Footer"
 import Hero from "@components/Hero"
-// import Testimonials from "@components/Testimonials";//
+
 import Contact from "@components/Contact";
 import Team from "~/components/Team";
 import FAQs from "~/components/FAQs";

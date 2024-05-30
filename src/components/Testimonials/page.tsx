@@ -94,7 +94,7 @@ function Testimonials() {
                           </div>
                         </div>
                         <p className="mt-4 text-gray-700">
-                          {testimonial.description}
+                        “{testimonial.description}”
                         </p>
                       </blockquote>
                     </div>

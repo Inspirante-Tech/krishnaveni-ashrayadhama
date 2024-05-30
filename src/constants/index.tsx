@@ -49,7 +49,7 @@ export const testimonials = [
     ),
     name: "Mr. Suresh Bhat",
     description:
-      "Visitor to the Ayurvedic Wellness Center. Wellness Center regularly for my chronic back pain. The Panchakarma treatments and massages have been incredibly effective.  and technicians, are very professional ",
+      "Visitor to the Ayurvedic Wellness Center. Wellness Center regularly  chronic back pain. The Panchakarma treatments and massages have been incredibly effective.  and technicians, are very professional ",
   },
   {
     image:
@@ -83,7 +83,7 @@ export const testimonials = [
     ),
     name: "Dr. Anjali Nair",
     description:
-      "Ayurvedic Practitioner.  The range of treatments combined with the expertise of the medical staff, ensures comprehensive care for both residents and the general public. It is a privilege to be a part of such a dedicated team.",
+      "Ayurvedic Practitioner.  The of treatments combined with the expertise of the medical staff, ensures comprehensive care for both residents and the general public. It is a privilege to be a part of such a dedicated team.",
   },
   {
     image:
