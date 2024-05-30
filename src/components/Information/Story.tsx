@@ -1,9 +1,9 @@
-// components/Info.tsx
+//story on how we started and why we started
 "use client";
 
 import React, { useEffect, useRef, useState } from 'react';
 
-const Info: React.FC = () => {
+const Story: React.FC = () => {
     const [isVisible, setIsVisible] = useState<boolean>(false);
     const containerRef = useRef<HTMLDivElement | null>(null);
 
@@ -56,4 +56,4 @@ const Info: React.FC = () => {
     );
 };
 
-export default Info;
+export default Story;

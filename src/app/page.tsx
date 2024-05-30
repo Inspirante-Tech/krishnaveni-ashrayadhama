@@ -1,7 +1,8 @@
 
 
 import Hero from "@components/Hero"
-import Info from "@components/Information/Info";
+import Story from "@components/Information/Story";
+import Information from "@components/Information/Information";
 import Facilities from "@components/Information/Facilities";
 import Contact from "@components/Contact";
 import Team from "~/components/Team";
@@ -15,10 +16,11 @@ export default function Home() {
     <>
       <Hero />
       <main className="w-full px-6 md:px-40">
-      <Info/>
+      <Story />
       <Facilities/>
+      <Information/>
         <FAQs />
-        <Team />s
+        <Team />
         <Contact />
         
       </main>

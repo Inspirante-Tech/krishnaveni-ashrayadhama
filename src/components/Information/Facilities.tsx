@@ -1,4 +1,4 @@
-// Facilities.tsx
+//Facilities provided by the organisation
 import React from 'react';
 import FacilityCard from './FacilityCard';
 
