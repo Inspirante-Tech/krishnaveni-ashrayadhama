@@ -9,7 +9,6 @@ export default function Gallery() {
     return (
         <section className='my-4'>
             <h2 className="font-bold text-2xl mb-4">Gallery</h2>
-            {/* <!-- With columns --> */}
             <div className="columns-1 sm:columns-2 lg:columns-4 gap-4 space-y-4">
                 <img className="w-full rounded-xl shadow" src="https://cruip-tutorials.vercel.app/masonry/masonry-01.jpg" width="232" height="290" alt="Image 01" />
                 <img className="w-full rounded-xl shadow" src="https://cruip-tutorials.vercel.app/masonry/masonry-02.jpg" width="232" height="290" alt="Image 02" />
