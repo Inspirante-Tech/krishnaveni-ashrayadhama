@@ -56,6 +56,7 @@ const config: Config = {
       fontFamily: {
         popins: ['Poetsen One', 'sans-serif'],
       },
+<<<<<<< HEAD
       keyframes: {
         slideDown: {
           from: { height: '0px' },
@@ -78,10 +79,9 @@ const config: Config = {
         slideDown: 'slideDown 300ms cubic-bezier(0.87, 0, 0.13, 1)',
         slideUp: 'slideUp 300ms cubic-bezier(0.87, 0, 0.13, 1)',
         scroll: 'scroll 40s linear infinite',
-        "loop-scroll": "loop-scroll 5s linear infinite",
-      },
-     
+        "loop-scroll": "loop-scroll 5s linear infinite", 
     },
+  },
   },
   plugins: [],
 };

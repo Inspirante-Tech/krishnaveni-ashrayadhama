@@ -20,7 +20,7 @@ export default function Home() {
       <Facilities/>
       <Information/>
         <FAQs />
-        <Team />
+        <Team />s
         <Contact />
         
       </main>
