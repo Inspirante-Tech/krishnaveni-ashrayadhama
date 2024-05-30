@@ -39,19 +39,19 @@ const QuestionAnswer = ({
 };
 
 const QuestionAndAnswers = () => (
-  <section className="bg-primary-100 flex justify-center items-center h-screen">
-    <div className="max-w-5xl px-4 py-12 sm:px-2 lg:px-2 lg:py-16 w-full relative sm:mt-2 mt-3">
+  <section className="bg-primary-100 flex justify-center items-center h-screen sm:mt-5   ">
+    <div className="max-w-5xl mx-auto px-4 md:p-12 sm:px-2 lg:px-2 lg:py-16 w-full relative sm:mt-2 mt-3">
       <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:items-center lg:gap-16">
         <div className="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right sm:mx-auto lg:text-left">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          <h2 className="text-2xl  mt-9 font-bold tracking-tight text-gray-900 sm:text-4xl sm:mt-5">
             Frequently Asked Questions...
           </h2>
-          <p className="mt-4 text-gray-700">
+          <p className="mt-4 text-gray-700 ">
             Explore common questions and find answers below. If you don&#39;t see
             what you&#39;re looking for, feel free to
             for assistance.
           </p>
-          <button className=" sm:mt-2 bg-secondary-400 p-4  rounded-md font-bold hover:bg-orange-400 text-action-950">Contact ous</button>
+          <button className=" sm:mt-2 bg-secondary-400 p-4 mt-2  rounded-md font-bold hover:bg-orange-400 text-action-950">Contact ous</button>
         </div>
 
         <div className="-mx-6 lg:col-span-2 lg:mx-0">

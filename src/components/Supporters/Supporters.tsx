@@ -9,7 +9,7 @@ const Supporters: React.FC<{ speed?: number }> = ({ speed = 5000 }) => {
   return (
     <section className="bg-primary-100 flex justify-center items-center Supportercontainer ">
     <div className="max-w-6xl px-4 py-6 sm:px-2 lg:px-2 lg:py-8 w-full relative sm:mt-5">
-      <h2 className={`text-center text-2xl sm:text-5xl font-bold ${titleFont.className }tracking-tight text-gray-900 sm:text-5xl mb-2 sm:mb-4 pt-8 sm:pt-12`}>
+      <h2 className={`text-center text-2xl sm:text-5xl font-bold ${titleFont.className }tracking-tight text-gray-900 sm:text-5xl mb-2 sm:mb-4 pt-14 sm:pt-12`}>
         Sepecial Thanks To Our Supporters 
       </h2>
       <p  className="text-center text-sm text-gray-700 mb-4">
