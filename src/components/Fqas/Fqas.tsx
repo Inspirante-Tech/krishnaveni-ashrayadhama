@@ -38,7 +38,7 @@ const QuestionAnswer = ({
   );
 };
 
-const QuestionAndAnswers = () => (
+const Fqas = () => (
   <section className="bg-primary-100 flex justify-center items-center h-screen sm:mt-5   ">
     <div className="max-w-5xl mx-auto px-4 md:p-12 sm:px-2 lg:px-2 lg:py-16 w-full relative sm:mt-2 mt-3">
       <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:items-center lg:gap-16">
@@ -70,4 +70,4 @@ const QuestionAndAnswers = () => (
   </section>
 );
 
-export default QuestionAndAnswers;
+export default Fqas ;
