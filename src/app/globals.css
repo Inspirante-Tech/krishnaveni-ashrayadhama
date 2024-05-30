@@ -66,3 +66,7 @@ body {
     animation-play-state: paused;
   }
 }
+
+dialog::backdrop {
+  background-color: rgba(64, 56, 56, 0.266);
+}
