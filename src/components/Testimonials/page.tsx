@@ -40,7 +40,7 @@ function Testimonials() {
   }, []);
 
   return (
-    <section className="bg-primary-100 flex justify-center items-center h-screen">
+    <section className="bg-primary-100 flex justify-center items-center ">
       <div className="max-w-5xl px-4 py-12 sm:px-2 lg:px-2 lg:py-16 w-full relative sm:mt-2 mt-3">
         <h2 className="text-center text-2xl   sm:text-5xl font-bold font-poppins tracking-tight text-gray-900  mt-2 mb-6 pt-12 sm:pt-16">
           Professional Staff Top-Notch Facilities
@@ -80,11 +80,7 @@ function Testimonials() {
                           />
                           <div>
                             <div className="flex justify-center gap-0.5 text-green-500">
-                              {testimonial.svg}
-                              {testimonial.svg}
-                              {testimonial.svg}
-                              {testimonial.svg}
-                              {testimonial.svg}
+                             
                             </div>
                             <p className="mt-0.5 text-lg font-medium text-gray-900">
                               {testimonial.name}
