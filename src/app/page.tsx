@@ -1,8 +1,12 @@
+
 import Hero from "@components/Hero"
-import Testimonials from "@components/Testimonials";
+
 import Contact from "@components/Contact";
 import Team from "~/components/Team";
 import FAQs from "~/components/FAQs";
+import Testimonials from "~/components/Testimonials/page";
+
+
 
 export default function Home() {
   return (
@@ -10,10 +14,11 @@ export default function Home() {
       <Hero />
       <main className="w-full px-16 md:px-40">
         <FAQs />
-        <Team />
+        <Team />s
         <Contact />
-        <Testimonials />
+        
       </main>
+      <Testimonials />
     </>
 
   );

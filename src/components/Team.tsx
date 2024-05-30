@@ -1,8 +1,9 @@
+import { Footerlinks, socialMedia } from "~/constants";
 
 function Team() {
   return (
-    <div>Team</div>
-  )
+   <div>Team</div>
+  );
 }
 
-export default Team
+export default Team;

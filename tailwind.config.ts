@@ -56,7 +56,11 @@ const config: Config = {
           '900': '#55422e',
           '950': '#221911',
         },
+      },
+      fontFamily: {
+        popins: ['Poetsen One', 'sans-serif']
       }
+      
     },
   },
   plugins: [],
