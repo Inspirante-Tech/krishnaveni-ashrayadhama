@@ -9,7 +9,7 @@ function Header() {
 
         <nav className="flex gap-4">
             <Link href="about">about</Link>
-            <Link href="about">gallery</Link>
+            <Link href="/events">events</Link>
             <Link href="about">contact</Link>
             <Link href="about">about</Link>
             <Link href="about">about</Link>
