@@ -1,9 +1,9 @@
-import { Footerlinks, socialMedia } from "~/constants";
+import React from 'react'
 
-function Team() {
+const Team = () => {
   return (
-   <div>Team</div>
-  );
+    <div>Team</div>
+  )
 }
 
-export default Team;
+export default Team

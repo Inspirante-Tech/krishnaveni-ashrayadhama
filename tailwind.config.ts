@@ -60,21 +60,15 @@ const config: Config = {
       fontFamily: {
         popins: ['Poetsen One', 'sans-serif']
       },
-      keyframes: {
-        slideDown: {
-          from: { height: '0px' },
-          to: { height: 'var(--radix-accordion-content-height)' },
-        },
-        slideUp: {
-          from: { height: 'var(--radix-accordion-content-height)' },
-          to: { height: '0px' },
-        },
-      },
       animation: {
-        slideDown: 'slideDown 300ms cubic-bezier(0.87, 0, 0.13, 1)',
-        slideUp: 'slideUp 300ms cubic-bezier(0.87, 0, 0.13, 1)',
+        "loop-scroll": "loop-scroll 5s linear infinite",
       },
-      
+      keyframes: {
+        "loop-scroll": {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-100%)" },
+        },
+      },
     },
   },
   plugins: [],
