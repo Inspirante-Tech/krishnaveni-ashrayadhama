@@ -10,12 +10,10 @@ const config: Config = {
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
-      colors:{
-        //Exact color -> primary-200
-        'primary': {
+      colors: {
+        primary: {
           '50': '#faf7f6',
           '100': '#f4eeec',
           '200': '#e8d8d4',
@@ -28,8 +26,7 @@ const config: Config = {
           '900': '#5d453f',
           '950': '#31221e',
         },
-        //Exact color -> secondary-400
-        'secondary': {
+        secondary: {
           '50': '#f8f6ee',
           '100': '#efe9d2',
           '200': '#e0d4a8',
@@ -42,8 +39,7 @@ const config: Config = {
           '900': '#583c2b',
           '950': '#322016',
         },
-        //Exact color -> action-950
-        'action': {
+        action: {
           '50': '#f7f7ef',
           '100': '#ecebd5',
           '200': '#dbd8ad',
@@ -58,19 +54,36 @@ const config: Config = {
         },
       },
       fontFamily: {
-        popins: ['Poetsen One', 'sans-serif']
+        popins: ['Poetsen One', 'sans-serif'],
       },
-      animation: {
-        "loop-scroll": "loop-scroll 5s linear infinite",
-      },
+<<<<<<< HEAD
       keyframes: {
+        slideDown: {
+          from: { height: '0px' },
+          to: { height: 'var(--radix-accordion-content-height)' },
+        },
+        slideUp: {
+          from: { height: 'var(--radix-accordion-content-height)' },
+          to: { height: '0px' },
+        },
+        scroll: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(calc(-250px * 4))' },
+        },
         "loop-scroll": {
           from: { transform: "translateX(0)" },
           to: { transform: "translateX(-100%)" },
         },
       },
+      animation: {
+        slideDown: 'slideDown 300ms cubic-bezier(0.87, 0, 0.13, 1)',
+        slideUp: 'slideUp 300ms cubic-bezier(0.87, 0, 0.13, 1)',
+        scroll: 'scroll 40s linear infinite',
+        "loop-scroll": "loop-scroll 5s linear infinite", 
     },
+  },
   },
   plugins: [],
 };
+
 export default config;
