@@ -1,7 +1,7 @@
 "use client"
 import { useEffect, useState } from "react";
 import { navigation } from "~/constants";
-import Button from "./design/Button";
+import Button from "../design/Button";
 import MenuSvg from "~/assets/svg/MenuSvg";
 
 const Header = () => {
@@ -24,7 +24,6 @@ const Header = () => {
           <h1 className="font-bold text-3xl">Logo</h1>
         </a>
 
-<<<<<<< HEAD
         <nav className={`${openNavigation ? "flex bg-primary-50  " : "hidden"} fixed top-[5rem] left-0 right-0 bottom-0 lg:bg-blur lg:backdrop-blur lg:static lg:flex lg:mx-auto `}>
           <div className="relative z-2 flex flex-col right-0 justify-center m-auto lg:flex-row">
             {navigation.map((item) => (
@@ -37,14 +36,6 @@ const Header = () => {
               </a>
             ))}
           </div>
-=======
-        <nav className="flex gap-4">
-            <Link href="about">about</Link>
-            <Link href="/events">events</Link>
-            <Link href="about">contact</Link>
-            <Link href="about">about</Link>
-            <Link href="about">about</Link>
->>>>>>> 1e0ac3153c8ad05fc8a3222b045bf44498ca0df3
         </nav>
 
         

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import Header from "@components/Header";
+import Header from "@components/Header/Header";
 import Footer from "@components/Footer/Footer";
 import "./globals.css";
 import {Exo_2, Inter, Noto_Sans,Roboto,Poppins } from 'next/font/google'
