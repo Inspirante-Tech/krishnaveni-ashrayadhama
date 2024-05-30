@@ -1,0 +1,35 @@
+summary {
+    position: relative;
+}
+
+summary::marker {
+    content: none;
+}
+
+summary::after {
+    content: '>';
+}
+
+summary::before,
+summary::after {
+    width: .75em;
+    position: absolute;
+    top: 1rem;
+    right: 0;
+    transition: all 100ms ease-in;
+}
+
+[open] summary::after {
+    transform: rotate(90deg);
+}
+
+details {
+    padding: .5rem 1rem;
+    border-bottom: 1px solid;
+}
+
+summary {
+    padding: 1rem 2em 1rem 0;
+    font-weight: bold;
+    cursor: pointer;
+}
