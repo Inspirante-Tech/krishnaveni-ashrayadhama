@@ -1,23 +1,26 @@
 import { HeroimageUrls } from "~/constants";
 import Carousel from "./Carousel";
+import ScrollDown from "./ScrollDown";
 
 import Image from "next/image";
 
 function Hero() {
   return (
-    <div className="">
+    <div className="relative w-full h-full">
       <Carousel>
         {HeroimageUrls.map((url, index) => (
           <Image
             key={index}
-            width={100}
-            height={100}
+            width={600}
+            height={600}
             className="min-w-[100vw] h-full object-cover snap-center"
             src={url}
             alt={`Slide ${index + 1}`}
           />
         ))}
       </Carousel>
+
+      <ScrollDown/>
     </div>
   );
 }

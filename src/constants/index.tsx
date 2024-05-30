@@ -19,7 +19,7 @@ export const navigation = [
   {
     id: "3",
     title: "Event",
-    url: "#Event",
+    url: "/events",
   },
   {
     id: "4",
