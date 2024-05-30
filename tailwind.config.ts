@@ -60,6 +60,7 @@ const config: Config = {
       fontFamily: {
         popins: ['Poetsen One', 'sans-serif']
       },
+<<<<<<< HEAD
       animation: {
         "loop-scroll": "loop-scroll 5s linear infinite",
       },
@@ -69,6 +70,23 @@ const config: Config = {
           to: { transform: "translateX(-100%)" },
         },
       },
+=======
+      keyframes: {
+        slideDown: {
+          from: { height: '0px' },
+          to: { height: 'var(--radix-accordion-content-height)' },
+        },
+        slideUp: {
+          from: { height: 'var(--radix-accordion-content-height)' },
+          to: { height: '0px' },
+        },
+      },
+      animation: {
+        slideDown: 'slideDown 300ms cubic-bezier(0.87, 0, 0.13, 1)',
+        slideUp: 'slideUp 300ms cubic-bezier(0.87, 0, 0.13, 1)',
+      },
+      
+>>>>>>> 1205d6fc11476e7b2a3564566529e9c84bb67982
     },
   },
   plugins: [],
