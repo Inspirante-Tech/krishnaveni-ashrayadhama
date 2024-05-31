@@ -135,7 +135,7 @@ function Events() {
       </div>
       <dialog
         ref={dialogRef}
-        className="w-[80%] h-[80%] bg-secondary-200 rounded"
+        className="w-[80%] h-[80%] bg-secondary-200 rounded eventdialog"
         onClick={(e) => e.currentTarget.close()}
       >
         {event && (

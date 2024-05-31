@@ -68,5 +68,35 @@ body {
 }
 
 dialog::backdrop {
-  background-color: rgba(64, 56, 56, 0.266);
+  background-color: rgba(64, 56, 56, 0.401);
+}
+
+.eventdialog[open] {
+  animation: slidedown 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@keyframes slidedown {
+  0% {
+      transform: translateY(-500px);
+      opacity: 0;
+  }
+
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+.photodialog[open] {
+  animation: scaleup 200ms cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+@keyframes scaleup {
+  0% {
+      scale:.3;
+  }
+
+  100% {
+      scale:1;
+  }
 }
