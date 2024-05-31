@@ -20,7 +20,7 @@ function Hero() {
         ))}
       </Carousel>
 
-      <ScrollDown/>
+      <ScrollDown />
     </div>
   );
 }
