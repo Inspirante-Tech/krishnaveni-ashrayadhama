@@ -102,7 +102,9 @@ export default function Gallery() {
       </div>
 
         {/* photodialog class refer global.css */}
-      <dialog ref={dialogRef} className= 'w-[80%] h-[80%] bg-primary-200 rounded  photodialog' >
+      <dialog ref={dialogRef} className= 'w-[80%] h-[80%] bg-primary-200 rounded  photodialog' 
+        onClick={onClose}
+      >
         <div className='w-full h-full flex place-content-center p-4'>
           {selectedImage!=null && <Image
             src={images[selectedImage]}
