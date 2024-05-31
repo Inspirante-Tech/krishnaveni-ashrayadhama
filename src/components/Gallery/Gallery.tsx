@@ -1,7 +1,7 @@
 "use client";
 import { CircleX } from "lucide-react";
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 
 const images = [
   "https://cruip-tutorials.vercel.app/masonry/masonry-01.jpg",
@@ -18,103 +18,56 @@ const images = [
   "https://cruip-tutorials.vercel.app/masonry/masonry-12.jpg",
 ];
 
-interface PhotoProps {
-  url: string;
-  alt: string;
-  callback: () => void;
-}
-
-const Photo: React.FC<PhotoProps> = ({ url, alt, callback }) => {
-  const [isVisible, setIsVisible] = useState<boolean>(false);
-  const imageRef = useRef<HTMLImageElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          if (imageRef.current) {
-            observer.unobserve(imageRef.current);
-          }
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (imageRef.current) {
-      observer.observe(imageRef.current);
-    }
-
-    return () => {
-      if (imageRef.current) {
-        observer.unobserve(imageRef.current);
-      }
-    };
-  }, []);
-
-  return (
-    <div className="relative overflow-hidden rounded-xl shadow-lg">
-      <Image
-        ref={imageRef}
-        className={`transition-opacity duration-1000 transform ${
-          isVisible ? "opacity-100" : "opacity-0"
-        } w-full h-auto`}
-        src={url}
-        alt={alt}
-        width={232}
-        height={290}
-        onClick={callback}
-      />
-      <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-50 transition-opacity duration-300 flex items-center justify-center opacity-0 hover:opacity-100">
-        <span className="text-white text-lg font-bold">View</span>
-      </div>
-    </div>
-  );
-};
-
 export default function Gallery() {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
-  const dialogRef = useRef<HTMLDialogElement>(null);
-  const onSelect = (index: number) => {
+
+  const openModal = (index: number) => {
     setSelectedImage(index);
-    dialogRef.current && dialogRef.current.showModal();
   };
+
+  const closeModal = () => {
+    setSelectedImage(null);
+  };
+
   return (
     <section className="my-4">
       <h2 className="font-bold text-2xl mb-4">Gallery</h2>
       <div className="columns-1 sm:columns-2 lg:columns-4 gap-4 space-y-4">
-        {images.map((image, key) => (
-          <Photo
-            key={key}
-            url={image}
-            alt={key.toString()}
-            callback={() => onSelect(key)}
-          />
+        {images.map((image, index) => (
+          <div
+            key={index}
+            className="relative overflow-hidden rounded-xl shadow-lg"
+          >
+            <img
+              src={image}
+              alt={`Image ${index + 1}`}
+              className="w-full h-auto cursor-pointer transition-opacity duration-1000 transform hover:opacity-80"
+              onClick={() => openModal(index)}
+            />
+          </div>
         ))}
       </div>
 
-      <dialog
-        ref={dialogRef}
-        className="w-[80%] h-[80%] bg-primary-200 rounded relative"
-      >
-        <div className="w-full h-full grid place-content-center">
-          {selectedImage !== null && (
+      {selectedImage !== null && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75">
+          <div className="relative max-w-full max-h-full overflow-hidden">
             <Image
               src={images[selectedImage]}
+              alt={`Image ${selectedImage + 1}`}
               width={800}
               height={600}
-              alt={"popup"}
-              className="rounded w-full h-auto"
+              layout="intrinsic"
+              className="rounded"
             />
-          )}
+            <button
+              onClick={closeModal}
+              className="absolute top-2 right-2 z-10 bg-white rounded-full p-1"
+            >
+              <CircleX className="text-red-600" size={32} />
+            </button>
+          </div>
         </div>
-
-        <form method="dialog">
-          <button className="absolute top-0 right-0 m-4 z-10 ">
-            <CircleX className="text-red-600" size={32} />
-          </button>
-        </form>
-      </dialog>
+      )}
     </section>
   );
 }
