@@ -1,9 +1,6 @@
 import { Footerlinks, socialMedia } from "~/constants";
 import React from "react";
-import { FaInstagram } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
-import { FaYoutube } from "react-icons/fa";
+import { Instagram, Linkedin, Twitter, Youtube } from "lucide-react";
 
 function Footer() {
   return (
@@ -29,10 +26,10 @@ function Footer() {
             <ul>
               <p className="text-gray-800 font-bold text-3xl pb-6">LOGO</p>
               <div className="flex gap-6 pb-5">
-                <FaInstagram className="text-2xl cursor-pointer hover:text-yellow-600" />
-                <FaTwitter className="text-2xl cursor-pointer hover:text-blue-600" />
-                <FaLinkedin className="text-2xl cursor-pointer hover:text-blue-600" />
-                <FaYoutube className="text-2xl cursor-pointer hover:text-red-600" />
+                <Instagram className="text-2xl cursor-pointer hover:text-yellow-600" />
+                <Twitter  className="text-2xl cursor-pointer hover:text-blue-600" />
+                <Linkedin className="text-2xl cursor-pointer hover:text-blue-600" />
+                <Youtube className="text-2xl cursor-pointer hover:text-red-600" />
               </div>
             </ul>
           </div>
