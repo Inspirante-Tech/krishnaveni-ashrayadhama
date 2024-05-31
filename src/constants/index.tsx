@@ -4,7 +4,7 @@ export const navigation = [
   {
     id: "0",
     title: "About us",
-    url: "#About",
+    url: "/about-us",
   },
   {
     id: "1",
