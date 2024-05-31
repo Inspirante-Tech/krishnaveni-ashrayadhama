@@ -56,7 +56,6 @@ const config: Config = {
       fontFamily: {
         popins: ['Poetsen One', 'sans-serif'],
       },
-<<<<<<< HEAD
       keyframes: {
         slideDown: {
           from: { height: '0px' },
