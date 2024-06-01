@@ -4,20 +4,12 @@ import { NearByimages } from "~/constants";
 
 const NearbyPlaces = () => {
   return (
-<<<<<<< HEAD
-    <section className="bg-primary-100  mt-4">
+    <section className="bg-primary-50  mt-4">
       <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
         <div className="mx-auto max-w-lg text-center">
           <h2 className="text-2xl text-center md:text-left font-bold  text-action-950 md:text-4xl">
             NEARBY PLACES TO VISIT
           </h2>
-=======
-    <section className="bg-primary-100 text-white content-container py-8 sm:px-6 sm:py-12 lg:py-16">
-      <div className="mx-auto max-w-lg text-center">
-        <h2 className="text-3xl font-bold  text-action-950 sm:text-4xl">
-          NEARBY PLACES TO VISIT:
-        </h2>
->>>>>>> 95664eeb0a952891a55ffdf7d1ee29285faf15fa
 
         <p className="mt-4 text-gray-800">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -26,7 +18,6 @@ const NearbyPlaces = () => {
         </p>
       </div>
 
-<<<<<<< HEAD
         <div className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {NearByimages.map((image, index) => (
         <div key={index} className="relative group border border-gray-300  rounded-xl overflow-hidden">
@@ -49,20 +40,6 @@ const NearbyPlaces = () => {
          
           ))}
         </div>
-=======
-      <div className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-        {NearByimages.map((image, index) => (
-          <div key={index} className="relative group">
-            <Image
-              src={image.src}
-              alt={image.alt}
-              width={1000}
-              height={1000}
-              className="rounded-xl object-cover transform transition duration-500 group-hover:scale-105 group-hover:shadow-xl"
-            />
-          </div>
-        ))}
->>>>>>> 95664eeb0a952891a55ffdf7d1ee29285faf15fa
       </div>
     </section>
   );

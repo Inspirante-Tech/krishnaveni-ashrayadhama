@@ -4,11 +4,11 @@ import { krishnaveniVriddhashramRules } from "~/constants";
 const RulesandRegulation = () => {
   return (
     <main>
-      <section className="space-y-4 mt-18 ">
+      <section className="space-y-4 mt-18  mx-auto p-8">
         {krishnaveniVriddhashramRules.map((ruleSet, index) => (
           <div key={index} className="mb-8">
             <h2 className="text-[22px] md:text-[26px] font-bold mb-4 uppercase">
-              
+
               {ruleSet.title}
             </h2>
             {ruleSet.rules.map((rule, i) => (

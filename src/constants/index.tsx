@@ -337,7 +337,6 @@ export const questionAndAnswers = [
   
 ];
 
-<<<<<<< HEAD
    export const krishnaveniVriddhashramRules = [
     {
       title: "General Rules",
@@ -384,10 +383,7 @@ export const questionAndAnswers = [
       ]
     }
   ];
-
-
-=======
-export const facilities = 
+  export const facilities = 
 [
   {
     id: 1,
@@ -436,4 +432,5 @@ export const content=[
     para: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias, ad necessitatibus earum repellendus omnis voluptatum minima officia tenetur, error expedita voluptate iure perferendis rem magnam consequuntur deleniti sapiente reprehenderit possimus maxime voluptatibus ipsum quibusdam odit praesentium? Ipsam reprehenderit dolores voluptatum? Est vero eos iusto facere, beatae repudiandae autem dolorem?tempora nam. Ex laborum commodi in reiciendis voluptatem atque quae quaerat et laudantium fugiat optio quidem libero, repellendus excepturi qui impedit, corporis ratione cum. Eveniet autem quaerat, suscipit ipsa unde mollitia iure dolorem vel ab repellat, beatae fugit doloribus saepe ullam, id quasi quam blanditiis illo deserunt? Adipisci dolores molestiae rerum, culpa explicabo saepe repellat magnam cum distinctio delectus error maxime quasi suscipit nisi nostrum temporibus? Tempore, blanditiis quod aliquam atque illo nostrum."
   }
 ];
->>>>>>> 95664eeb0a952891a55ffdf7d1ee29285faf15fa
+
+
