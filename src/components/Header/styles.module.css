@@ -1,0 +1,10 @@
+.hoverAnimate {
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.hoverAnimate:hover {
+  color: #ff6b6b;
+  transform: scale(1.1);
+}

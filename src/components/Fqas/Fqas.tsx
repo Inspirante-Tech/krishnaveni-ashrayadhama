@@ -16,7 +16,7 @@ const QuestionAnswer = ({
 
   return (
     <div
-      className={`group border-s-4 border-secondary-500 bg-gray-50 p-3 [&_summary::-webkit-details-marker]:hidden transform transition-all duration-500 ${
+      className={`group border-s-4 border-secondary-500 bg-gray-50 p-3 [&_summary::-webkit-details-marker]:hidden transform transition-opacity duration-500 ${
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"
       }`}
     >
@@ -28,8 +28,8 @@ const QuestionAnswer = ({
         <span className="shrink-0 rounded-full bg-secondary-50 p-1.5 text-gray-900 sm:p-3">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className={`size-5 shrink-0 transition duration-300 transform ${
-              isOpen ? "-rotate-45" : ""
+            className={`size-5 shrink-0 transition-transform duration-300 ${
+              isOpen ? "rotate-45" : ""
             }`}
             viewBox="0 0 20 20"
             fill="currentColor"
@@ -42,15 +42,14 @@ const QuestionAnswer = ({
           </svg>
         </span>
       </summary>
-      {isOpen && (
-        <div
-          className={`transition-max-height duration-5000 ease-in-out overflow-hidden ${
-            isOpen ? "max-h-96" : "max-h-0"
-          }`}
-        >
-          <p className="mt-2 leading-relaxed text-gray-700">{answer}</p>
-        </div>
-      )}
+      <div
+        className={`transition-all duration-500 ease-in-out overflow-hidden ${
+          isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+        }`}
+        style={{ maxHeight: isOpen ? "500px" : "0" }}
+      >
+        <p className="mt-2 leading-relaxed text-gray-700">{answer}</p>
+      </div>
     </div>
   );
 };
