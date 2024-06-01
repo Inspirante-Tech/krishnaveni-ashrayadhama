@@ -37,13 +37,13 @@ const Information: React.FC = () => {
             ref={containerRef}
             className={`transition-opacity duration-1000 transform ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-            }  p-3 md:p-4 bg-secondary-400 text-justify`}
+            }  p-3 md:p-4 text-justify bg-secondary-200`}
         >
            <h2 className="text-center text-4xl md:text-5xl font-bold font-poppins tracking-tight text-gray-900   pt-8">Who are we</h2>
             <div className='page-container'>
             
                 {content.map(info=>(
-                    <p className="text-base mb-2 px-2 md:mb-4 md:px-14" key={info.id}>
+                    <p className="text-base mb-2 px-2 md:mb-4 md:px-18" key={info.id}>
                     {info.para}
                 </p>
                 ))}   

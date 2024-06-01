@@ -43,7 +43,7 @@ const Story: React.FC = () => {
             <div className='page-container'>
             
                 {information.map(info=>(
-                    <p className="text-base mb-2 px-2 md:mb-4 md:px-14" key={info.id}>
+                    <p className="text-base mb-2 px-2 md:mb-4 md:px-18" key={info.id}>
                     {info.para}
                 </p>
                 ))}   
