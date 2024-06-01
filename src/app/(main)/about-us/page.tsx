@@ -1,5 +1,3 @@
-import NearbyPlaces from "~/components/NearbyPlaces/NearbyPlaces";
-
 export default function About() {
   return (
     <main className="space-y-12 mt-16 ">

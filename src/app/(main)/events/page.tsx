@@ -3,7 +3,7 @@ import Events from '~/components/Events/Events'
 
 function page() {
   return (
-    <main className='mt-28 mb-8'>
+    <main className='mt-20 mb-8 pt-12'>
         <Events/>
     </main>
   )
