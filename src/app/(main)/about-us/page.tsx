@@ -2,8 +2,8 @@ import NearbyPlaces from "~/components/NearbyPlaces/NearbyPlaces";
 
 export default function About() {
   return (
-    <main className="w-full px-16 md:px-40">
-      <div className="">
+    <main className="space-y-12 mt-16">
+      <section>
         <h1 className="text-3xl text-black-900 text-center py-5 font-bold hover:text-green-500 transition ease-in-out duration-500">
           About Krishnaveni Vridddhashrama
         </h1>
@@ -23,9 +23,8 @@ export default function About() {
           corporis quod, velit dignissimos porro doloribus blanditiis accusamus
           similique neque officiis modi quo veritatis aspernatur quidem nisi in
         </p>
-      </div>
-      <br></br>
-      <div className="grid grid-cols-1 md:grid-cols-2 justify-between gap-4  items-center">
+      </section>
+      <section className="grid grid-cols-1 md:grid-cols-2 justify-between gap-4  items-center">
         <img
           className="object-cover float-right rounded-2xl hover:shadow-xl transition ease-out duration-500"
           src="https://placehold.co/600x400/png"
@@ -50,10 +49,8 @@ export default function About() {
             odio.
           </p>
         </div>
-      </div>
-      <br></br>
-      <br></br>
-      <div className="grid grid-cols-1 md:grid-cols-2 items-center">
+      </section>
+      <section className="grid grid-cols-1 md:grid-cols-2 items-center">
         <img
           className="object-cover float-right rounded-2xl hover:shadow-xl transition ease-out duration-500 md:order-last order-first"
           src="https://placehold.co/600x400/png"
@@ -78,8 +75,7 @@ export default function About() {
             odio.
           </p>
         </div>
-      </div>
-      <div></div>
+      </section>
     </main>
   );
 }
