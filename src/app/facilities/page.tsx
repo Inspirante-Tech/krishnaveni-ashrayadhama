@@ -30,13 +30,13 @@ const facilities = [
 function page() {
   return (
     <main>
-        {
+        {/* {
             facilities.map(facility=>(
                 <div>
                     
                 </div>
             ))
-        }
+        }  */}
     </main>
   )
 }
