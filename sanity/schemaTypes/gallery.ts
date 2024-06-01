@@ -8,23 +8,18 @@ export default {
   icon: ImagesIcon,
   fields: [
     defineField({
-      name: 'images',
-      title: 'Images',
-      type: 'array',
-      of: [defineArrayMember(
-        {
-          type: 'image',
+      name: 'image',
+      title: 'Image',
+      type: 'image',
+      validation: (Rule) => Rule.required(),
+      fields: [
+        defineField({
+          name: 'alt',
+          title: 'short description',
+          type: 'string',
           validation: (Rule) => Rule.required(),
-          fields: [
-            defineField({
-              name: 'alt',
-              title: 'short description',
-              type: 'string',
-              validation: (Rule) => Rule.required(),
-            })
-          ]
-        }
-      )],
+        })
+      ],
     }),
   ]
 }
