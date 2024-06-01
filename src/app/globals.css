@@ -57,9 +57,10 @@
 
 body {
   width: 100vw;
+  max-width: 100%;
+  min-height: 100vh;
   overflow-x: hidden;
 }
-
 
 @layer utilities{
   .paused{
@@ -99,4 +100,15 @@ dialog::backdrop {
   100% {
       scale:1;
   }
+}
+
+
+main{
+  padding: 2rem;
+}
+
+main>section{
+  width: 100%;
+  max-width: 1024px;
+  margin: auto;
 }

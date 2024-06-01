@@ -38,7 +38,7 @@ function Carousel({ children }: Props) {
             <div className="flex  w-full h-full overflow-x-scroll scroll-smooth snap-mandatory snap-x no-scrollbar relative" ref={carouselRef}>
                 {children}
             </div>
-            <button className="rounded-full p-4 aspect-square  bg-slate-900/50 absolute top-[50%] left-4 z-10 translate-x-[50%] -translate-y-[50%]" onClick={() => move(true)}>
+            <button className="rounded-full p-4 aspect-square  bg-slate-900/50 absolute top-[50%] left-4 z-10  -translate-y-[50%]" onClick={() => move(true)}>
                 <ChevronLeft />
             </button>
 
