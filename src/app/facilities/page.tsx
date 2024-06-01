@@ -30,13 +30,13 @@ const facilities = [
 function page() {
   return (
     <main className="w-full px-16 md:px-40 mt-8">
-        {
+        {/* {
             facilities.map(facility=>(
                 <div>
                     
                 </div>
             ))
-        }
+        } */}
     </main>
   )
 }

@@ -14,7 +14,7 @@ export const navigation = [
   {
     id: "2",
     title: "Specialities",
-    url: "#Specialities",
+    url: "/vriddhashrama",
   },
   {
     id: "3",
@@ -264,5 +264,42 @@ export const questionAndAnswers = [
   "https://images.unsplash.com/photo-1550133730-695473e544be?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
   "https://images.unsplash.com/photo-1550167164-1b67c2be3973?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
   "https://images.unsplash.com/photo-1550338861-b7cfeaf8ffd8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+];
+ export const NearByimages = [
+  { src: "https://wallpapercave.com/wp/wp2649841.jpg", alt: "Digital Campaign 1" },
+  { src: "https://wallpapercave.com/wp/wp2649841.jpg", alt: "Digital Campaign 2" },
+  { src: "https://wallpapercave.com/wp/wp2649841.jpg", alt: "Digital Campaign 3" },
+  { src: "https://wallpapercave.com/wp/wp2649841.jpg", alt: "Digital Campaign 4" },
+  { src: "https://wallpapercave.com/wp/wp2649841.jpg", alt: "Digital Campaign 5" },
+  { src: "https://wallpapercave.com/wp/wp2649841.jpg", alt: "Digital Campaign 6" },
+  { src: "https://wallpapercave.com/wp/wp2649841.jpg", alt: "Digital Campaign 7" },
+  { src: "https://wallpapercave.com/wp/wp2649841.jpg", alt: "Digital Campaign 8" }
+];
+ export const ImageContents = [
+  {
+    heading: "Heading for this section",
+    content:
+      "This is the content for the first section. Lorem ipsum This is the content for the first section. Lorem ipsum d dolor sit amet, consectetur adipiscing elit.This is the content for the first section. Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    imageSrc: "https://wallpapercave.com/wp/wp2649841.jpg",
+    imageAlt: "Image 1",
+    reverse: false,
+  },
+  {
+    heading: "Heading for this section",
+    content:
+    "This is the content for the first section. Lorem ipsum This is the content for the first section. Lorem ipsum d dolor sit amet, consectetur adipiscing elit.This is the content for the first section. Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    imageSrc: "https://wallpapercave.com/wp/wp2649841.jpg",
+    imageAlt: "Image 2",
+    reverse: true,
+  },
+  {
+    heading: "Heading for this section",
+    content:
+    "This is the content for the first section. Lorem ipsum This is the content for the first section. Lorem ipsum d dolor sit amet, consectetur adipiscing elit.This is the content for the first section. Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    imageSrc: "https://wallpapercave.com/wp/wp2649841.jpg",
+    imageAlt: "Image 2",
+    reverse: true,
+  },
+  
 ];
 
