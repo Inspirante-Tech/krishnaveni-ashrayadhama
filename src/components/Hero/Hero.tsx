@@ -13,7 +13,7 @@ function Hero() {
             key={index}
             width={600}
             height={600}
-            className="h-full object-cover snap-center"
+            className="min-w-[100vw] h-full object-cover snap-center"
             src={url}
             alt={`Slide ${index + 1}`}
           />
