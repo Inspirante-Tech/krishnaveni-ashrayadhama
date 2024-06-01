@@ -8,31 +8,24 @@ export const navigation = [
   },
   {
     id: "1",
-    title: "Testimonials",
-    url: "#Testimonials",
-  },
-  {
-    id: "2",
     title: "Specialities",
     url: "/vriddhashrama",
+  },{
+    id: "2",
+    title: "Ayurvedic center",
+    url: "/ayurvedic-center",
   },
   {
     id: "3",
-    title: "Event",
+    title: "Events",
     url: "/events",
   },
   {
     id: "4",
-    title: "Donate",
-    url: "#Donate",
+    title: "Gallery",
+    url: "/gallery",
     
-  },
-  {
-    id: "5",
-    title: "Faqs",
-    url: "#Faqs",
-    
-  },
+  }
 ];
 
 
