@@ -3,6 +3,7 @@ import Story from "@components/Information/Story";
 import Information from "@components/Information/Information";
 import Facilities from "@components/Information/Facilities";
 import Testimonials from "~/components/Testimonials/page";
+import Fqas from "~/components/Fqas/Fqas";
 
 export default function Home() {
   return (
@@ -12,8 +13,10 @@ export default function Home() {
         <Story />
         <Facilities />
         <Information />
+        <Fqas/>
+        <Testimonials />
       </main>
-      <Testimonials />
+      
     </>
   );
 }
