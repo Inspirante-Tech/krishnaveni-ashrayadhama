@@ -52,7 +52,7 @@
 .page-container {
   @apply max-w-screen-2xl; 
   @apply mx-auto;
-  @apply p-4 md:p-12;
+  @apply p-2 md:p-12;
 }
 
 body {

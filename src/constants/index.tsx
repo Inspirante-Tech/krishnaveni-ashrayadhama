@@ -344,3 +344,51 @@ export const questionAndAnswers = [
   
 ];
 
+   export const krishnaveniVriddhashramRules = [
+    {
+      title: "General Rules",
+      rules: [
+        "Guests shall provide all filled up forms F1 to F7 along with the application form.All information provided should be true and correct.Residents shall not cause any disturbance, violence, nuisance, or annoyance to other residents, employees, workmen, neighbours, or office bearers of Krishnaveni Vriddhashram by their speech, behaviour, actions, or by playing loud music.",
+      ]
+    },
+    {
+      title: "Valuables",
+      rules: [
+        "Residents shall not keep any valuables in their room.Residents are strongly advised to store their valuables with family members.If not possible, residents shall deposit the cash/valuables with the management and obtain an official receipt.",
+      ]
+    },
+    {
+      title: "Food Regulations",
+      rules: [
+        "Pure vegetarian wholesome food/beverages prepared in our hygienically maintained kitchen will be served in the common dining area as per schedule.The menu and schedule are decided by the management in consultation with a panel of doctors.Residents shall not bring outside food inside Krishnaveni Vriddhashram premises.Consumption of non-vegetarian food, alcohol, or alcoholic beverages within Krishnaveni Vriddhashram premises is strictly prohibited.",
+        "Use/consumption of any kind of drugs, chewing of pan, consumption of tobacco in any form, and smoking is strictly prohibited.Any violation of this code can result in immediate termination of the contract.Food is served in the Krishnaveni Vriddhashram as per the predetermined menu which is decided by the management in consultation with a panel of doctors which will be pure vegetarian only.There will be no individual room service, except in special cases of extreme importance after getting permission from the management.Residents are not entitled to demand or dictate any change in the menu.",
+        "Residents are expected not to waste food, electricity, or water.Residents are expected to switch off lights, fans, AC, or TV whenever not needed.Residents are expected to close the water taps whenever not required and save water.Residents are not allowed to cook/heat food on their own in their individual rooms or at the common kitchen.",
+        
+      ]
+    },
+    {
+      title: "Illness Medicine Doctor Hospitals",
+      rules: [
+        "Krishnaveni Vriddhashram offers medical assistance through accredited medical practitioners and a panel of doctors.Residents shall purchase/procure medicines or medications on their own.Management shall not in any way be held responsible for the residents not taking medicines.In case of any critical illness or medical emergency, the management has the right to get the residents checked by any of its panel of doctors or at any hospital or any doctors as recommended by the panel of doctors.",
+        "All charges/costs and bills arising out of this medical treatment or hospitalisation shall be borne and paid by the said resident.In case of critical illness or the resident cannot be managed within Krishnaveni Vriddhashram, it becomes the duty and responsibility of the said resident’s relatives/sponsor/guardian to take the resident to their home or to get the resident admitted to a hospital as per the requirement of the situation.The said resident may be brought back to Krishnaveni Vriddhashram once he/she is found fit to live at Krishnaveni Vriddhashram.",
+        
+        
+      ]
+    },
+    {
+      title: "Visitors",
+      rules: [
+        "Visitors are allowed to come and meet the residents after taking permission from the management, during the visitor’s time as decided by the management.The management or its authorised person may deny entry to any visitor without assigning any reason whatsoever.All visitors must enter their name and mobile number along with the time of entry and departure in the visitor log found in the main office or reception.",
+        "Visitors are not allowed to park their vehicle within the Krishnaveni Vriddhashram premises.Visitors are not allowed to stay with the residents within the Krishnaveni Vriddhashram premises.Management may restrict the entry time for visitors or fix visiting hours whenever such necessity arises.Management or its authorised person may deny entry to any person or visitor of any age who may be friends or relatives of the residents without assigning any reason.No resident may have more than 3 visitors in their room or more than 5 visitors in the common areas.",
+      ]
+    },
+    {
+      title: "Life  style Protocol",
+      rules: [
+        "Residents shall not cause any disturbance, violence, nuisance, or annoyance to other residents, employees, workmen, neighbours, or office bearers of Krishnaveni Vriddhashram.Residents are expected not to waste food.",
+        
+      ]
+    }
+  ];
+
+
