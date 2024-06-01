@@ -33,14 +33,14 @@ const Story: React.FC = () => {
     }, []);
 
     return (
-        <div
+        <section
             ref={containerRef}
             className={`transition-opacity duration-1000 transform ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-            }  p-3 md:p-4  text-justify`}
+            } text-justify`}
         >
            <h2 className="text-center text-4xl md:text-5xl font-bold font-poppins tracking-tight text-gray-900   pt-8">Our Story</h2>
-            <div className='page-container'>
+            <div className='content-container'>
             
                 {information.map(info=>(
                     <p className="text-base mb-2 px-2 md:mb-4 md:px-18" key={info.id}>
@@ -49,7 +49,7 @@ const Story: React.FC = () => {
                 ))}   
 
             </div>
-        </div>
+        </section>
     );
 };
 

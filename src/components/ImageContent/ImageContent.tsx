@@ -4,7 +4,7 @@ import { ImageContents } from "~/constants";
 
 const ImageContent = () => {
   return (
-    <section className="space-y-8 mt-20 ">
+    <section className="space-y-8 mt-20 content-container">
     {ImageContents.map((section, index) => (
       <div
         key={index}

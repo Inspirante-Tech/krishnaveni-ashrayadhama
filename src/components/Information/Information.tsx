@@ -1,6 +1,6 @@
 //story on how we started and why we started
 "use client";
-import {content} from '~/constants';
+import { content } from '~/constants';
 
 import React, { useEffect, useRef, useState } from 'react';
 
@@ -33,23 +33,21 @@ const Information: React.FC = () => {
     }, []);
 
     return (
-        <div
+        <section
             ref={containerRef}
-            className={`transition-opacity duration-1000 transform ${
-                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-            }  p-3 md:p-4 text-justify bg-secondary-200`}
+            className={`transition-opacity duration-1000 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                } text-justify bg-secondary-200 `}
         >
-           <h2 className="text-center text-4xl md:text-5xl font-bold font-poppins tracking-tight text-gray-900   pt-8">Who are we</h2>
-            <div className='page-container'>
-            
-                {content.map(info=>(
-                    <p className="text-base mb-2 px-2 md:mb-4 md:px-18" key={info.id}>
-                    {info.para}
-                </p>
-                ))}   
+            <h2 className="text-center text-4xl md:text-5xl font-bold font-poppins tracking-tight text-gray-900 pt-8">Who are we</h2>
+                <div className='content-container'>
 
-            </div>
-        </div>
+                    {content.map(info => (
+                        <p className="text-base mb-2 px-2 md:mb-4 md:px-18" key={info.id}>
+                            {info.para}
+                        </p>
+                    ))}
+                </div>
+        </section>
     );
 };
 

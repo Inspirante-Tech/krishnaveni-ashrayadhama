@@ -4,9 +4,9 @@ import FacilityCard from "./FacilityCard";
 export default function Facilities()
 {
   return(
-    <>
-        <h1 className="text-center text-2xl sm:text-5xl font-bold font-poppins tracking-tight text-gray-900  sm:pt-16s">Facilities</h1>
-        <div className="flex flex-wrap justify-center  md:space-x-8  page-container">
+    <section className="content-container">
+        <h1 className="text-center text-2xl sm:text-5xl font-bold font-poppins tracking-tight text-gray-900">Facilities</h1>
+        <div className="flex flex-wrap justify-between  md:space-x-8">
             {facilities.map(facility=>(
                 <FacilityCard
                   key={facility.id}
@@ -16,6 +16,6 @@ export default function Facilities()
             />
             ))}
         </div>
-    </>
+    </section>
   )
 }

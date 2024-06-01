@@ -15,10 +15,9 @@ const QuestionAnswer = ({
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div
-      className={`group border-s-4 border-secondary-500 bg-gray-50 p-3 [&_summary::-webkit-details-marker]:hidden transform transition-opacity duration-500 ${
-        isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"
-      }`}
+    <section
+      className={`group border-s-4 border-secondary-500 bg-gray-50 p-3 [&_summary::-webkit-details-marker]:hidden transform transition-opacity duration-500 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"
+        }`}
     >
       <summary
         className="flex cursor-pointer items-center justify-between gap-1.5"
@@ -28,9 +27,8 @@ const QuestionAnswer = ({
         <span className="shrink-0 rounded-full bg-secondary-50 p-1.5 text-gray-900 sm:p-3">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className={`size-5 shrink-0 transition-transform duration-300 ${
-              isOpen ? "rotate-45" : ""
-            }`}
+            className={`size-5 shrink-0 transition-transform duration-300 ${isOpen ? "rotate-45" : ""
+              }`}
             viewBox="0 0 20 20"
             fill="currentColor"
           >
@@ -43,14 +41,13 @@ const QuestionAnswer = ({
         </span>
       </summary>
       <div
-        className={`transition-all duration-500 ease-in-out overflow-hidden ${
-          isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-        }`}
+        className={`transition-all duration-500 ease-in-out overflow-hidden ${isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+          }`}
         style={{ maxHeight: isOpen ? "500px" : "0" }}
       >
         <p className="mt-2 leading-relaxed text-gray-700">{answer}</p>
       </div>
-    </div>
+    </section>
   );
 };
 
@@ -71,37 +68,33 @@ const Fqas = () => {
   }, []);
 
   return (
-    <section className="bg-primary-100 flex justify-center items-center sm:mt-5">
-      <div className="max-w-5xl mx-auto px-4 md:p-12 sm:px-2 lg:px-2 lg:py-16 w-full relative sm:mt-2 mt-3">
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:items-center lg:gap-16">
-          <div className="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right sm:mx-auto lg:text-left">
-            <h2 className="text-2xl mt-9 font-bold tracking-tight text-gray-900 sm:text-4xl sm:mt-5">
-              Frequently Asked Questions...
-            </h2>
-            <p className="mt-4 text-gray-700">
-              Explore common questions and find answers below. If you don&#39;t
-              see what you&#39;re looking for, feel free to contact us for
-              assistance.
-            </p>
-            <Button className="sm:mt-2 bg-secondary-400 p-4 mt-2 rounded-md font-bold hover:bg-orange-400 text-action-950">
-              Contact us
-            </Button>
-          </div>
+    <section className="content-container bg-primary-100 lg:py-16 w-full relative sm:mt-2 mt-3  grid grid-cols-1 gap-8 lg:grid-cols-3 lg:items-center lg:gap-16 justify-between">
+      <div className="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right sm:mx-auto lg:text-left">
+          <h2 className="text-2xl mt-9 font-bold tracking-tight text-gray-900 sm:text-4xl sm:mt-5">
+            Frequently Asked Questions...
+          </h2>
+          <p className="mt-4 text-gray-700">
+            Explore common questions and find answers below. If you don&#39;t
+            see what you&#39;re looking for, feel free to contact us for
+            assistance.
+          </p>
+          <Button className="sm:mt-2 bg-secondary-400 p-4 mt-2 rounded-md font-bold hover:bg-orange-400 text-action-950">
+            Contact us
+          </Button>
+        </div>
 
-          <div className="-mx-6 lg:col-span-2 lg:mx-0">
-            <div className="space-y-4">
-              {questionAndAnswers.map((qa, index) => (
-                <QuestionAnswer
-                  key={index}
-                  question={qa.question}
-                  answer={qa.answer}
-                  isVisible={visibleIndexes.includes(index)}
-                />
-              ))}
-            </div>
+        <div className="-mx-6 lg:col-span-2 lg:mx-0">
+          <div className="space-y-4">
+            {questionAndAnswers.map((qa, index) => (
+              <QuestionAnswer
+                key={index}
+                question={qa.question}
+                answer={qa.answer}
+                isVisible={visibleIndexes.includes(index)}
+              />
+            ))}
           </div>
         </div>
-      </div>
     </section>
   );
 };

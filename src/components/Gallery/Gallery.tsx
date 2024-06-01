@@ -52,7 +52,7 @@ async function GalleryContentWrapper() {
 //src https://codepen.io/cruip/pen/JjqbdRB
 export default function Gallery() {
   return (
-    <section className='my-4'>
+    <section className='my-4 content-container'>
       <h2 className="font-bold text-2xl mb-4">Gallery</h2>
         <Suspense fallback={<SuspenseComponent />}>
           <GalleryContentWrapper />
