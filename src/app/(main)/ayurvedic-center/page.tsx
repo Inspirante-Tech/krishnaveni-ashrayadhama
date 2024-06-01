@@ -1,6 +1,10 @@
+import ImageContent from "~/components/ImageContent/ImageContent"
+
 function page() {
   return (
-    <div>page</div>
+    <main>
+        <ImageContent />
+    </main>
   )
 }
 
