@@ -44,9 +44,9 @@ export default function RootLayout({
     <html lang="en">
 
       <body className={`${inter.className} ${roboto.className} bg-primary-100`}>
-        {/* <Header /> */}
+        <Header />
           {children}
-       {/* <Footer/> */}
+       <Footer/>
       </body>
     </html>
   );
