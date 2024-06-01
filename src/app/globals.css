@@ -100,3 +100,14 @@ dialog::backdrop {
       scale:1;
   }
 }
+
+
+main{
+  padding: 2rem;
+}
+
+main>section{
+  width: 100%;
+  max-width: 1024px;
+  margin: auto;
+}
