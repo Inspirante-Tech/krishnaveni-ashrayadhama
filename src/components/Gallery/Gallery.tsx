@@ -1,7 +1,7 @@
-"use client"
-import { CircleX } from 'lucide-react'
-import Image from 'next/image'
-import { useEffect, useRef, useState } from 'react'
+import { ErrorBoundary } from 'next/dist/client/components/error-boundary'
+import { Suspense } from 'react'
+import { fetchGalleryImages } from '~/lib/queries'
+import { GalleryContent } from './GalleryContent'
 
 const images = [
   "https://cruip-tutorials.vercel.app/masonry/masonry-01.jpg",
@@ -18,108 +18,45 @@ const images = [
   "https://cruip-tutorials.vercel.app/masonry/masonry-12.jpg"
 ]
 
-interface PhotoProps {
-  url: string
-  alt: string
-  callback: () => void
-}
-
-const Photo: React.FC<PhotoProps> = ({ url, alt, callback }) => {
-  const [isVisible, setIsVisible] = useState<boolean>(false);
-  const imageRef = useRef<HTMLImageElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          if (imageRef.current) {
-            observer.unobserve(imageRef.current);
-          }
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (imageRef.current) {
-      observer.observe(imageRef.current);
-    }
-
-    return () => {
-      if (imageRef.current) {
-        observer.unobserve(imageRef.current);
-      }
-    };
-  }, []);
+const ErrorComponent = () => {
   return (
-    <div className="relative overflow-hidden rounded-xl shadow-lg"
-      onClick={callback}
-    >
-      <Image
-        ref={imageRef}
-        className={`transition-opacity duration-1000 transform ${isVisible ? "opacity-100" : "opacity-0"
-          } w-full h-auto`}
-        src={url}
-        alt={alt}
-        width={232}
-        height={290}
-      />
-      <div
-        className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-50 transition-opacity duration-300 flex items-center justify-center opacity-0 hover:opacity-100 cursor-pointer"
-      >
-        <span className="text-white text-lg font-bold">View</span>
-      </div>
+    <div className='w-ful h-full p-8 grid place-content-center'>
+      <span className='text-red-600'>Something went wrong</span>
     </div>
   )
 }
 
+const SuspenseComponent = () => {
+  return (
+    <div className='w-ful h-full p-8 grid place-content-center'>
+      <span className='text-gray-500'>Loading</span>
+    </div>
+  )
+}
+
+interface Image {
+  image: string,
+  id: string,
+  alt: string
+}
+
+async function GalleryContentWrapper() {
+  const images = await fetchGalleryImages();
+  return (
+    <GalleryContent images={images} />
+  )
+}
+
+
+
 //src https://codepen.io/cruip/pen/JjqbdRB
 export default function Gallery() {
-  const [selectedImage, setSelectedImage] = useState<number | null>(null);
-  const dialogRef = useRef<HTMLDialogElement>(null);
-
-  const onSelect = (index: number) => {
-    setSelectedImage(index);
-    dialogRef.current && dialogRef.current.showModal()
-  }
-
-  const onClose = () => {
-    dialogRef.current && dialogRef.current.close();
-  };
-
   return (
     <section className='my-4'>
       <h2 className="font-bold text-2xl mb-4">Gallery</h2>
-      <div className="columns-1 sm:columns-2 lg:columns-4 gap-4 space-y-4">
-        {images.map((image, key) => (
-          <Photo
-            key={key}
-            url={image}
-            alt={key.toString()}
-            callback={() => onSelect(key)}
-          />
-        ))}
-      </div>
-
-        {/* photodialog class refer global.css */}
-      <dialog ref={dialogRef} className= 'w-[80%] h-[80%] bg-primary-200 rounded  photodialog' 
-        onClick={onClose}
-      >
-        <div className='w-full h-full flex place-content-center p-4'>
-          {selectedImage!=null && <Image
-            src={images[selectedImage]}
-            width="232" height="290"
-            alt={"popup"}
-            className="rounded w-full h-auto object-contain"
-          />}
-        </div>
-
-        <form method="dialog" className="absolute top-0 right-0 z-10">
-          <button className="m-4" onClick={onClose}>
-            <CircleX className="text-red-600" size={32} />
-          </button>
-        </form>
-      </dialog>
+        <Suspense fallback={<SuspenseComponent />}>
+          <GalleryContentWrapper />
+        </Suspense>
     </section>
   )
 }
