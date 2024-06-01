@@ -9,27 +9,28 @@ const MenuSvg: React.FC<MenuSvgProps> = ({ openNavigation }) => {
     <svg
       className="overflow-visible text-black"
       width="20"
-      height="12"
-      viewBox="0 0 20 12"
+      height="20"
+      viewBox="0 0 20 20"
     >
-      <rect
-        className="transition-all origin-center"
-        y={openNavigation ? "5" : "0"}
-        width="20"
-        height="2"
-        rx="1"
-        fill="black"
-        transform={`rotate(${openNavigation ? "45" : "0"})`}
-      />
-      <rect
-        className="transition-all origin-center"
-        y={openNavigation ? "5" : "10"}
-        width="20"
-        height="2"
-        rx="1"
-        fill="black"
-        transform={`rotate(${openNavigation ? "-45" : "0"})`}
-      />
+          <rect
+            className="transition-all"
+            y={0}
+            width="20"
+            height="2"
+            rx="1"
+            fill="black"
+            transform={`rotate(${openNavigation ? "45" : "0"})`}
+          />
+          <rect
+            className="transition-all"
+            y={10}
+            width="20"
+            height="2"
+            rx="1"
+            fill="black"
+            transform={`rotate(${openNavigation ? "-45" : "0"})`}
+
+          />
     </svg>
   );
 };
