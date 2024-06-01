@@ -102,10 +102,11 @@ dialog::backdrop {
   }
 }
 
-
-main{
+/*ive removed it to apply alternate colors in the home page*/
+/* main{
   padding: 2rem;
-}
+} */
+
 
 main>section{
   width: 100%;
