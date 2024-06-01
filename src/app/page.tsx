@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <main className="w-full px-6 md:px-40">
+      <main>
         <Story />
         <Facilities />
         <Information />

@@ -29,7 +29,7 @@ const facilities = [
 
 function page() {
   return (
-    <main className="w-full px-16 md:px-40 mt-8">
+    <main>
         {
             facilities.map(facility=>(
                 <div>
