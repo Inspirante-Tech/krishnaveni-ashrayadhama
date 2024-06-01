@@ -104,7 +104,7 @@ function Events() {
   const event = getEvent(selected)
 
   return (
-    <section className=" mt-28  bg-primary-300 rounded p-8">
+    <section className="content-container bg-primary-300 rounded p-8">
       <h1 className="font-bold text-3xl mb-4">Events</h1>
       <div className="flex flex-wrap gap-8 justify-around">
         {events.map((event) => {

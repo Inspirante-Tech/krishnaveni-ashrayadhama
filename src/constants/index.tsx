@@ -8,31 +8,24 @@ export const navigation = [
   },
   {
     id: "1",
-    title: "Testimonials",
-    url: "#Testimonials",
-  },
-  {
-    id: "2",
     title: "Specialities",
     url: "/vriddhashrama",
+  },{
+    id: "2",
+    title: "Ayurvedic center",
+    url: "/ayurvedic-center",
   },
   {
     id: "3",
-    title: "Event",
+    title: "Events",
     url: "/events",
   },
   {
     id: "4",
-    title: "Donate",
-    url: "#Donate",
+    title: "Gallery",
+    url: "/gallery",
     
-  },
-  {
-    id: "5",
-    title: "Faqs",
-    url: "#Faqs",
-    
-  },
+  }
 ];
 
 
@@ -344,6 +337,7 @@ export const questionAndAnswers = [
   
 ];
 
+<<<<<<< HEAD
    export const krishnaveniVriddhashramRules = [
     {
       title: "General Rules",
@@ -392,3 +386,54 @@ export const questionAndAnswers = [
   ];
 
 
+=======
+export const facilities = 
+[
+  {
+    id: 1,
+    title: 'Facility 1',
+    image: '/kitchen.jpg',
+    description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores, reprehenderit'
+  },
+  {
+    id: 2,
+    title: 'Facility 2',
+    image: '/facilities.jpg',
+    description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores, reprehenderit'
+  },
+  {
+    id: 3,
+    title: 'Facility 3',
+    image: '/facilities.jpg',
+    description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores, reprehenderit'
+  },
+  {
+    id: 4,
+    title: 'Facility 4',
+    image: '/kitchen.jpg',
+    description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores, reprehenderit'
+  }
+]
+
+export const information=[
+  {
+    id:1,
+    para: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias, ad necessitatibus earum repellendus omnis voluptatum minima officia tenetur, error expedita voluptate iure perferendis rem magnam consequuntur deleniti sapiente reprehenderit possimus maxime voluptatibus ipsum quibusdam odit praesentium? Ipsam reprehenderit dolores voluptatum? Est vero eos iusto facere, beatae repudiandae autem dolorem? Laboriosam placeat et autem cum corrupti iusto hic, perferendis veritatis facilis sed animi dignissimos deserunt, illum voluptatesrepellendus excepturi qui impedit, corporis ratione cum. Eveniet autem quaerat, suscipit ipsa unde mollitia iure dolorem vel ab repellat, beatae fugit doloribus saepe ullam, id quasi quam blanditiis illo deserunt? Adipisci dolores molestiae rerum, culpa explicabo saepe repellat magnam cum distinctio delectus error maxime quasi suscipit nisi nostrum temporibus? Tempore, blanditiis quod aliquam atque illo nostrum."
+  },
+  {
+    id:2,
+    para: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias, ad necessitatibus earum repellendus omnis voluptatum minima officia tenetur, error expedita voluptate iure perferendis rem magnam consequuntur deleniti sapiente reprehenderit possimus maxime voluptatibus ipsum quibusdam odit praesentium? Ipsam reprehenderit dolores voluptatum? Est vero eos iusto facere, beatae repudiandae autem dolorem?tempora nam. Ex laborum commodi in reiciendis voluptatem atque quae quaerat et laudantium fugiat optio quidem libero, repellendus excepturi qui impedit, corporis ratione cum. Eveniet autem quaerat, suscipit ipsa unde mollitia iure dolorem vel ab repellat, beatae fugit doloribus saepe ullam, id quasi quam blanditiis illo deserunt? Adipisci dolores molestiae rerum, culpa explicabo saepe repellat magnam cum distinctio delectus error maxime quasi suscipit nisi nostrum temporibus? Tempore, blanditiis quod aliquam atque illo nostrum."
+  }
+];
+
+export const content=[
+  {
+    id:1,
+    para: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias, ad necessitatibus earum repellendus omnis voluptatum minima officia tenetur, error expedita voluptate iure perferendis rem magnam consequuntur deleniti sapiente reprehenderit possimus maxime voluptatibus ipsum quibusdam odit praesentium? Ipsam reprehenderit dolores voluptatum? Est vero eos iusto facere, beatae repudiandae autem dolorem? Laboriosam placeat et autem cum corrupti iusto hic, perferendis veritatis facilis sed animi dignissimos deserunt, illum voluptatesrepellendus excepturi qui impedit, corporis ratione cum. Eveniet autem quaerat, suscipit ipsa unde mollitia iure dolorem vel ab repellat, beatae fugit doloribus saepe ullam, id quasi quam blanditiis illo deserunt? Adipisci dolores molestiae rerum, culpa explicabo saepe repellat magnam cum distinctio delectus error maxime quasi suscipit nisi nostrum temporibus? Tempore, blanditiis quod aliquam atque illo nostrum."
+  },
+  {
+    id:2,
+    para: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias, ad necessitatibus earum repellendus omnis voluptatum minima officia tenetur, error expedita voluptate iure perferendis rem magnam consequuntur deleniti sapiente reprehenderit possimus maxime voluptatibus ipsum quibusdam odit praesentium? Ipsam reprehenderit dolores voluptatum? Est vero eos iusto facere, beatae repudiandae autem dolorem?tempora nam. Ex laborum commodi in reiciendis voluptatem atque quae quaerat et laudantium fugiat optio quidem libero, repellendus excepturi qui impedit, corporis ratione cum. Eveniet autem quaerat, suscipit ipsa unde mollitia iure dolorem vel ab repellat, beatae fugit doloribus saepe ullam, id quasi quam blanditiis illo deserunt? Adipisci dolores molestiae rerum, culpa explicabo saepe repellat magnam cum distinctio delectus error maxime quasi suscipit nisi nostrum temporibus? Tempore, blanditiis quod aliquam atque illo nostrum."
+  }
+];
+>>>>>>> 95664eeb0a952891a55ffdf7d1ee29285faf15fa
