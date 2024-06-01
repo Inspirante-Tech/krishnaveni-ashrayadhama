@@ -266,14 +266,55 @@ export const questionAndAnswers = [
   "https://images.unsplash.com/photo-1550338861-b7cfeaf8ffd8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
 ];
  export const NearByimages = [
-  { src: "https://wallpapercave.com/wp/wp2649841.jpg", alt: "Digital Campaign 1" },
-  { src: "https://wallpapercave.com/wp/wp2649841.jpg", alt: "Digital Campaign 2" },
-  { src: "https://wallpapercave.com/wp/wp2649841.jpg", alt: "Digital Campaign 3" },
-  { src: "https://wallpapercave.com/wp/wp2649841.jpg", alt: "Digital Campaign 4" },
-  { src: "https://wallpapercave.com/wp/wp2649841.jpg", alt: "Digital Campaign 5" },
-  { src: "https://wallpapercave.com/wp/wp2649841.jpg", alt: "Digital Campaign 6" },
-  { src: "https://wallpapercave.com/wp/wp2649841.jpg", alt: "Digital Campaign 7" },
-  { src: "https://wallpapercave.com/wp/wp2649841.jpg", alt: "Digital Campaign 8" }
+  { 
+    src: "https://wallpapercave.com/wp/wp2649841.jpg", 
+    alt: "Digital Campaign 1",
+    description: "Manglore",
+    mapLink: "https://www.google.com/maps/place/Your+Location+Here" 
+  },
+  { 
+    src: "https://wallpapercave.com/wp/wp2649841.jpg", 
+    alt: "Digital Campaign 1",
+    description: "Manglore",
+    mapLink: "https://www.google.com/maps/place/Your+Location+Here" 
+  },
+  { 
+    src: "https://wallpapercave.com/wp/wp2649841.jpg", 
+    alt: "Digital Campaign 1",
+    description: "Manglore",
+    mapLink: "https://www.google.com/maps/place/Your+Location+Here" 
+  },
+  { 
+    src: "https://wallpapercave.com/wp/wp2649841.jpg", 
+    alt: "Digital Campaign 1",
+    description: "Manglore",
+    mapLink: "https://www.google.com/maps/place/Your+Location+Here" 
+  },
+  { 
+    src: "https://wallpapercave.com/wp/wp2649841.jpg", 
+    alt: "Digital Campaign 1",
+    description: "Manglore",
+    mapLink: "https://www.google.com/maps/place/Your+Location+Here" 
+  },
+  { 
+    src: "https://wallpapercave.com/wp/wp2649841.jpg", 
+    alt: "Digital Campaign 1",
+    description: "Manglore",
+    mapLink: "https://www.google.com/maps/place/Your+Location+Here" 
+  },
+  
+  { 
+    src: "https://wallpapercave.com/wp/wp2649841.jpg", 
+    alt: "Digital Campaign 1",
+    description: "Manglore",
+    mapLink: "https://www.google.com/maps/place/Your+Location+Here" 
+  },
+  { 
+    src: "https://wallpapercave.com/wp/wp2649841.jpg", 
+    alt: "Digital Campaign 1",
+    description: "Manglore",
+    mapLink: "https://www.google.com/maps/place/Your+Location+Here" 
+  },
 ];
  export const ImageContents = [
   {
