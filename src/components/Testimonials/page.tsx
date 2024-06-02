@@ -62,9 +62,9 @@ function Testimonials() {
 
       {
         isLoading ? (
-          <span>
-            loadng
-          </span>
+          <div className="w-full text-center m-auto py-4 text-gray-500">
+            loading...
+          </div>
         ) : (
           <div className="w-full flex justify-center sm:mt-2">
             <Carousel className="w-full mt-4">
