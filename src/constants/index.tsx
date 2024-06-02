@@ -216,7 +216,7 @@ export const supporters: { id: string; name: string; url: string }[] = [
     name: "Scenic Mountain",
     url: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80",
   },
-].map((image,index) => ({
+].map((image, index) => ({
   id: index.toString(),
   name: image.name,
   url: image.url,
@@ -302,7 +302,33 @@ export const NearByimages = [
     mapLink: "https://www.google.com/maps/place/Your+Location+Here",
   },
 ];
-export const ImageContents = [
+export const VridddhashramaImageContentsImageContents = [
+  {
+    heading: "Heading for this section",
+    content:
+      "This is the content for the first section. Lorem ipsum This is the content for the first section. Lorem ipsum d dolor sit amet, consectetur adipiscing elit.This is the content for the first section. Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    imageSrc: "https://wallpapercave.com/wp/wp2649841.jpg",
+    imageAlt: "Image 1",
+    reverse: false,
+  },
+  {
+    heading: "Heading for this section",
+    content:
+      "This is the content for the first section. Lorem ipsum This is the content for the first section. Lorem ipsum d dolor sit amet, consectetur adipiscing elit.This is the content for the first section. Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    imageSrc: "https://wallpapercave.com/wp/wp2649841.jpg",
+    imageAlt: "Image 2",
+    reverse: true,
+  },
+  {
+    heading: "Heading for this section",
+    content:
+      "This is the content for the first section. Lorem ipsum This is the content for the first section. Lorem ipsum d dolor sit amet, consectetur adipiscing elit.This is the content for the first section. Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    imageSrc: "https://wallpapercave.com/wp/wp2649841.jpg",
+    imageAlt: "Image 2",
+    reverse: true,
+  },
+];
+export const AyurvedicImageContentsImageContents = [
   {
     heading: "Heading for this section",
     content:
@@ -329,7 +355,7 @@ export const ImageContents = [
   },
 ];
 
- export const krishnaveniVriddhashramRules = [
+export const krishnaveniVriddhashramRules = [
   {
     heading: "Forms and Information",
     rules: [
@@ -397,6 +423,10 @@ export const ImageContents = [
     ],
   },
 ];
+
+export const VridddhashramaPageVideo = "https://www.youtube.com/embed/zD43hknPtLc";
+export const AyurvedicPagePageVideo = "https://www.youtube.com/embed/zD43hknPtLc";
+
 
 export const facilities = [
   {
