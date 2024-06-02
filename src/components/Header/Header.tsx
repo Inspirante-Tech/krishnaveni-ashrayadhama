@@ -42,7 +42,7 @@ const Header = () => {
             ))}
           </div>
         </nav>
-
+  
         <Button
           className="ml-auto lg:hidden"
           px="px-3"
