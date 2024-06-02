@@ -1,6 +1,9 @@
+
 import ImageContent from "~/components/ImageContent/ImageContent";
+import ServicesOffered from "~/components/ServicesOffered/ServicesOffered";
 import VideoSection from "~/components/VideoSection/VideoSection";
 import { AyurvedicImageContentsImageContents, AyurvedicPagePageVideo } from "~/constants";
+
 
 function page() {
   return (
@@ -17,6 +20,10 @@ function page() {
       </section>
       <ImageContent data={AyurvedicImageContentsImageContents} />
       <VideoSection  videoSrc={AyurvedicPagePageVideo} />
+      <hr/>
+      <ServicesOffered/>
+    
+     
     </main>
   );
 }
