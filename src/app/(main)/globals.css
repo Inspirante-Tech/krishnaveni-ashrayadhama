@@ -98,3 +98,8 @@ dialog::backdrop {
       scale:1;
   }
 }
+/* styles.module.css */
+
+.menu-transition {
+  transition: transform 0.3s ease;
+}
