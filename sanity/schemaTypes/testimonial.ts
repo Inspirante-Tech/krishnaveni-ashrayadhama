@@ -1,4 +1,5 @@
 import { defineField, defineType } from 'sanity'
+ import {baseLanguage} from './localeString'
 
 export default defineType({
     name: 'testimonial',
@@ -8,7 +9,7 @@ export default defineType({
         defineField({
             name: 'name',
             title: 'Name',
-            type: 'string',
+            type: 'localeString',
         }),
         defineField({
             name: 'image',
@@ -21,12 +22,12 @@ export default defineType({
         defineField({
             name: 'statement',
             title: 'Statement',
-            type: 'text',
+            type: 'localeString',
         }),
     ],
     preview: {
         select: {
-            title: 'name',
+            title: `name.${baseLanguage!.id}`,
             media: 'image',
         },
     },

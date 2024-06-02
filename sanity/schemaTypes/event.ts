@@ -1,4 +1,5 @@
 import { defineField, defineType } from 'sanity'
+import { baseLanguage } from './localeString'
 
 export default defineType({
   name: 'event',
@@ -8,7 +9,7 @@ export default defineType({
     defineField({
       name: 'title',
       title: 'Title',
-      type: 'string',
+      type: 'localeString',
       validation: (Rule) => Rule.required(),
     }),
     defineField({
@@ -19,14 +20,6 @@ export default defineType({
       options: {
         hotspot: true,
       },
-      fields: [
-        {
-          name: 'alt',
-          type: 'string',
-          title: 'Alternative Text',
-          validation: (Rule) => Rule.required(),
-        }
-      ]
     }),
     defineField({
       name: 'date',
@@ -37,13 +30,13 @@ export default defineType({
     defineField({
       name: 'description',
       title: 'description',
-      type: 'text',
+      type: 'localeString',
       validation: (Rule) => Rule.required(),
     })
   ],
   preview: {
     select: {
-      title: 'title',
+      title: `title.${baseLanguage!.id}`,
       date: 'date',
       media: 'image',
     }
