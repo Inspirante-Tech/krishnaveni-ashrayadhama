@@ -1,4 +1,5 @@
 
+import Doctors from "~/components/Doctors/Doctors";
 import ImageContent from "~/components/ImageContent/ImageContent";
 import ServicesOffered from "~/components/ServicesOffered/ServicesOffered";
 import VideoSection from "~/components/VideoSection/VideoSection";
@@ -22,7 +23,7 @@ function page() {
       <VideoSection  videoSrc={AyurvedicPagePageVideo} />
       <hr/>
       <ServicesOffered/>
-    
+      <Doctors/>
      
     </main>
   );
