@@ -1,3 +1,5 @@
+import './globals.css';
+
 export const metadata = {
   title: "Krishnaveni Vriddhashrama",
   description: "Krishnaveni Vriddhashrama",
