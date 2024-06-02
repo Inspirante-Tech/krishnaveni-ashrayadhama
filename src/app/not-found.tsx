@@ -1,4 +1,8 @@
+import './globals.css';
+
 import { NextPage } from "next";
+import Header from "~/components/Header/Header";
+
 
 const Page404: NextPage = () => {
   const titleText: string = "Page Not Found";
@@ -7,6 +11,7 @@ const Page404: NextPage = () => {
 
   return (
     <>
+    <Header/>
     <div className="flex flex-col min-h-screen justify-center items-center bg-primary-100">
       <div className="text-9xl font-black text-secondary-600">404</div>
       <div className="flex flex-col justify-center items-center">
