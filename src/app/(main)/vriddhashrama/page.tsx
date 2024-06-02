@@ -2,13 +2,15 @@ import ImageContent from "~/components/ImageContent/ImageContent";
 import NearbyPlaces from "~/components/NearbyPlaces/NearbyPlaces";
 import RulesandRegulation from "~/components/RulesandRegulation/RulesandRegulation";
 import VideoSection from "~/components/VideoSection/VideoSection";
+import { VridddhashramaImageContentsImageContents } from "~/constants";
+
 
 export default function Vridddhashrama() {
   return (
     <main className="bg-white  page-container ">
-      <section>
+      <section className="content-container">
         
-        <h2 className="text-3xl heading  md:text-5xl font-bold mt-20 p-6 text-action-950 sm:text-4xl">
+        <h2 className="text-3xl   md:text-5xl font-bold mt-12 p-6 text-action-950 ">
           Vriddhashrama
         </h2>
         <p className="mt-1 text-gray-800 p-6">
@@ -18,7 +20,7 @@ export default function Vridddhashrama() {
         </p>
       </section>
 
-      <ImageContent />
+      <ImageContent  data={VridddhashramaImageContentsImageContents}/>
       <VideoSection />
       <div>
         <h2 className="text-2xl md:text-3xl uppercase font-bold text-center mt-10  text-action-950">

@@ -302,7 +302,33 @@ export const NearByimages = [
     mapLink: "https://www.google.com/maps/place/Your+Location+Here",
   },
 ];
-export const ImageContents = [
+export const VridddhashramaImageContentsImageContents = [
+  {
+    heading: "Heading for this section",
+    content:
+      "This is the content for the first section. Lorem ipsum This is the content for the first section. Lorem ipsum d dolor sit amet, consectetur adipiscing elit.This is the content for the first section. Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    imageSrc: "https://wallpapercave.com/wp/wp2649841.jpg",
+    imageAlt: "Image 1",
+    reverse: false,
+  },
+  {
+    heading: "Heading for this section",
+    content:
+      "This is the content for the first section. Lorem ipsum This is the content for the first section. Lorem ipsum d dolor sit amet, consectetur adipiscing elit.This is the content for the first section. Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    imageSrc: "https://wallpapercave.com/wp/wp2649841.jpg",
+    imageAlt: "Image 2",
+    reverse: true,
+  },
+  {
+    heading: "Heading for this section",
+    content:
+      "This is the content for the first section. Lorem ipsum This is the content for the first section. Lorem ipsum d dolor sit amet, consectetur adipiscing elit.This is the content for the first section. Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    imageSrc: "https://wallpapercave.com/wp/wp2649841.jpg",
+    imageAlt: "Image 2",
+    reverse: true,
+  },
+];
+export const AyurvedicImageContentsImageContents = [
   {
     heading: "Heading for this section",
     content:
