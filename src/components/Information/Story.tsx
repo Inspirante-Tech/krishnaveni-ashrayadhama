@@ -39,15 +39,15 @@ const Story: React.FC = () => {
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             } text-justify`}
         >
-           <h2 className="text-center text-4xl md:text-5xl font-bold font-poppins tracking-tight text-gray-900   pt-8">Our Story</h2>
-            <div className='content-container'>
-            
-                {information.map(info=>(
-                    <p className="text-base mb-2 px-2 md:mb-4 md:px-18" key={info.id}>
-                    {info.para}
-                </p>
-                ))}   
-
+            <div className='content-container flex gap-8 flex-col'>
+                <h2 className="heading text-gray-900">Our Story</h2>
+                <div className="">
+                  {information.map(info=>(
+                      <p className="body" key={info.id}>
+                      {info.para}
+                  </p>
+                  ))}   
+                </div>
             </div>
         </section>
     );

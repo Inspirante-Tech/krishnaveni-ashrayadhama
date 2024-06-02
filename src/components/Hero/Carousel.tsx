@@ -8,15 +8,22 @@ interface Props {
 
 function Carousel({ children }: Props) {
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [timerId, setTimerId] = useState<Timer>();
     const carouselRef = useRef<HTMLDivElement>(null);
     const itemCount = React.Children.count(children);
-    function move(prvs: boolean) {
+    function move(prvs: boolean ,isButtonClick: boolean = false) {
         setCurrentIndex(currentIndex => {
             let to;
             if (prvs) {
-                to = (currentIndex + itemCount - 1) % itemCount;
+                to = (currentIndex - 1) % itemCount;
             } else {
-                to = (currentIndex + itemCount + 1) % itemCount;
+                to = (currentIndex + 1) % itemCount;
+            }
+            if (isButtonClick) {
+                clearInterval(timerId);
+                setTimerId(setInterval(() => {
+                    move(false, false);
+                }, 3000));
             }
             if (carouselRef.current) {
                 carouselRef.current.scrollLeft = carouselRef.current?.clientWidth * to
@@ -26,24 +33,24 @@ function Carousel({ children }: Props) {
     }
 
     useEffect(() => {
-        const timeoutId = setInterval(() => {
-            console.log(currentIndex)
-            move(false)
-        }, 3000);
-        return () => clearTimeout(timeoutId);
+        setTimerId(setInterval(() => {
+            move(false);
+        }, 3000));
+        return () => clearTimeout(timerId);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return (
         <div className='relative w-full h-screen max-h-screen'>
-            <div className="flex  w-full h-full overflow-x-scroll scroll-smooth snap-mandatory snap-x no-scrollbar relative" ref={carouselRef}>
+            <div className="flex  w-full h-full overflow-x-scroll scroll-smooth snap-mandatory snap-x no-scrollbar relative pointer-events-none" ref={carouselRef}>
                 {children}
             </div>
-            <button className="rounded-full p-4 aspect-square  bg-slate-900/50 absolute top-[50%] left-4 z-10  -translate-y-[50%]" onClick={() => move(true)}>
-                <ChevronLeft />
+            <button className="rounded-full p-3 aspect-square  bg-gray-200/75 absolute top-[50%] left-4 z-10  -translate-y-[50%] md:scale-100 scale-75" onClick={() => move(true, true)}>
+                <ChevronLeft size={32} />
             </button>
 
-            <button className="rounded-full p-4 aspect-square  bg-slate-900/50 absolute top-[50%] left-full z-10 -translate-x-[150%] -translate-y-[50%]" onClick={() => move(false)}>
-                <ChevronRight />
+            <button className="rounded-full p-3 aspect-square  bg-gray-200/75 absolute top-[50%] left-full z-10 -translate-x-[150%] -translate-y-[50%] md:scale-100 scale-75" onClick={() => move(false, true)}>
+                <ChevronRight size={32} />
             </button>
         </div>
     )

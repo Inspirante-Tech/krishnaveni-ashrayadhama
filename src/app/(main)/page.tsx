@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <main className="my-12">
+      <main>
         <Story />
         <Facilities />
         <Information />

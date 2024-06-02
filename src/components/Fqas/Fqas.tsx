@@ -68,33 +68,35 @@ const Fqas = () => {
   }, []);
 
   return (
-    <section className="content-container bg-primary-100 lg:py-16 w-full relative sm:mt-2 mt-3  grid grid-cols-1 gap-8 lg:grid-cols-3 lg:items-center lg:gap-16 justify-between">
-      <div className="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right sm:mx-auto lg:text-left">
-          <h2 className="text-2xl mt-9 font-bold tracking-tight text-gray-900 sm:text-4xl sm:mt-5">
-            Frequently Asked Questions...
-          </h2>
-          <p className="mt-4 text-gray-700">
-            Explore common questions and find answers below. If you don&#39;t
-            see what you&#39;re looking for, feel free to contact us for
-            assistance.
-          </p>
-          <Button className="sm:mt-2 bg-secondary-400 p-4 mt-2 rounded-md font-bold hover:bg-orange-400 text-action-950">
-            Contact us
-          </Button>
-        </div>
-
-        <div className="-mx-6 lg:col-span-2 lg:mx-0">
-          <div className="space-y-4">
-            {questionAndAnswers.map((qa, index) => (
-              <QuestionAnswer
-                key={index}
-                question={qa.question}
-                answer={qa.answer}
-                isVisible={visibleIndexes.includes(index)}
-              />
-            ))}
+    <section className="bg-secondary-50">
+      <div className="content-container relative grid grid-cols-1 gap-4 lg:grid-cols-3 lg:items-center lg:gap-16 justify-between">
+        <div className="text-center sm:mx-auto lg:col-span-1">
+            <h2 className="heading text-gray-900 sm:mt-5">
+              Frequently Asked Questions
+            </h2>
+            <p className="mt-4 text-gray-700">
+              Explore common questions and find answers below. If you don&#39;t
+              see what you&#39;re looking for, feel free to contact us for
+              assistance.
+            </p>
+            <Button className="sm:mt-2 bg-secondary-400 p-4 mt-2 rounded-md font-bold hover:bg-orange-400 text-action-950">
+              Contact us
+            </Button>
           </div>
-        </div>
+
+          <div className="-mx-6 lg:col-span-2 lg:mx-0">
+            <div className="space-y-4">
+              {questionAndAnswers.map((qa, index) => (
+                <QuestionAnswer
+                  key={index}
+                  question={qa.question}
+                  answer={qa.answer}
+                  isVisible={visibleIndexes.includes(index)}
+                />
+              ))}
+            </div>
+          </div>
+      </div>
     </section>
   );
 };

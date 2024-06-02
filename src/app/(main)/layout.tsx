@@ -23,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className={`${inter.className} bg-primary-100 w-full h-full`}>
+    <div className={`${inter.className} bg-primary-50 w-full h-full`}>
       <Header />
       {children}
       <Footer />
