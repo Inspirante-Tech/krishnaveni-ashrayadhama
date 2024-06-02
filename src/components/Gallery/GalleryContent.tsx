@@ -2,12 +2,10 @@
 import { CircleX } from 'lucide-react'
 import Image from 'next/image'
 import {useRef, useState } from 'react'
-import { fetchGalleryImages } from '~/lib/queries'
 import {type Image as ImageType } from './types'
 import Photo from './Photo'
 
 export function GalleryContent({ images }: { images: ImageType[] }) {
-    console.log(fetchGalleryImages())
     const [selectedImage, setSelectedImage] = useState<ImageType | null>(null);
     const dialogRef = useRef<HTMLDialogElement>(null);
   
