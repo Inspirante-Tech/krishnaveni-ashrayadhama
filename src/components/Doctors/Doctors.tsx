@@ -5,10 +5,11 @@ import EmblaCarousel from "embla-carousel";
 import Autoplay from "embla-carousel-autoplay";
 import { Carousel, CarouselContent, CarouselItem } from "../ui/carousel";
 import { DoctorsDetails } from "~/constants";
+import AutoScroll from 'embla-carousel-auto-scroll'
 
 function Doctors() {
   return (
-    <section className="bg-primary-100 content-container py-12 lg:py-16 w-full relative sm:mt-2 mt-3">
+    <section className="bg-primary-100 content-container py-12 lg:py-16 w-full relative sm:mt-2 mt-3 border-black">
       <h2 className="text-center text-2xl sm:text-5xl font-bold tracking-tight text-gray-900 mt-2 mb-6 pt-12 sm:pt-16">
         Our Outstanding Doctors
       </h2>
@@ -20,12 +21,8 @@ function Doctors() {
       <div className="w-full flex justify-center sm:mt-2">
         <Carousel
           opts={{ loop: true, dragFree: false, watchDrag: false }}
-          plugins={[
-            Autoplay({
-              delay: 1000,
-            }),
-          ]}
-          className="w-full mt-4"
+          plugins={[AutoScroll()]}
+          className="w-full mt-4 "
         >
           <CarouselContent className="flex">
             {DoctorsDetails.map((doctor, index) => (
