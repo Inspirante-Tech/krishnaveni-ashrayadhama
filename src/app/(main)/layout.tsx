@@ -1,8 +1,9 @@
+import "../globals.css";
 import type { Metadata } from "next";
 
 import Header from "~/components/Header/Header";
 import Footer from "~/components/Footer/Footer";
-import "./globals.css";
+
 import { Inter, Noto_Sans } from 'next/font/google'
 
 export const textFont = Noto_Sans({
