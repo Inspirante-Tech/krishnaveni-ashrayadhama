@@ -1,6 +1,6 @@
-import { client } from "../../sanity/lib/client";
+import { client } from "~/sanity/lib/client";
 import type { Image } from 'sanity'
-import { urlForImage } from "../../sanity/lib/image";
+import { urlForImage } from "~/sanity/lib/image";
 
 const TESTIMONIAL_QUERY = `*[_type == "testimonial"]{'id':_id,name,image, statement}`
 
@@ -18,7 +18,6 @@ export async function fetchTestimonials() {
         image: urlForImage(testimonial.image)
     }))
 }
-
 
 const GALLERY_QUERY = `*[_type == "gallery"]{'id':_id,image,"alt":image.alt}`
 

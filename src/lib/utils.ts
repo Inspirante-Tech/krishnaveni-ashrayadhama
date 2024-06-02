@@ -14,7 +14,8 @@ export async function delayAsyncFunction<T extends (...args: any[]) => Promise<a
     });
 }
 
-export type ResolvedType<T> = T extends Promise<infer R> ? R : never;
-export type ArrayElementType<T> = T extends (infer U)[] ? U : never;
+export function formatDate(date:string) {
+  return new Intl.DateTimeFormat('en-US').format(new Date(date))
+}
 
 

@@ -3,13 +3,14 @@ import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { Carousel, CarouselContent, CarouselItem } from "../ui/carousel";
 import { fetchTestimonials } from "~/lib/queries";
-import { ResolvedType, delayAsyncFunction } from "~/lib/utils";
+import {delayAsyncFunction } from "~/lib/utils";
+import { TestimonialType } from "~/lib/types";
 
 function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [visibleItems, setVisibleItems] = useState(2);
   const [isLoading, setIsLoading] = useState(true);
-  const [testimonials, setTestimonials] = useState<ResolvedType<ReturnType<typeof fetchTestimonials>>>([]);
+  const [testimonials, setTestimonials] = useState<TestimonialType[]>([]);
 
   useEffect(() => {
     (async () => {
