@@ -1,5 +1,5 @@
 import { ImagesIcon } from '@sanity/icons'
-import { defineArrayMember, defineField } from 'sanity'
+import {defineField } from 'sanity'
 
 export default {
   name: 'gallery',
@@ -19,7 +19,13 @@ export default {
           type: 'string',
           validation: (Rule) => Rule.required(),
         })
-      ],
-    }),
-  ]
+      ]
+    })
+  ],
+  preview: {
+    select: {
+      title:"image.alt",
+      media: 'image',
+    }
+  },
 }
