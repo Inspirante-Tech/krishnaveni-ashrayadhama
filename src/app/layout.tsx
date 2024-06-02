@@ -1,18 +1,25 @@
-import './globals.css';
+import "./globals.css";
+import { Noto_Sans } from "next/font/google";
 
 export const metadata = {
   title: "Krishnaveni Vriddhashrama",
   description: "Krishnaveni Vriddhashrama",
-}
+};
+
+const notoSans = Noto_Sans({
+  weight: ["500", "600", "700"],
+  subsets: ["latin"],
+  variable: "--font-noto-sans",
+});
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${notoSans.variable}`}>
       <body>{children}</body>
     </html>
-  )
+  );
 }

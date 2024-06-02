@@ -8,58 +8,56 @@ import { testimonials } from "~/constants";
 
 function Testimonials() {
   return (
-    <section className="bg-primary-100 content-container py-12 lg:py-16 w-full relative sm:mt-2 mt-3">
-      <h2 className="text-center text-2xl sm:text-5xl font-bold tracking-tight text-gray-900 mt-2 mb-6 pt-12 sm:pt-16">
-        Professional Staff Top-Notch Facilities
-      </h2>
-      <p className="text-center text-sm text-gray-700">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-        quibusdam similique labore fuga impedit, consectetur facilis odit
-        accusantium quo, doloribus iste.
-      </p>
-      <div className="w-full flex justify-center sm:mt-2">
-        <Carousel
-        opts={{loop:true,dragFree:false,watchDrag:false}}
-        plugins={[
-          Autoplay({
-            delay: 5000,
-          }),
-        ]}
-          className="w-full mt-4"
-        >
-          <CarouselContent className="flex ">
-            {testimonials.map((testimonial, index) => (
-              <CarouselItem
-                key={index}
-                className="flex-none p-2  lg:basis-1/3  md:basis-1/2 max-w-fit"
-              >
-                <div className="mb-8 sm:break-inside-avoid relative">
-                  <div className="p-1">
-                    <blockquote className="rounded-lg bg-secondary-100 p-6 shadow-sm sm:p-8">
-                      <div className="flex items-center gap-4">
-                        <Image
-                          width={60}
-                          height={60}
-                          alt="testimonialImage"
-                          src={testimonial.image}
-                          className="size-14 rounded-full object-cover"
-                        />
-                        <div>
-                          <p className="mt-0.5 text-lg font-medium text-gray-900">
-                            {testimonial.name}
-                          </p>
-                        </div>
+    <section className="relative">
+      <div className="content-container flex flex-col gap-8">
+        <div className="flex flex-col gap-4">
+          <h2 className="heading text-gray-900">Testimonials</h2>
+          <p className="body text-gray-700">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
+            quibusdam similique labore fuga impedit, consectetur facilis odit
+            accusantium quo, doloribus iste.
+          </p>
+        </div>
+        <div className="w-full flex justify-center">
+          <Carousel
+            opts={{ loop: true, dragFree: false, watchDrag: false }}
+            plugins={[
+              Autoplay({
+                delay: 3000,
+              }),
+            ]}
+            className="w-full mt-4"
+          >
+            <CarouselContent className="flex gap-4 px-4">
+              {testimonials.map((testimonial, index) => (
+                <CarouselItem
+                  key={index}
+                  className="lg:basis-1/3 md:basis-1/2 max-w-fit"
+                >
+                  <div className="p-4 md:p-8  flex flex-col gap-4 bg-secondary-100 shadow-lg rounded-lg ">
+                    <div className="flex items-center gap-4">
+                      <Image
+                        width={60}
+                        height={60}
+                        alt="testimonialImage"
+                        src={testimonial.image}
+                        className="size-14 rounded-full object-cover"
+                      />
+                      <div>
+                        <p className="text-lg font-medium text-gray-900">
+                          {testimonial.name}
+                        </p>
                       </div>
-                      <p className="mt-4 text-gray-700">
-                        “{testimonial.description}”
-                      </p>
-                    </blockquote>
+                    </div>
+                    <p className="text-gray-700 leading-loose">
+                      “{testimonial.description}”
+                    </p>
                   </div>
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-        </Carousel>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
+        </div>
       </div>
     </section>
   );

@@ -55,6 +55,7 @@ const config: Config = {
         },
       },
       fontFamily: {
+        sans: ["var(--font-noto-sans)", "sans-serif"],
         popins: ["Poetsen One", "sans-serif"],
       },
       keyframes: {
