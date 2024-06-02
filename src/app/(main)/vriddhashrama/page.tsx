@@ -5,7 +5,7 @@ import VideoSection from "~/components/VideoSection/VideoSection";
 
 export default function Vridddhashrama() {
   return (
-    <main className="bg-primary-50  page-container ">
+    <main className="bg-white  page-container ">
       <section>
         
         <h2 className="text-3xl heading  md:text-5xl font-bold mt-20 p-6 text-action-950 sm:text-4xl">
@@ -21,7 +21,7 @@ export default function Vridddhashrama() {
       <ImageContent />
       <VideoSection />
       <div>
-        <h2 className="text-2xl md:text-3xl font-bold text-center mt-10 ">
+        <h2 className="text-2xl md:text-3xl uppercase font-bold text-center mt-10  text-action-950">
           Vriddhashram Rules And Regulations
         </h2>
 

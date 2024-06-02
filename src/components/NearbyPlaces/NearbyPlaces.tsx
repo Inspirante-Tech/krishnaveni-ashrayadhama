@@ -4,7 +4,7 @@ import { NearByimages } from "~/constants";
 
 const NearbyPlaces = () => {
   return (
-    <section className="bg-primary-50  mt-4">
+    <section className="bg-white  mt-4">
       <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
         <div className="mx-auto max-w-lg text-center">
           <h2 className="text-2xl text-center md:text-left font-bold  text-action-950 md:text-4xl">

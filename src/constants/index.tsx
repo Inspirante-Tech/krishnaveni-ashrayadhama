@@ -10,7 +10,8 @@ export const navigation = [
     id: "1",
     title: "Specialities",
     url: "/vriddhashrama",
-  },{
+  },
+  {
     id: "2",
     title: "Ayurvedic center",
     url: "/ayurvedic-center",
@@ -24,16 +25,14 @@ export const navigation = [
     id: "4",
     title: "Gallery",
     url: "/gallery",
-    
-  }
+  },
 ];
-
 
 export const testimonials = [
   {
     image:
       "https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80",
-   
+
     name: "Mrs. Meera Rao",
     description:
       "Daughter of a Resident.   areas provide a wonderful space for activities and socializing. The Ayurvedic Wellness Center ensures she gets the best medical care, and I can see her health improving every day.",
@@ -42,7 +41,6 @@ export const testimonials = [
     image:
       "https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80",
 
-   
     name: "Dr. Rajesh Kumar",
     description:
       "Senior Citizen Resident.  Vriddhashram environment, coupled with the excellent facilities, makes it feel like home. The staff is caring, and the pure vegetarian meals are delightful. I feel truly cared for here.",
@@ -50,7 +48,7 @@ export const testimonials = [
   {
     image:
       "https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80",
-    
+
     name: "Mr. Suresh Bhat",
     description:
       "Visitor to the Ayurvedic Wellness Center. Wellness Center regularly  chronic back pain. The Panchakarma treatments and massages have been incredibly effective.  and technicians, are very professional ",
@@ -58,7 +56,7 @@ export const testimonials = [
   {
     image:
       "https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80",
-   
+
     name: "Mr. jone dev",
     description:
       "Visitor to the Ayurvedic Wellness Center.  top-notch, and the staff, including the doctors and technicians, are very professional and compassionate. I highly recommend this center to anyone seeking holistic healing.",
@@ -66,7 +64,7 @@ export const testimonials = [
   {
     image:
       "https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80",
-    
+
     name: "Dr. Anjali Nair",
     description:
       "Ayurvedic Practitioner.  The of treatments combined with the expertise of the medical staff, ensures comprehensive care for both residents and the general public. It is a privilege to be a part of such a dedicated team.",
@@ -74,7 +72,7 @@ export const testimonials = [
   {
     image:
       "https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80",
-    
+
     name: "Mr. Ravi Shankar",
     description:
       "Local Resident.  Center has been  to our community. The wellness center’s state-of-the-art facilities and experienced staff provide excellent healthcare services. It’s reassuring to have such a facility so close to home.",
@@ -82,7 +80,7 @@ export const testimonials = [
   {
     image:
       "https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80",
-   
+
     name: "Mrs. Lakshmi Prasad",
     description:
       "Prospective Resident’s meeting the staff, we are confident that this will be a wonderful home for my father. The combination of a supportive environment for seniors and access to top-quality Ayurvedic care is truly unique.",
@@ -90,7 +88,7 @@ export const testimonials = [
   {
     image:
       "https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80",
-  
+
     name: "Mrs. Lakshmi Prasad",
     description:
       "Prospective Resident’s meeting the staff, we are confident that this will be a wonderful home for my father. The combination of a supportive environment for seniors and access to top-quality Ayurvedic care is truly unique.",
@@ -98,7 +96,7 @@ export const testimonials = [
   {
     image:
       "https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80",
-   
+
     name: "Mrs. Lakshmi Prasad",
     description:
       "Prospective Resident’s meeting the staff, we are confident that this will be a wonderful home for my father. The combination of a supportive environment for seniors and access to top-quality Ayurvedic care is truly unique.",
@@ -204,7 +202,6 @@ export const Footerlinks = [
 ];
 
 export const supporters: { id: string; name: string; url: string }[] = [
- 
   {
     name: "Scenic Mountain",
     url: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80",
@@ -221,8 +218,6 @@ export const supporters: { id: string; name: string; url: string }[] = [
     name: "Scenic Mountain",
     url: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80",
   },
-
-  
 ].map((image) => ({
   id: uuidv4(),
   name: image.name,
@@ -231,85 +226,85 @@ export const supporters: { id: string; name: string; url: string }[] = [
 
 export const questionAndAnswers = [
   {
-    question: 'What is Lorem Ipsum?',
+    question: "What is Lorem Ipsum?",
     answer:
-      ' Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      " Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
-    question: 'Why do we use it?',
+    question: "Why do we use it?",
     answer:
-      ' be distracted by the readable content of a page when looking at its layout.',
+      " be distracted by the readable content of a page when looking at its layout.",
   },
   {
-    question: 'Where does it come from?',
+    question: "Where does it come from?",
     answer:
-      'classical Latin literature from 45 BC, making it over 2000 years old.',
+      "classical Latin literature from 45 BC, making it over 2000 years old.",
   },
   {
-    question: 'Where can I get some?',
+    question: "Where can I get some?",
     answer:
-      ' available, ected humour,ised words which don\'t look even slightly believable.',
+      " available, ected humour,ised words which don't look even slightly believable.",
   },
 ];
- export const HeroimageUrls = [
+export const HeroimageUrls = [
   "https://images.unsplash.com/photo-1549989476-69a92fa57c36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
   "https://images.unsplash.com/photo-1549396535-c11d5c55b9df?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
   "https://images.unsplash.com/photo-1550133730-695473e544be?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
   "https://images.unsplash.com/photo-1550167164-1b67c2be3973?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
-  "https://images.unsplash.com/photo-1550338861-b7cfeaf8ffd8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+  "https://images.unsplash.com/photo-1550338861-b7cfeaf8ffd8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
 ];
- export const NearByimages = [
-  { 
-    src: "https://wallpapercave.com/wp/wp2649841.jpg", 
+export const NearByimages = [
+  {
+    src: "https://wallpapercave.com/wp/wp2649841.jpg",
     alt: "Digital Campaign 1",
     description: "Manglore",
-    mapLink: "https://www.google.com/maps/place/Your+Location+Here" 
+    mapLink: "https://www.google.com/maps/place/Your+Location+Here",
   },
-  { 
-    src: "https://wallpapercave.com/wp/wp2649841.jpg", 
+  {
+    src: "https://wallpapercave.com/wp/wp2649841.jpg",
     alt: "Digital Campaign 1",
     description: "Manglore",
-    mapLink: "https://www.google.com/maps/place/Your+Location+Here" 
+    mapLink: "https://www.google.com/maps/place/Your+Location+Here",
   },
-  { 
-    src: "https://wallpapercave.com/wp/wp2649841.jpg", 
+  {
+    src: "https://wallpapercave.com/wp/wp2649841.jpg",
     alt: "Digital Campaign 1",
     description: "Manglore",
-    mapLink: "https://www.google.com/maps/place/Your+Location+Here" 
+    mapLink: "https://www.google.com/maps/place/Your+Location+Here",
   },
-  { 
-    src: "https://wallpapercave.com/wp/wp2649841.jpg", 
+  {
+    src: "https://wallpapercave.com/wp/wp2649841.jpg",
     alt: "Digital Campaign 1",
     description: "Manglore",
-    mapLink: "https://www.google.com/maps/place/Your+Location+Here" 
+    mapLink: "https://www.google.com/maps/place/Your+Location+Here",
   },
-  { 
-    src: "https://wallpapercave.com/wp/wp2649841.jpg", 
+  {
+    src: "https://wallpapercave.com/wp/wp2649841.jpg",
     alt: "Digital Campaign 1",
     description: "Manglore",
-    mapLink: "https://www.google.com/maps/place/Your+Location+Here" 
+    mapLink: "https://www.google.com/maps/place/Your+Location+Here",
   },
-  { 
-    src: "https://wallpapercave.com/wp/wp2649841.jpg", 
+  {
+    src: "https://wallpapercave.com/wp/wp2649841.jpg",
     alt: "Digital Campaign 1",
     description: "Manglore",
-    mapLink: "https://www.google.com/maps/place/Your+Location+Here" 
+    mapLink: "https://www.google.com/maps/place/Your+Location+Here",
   },
-  
-  { 
-    src: "https://wallpapercave.com/wp/wp2649841.jpg", 
+
+  {
+    src: "https://wallpapercave.com/wp/wp2649841.jpg",
     alt: "Digital Campaign 1",
     description: "Manglore",
-    mapLink: "https://www.google.com/maps/place/Your+Location+Here" 
+    mapLink: "https://www.google.com/maps/place/Your+Location+Here",
   },
-  { 
-    src: "https://wallpapercave.com/wp/wp2649841.jpg", 
+  {
+    src: "https://wallpapercave.com/wp/wp2649841.jpg",
     alt: "Digital Campaign 1",
     description: "Manglore",
-    mapLink: "https://www.google.com/maps/place/Your+Location+Here" 
+    mapLink: "https://www.google.com/maps/place/Your+Location+Here",
   },
 ];
- export const ImageContents = [
+export const ImageContents = [
   {
     heading: "Heading for this section",
     content:
@@ -321,7 +316,7 @@ export const questionAndAnswers = [
   {
     heading: "Heading for this section",
     content:
-    "This is the content for the first section. Lorem ipsum This is the content for the first section. Lorem ipsum d dolor sit amet, consectetur adipiscing elit.This is the content for the first section. Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "This is the content for the first section. Lorem ipsum This is the content for the first section. Lorem ipsum d dolor sit amet, consectetur adipiscing elit.This is the content for the first section. Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     imageSrc: "https://wallpapercave.com/wp/wp2649841.jpg",
     imageAlt: "Image 2",
     reverse: true,
@@ -329,108 +324,131 @@ export const questionAndAnswers = [
   {
     heading: "Heading for this section",
     content:
-    "This is the content for the first section. Lorem ipsum This is the content for the first section. Lorem ipsum d dolor sit amet, consectetur adipiscing elit.This is the content for the first section. Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "This is the content for the first section. Lorem ipsum This is the content for the first section. Lorem ipsum d dolor sit amet, consectetur adipiscing elit.This is the content for the first section. Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     imageSrc: "https://wallpapercave.com/wp/wp2649841.jpg",
     imageAlt: "Image 2",
     reverse: true,
   },
-  
 ];
 
-   export const krishnaveniVriddhashramRules = [
-    {
-      title: "General Rules",
-      rules: [
-        "Guests shall provide all filled up forms F1 to F7 along with the application form.All information provided should be true and correct.Residents shall not cause any disturbance, violence, nuisance, or annoyance to other residents, employees, workmen, neighbours, or office bearers of Krishnaveni Vriddhashram by their speech, behaviour, actions, or by playing loud music.",
-      ]
-    },
-    {
-      title: "Valuables",
-      rules: [
-        "Residents shall not keep any valuables in their room.Residents are strongly advised to store their valuables with family members.If not possible, residents shall deposit the cash/valuables with the management and obtain an official receipt.",
-      ]
-    },
-    {
-      title: "Food Regulations",
-      rules: [
-        "Pure vegetarian wholesome food/beverages prepared in our hygienically maintained kitchen will be served in the common dining area as per schedule.The menu and schedule are decided by the management in consultation with a panel of doctors.Residents shall not bring outside food inside Krishnaveni Vriddhashram premises.Consumption of non-vegetarian food, alcohol, or alcoholic beverages within Krishnaveni Vriddhashram premises is strictly prohibited.",
-        "Use/consumption of any kind of drugs, chewing of pan, consumption of tobacco in any form, and smoking is strictly prohibited.Any violation of this code can result in immediate termination of the contract.Food is served in the Krishnaveni Vriddhashram as per the predetermined menu which is decided by the management in consultation with a panel of doctors which will be pure vegetarian only.There will be no individual room service, except in special cases of extreme importance after getting permission from the management.Residents are not entitled to demand or dictate any change in the menu.",
-        "Residents are expected not to waste food, electricity, or water.Residents are expected to switch off lights, fans, AC, or TV whenever not needed.Residents are expected to close the water taps whenever not required and save water.Residents are not allowed to cook/heat food on their own in their individual rooms or at the common kitchen.",
-        
-      ]
-    },
-    {
-      title: "Illness Medicine Doctor Hospitals",
-      rules: [
-        "Krishnaveni Vriddhashram offers medical assistance through accredited medical practitioners and a panel of doctors.Residents shall purchase/procure medicines or medications on their own.Management shall not in any way be held responsible for the residents not taking medicines.In case of any critical illness or medical emergency, the management has the right to get the residents checked by any of its panel of doctors or at any hospital or any doctors as recommended by the panel of doctors.",
-        "All charges/costs and bills arising out of this medical treatment or hospitalisation shall be borne and paid by the said resident.In case of critical illness or the resident cannot be managed within Krishnaveni Vriddhashram, it becomes the duty and responsibility of the said resident’s relatives/sponsor/guardian to take the resident to their home or to get the resident admitted to a hospital as per the requirement of the situation.The said resident may be brought back to Krishnaveni Vriddhashram once he/she is found fit to live at Krishnaveni Vriddhashram.",
-        
-        
-      ]
-    },
-    {
-      title: "Visitors",
-      rules: [
-        "Visitors are allowed to come and meet the residents after taking permission from the management, during the visitor’s time as decided by the management.The management or its authorised person may deny entry to any visitor without assigning any reason whatsoever.All visitors must enter their name and mobile number along with the time of entry and departure in the visitor log found in the main office or reception.",
-        "Visitors are not allowed to park their vehicle within the Krishnaveni Vriddhashram premises.Visitors are not allowed to stay with the residents within the Krishnaveni Vriddhashram premises.Management may restrict the entry time for visitors or fix visiting hours whenever such necessity arises.Management or its authorised person may deny entry to any person or visitor of any age who may be friends or relatives of the residents without assigning any reason.No resident may have more than 3 visitors in their room or more than 5 visitors in the common areas.",
-      ]
-    },
-    {
-      title: "Life  style Protocol",
-      rules: [
-        "Residents shall not cause any disturbance, violence, nuisance, or annoyance to other residents, employees, workmen, neighbours, or office bearers of Krishnaveni Vriddhashram.Residents are expected not to waste food.",
-        
-      ]
-    }
-  ];
-  export const facilities = 
-[
+ export const krishnaveniVriddhashramRules = [
+  {
+    heading: "Forms and Information",
+    rules: [
+      "Guest shall provide all filled up forms F1 to F7 along with the application form.",
+      "All information provided should be true and correct.",
+    ],
+  },
+  {
+    heading: "Behavior and Conduct",
+    rules: [
+      "Residents shall not cause any disturbance, violence, nuisance, or annoyance to other residents, employees, workmen, neighbors, or office bearers of Krishnaveni Vriddhashram by their speech, behavior, or actions.",
+      "Use or consumption of drugs, chewing pan, tobacco in any form, and smoking is strictly prohibited. Any violation of this code can result in immediate termination of the contract.",
+    ],
+  },
+  {
+    heading: "Valuables",
+    rules: [
+      "Residents shall not keep any valuables in their rooms. They are advised to store valuables with family members or deposit them with the management and obtain an official receipt.",
+    ],
+  },
+  {
+    heading: "Food",
+    rules: [
+      "Pure vegetarian wholesome food and beverages prepared in our hygienically maintained kitchen will be served in the common dining area as per the schedule.",
+      "Residents shall not bring outside food inside Krishnaveni Vriddhashram premises.",
+      "Consumption of non-vegetarian food, alcohol, or alcoholic beverages within Krishnaveni Vriddhashram premises is strictly prohibited.",
+      "There will be no individual room service, except in special cases of extreme importance after getting permission from the management.",
+      "Residents are not entitled to demand or dictate any change in the menu.",
+      "Residents are expected not to waste food, electricity, or water.",
+    ],
+  },
+  {
+    heading: "Medical Assistance",
+    rules: [
+      "Krishnaveni Vriddhashram offers medical assistance through accredited medical practitioners and a panel of doctors. Residents shall purchase or procure medicines on their own.",
+      "Management shall not be held responsible for residents not taking medicines.",
+      "In case of any critical illness or medical emergency, management has the right to get the residents checked by any of its panel of doctors or at any hospital as recommended by the panel of doctors. All charges or costs arising out of this medical treatment or hospitalization shall be borne by the resident.",
+      "In case of critical illness that cannot be managed within Krishnaveni Vriddhashram, it is the responsibility of the resident’s relatives, sponsor, or guardian to take the resident home or get them admitted to a hospital.",
+    ],
+  },
+  {
+    heading: "Visitors",
+    rules: [
+      "Visitors are allowed to meet residents after taking permission from the management, during the visitor’s time as decided by the management.",
+      "The management may deny entry to any visitor without assigning any reason.",
+      "Visitors must enter their name and mobile number along with the time of entry and departure in the visitor log at the main office or reception.",
+      "Visitors are not allowed to park their vehicles or stay within the Krishnaveni Vriddhashram premises.",
+      "No resident may have more than 3 visitors in their room or more than 5 visitors in common areas.",
+    ],
+  },
+  {
+    heading: "Lifestyle Protocol",
+    rules: [
+      "Residents shall not cause any disturbance, violence, nuisance, or annoyance to other residents, employees, workmen, neighbors, or office bearers of Krishnaveni Vriddhashram.",
+      "Residents are expected not to waste food, water, or electricity. Lights and fans should be switched off when not required. Water taps should be closed when not required.",
+      "Residents shall pay separately for their laundry and ironing charges, and also for extra services like TV, AC, and internet in their room.",
+      "Residents are not allowed to bring or use any furniture, fixture, equipment, electrical, or other gadgets without prior permission from the management.",
+      "Any damage to furniture, fittings, or equipment belonging to Krishnaveni Vriddhashram caused by residents or their guests will be charged to the resident.",
+      "Residents shall cooperate in keeping the premises clean, neat, and tidy.",
+      "Washing of clothes inside rooms is restricted to undergarments, towels, socks, and handkerchiefs. Such washed clothes shall be hung for drying in the designated area.",
+      "Putting up or fixing any type of signboard or nameplate within Krishnaveni Vriddhashram premises is not allowed.",
+      "Pets are not allowed inside the premises.",
+      "Residents shall attend and complete tasks assigned by the management for better interaction and efficient management of the home. Residents may also share skills like art, painting, and games for the benefit of other members.",
+      "Residents should accept the room or bed allotted by the management and must not insist on any particular room or bed or roommate. The management can shift or transfer residents at its sole discretion.",
+    ],
+  },
+];
+
+export const facilities = [
   {
     id: 1,
-    title: 'Facility 1',
-    image: '/kitchen.jpg',
-    description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores, reprehenderit'
+    title: "Facility 1",
+    image: "/kitchen.jpg",
+    description:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores, reprehenderit",
   },
   {
     id: 2,
-    title: 'Facility 2',
-    image: '/facilities.jpg',
-    description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores, reprehenderit'
+    title: "Facility 2",
+    image: "/facilities.jpg",
+    description:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores, reprehenderit",
   },
   {
     id: 3,
-    title: 'Facility 3',
-    image: '/facilities.jpg',
-    description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores, reprehenderit'
+    title: "Facility 3",
+    image: "/facilities.jpg",
+    description:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores, reprehenderit",
   },
   {
     id: 4,
-    title: 'Facility 4',
-    image: '/kitchen.jpg',
-    description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores, reprehenderit'
-  }
-]
-
-export const information=[
-  {
-    id:1,
-    para: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias, ad necessitatibus earum repellendus omnis voluptatum minima officia tenetur, error expedita voluptate iure perferendis rem magnam consequuntur deleniti sapiente reprehenderit possimus maxime voluptatibus ipsum quibusdam odit praesentium? Ipsam reprehenderit dolores voluptatum? Est vero eos iusto facere, beatae repudiandae autem dolorem? Laboriosam placeat et autem cum corrupti iusto hic, perferendis veritatis facilis sed animi dignissimos deserunt, illum voluptatesrepellendus excepturi qui impedit, corporis ratione cum. Eveniet autem quaerat, suscipit ipsa unde mollitia iure dolorem vel ab repellat, beatae fugit doloribus saepe ullam, id quasi quam blanditiis illo deserunt? Adipisci dolores molestiae rerum, culpa explicabo saepe repellat magnam cum distinctio delectus error maxime quasi suscipit nisi nostrum temporibus? Tempore, blanditiis quod aliquam atque illo nostrum."
+    title: "Facility 4",
+    image: "/kitchen.jpg",
+    description:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores, reprehenderit",
   },
-  {
-    id:2,
-    para: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias, ad necessitatibus earum repellendus omnis voluptatum minima officia tenetur, error expedita voluptate iure perferendis rem magnam consequuntur deleniti sapiente reprehenderit possimus maxime voluptatibus ipsum quibusdam odit praesentium? Ipsam reprehenderit dolores voluptatum? Est vero eos iusto facere, beatae repudiandae autem dolorem?tempora nam. Ex laborum commodi in reiciendis voluptatem atque quae quaerat et laudantium fugiat optio quidem libero, repellendus excepturi qui impedit, corporis ratione cum. Eveniet autem quaerat, suscipit ipsa unde mollitia iure dolorem vel ab repellat, beatae fugit doloribus saepe ullam, id quasi quam blanditiis illo deserunt? Adipisci dolores molestiae rerum, culpa explicabo saepe repellat magnam cum distinctio delectus error maxime quasi suscipit nisi nostrum temporibus? Tempore, blanditiis quod aliquam atque illo nostrum."
-  }
 ];
 
-export const content=[
+export const information = [
   {
-    id:1,
-    para: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias, ad necessitatibus earum repellendus omnis voluptatum minima officia tenetur, error expedita voluptate iure perferendis rem magnam consequuntur deleniti sapiente reprehenderit possimus maxime voluptatibus ipsum quibusdam odit praesentium? Ipsam reprehenderit dolores voluptatum? Est vero eos iusto facere, beatae repudiandae autem dolorem? Laboriosam placeat et autem cum corrupti iusto hic, perferendis veritatis facilis sed animi dignissimos deserunt, illum voluptatesrepellendus excepturi qui impedit, corporis ratione cum. Eveniet autem quaerat, suscipit ipsa unde mollitia iure dolorem vel ab repellat, beatae fugit doloribus saepe ullam, id quasi quam blanditiis illo deserunt? Adipisci dolores molestiae rerum, culpa explicabo saepe repellat magnam cum distinctio delectus error maxime quasi suscipit nisi nostrum temporibus? Tempore, blanditiis quod aliquam atque illo nostrum."
+    id: 1,
+    para: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias, ad necessitatibus earum repellendus omnis voluptatum minima officia tenetur, error expedita voluptate iure perferendis rem magnam consequuntur deleniti sapiente reprehenderit possimus maxime voluptatibus ipsum quibusdam odit praesentium? Ipsam reprehenderit dolores voluptatum? Est vero eos iusto facere, beatae repudiandae autem dolorem? Laboriosam placeat et autem cum corrupti iusto hic, perferendis veritatis facilis sed animi dignissimos deserunt, illum voluptatesrepellendus excepturi qui impedit, corporis ratione cum. Eveniet autem quaerat, suscipit ipsa unde mollitia iure dolorem vel ab repellat, beatae fugit doloribus saepe ullam, id quasi quam blanditiis illo deserunt? Adipisci dolores molestiae rerum, culpa explicabo saepe repellat magnam cum distinctio delectus error maxime quasi suscipit nisi nostrum temporibus? Tempore, blanditiis quod aliquam atque illo nostrum.",
   },
   {
-    id:2,
-    para: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias, ad necessitatibus earum repellendus omnis voluptatum minima officia tenetur, error expedita voluptate iure perferendis rem magnam consequuntur deleniti sapiente reprehenderit possimus maxime voluptatibus ipsum quibusdam odit praesentium? Ipsam reprehenderit dolores voluptatum? Est vero eos iusto facere, beatae repudiandae autem dolorem?tempora nam. Ex laborum commodi in reiciendis voluptatem atque quae quaerat et laudantium fugiat optio quidem libero, repellendus excepturi qui impedit, corporis ratione cum. Eveniet autem quaerat, suscipit ipsa unde mollitia iure dolorem vel ab repellat, beatae fugit doloribus saepe ullam, id quasi quam blanditiis illo deserunt? Adipisci dolores molestiae rerum, culpa explicabo saepe repellat magnam cum distinctio delectus error maxime quasi suscipit nisi nostrum temporibus? Tempore, blanditiis quod aliquam atque illo nostrum."
-  }
+    id: 2,
+    para: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias, ad necessitatibus earum repellendus omnis voluptatum minima officia tenetur, error expedita voluptate iure perferendis rem magnam consequuntur deleniti sapiente reprehenderit possimus maxime voluptatibus ipsum quibusdam odit praesentium? Ipsam reprehenderit dolores voluptatum? Est vero eos iusto facere, beatae repudiandae autem dolorem?tempora nam. Ex laborum commodi in reiciendis voluptatem atque quae quaerat et laudantium fugiat optio quidem libero, repellendus excepturi qui impedit, corporis ratione cum. Eveniet autem quaerat, suscipit ipsa unde mollitia iure dolorem vel ab repellat, beatae fugit doloribus saepe ullam, id quasi quam blanditiis illo deserunt? Adipisci dolores molestiae rerum, culpa explicabo saepe repellat magnam cum distinctio delectus error maxime quasi suscipit nisi nostrum temporibus? Tempore, blanditiis quod aliquam atque illo nostrum.",
+  },
 ];
 
-
+export const content = [
+  {
+    id: 1,
+    para: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias, ad necessitatibus earum repellendus omnis voluptatum minima officia tenetur, error expedita voluptate iure perferendis rem magnam consequuntur deleniti sapiente reprehenderit possimus maxime voluptatibus ipsum quibusdam odit praesentium? Ipsam reprehenderit dolores voluptatum? Est vero eos iusto facere, beatae repudiandae autem dolorem? Laboriosam placeat et autem cum corrupti iusto hic, perferendis veritatis facilis sed animi dignissimos deserunt, illum voluptatesrepellendus excepturi qui impedit, corporis ratione cum. Eveniet autem quaerat, suscipit ipsa unde mollitia iure dolorem vel ab repellat, beatae fugit doloribus saepe ullam, id quasi quam blanditiis illo deserunt? Adipisci dolores molestiae rerum, culpa explicabo saepe repellat magnam cum distinctio delectus error maxime quasi suscipit nisi nostrum temporibus? Tempore, blanditiis quod aliquam atque illo nostrum.",
+  },
+  {
+    id: 2,
+    para: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias, ad necessitatibus earum repellendus omnis voluptatum minima officia tenetur, error expedita voluptate iure perferendis rem magnam consequuntur deleniti sapiente reprehenderit possimus maxime voluptatibus ipsum quibusdam odit praesentium? Ipsam reprehenderit dolores voluptatum? Est vero eos iusto facere, beatae repudiandae autem dolorem?tempora nam. Ex laborum commodi in reiciendis voluptatem atque quae quaerat et laudantium fugiat optio quidem libero, repellendus excepturi qui impedit, corporis ratione cum. Eveniet autem quaerat, suscipit ipsa unde mollitia iure dolorem vel ab repellat, beatae fugit doloribus saepe ullam, id quasi quam blanditiis illo deserunt? Adipisci dolores molestiae rerum, culpa explicabo saepe repellat magnam cum distinctio delectus error maxime quasi suscipit nisi nostrum temporibus? Tempore, blanditiis quod aliquam atque illo nostrum.",
+  },
+];
