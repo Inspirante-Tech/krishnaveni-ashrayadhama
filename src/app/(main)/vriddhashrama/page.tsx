@@ -2,10 +2,11 @@ import ImageContent from "~/components/ImageContent/ImageContent";
 import NearbyPlaces from "~/components/NearbyPlaces/NearbyPlaces";
 import RulesandRegulation from "~/components/RulesandRegulation/RulesandRegulation";
 import VideoSection from "~/components/VideoSection/VideoSection";
-import { VridddhashramaImageContentsImageContents } from "~/constants";
+import { VridddhashramaImageContentsImageContents, VridddhashramaPageVideo } from "~/constants";
 
 
 export default function Vridddhashrama() {
+ 
   return (
     <main className="bg-white  page-container ">
       <section className="content-container">
@@ -21,7 +22,7 @@ export default function Vridddhashrama() {
       </section>
 
       <ImageContent  data={VridddhashramaImageContentsImageContents}/>
-      <VideoSection />
+      <VideoSection  videoSrc={VridddhashramaPageVideo} />
       <div>
         <h2 className="text-2xl md:text-3xl uppercase font-bold text-center mt-10  text-action-950">
           Vriddhashram Rules And Regulations

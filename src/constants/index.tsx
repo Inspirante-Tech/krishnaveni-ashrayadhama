@@ -216,7 +216,7 @@ export const supporters: { id: string; name: string; url: string }[] = [
     name: "Scenic Mountain",
     url: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80",
   },
-].map((image,index) => ({
+].map((image, index) => ({
   id: index.toString(),
   name: image.name,
   url: image.url,
@@ -355,7 +355,7 @@ export const AyurvedicImageContentsImageContents = [
   },
 ];
 
- export const krishnaveniVriddhashramRules = [
+export const krishnaveniVriddhashramRules = [
   {
     heading: "Forms and Information",
     rules: [
@@ -423,6 +423,10 @@ export const AyurvedicImageContentsImageContents = [
     ],
   },
 ];
+
+export const VridddhashramaPageVideo = "https://www.youtube.com/embed/zD43hknPtLc";
+export const AyurvedicPagePageVideo = "https://www.youtube.com/embed/zD43hknPtLc";
+
 
 export const facilities = [
   {
