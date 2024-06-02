@@ -1,6 +1,6 @@
 function GetInTouch() {
   return (
-    <section className=" bg-primary-100 content-container">
+    <section className=" bg-primary-50 content-container">
     <div className="flex flex-col items-center gap-4 rounded-lg bg-secondary-400 p-6 shadow-lg sm:flex-row sm:justify-between">
       <strong className="text-xl text-white  font-popins sm:text-xl">
         {" "}
