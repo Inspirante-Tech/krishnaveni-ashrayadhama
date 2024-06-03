@@ -1,7 +1,8 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { questionAndAnswers } from "~/constants";
 import { Button } from "../ui/button";
+import { useTranslations } from "next-intl";
+import { FqaType } from "~/lib/types";
 
 const QuestionAnswer = ({
   question,
@@ -51,11 +52,12 @@ const QuestionAnswer = ({
   );
 };
 
-const Fqas = () => {
+const Fqas = ({fqas}:{fqas:FqaType[]}) => {
   const [visibleIndexes, setVisibleIndexes] = useState<number[]>([]);
+  const t = useTranslations("home.fqa");
 
   useEffect(() => {
-    const timeoutIds = questionAndAnswers.map(
+    const timeoutIds = fqas.map(
       (_, index) =>
         setTimeout(() => {
           setVisibleIndexes((prev) => [...prev, index]);
@@ -71,25 +73,23 @@ const Fqas = () => {
     <section className="content-container bg-primary-100 lg:py-16 w-full relative sm:mt-2 mt-3  grid grid-cols-1 gap-8 lg:grid-cols-3 lg:items-center lg:gap-16 justify-between">
       <div className="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right sm:mx-auto lg:text-left">
           <h2 className="text-2xl mt-9 font-bold tracking-tight text-gray-900 sm:text-4xl sm:mt-5">
-            Frequently Asked Questions...
+            {t("heading")}
           </h2>
           <p className="mt-4 text-gray-700">
-            Explore common questions and find answers below. If you don&#39;t
-            see what you&#39;re looking for, feel free to contact us for
-            assistance.
+            {t("description")}
           </p>
           <Button className="sm:mt-2 bg-secondary-400 p-4 mt-2 rounded-md font-bold hover:bg-orange-400 text-action-950">
-            Contact us
+            {t("contactUs")}
           </Button>
         </div>
 
         <div className="-mx-6 lg:col-span-2 lg:mx-0">
           <div className="space-y-4">
-            {questionAndAnswers.map((qa, index) => (
+            {fqas.map((fqa,index) => (
               <QuestionAnswer
                 key={index}
-                question={qa.question}
-                answer={qa.answer}
+                question={fqa.question}
+                answer={fqa.answer}
                 isVisible={visibleIndexes.includes(index)}
               />
             ))}

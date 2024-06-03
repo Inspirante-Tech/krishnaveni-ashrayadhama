@@ -1,9 +1,10 @@
 import { defineField, defineType } from 'sanity'
+import { baseLanguage } from './locale'
 
 export default defineType({
     name: 'fqa',
     title: 'fqa',
-    type: 'document',
+    type: 'object',
     fields: [
         defineField({
             name: 'question',
@@ -14,8 +15,13 @@ export default defineType({
         defineField({
             name: 'answer',
             title: 'answer',
-            type: 'localeString',
+            type: 'localeText',
             validation: (Rule) => Rule.required(),
         })
-    ]
+    ],
+    preview: {
+        select: {
+            title: `question.${baseLanguage!.id}`,
+        }
+    },
 })

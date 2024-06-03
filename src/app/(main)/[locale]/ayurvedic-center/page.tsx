@@ -1,22 +1,25 @@
-import ImageContent from "~/components/ImageContent/ImageContent";
+import { getLocale, getTranslations } from "next-intl/server";
+import Features from "~/components/Features/Features";
 import VideoSection from "~/components/VideoSection/VideoSection";
 import { AyurvedicImageContentsImageContents, AyurvedicPagePageVideo } from "~/constants";
+import { fetchAyrvedicCenterPage } from "~/lib/queries";
 
-function page() {
+async function page() {
+  const loacle = await getLocale();
+  const pageData = await fetchAyrvedicCenterPage(loacle);
+
   return (
     <main  className="bg-white  page-container">
       <section className="content-container">
         <h2 className="text-3xl   md:text-5xl font-bold mt-12 p-6 text-action-950 ">
-          Ayurvedic Center
+          {pageData.title}
         </h2>
         <p className="mt-1 text-gray-800 p-6">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
-          dolores iure fugit totam iste obcaecati. Consequatur ipsa quod ipsum
-          sequi culpa delectus, cumque id tenetur quibusdam, quos fuga minima.
+          {pageData.description}
         </p>
       </section>
-      <ImageContent data={AyurvedicImageContentsImageContents} />
-      <VideoSection  videoSrc={AyurvedicPagePageVideo} />
+      <Features data={pageData.features} />
+      <VideoSection  videoSrc={pageData.videoLink} />
     </main>
   );
 }

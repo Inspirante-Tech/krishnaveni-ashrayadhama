@@ -1,10 +1,9 @@
 //story on how we started and why we started
 "use client";
-import { content } from '~/constants';
 
 import React, { useEffect, useRef, useState } from 'react';
 
-const Information: React.FC = () => {
+const Information: React.FC<{data:string}> = ({data}) => {
     const [isVisible, setIsVisible] = useState<boolean>(false);
     const containerRef = useRef<HTMLDivElement | null>(null);
 
@@ -41,9 +40,9 @@ const Information: React.FC = () => {
             <h2 className="text-center text-4xl md:text-5xl font-bold font-poppins tracking-tight text-gray-900 pt-8">Who are we</h2>
                 <div className='content-container'>
 
-                    {content.map(info => (
-                        <p className="text-base mb-2 px-2 md:mb-4 md:px-18" key={info.id}>
-                            {info.para}
+                    {[data].map((info,index )=> (
+                        <p className="text-base mb-2 px-2 md:mb-4 md:px-18" key={index}>
+                            {info}
                         </p>
                     ))}
                 </div>

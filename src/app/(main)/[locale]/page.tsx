@@ -5,17 +5,21 @@ import Facilities from "~/components/Information/Facilities";
 import Testimonials from "~/components/Testimonials/page";
 import Fqas from "~/components/Fqas/Fqas";
 import GetInTouch from "~/components/GetInTouch/GetInTouch";
+import { fetchHomePage } from "~/lib/queries";
+import { getLocale } from "next-intl/server";
 
-export default function Home() {
+export default async function Home() {
+  const locale = await getLocale();
+  const data = await fetchHomePage(locale);
   return (
     <>
       <Hero />
       <main className="my-12">
-        <Story />
-        <Facilities />
-        <Information />
-        <Fqas/>
-        <Testimonials />
+        <Story data={data.story}/>
+        <Facilities facilities={data.facilities}/>
+        <Information data={data.whoweare}/>
+        <Fqas fqas={data.fqas}/>
+        <Testimonials testimonials={data.testimonials} />
         <GetInTouch/>
       </main>
     </>

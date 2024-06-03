@@ -1,27 +1,22 @@
 export const navigation = [
   {
-    id: "0",
-    title: "About us",
+    id: "aboutUs",
     url: "/about-us",
   },
   {
-    id: "1",
-    title: "Specialities",
+    id: "specialities",
     url: "/vriddhashrama",
   },
   {
-    id: "2",
-    title: "Ayurvedic center",
+    id: "ayurvedicCenter",
     url: "/ayurvedic-center",
   },
   {
-    id: "3",
-    title: "Events",
+    id: "events",
     url: "/events",
   },
   {
-    id: "4",
-    title: "Gallery",
+    id: "gallery",
     url: "/gallery",
   },
 ];

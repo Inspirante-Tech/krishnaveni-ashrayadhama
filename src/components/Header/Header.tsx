@@ -4,8 +4,11 @@ import { navigation } from "~/constants";
 import Button from "../design/Button";
 import MenuSvg from "~/assets/svg/MenuSvg";
 import styles from "./styles.module.css";
+import { useTranslations } from "next-intl";
+import LocaleLink from "../ui/LocaleLink";
 
 const Header = () => {
+  const t = useTranslations("links");
   const [openNavigation, setOpenNavigation] = useState(false);
   const [currentPathname, setCurrentPathname] = useState("");
   const toggleNavigation = () => {
@@ -32,13 +35,13 @@ const Header = () => {
         >
           <div className="relative z-2 flex flex-col right-0 justify-center m-auto lg:flex-row">
             {navigation.map((item) => (
-              <a
+              <LocaleLink
                 key={item.id}
                 href={item.url}
                 className={`block relative font-code text-md font-bold uppercase text-n-1 transition-colors hover:text-color-1 px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-xs lg:font-semibold ${item.url === currentPathname ? "z-2 lg:text-n-1" : "lg:text-n-1/50"} lg:leading-5 lg:hover:text-n-1 xl:px-12 ${styles.hoverAnimate}`}
               >
-                {item.title}
-              </a>
+                {t(item.id)}
+              </LocaleLink>
             ))}
           </div>
         </nav>

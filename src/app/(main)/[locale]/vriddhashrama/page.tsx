@@ -1,4 +1,4 @@
-import ImageContent from "~/components/ImageContent/ImageContent";
+import ImageContent from "~/components/Features/Features";
 import NearbyPlaces from "~/components/NearbyPlaces/NearbyPlaces";
 import RulesandRegulation from "~/components/RulesandRegulation/RulesandRegulation";
 import VideoSection from "~/components/VideoSection/VideoSection";

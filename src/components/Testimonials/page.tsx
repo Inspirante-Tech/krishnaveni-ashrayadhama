@@ -2,22 +2,11 @@
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { Carousel, CarouselContent, CarouselItem } from "../ui/carousel";
-import { fetchTestimonials } from "~/lib/queries";
-import {delayAsyncFunction } from "~/lib/utils";
 import { TestimonialType } from "~/lib/types";
 
-function Testimonials() {
+function Testimonials({ testimonials }: { testimonials: TestimonialType[] }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [visibleItems, setVisibleItems] = useState(2);
-  const [isLoading, setIsLoading] = useState(true);
-  const [testimonials, setTestimonials] = useState<TestimonialType[]>([]);
-
-  useEffect(() => {
-    (async () => {
-      setTestimonials(await delayAsyncFunction(fetchTestimonials, 4000))
-      setIsLoading(false)
-    })()
-  })
 
   useEffect(() => {
     const updateVisibleItems = () => {
@@ -59,61 +48,52 @@ function Testimonials() {
         quibusdam similique labore fuga impedit, consectetur facilis odit
         accusantium quo, doloribus iste.
       </p>
-
-      {
-        isLoading ? (
-          <div className="w-full text-center m-auto py-4 text-gray-500">
-            loading...
-          </div>
-        ) : (
-          <div className="w-full flex justify-center sm:mt-2">
-            <Carousel className="w-full mt-4">
-              <CarouselContent
-                className="flex transition-transform duration-300"
-                style={{
-                  transform: `translateX(-${(currentIndex * 100) / visibleItems
-                    }%)`,
-                }}
+      <div className="w-full flex justify-center sm:mt-2">
+        <Carousel className="w-full mt-4">
+          <CarouselContent
+            className="flex transition-transform duration-300"
+            style={{
+              transform: `translateX(-${(currentIndex * 100) / visibleItems
+                }%)`,
+            }}
+          >
+            {testimonials.map((testimonial, index) => (
+              <CarouselItem
+                key={index}
+                className="flex-none p-2"
+                style={{ flexBasis: `${100 / visibleItems}%` }}
               >
-                {testimonials.map((testimonial, index) => (
-                  <CarouselItem
-                    key={index}
-                    className="flex-none p-2"
-                    style={{ flexBasis: `${100 / visibleItems}%` }}
-                  >
-                    <div className="mb-8 sm:break-inside-avoid relative">
-                      <div className="p-1">
-                        <blockquote className="rounded-lg bg-secondary-100 p-6 shadow-sm sm:p-8">
-                          <div className="flex items-center gap-4">
-                            <Image
-                              width={60}
-                              height={60}
-                              alt="testimonialImage"
-                              src={testimonial.image}
-                              className="size-14 rounded-full object-cover"
-                            />
-                            <div>
-                              <div className="flex justify-center gap-0.5 text-green-500">
+                <div className="mb-8 sm:break-inside-avoid relative">
+                  <div className="p-1">
+                    <blockquote className="rounded-lg bg-secondary-100 p-6 shadow-sm sm:p-8">
+                      <div className="flex items-center gap-4">
+                        <Image
+                          width={60}
+                          height={60}
+                          alt="testimonialImage"
+                          src={testimonial.image}
+                          className="size-14 rounded-full object-cover"
+                        />
+                        <div>
+                          <div className="flex justify-center gap-0.5 text-green-500">
 
-                              </div>
-                              <p className="mt-0.5 text-lg font-medium text-gray-900">
-                                {testimonial.name}
-                              </p>
-                            </div>
                           </div>
-                          <p className="mt-4 text-gray-700">
-                            “{testimonial.statement}”
+                          <p className="mt-0.5 text-lg font-medium text-gray-900">
+                            {testimonial.name}
                           </p>
-                        </blockquote>
+                        </div>
                       </div>
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-            </Carousel>
-          </div>
-        )
-      }
+                      <p className="mt-4 text-gray-700">
+                        “{testimonial.statement}”
+                      </p>
+                    </blockquote>
+                  </div>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+        </Carousel>
+      </div>
     </section>
   );
 }

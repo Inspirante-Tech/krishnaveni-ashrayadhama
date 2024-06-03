@@ -1,9 +1,9 @@
-import { defineField, defineType } from "sanity";
-import { baseLanguage } from "./locale";
+import { defineField, defineType } from 'sanity'
+import { baseLanguage } from './locale'
 
 export default defineType({
-    name: 'facility',
-    title: 'Facility',
+    name: 'feature',
+    title: 'Feature',
     type: 'object',
     fields: [
         defineField({
@@ -23,7 +23,7 @@ export default defineType({
         }),
         defineField({
             name: 'description',
-            title: 'short description',
+            title: 'description',
             type: 'localeText',
             validation: (Rule) => Rule.required(),
         })
