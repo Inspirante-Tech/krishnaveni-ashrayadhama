@@ -1,10 +1,7 @@
-//story on how we started and why we started
 "use client";
-import {information} from '~/constants';
-
 import React, { useEffect, useRef, useState } from 'react';
 
-const Story: React.FC = () => {
+const Story: React.FC<{ data: string }> = ({ data }) => {
     const [isVisible, setIsVisible] = useState<boolean>(false);
     const containerRef = useRef<HTMLDivElement | null>(null);
 
@@ -35,19 +32,16 @@ const Story: React.FC = () => {
     return (
         <section
             ref={containerRef}
-            className={`transition-opacity duration-1000 transform ${
-                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-            } text-justify`}
+            className={`transition-opacity duration-1000 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                } text-justify`}
         >
             <div className='content-container flex gap-8 flex-col'>
                 <h2 className="heading text-gray-900">Our Story</h2>
-                <div className="">
-                  {information.map(info=>(
-                      <p className="body" key={info.id}>
-                      {info.para}
-                  </p>
-                  ))}   
-                </div>
+                {[data].map((info, index) => (
+                    <p className="body" key={index}>
+                        {info}
+                    </p>
+                ))}
             </div>
         </section>
     );

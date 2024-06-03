@@ -1,4 +1,5 @@
 import {defineArrayMember, defineField, defineType} from 'sanity'
+import { baseLanguage } from './locale'
 
 export default defineType({
   name: 'doctor',
@@ -8,7 +9,7 @@ export default defineType({
     defineField({
       name: 'name',
       title: 'Name',
-      type: 'string',
+      type: 'localeString',
       validation: (Rule) => Rule.required(),
     }),
     defineField({
@@ -17,14 +18,7 @@ export default defineType({
       type: 'image',
       options: {
         hotspot: true,
-      },
-      fields: [
-        {
-          name: 'alt',
-          type: 'string',
-          title: 'Alternative Text',
-        }
-      ]
+      }
     }),
     defineField({
       name: 'bio',
@@ -42,7 +36,7 @@ export default defineType({
   ],
   preview: {
     select: {
-      title: 'name',
+      title: `name.${baseLanguage!.id}`,
       media: 'image',
     },
   },
