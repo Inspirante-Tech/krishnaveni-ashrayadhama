@@ -19,6 +19,10 @@ export const navigation = [
     id: "gallery",
     url: "/gallery",
   },
+  {
+    id: "contact",
+    url: "/contact",
+  },
 ];
 
 export const testimonials = [
@@ -297,6 +301,57 @@ export const NearByimages = [
     mapLink: "https://www.google.com/maps/place/Your+Location+Here",
   },
 ];
+export const ServicesOffer = [
+  {
+    src: "https://wallpapercave.com/wp/wp2649841.jpg",
+    alt: "Digital Campaign 1",
+    description: "Manglore",
+    mapLink: "https://www.google.com/maps/place/Your+Location+Here",
+  },
+  {
+    src: "https://wallpapercave.com/wp/wp2649841.jpg",
+    alt: "Digital Campaign 1",
+    description: "Manglore",
+    mapLink: "https://www.google.com/maps/place/Your+Location+Here",
+  },
+  {
+    src: "https://wallpapercave.com/wp/wp2649841.jpg",
+    alt: "Digital Campaign 1",
+    description: "Manglore",
+    mapLink: "https://www.google.com/maps/place/Your+Location+Here",
+  },
+  {
+    src: "https://wallpapercave.com/wp/wp2649841.jpg",
+    alt: "Digital Campaign 1",
+    description: "Manglore",
+    mapLink: "https://www.google.com/maps/place/Your+Location+Here",
+  },
+  {
+    src: "https://wallpapercave.com/wp/wp2649841.jpg",
+    alt: "Digital Campaign 1",
+    description: "Manglore",
+    mapLink: "https://www.google.com/maps/place/Your+Location+Here",
+  },
+  {
+    src: "https://wallpapercave.com/wp/wp2649841.jpg",
+    alt: "Digital Campaign 1",
+    description: "Manglore",
+    mapLink: "https://www.google.com/maps/place/Your+Location+Here",
+  },
+
+  {
+    src: "https://wallpapercave.com/wp/wp2649841.jpg",
+    alt: "Digital Campaign 1",
+    description: "Manglore",
+    mapLink: "https://www.google.com/maps/place/Your+Location+Here",
+  },
+  {
+    src: "https://wallpapercave.com/wp/wp2649841.jpg",
+    alt: "Digital Campaign 1",
+    description: "Manglore",
+    mapLink: "https://www.google.com/maps/place/Your+Location+Here",
+  },
+];
 export const VridddhashramaImageContentsImageContents = [
   {
     heading: "Heading for this section",
@@ -474,4 +529,44 @@ export const content = [
     id: 2,
     para: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias, ad necessitatibus earum repellendus omnis voluptatum minima officia tenetur, error expedita voluptate iure perferendis rem magnam consequuntur deleniti sapiente reprehenderit possimus maxime voluptatibus ipsum quibusdam odit praesentium? Ipsam reprehenderit dolores voluptatum? Est vero eos iusto facere, beatae repudiandae autem dolorem?tempora nam. Ex laborum commodi in reiciendis voluptatem atque quae quaerat et laudantium fugiat optio quidem libero, repellendus excepturi qui impedit, corporis ratione cum. Eveniet autem quaerat, suscipit ipsa unde mollitia iure dolorem vel ab repellat, beatae fugit doloribus saepe ullam, id quasi quam blanditiis illo deserunt? Adipisci dolores molestiae rerum, culpa explicabo saepe repellat magnam cum distinctio delectus error maxime quasi suscipit nisi nostrum temporibus? Tempore, blanditiis quod aliquam atque illo nostrum.",
   },
+];
+
+export const DoctorsDetails = [
+  {
+    iamge: "https://www.pngmart.com/files/21/Male-Doctor-PNG-Isolated-HD.png",
+    name: "Docter 1"
+  },
+  {
+    iamge: "https://www.pngmart.com/files/21/Male-Doctor-PNG-Isolated-HD.png",
+    name: "Docter 2"
+  },
+  {
+    iamge: "https://www.pngmart.com/files/21/Male-Doctor-PNG-Isolated-HD.png",
+    name: "Docter 3"
+  },
+  {
+    iamge: "https://www.pngmart.com/files/21/Male-Doctor-PNG-Isolated-HD.png",
+    name: "Docter 4"
+  },
+  {
+    iamge: "https://www.pngmart.com/files/21/Male-Doctor-PNG-Isolated-HD.png",
+    name: "Docter 5"
+  },
+  {
+    iamge: "https://www.pngmart.com/files/21/Male-Doctor-PNG-Isolated-HD.png",
+    name: "Docter 6"
+  },
+  {
+    iamge: "https://www.pngmart.com/files/21/Male-Doctor-PNG-Isolated-HD.png",
+    name: "Docter 7"
+  },
+  {
+    iamge: "https://www.pngmart.com/files/21/Male-Doctor-PNG-Isolated-HD.png",
+    name: "Docter 8"
+  },
+  {
+    iamge: "https://www.pngmart.com/files/21/Male-Doctor-PNG-Isolated-HD.png",
+    name: "Docter 9"
+  },
+
 ];

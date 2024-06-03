@@ -1,6 +1,4 @@
-//story on how we started and why we started
 "use client";
-
 import React, { useEffect, useRef, useState } from 'react';
 
 const Story: React.FC<{ data: string }> = ({ data }) => {
@@ -37,15 +35,13 @@ const Story: React.FC<{ data: string }> = ({ data }) => {
             className={`transition-opacity duration-1000 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                 } text-justify`}
         >
-            <h2 className="text-center text-4xl md:text-5xl font-bold font-poppins tracking-tight text-gray-900   pt-8">Our Story</h2>
-            <div className='content-container'>
-
+            <div className='content-container flex gap-8 flex-col'>
+                <h2 className="heading text-gray-900">Our Story</h2>
                 {[data].map((info, index) => (
-                    <p className="text-base mb-2 px-2 md:mb-4 md:px-18" key={index}>
+                    <p className="body" key={index}>
                         {info}
                     </p>
                 ))}
-
             </div>
         </section>
     );

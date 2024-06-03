@@ -20,7 +20,8 @@
         "specialities": "specialities",
         "ayurvedicCenter": "ayurvedic center",
         "events": "events",
-        "gallery": "gallery"
+        "gallery": "gallery",
+        "contact": "contact"
     },
     "ayurvedicCenter":{
         "heading":"ayurvedic center"

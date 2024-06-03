@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import { navigation } from "~/constants";
 import Button from "../design/Button";
 import MenuSvg from "~/assets/svg/MenuSvg";
-import styles from "./styles.module.css";
 import { useTranslations } from "next-intl";
 import LocaleLink from "../ui/LocaleLink";
 
@@ -23,29 +22,29 @@ const Header = () => {
 
   return (
     <div
-      className={`fixed top-0 left-0 w-full z-50 lg:bg-n-8/90 lg:backdrop-blur-md ${openNavigation ? "bg-primary-50" : "bg-blur backdrop-blur-md"}`}
+      className={`fixed top-0 left-0 w-full z-50 ${openNavigation ? "bg-primary-50" : "lg:bg-n-8/90 lg:backdrop-blur-md bg-blur backdrop-blur-md"}`}
     >
-      <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
+      <div className="flex items-center justify-between px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
         <a className="block w-[12rem] xl:mr-8" href="/">
           <h1 className="font-bold text-3xl">Logo</h1>
         </a>
 
         <nav
-          className={`${openNavigation ? "flex bg-primary-50" : "hidden"} fixed top-[5rem] left-0 right-0 bottom-0 lg:bg-blur lg:backdrop-blur lg:static lg:flex lg:mx-auto`}
+          className={`fixed top-0 right-0 bottom-0 w-full left-0 bg-primary-50 transition-transform transform ${openNavigation ? "translate-x-0 pt-10" : "translate-x-full"} lg:static lg:flex lg:translate-x-0 lg:bg-transparent lg:w-auto lg:max-w-none lg:transition-none`}
         >
-          <div className="relative z-2 flex flex-col right-0 justify-center m-auto lg:flex-row">
+          <div className="relative z-20 flex flex-col lg:flex-row lg:justify-end">
             {navigation.map((item) => (
               <LocaleLink
                 key={item.id}
                 href={item.url}
-                className={`block relative font-code text-md font-bold uppercase text-n-1 transition-colors hover:text-color-1 px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-xs lg:font-semibold ${item.url === currentPathname ? "z-2 lg:text-n-1" : "lg:text-n-1/50"} lg:leading-5 lg:hover:text-n-1 xl:px-12 ${styles.hoverAnimate}`}
+                className={`hover:text-orange-600 block relative font-code text-md font-bold uppercase text-n-1 transition-colors px-6 py-6 md:py-8 lg:px-4 lg:py-4 xl:px-6  lg:text-xs lg:font-semibold lg:leading-5 ${item.url === currentPathname ? "text-color-1" : "text-n-1/50"} hover:text-color-1 hover:text-orange-600`}
               >
                 {t(item.id)}
               </LocaleLink>
             ))}
           </div>
         </nav>
-  
+
         <Button
           className="ml-auto lg:hidden"
           px="px-3"

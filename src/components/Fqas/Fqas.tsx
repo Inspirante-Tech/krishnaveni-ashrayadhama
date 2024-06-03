@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import { questionAndAnswers } from "~/constants";
 import { Button } from "../ui/button";
-import { useTranslations } from "next-intl";
 import { FqaType } from "~/lib/types";
 
 const QuestionAnswer = ({
@@ -17,7 +17,7 @@ const QuestionAnswer = ({
 
   return (
     <section
-      className={`group border-s-4 border-secondary-500 bg-gray-50 p-3 [&_summary::-webkit-details-marker]:hidden transform transition-opacity duration-500 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"
+      className={`  group border-s-4 border-secondary-500 bg-gray-50 p-3 [&_summary::-webkit-details-marker]:hidden transform transition-opacity duration-500 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"
         }`}
     >
       <summary
@@ -25,7 +25,7 @@ const QuestionAnswer = ({
         onClick={() => setIsOpen(!isOpen)}
       >
         <h2 className="text-lg font-medium text-gray-900">{question}</h2>
-        <span className="shrink-0 rounded-full bg-secondary-50 p-1.5 text-gray-900 sm:p-3">
+        <span className="shrink-0 rounded-full bg-secondary-100 p-1.5 text-gray-900 sm:p-3">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className={`size-5 shrink-0 transition-transform duration-300 ${isOpen ? "rotate-45" : ""
@@ -52,12 +52,11 @@ const QuestionAnswer = ({
   );
 };
 
-const Fqas = ({fqas}:{fqas:FqaType[]}) => {
+const Fqas = ({ fqas }: { fqas: FqaType[] }) => {
   const [visibleIndexes, setVisibleIndexes] = useState<number[]>([]);
-  const t = useTranslations("home.fqa");
 
   useEffect(() => {
-    const timeoutIds = fqas.map(
+    const timeoutIds = questionAndAnswers.map(
       (_, index) =>
         setTimeout(() => {
           setVisibleIndexes((prev) => [...prev, index]);
@@ -70,22 +69,24 @@ const Fqas = ({fqas}:{fqas:FqaType[]}) => {
   }, []);
 
   return (
-    <section className="content-container bg-primary-100 lg:py-16 w-full relative sm:mt-2 mt-3  grid grid-cols-1 gap-8 lg:grid-cols-3 lg:items-center lg:gap-16 justify-between">
-      <div className="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right sm:mx-auto lg:text-left">
-          <h2 className="text-2xl mt-9 font-bold tracking-tight text-gray-900 sm:text-4xl sm:mt-5">
-            {t("heading")}
+    <section className="bg-secondary-50 content-container ">
+      <div className="relative grid grid-cols-1 gap-4 lg:grid-cols-3 lg:items-center lg:gap-16 justify-between">
+        <div className="text-center sm:mx-auto lg:col-span-1">
+          <h2 className="heading text-gray-900 sm:mt-5">
+            Frequently Asked Questions
           </h2>
           <p className="mt-4 text-gray-700">
-            {t("description")}
+            Explore common questions and find answers below. If you don&#39;t
+            see what you&#39;re looking for, feel free to contact us for
+            assistance.
           </p>
-          <Button className="sm:mt-2 bg-secondary-400 p-4 mt-2 rounded-md font-bold hover:bg-orange-400 text-action-950">
-            {t("contactUs")}
+          <Button className="sm:mt-2 bg-secondary-300 transition-colors duration-150 p-4 mt-2 rounded-md font-bold hover:bg-secondary-400 text-action-950">
+            Contact us
           </Button>
         </div>
-
-        <div className="-mx-6 lg:col-span-2 lg:mx-0">
+        <div className="-mx-6  p-6 lg:col-span-2 lg:mx-0 sm:w-full md:w-3/4 lg:w-full">
           <div className="space-y-4">
-            {fqas.map((fqa,index) => (
+            {fqas.map((fqa, index) => (
               <QuestionAnswer
                 key={index}
                 question={fqa.question}
@@ -95,6 +96,7 @@ const Fqas = ({fqas}:{fqas:FqaType[]}) => {
             ))}
           </div>
         </div>
+      </div>
     </section>
   );
 };

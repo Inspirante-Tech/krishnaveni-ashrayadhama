@@ -1,4 +1,6 @@
-export default function About() {
+import Image from "next/image";
+
+ function About() {
   return (
     <main className="space-y-12 mt-16 ">
       <section className="content-container">
@@ -23,11 +25,13 @@ export default function About() {
         </p>
       </section>
       <section className="grid grid-cols-1 md:grid-cols-2 justify-between gap-4  items-center content-container">
-        <img
+        <Image
           className="object-cover float-right rounded-2xl hover:shadow-xl transition ease-out duration-500"
           src="https://placehold.co/600x400/png"
           alt="Text box with number"
-        ></img>
+          width={600}
+          height={400}
+        />
         <div className="flex-grow">
           <p className="text-3xl py-8 my-5 font-semibold hover:text-green-500 transition ease-in-out duration-500">
             Why This Initiative?
@@ -49,11 +53,13 @@ export default function About() {
         </div>
       </section>
       <section className="grid grid-cols-1 md:grid-cols-2 items-center content-container">
-        <img
+        <Image
           className="object-cover float-right rounded-2xl hover:shadow-xl transition ease-out duration-500 md:order-last order-first"
           src="https://placehold.co/600x400/png"
           alt="Text box with number"
-        ></img>
+          height={400}
+          width={600}
+        />
         <div className="md:order-first order-last md:p-4">
           <p className="text-3xl py-8 my-5 font-semibold hover:text-green-500 transition ease-in-out duration-500">
             Why This Initiative?
@@ -77,3 +83,4 @@ export default function About() {
     </main>
   );
 }
+export default About;
