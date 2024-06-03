@@ -1,33 +1,33 @@
-import './globals.css';
+import Image from "next/image";
+import "tailwindcss/tailwind.css";
+import "./globals.css";
 
-import { NextPage } from "next";
-import Header from "~/components/Header/Header";
-
-
-const Page404: NextPage = () => {
-  const titleText: string = "Page Not Found";
-  const bodyText: string =
-    "Looks like you've taken a wrong turn.";
-
+export default function NotFound() {
   return (
-    <>
-    <Header/>
-    <div className="flex flex-col min-h-screen justify-center items-center bg-primary-100">
-      <div className="text-9xl font-black text-secondary-600">404</div>
-      <div className="flex flex-col justify-center items-center">
-        <h1
-          className={`font-bold text-2xl md:text-5xl mb-1 md:mb-3 text-secondary-500/60 transition-colors duration-300 flex justify-center items-center text-center mx-2`}
-        >
-          {titleText}
-        </h1>
-        <a href="/">
-          <button className="inline-flex items-center justify-center whitespace-nowrap text-sm ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 sm:mt-2 bg-primary-500 p-4 mt-2 rounded-md font-bold hover:bg-primary-600  text-action-950">Return to Home</button>
-        </a>
+    <section className="bg-gray-50 content-container">
+      <div className="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center">
+        <div className="mx-auto max-w-xl text-center">
+          <h1 className="text-7xl font-extrabold sm:text-9xl">OOPS!</h1>
+          <strong className="font-extrabold text-red-700 sm:block heading">
+            {" "}
+            404 | page could not be found{" "}
+          </strong>
+
+          <p className="mt-4 sm:text-xl/relaxed text-sm">
+            Sorry, the page you&#39;re looking for couldn&#39;t be found. It seems the
+            link you followed might be broken or the page has been removed.
+          </p>
+
+          <div className="mt-8 flex flex-wrap justify-center gap-4">
+            <a
+              className="block w-full rounded hover:bg-secondary-400 px-12 py-3 text-sm text-white  hover:text-action-950 font-bold shadow bg-secondary-600 focus:outline-none focus:ring  sm:w-auto"
+              href="#"
+            >
+              Back Home
+            </a>
+          </div>
+        </div>
       </div>
-    </div>
-    </>
+    </section>
   );
-};
-
-export default Page404;
-
+}

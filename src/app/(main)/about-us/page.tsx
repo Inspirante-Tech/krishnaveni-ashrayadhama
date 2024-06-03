@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function About() {
+ function About() {
   return (
     <main className="space-y-12 mt-16 ">
       <section className="content-container">
@@ -83,3 +83,4 @@ export default function About() {
     </main>
   );
 }
+export default About;

@@ -24,6 +24,11 @@ export const navigation = [
     title: "Gallery",
     url: "/gallery",
   },
+  {
+    id: "5",
+    title: "Contact",
+    url: "/contact",
+  },
 ];
 
 export const testimonials = [
