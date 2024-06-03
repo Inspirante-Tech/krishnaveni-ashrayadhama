@@ -31,13 +31,7 @@ const Header = () => {
         >
           <div className="relative z-20 flex flex-col lg:flex-row lg:justify-end">
             {navigation.map((item) => (
-              // <a
-              //   key={item.id}
-              //   href={item.url}
-              //   className={`hover:text-orange-600 block relative font-code text-md font-bold uppercase text-n-1 transition-colors px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-xs lg:font-semibold lg:leading-5 xl:px-12 ${item.url === currentPathname ? "text-color-1" : "text-n-1/50"} hover:text-color-1 hover:text-orange-600`}
-              // >
-              //   {item.title}
-              // </a>
+              
               <a
                 key={item.id}
                 href={item.url}
