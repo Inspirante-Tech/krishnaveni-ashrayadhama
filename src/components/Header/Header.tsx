@@ -1,4 +1,3 @@
-
 "use client";
 import { useEffect, useState } from "react";
 import { navigation } from "~/constants";
@@ -18,10 +17,9 @@ const Header = () => {
     }
   }, []);
 
-  
   return (
     <div
-      className={`fixed top-0 left-0 w-full z-50 lg:bg-n-8/90 lg:backdrop-blur-md ${openNavigation ? "bg-primary-50" : "bg-blur backdrop-blur-md"}`}
+      className={`fixed top-0 left-0 w-full z-50 ${openNavigation ? "bg-primary-50" : "lg:bg-n-8/90 lg:backdrop-blur-md bg-blur backdrop-blur-md"}`}
     >
       <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
         <a className="block w-[12rem] xl:mr-8" href="/">
@@ -29,7 +27,7 @@ const Header = () => {
         </a>
 
         <nav
-          className={`fixed top-0 right-0 bottom-0 w-full left-0 max-w-xs bg-primary-50 transition-transform transform ${openNavigation ? "translate-x-0 pt-10  " : "translate-x-full"} lg:static lg:flex lg:translate-x-0 lg:bg-transparent lg:w-auto lg:max-w-none lg:transition-transform lg:duration-500 lg:ease-in-out`}
+          className={`fixed top-0 right-0 bottom-0 w-full left-0 bg-primary-50 transition-transform transform ${openNavigation ? "translate-x-0 pt-10" : "translate-x-full"} lg:static lg:flex lg:translate-x-0 lg:bg-transparent lg:w-auto lg:max-w-none lg:transition-none`}
         >
           <div className="relative z-20 flex flex-col lg:flex-row">
             {navigation.map((item) => (

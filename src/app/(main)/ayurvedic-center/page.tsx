@@ -26,7 +26,7 @@ function page() {
       <ServicesOffered />
       <Doctors />
       <hr />
-      <div className="max-w-xl mt-2 border-t-4 border-black content-container">
+      <div className="max-w-xl mt-1 border-t-2 border-black content-container">
         <h2 className="text-3xl font-bold sm:text-4xl">
           How can you avail our services
         </h2>
