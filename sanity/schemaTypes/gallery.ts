@@ -1,6 +1,6 @@
 import { ImagesIcon } from '@sanity/icons'
 import {defineField } from 'sanity'
-import { baseLanguage } from './localeString'
+import { baseLanguage } from './locale'
 
 export default {
   name: 'gallery',

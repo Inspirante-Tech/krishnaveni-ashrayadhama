@@ -31,7 +31,7 @@ export default defineConfig({
         {id: 'kn', title: 'Kannada'},
         {id: 'en', title: 'English'}
       ],
-      schemaTypes: ["Home"],
+      schemaTypes: [],
     })
   ],
 })

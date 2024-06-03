@@ -1,5 +1,5 @@
 import {defineArrayMember, defineField, defineType} from 'sanity'
-import { baseLanguage } from './localeString'
+import { baseLanguage } from './locale'
 
 export default defineType({
   name: 'doctor',
