@@ -3,10 +3,13 @@
         "facilities": {
             "heading": "Facilities"
         },
-        "fqa": {
+        "fqas": {
             "heading": "Frequently Asked Questions...",
             "description": "Explore common questions and find answers below. If you don't see what you're looking for, feel free to contact us for assistance.",
             "contactUs": "contact us"
+        },
+        "testimonials":{
+            "heading":"testimonials"
         }
     },
     "events": {
@@ -25,5 +28,10 @@
     },
     "ayurvedicCenter":{
         "heading":"ayurvedic center"
+    },
+    "vridddhashrama":{
+        "rulesAndRegulation":{
+            "heading":"rules and regulations"
+        }
     }
 }

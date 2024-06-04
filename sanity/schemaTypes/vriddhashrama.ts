@@ -6,6 +6,12 @@ export default {
     type: 'document',
     fields: [
         defineField({
+            name: 'title',
+            title: 'Title',
+            type: 'localeString',
+            validation: (Rule) => Rule.required(),
+        }),
+        defineField({
             name: 'description',
             title: 'description',
             type: 'localeText',
@@ -29,6 +35,11 @@ export default {
                     type: "feature"
                 })
             ]
+        }),
+        defineField({
+            title: 'Rules and Regulation',
+            name: 'rules',
+            type: 'localeBlockArray',
         })
     ],
     preview: {
