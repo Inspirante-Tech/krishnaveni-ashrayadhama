@@ -18,6 +18,17 @@ export default defineType({
             validation: (Rule) => Rule.required(),
         }),
         defineField({
+            name: "carosuel",
+            type: "array",
+            validation: (Rule) => Rule.required(),
+            of: [
+                defineField({
+                    name: "image",
+                    type: "image"
+                })
+            ]
+        }),
+        defineField({
             name: "facilities",
             type: "array",
             of: [
