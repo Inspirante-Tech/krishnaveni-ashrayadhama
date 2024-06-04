@@ -1,0 +1,29 @@
+{
+    "home": {
+        "facilities": {
+            "heading": "Facilities"
+        },
+        "fqa": {
+            "heading": "Frequently Asked Questions...",
+            "description": "Explore common questions and find answers below. If you don't see what you're looking for, feel free to contact us for assistance.",
+            "contactUs": "contact us"
+        }
+    },
+    "events": {
+        "heading": "events"
+    },
+    "gallery": {
+        "heading": "Gallery"
+    },
+    "links": {
+        "aboutUs": "about us",
+        "specialities": "specialities",
+        "ayurvedicCenter": "ayurvedic center",
+        "events": "events",
+        "gallery": "gallery",
+        "contact": "contact"
+    },
+    "ayurvedicCenter":{
+        "heading":"ayurvedic center"
+    }
+}

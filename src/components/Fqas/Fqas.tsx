@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { questionAndAnswers } from "~/constants";
 import { Button } from "../ui/button";
+import { FqaType } from "~/lib/types";
 
 const QuestionAnswer = ({
   question,
@@ -16,9 +17,8 @@ const QuestionAnswer = ({
 
   return (
     <section
-      className={`  group border-s-4 border-secondary-500 bg-gray-50 p-3 [&_summary::-webkit-details-marker]:hidden transform transition-opacity duration-500 ${
-        isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"
-      }`}
+      className={`  group border-s-4 border-secondary-500 bg-gray-50 p-3 [&_summary::-webkit-details-marker]:hidden transform transition-opacity duration-500 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"
+        }`}
     >
       <summary
         className="flex cursor-pointer items-center justify-between gap-1.5"
@@ -28,9 +28,8 @@ const QuestionAnswer = ({
         <span className="shrink-0 rounded-full bg-secondary-100 p-1.5 text-gray-900 sm:p-3">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className={`size-5 shrink-0 transition-transform duration-300 ${
-              isOpen ? "rotate-45" : ""
-            }`}
+            className={`size-5 shrink-0 transition-transform duration-300 ${isOpen ? "rotate-45" : ""
+              }`}
             viewBox="0 0 20 20"
             fill="currentColor"
           >
@@ -43,9 +42,8 @@ const QuestionAnswer = ({
         </span>
       </summary>
       <div
-        className={`transition-all duration-500 ease-in-out overflow-hidden ${
-          isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-        }`}
+        className={`transition-all duration-500 ease-in-out overflow-hidden ${isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+          }`}
         style={{ maxHeight: isOpen ? "500px" : "0" }}
       >
         <p className="mt-2 leading-relaxed text-gray-700">{answer}</p>
@@ -54,7 +52,7 @@ const QuestionAnswer = ({
   );
 };
 
-const Fqas = () => {
+const Fqas = ({ fqas }: { fqas: FqaType[] }) => {
   const [visibleIndexes, setVisibleIndexes] = useState<number[]>([]);
 
   useEffect(() => {
@@ -88,11 +86,11 @@ const Fqas = () => {
         </div>
         <div className="-mx-6  p-6 lg:col-span-2 lg:mx-0 sm:w-full md:w-3/4 lg:w-full">
           <div className="space-y-4">
-            {questionAndAnswers.map((qa, index) => (
+            {fqas.map((fqa, index) => (
               <QuestionAnswer
                 key={index}
-                question={qa.question}
-                answer={qa.answer}
+                question={fqa.question}
+                answer={fqa.answer}
                 isVisible={visibleIndexes.includes(index)}
               />
             ))}

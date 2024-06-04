@@ -4,15 +4,17 @@ import Image from "next/image";
 import { CircleX } from "lucide-react";
 import { EventType } from "~/lib/types";
 import { formatDate } from "~/lib/utils";
+import { useTranslations } from "next-intl";
 
 //https://stackoverflow.com/questions/50037663/how-to-close-a-native-html-dialog-when-clicking-outside-with-javascript
 function Events({ events }: { events: EventType[] }) {
+  const t = useTranslations("gallery")
   const dialogRef = useRef<HTMLDialogElement>(null);
   const [selectedEvent, setSelectedEvent] = useState<EventType | null>(null);
 
   return (
     <section className="content-container bg-primary-300 rounded p-8">
-      <h1 className="font-bold text-3xl mb-4">Events</h1>
+      <h1 className="font-bold text-3xl mb-4">{t("heading")}</h1>
       <div className="flex flex-wrap gap-8 justify-around">
         {events.map((event) => {
           return (

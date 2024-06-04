@@ -4,8 +4,10 @@ import Image from 'next/image'
 import { useRef, useState } from 'react'
 import { type Image as ImageType } from './types'
 import Photo from './Photo'
+import { useTranslations } from 'next-intl'
 
 export function Gallery({ images }: { images: ImageType[] }) {
+  const t = useTranslations("gallery")
   const [selectedImage, setSelectedImage] = useState<ImageType | null>(null);
   const dialogRef = useRef<HTMLDialogElement>(null);
 
@@ -20,7 +22,7 @@ export function Gallery({ images }: { images: ImageType[] }) {
 
   return (
     <section className='my-4 content-container'>
-      <h2 className="font-bold text-2xl mb-4">Gallery</h2>
+      <h2 className="font-bold text-2xl mb-4">{t("heading")}</h2>
       <div className="columns-1 sm:columns-2 lg:columns-4 gap-4 space-y-4">
         {images.map(image => (
           <Photo

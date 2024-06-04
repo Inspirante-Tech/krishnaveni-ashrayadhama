@@ -1,12 +1,11 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import EmblaCarousel from "embla-carousel";
 import Autoplay from "embla-carousel-autoplay";
+import { TestimonialType } from "~/lib/types";
 import { Carousel, CarouselContent, CarouselItem } from "../ui/carousel";
-import { testimonials } from "~/constants";
 
-function Testimonials() {
+function Testimonials({ testimonials }: { testimonials: TestimonialType[] }) {
   return (
     <section className="relative">
       <div className="content-container flex flex-col gap-8">
@@ -50,7 +49,7 @@ function Testimonials() {
                       </div>
                     </div>
                     <p className="text-gray-700 leading-loose">
-                      “{testimonial.description}”
+                      “{testimonial.statement}”
                     </p>
                   </div>
                 </CarouselItem>

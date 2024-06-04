@@ -1,4 +1,3 @@
-import "./globals.css";
 import { Noto_Sans } from "next/font/google";
 
 export const metadata = {
@@ -18,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${notoSans.variable}`}>
+    <html className={`${notoSans.variable}`}>
       <body>{children}</body>
     </html>
   );
