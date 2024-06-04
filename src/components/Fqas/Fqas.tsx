@@ -71,8 +71,8 @@ const Fqas = () => {
   }, []);
 
   return (
-    <section className="bg-secondary-50 content-container ">
-      <div className="relative grid grid-cols-1 gap-4 lg:grid-cols-3 lg:items-center lg:gap-16 justify-between">
+    <section className="bg-secondary-50 ">
+      <div className="relative grid grid-cols-1 gap-4 lg:grid-cols-3 lg:items-center lg:gap-16 justify-between content-container">
         <div className="text-center sm:mx-auto lg:col-span-1">
           <h2 className="heading text-gray-900 sm:mt-5">
             Frequently Asked Questions
