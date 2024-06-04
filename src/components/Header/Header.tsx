@@ -1,13 +1,10 @@
 "use client";
 import { navigation } from "~/constants";
-// import Button from "../design/Button";
-// import MenuSvg from "~/assets/svg/MenuSvg";
 import { useTranslations } from "next-intl";
 import LocaleLink from "../ui/LocaleLink";
 import LocalSwitcher from "./LocaleSwitcher";
 import styles from "./styles.module.css";
 import { usePathname } from "next/navigation";
-import { useEffect } from "react";
 
 const Header = () => {
   const t = useTranslations("links");
@@ -42,9 +39,7 @@ const Header = () => {
           ))}
         </div>
         <div className="flex gap-6 justify-center items-center">
-          <button className="subheading font-medium text-gray-900 hover:text-secondary-800 hover:scale-105 transition-all duration-150 ease-linear align-middle p-2">
-            {router.split("/")[1] === "en" ? "ಕ" : "en"}
-          </button>
+          <LocalSwitcher />
           <MobileNav />
         </div>
       </div>
