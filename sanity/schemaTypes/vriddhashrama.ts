@@ -35,6 +35,11 @@ export default {
                     type: "feature"
                 })
             ]
+        }),
+        defineField({
+            title: 'Rules and Regulation',
+            name: 'rules',
+            type: 'localeBlockArray',
         })
     ],
     preview: {

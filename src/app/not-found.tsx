@@ -1,7 +1,3 @@
-import Image from "next/image";
-import "tailwindcss/tailwind.css";
-import "./globals.css";
-
 export default function NotFound() {
   return (
     <section className="bg-gray-50 content-container">
@@ -9,8 +5,7 @@ export default function NotFound() {
         <div className="mx-auto max-w-xl text-center">
           <h1 className="text-7xl font-extrabold sm:text-9xl">OOPS!</h1>
           <strong className="font-extrabold text-red-700 sm:block heading">
-            {" "}
-            404 | page could not be found{" "}
+            404 | page could not be found
           </strong>
 
           <p className="mt-4 sm:text-xl/relaxed text-sm">
@@ -20,8 +15,8 @@ export default function NotFound() {
 
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <a
-              className="block w-full rounded hover:bg-secondary-400 px-12 py-3 text-sm text-white  hover:text-action-950 font-bold shadow bg-secondary-600 focus:outline-none focus:ring  sm:w-auto"
-              href="#"
+              className="block w-full rounded hover:bg-secondary-400 px-12 py-3 text-sm text-white  hover:text-action-950 font-bold shadow bg-secondary-600  sm:w-auto transition-colors"
+              href="/"
             >
               Back Home
             </a>

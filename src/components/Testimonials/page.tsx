@@ -4,13 +4,15 @@ import React from "react";
 import Autoplay from "embla-carousel-autoplay";
 import { TestimonialType } from "~/lib/types";
 import { Carousel, CarouselContent, CarouselItem } from "../ui/carousel";
+import { useTranslations } from "next-intl";
 
 function Testimonials({ testimonials }: { testimonials: TestimonialType[] }) {
+  const t = useTranslations("home.testimonials")
   return (
     <section className="relative">
       <div className="content-container flex flex-col gap-8">
         <div className="flex flex-col gap-4">
-          <h2 className="heading text-gray-900">Testimonials</h2>
+          <h2 className="heading text-gray-900">{t("heading")}</h2>
           <p className="body text-gray-700">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
             quibusdam similique labore fuga impedit, consectetur facilis odit
