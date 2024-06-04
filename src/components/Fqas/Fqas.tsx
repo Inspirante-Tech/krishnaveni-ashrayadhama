@@ -18,8 +18,9 @@ const QuestionAnswer = ({
 
   return (
     <section
-      className={`  group border-s-4 border-secondary-500 bg-gray-50 p-3 [&_summary::-webkit-details-marker]:hidden transform transition-opacity duration-500 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"
-        }`}
+      className={`  group border-s-4 border-secondary-500 bg-gray-50 p-3 [&_summary::-webkit-details-marker]:hidden transform transition-opacity duration-500 ${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"
+      }`}
     >
       <summary
         className="flex cursor-pointer items-center justify-between gap-1.5"
@@ -29,8 +30,9 @@ const QuestionAnswer = ({
         <span className="shrink-0 rounded-full bg-secondary-100 p-1.5 text-gray-900 sm:p-3">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className={`size-5 shrink-0 transition-transform duration-300 ${isOpen ? "rotate-45" : ""
-              }`}
+            className={`size-5 shrink-0 transition-transform duration-300 ${
+              isOpen ? "rotate-45" : ""
+            }`}
             viewBox="0 0 20 20"
             fill="currentColor"
           >
@@ -43,8 +45,9 @@ const QuestionAnswer = ({
         </span>
       </summary>
       <div
-        className={`transition-all duration-500 ease-in-out overflow-hidden ${isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-          }`}
+        className={`transition-all duration-500 ease-in-out overflow-hidden ${
+          isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+        }`}
         style={{ maxHeight: isOpen ? "500px" : "0" }}
       >
         <p className="mt-2 leading-relaxed text-gray-700">{answer}</p>
@@ -54,7 +57,7 @@ const QuestionAnswer = ({
 };
 
 const Fqas = ({ fqas }: { fqas: FqaType[] }) => {
-  const t=useTranslations("home.fqas");
+  const t = useTranslations("home.fqas");
   const [visibleIndexes, setVisibleIndexes] = useState<number[]>([]);
 
   useEffect(() => {
@@ -71,20 +74,18 @@ const Fqas = ({ fqas }: { fqas: FqaType[] }) => {
   }, []);
 
   return (
-    <section className="bg-secondary-50 ">
-      <div className="relative grid grid-cols-1 gap-4 lg:grid-cols-3 lg:items-center lg:gap-16 justify-between content-container">
-        <div className="text-center sm:mx-auto lg:col-span-1">
-          <h2 className="heading text-gray-900 sm:mt-5">
-            {t("heading")}
-          </h2>
-          <p className="mt-4 text-gray-700">
-            {t("description")}
-          </p>
-          <Button className="sm:mt-2 bg-secondary-300 transition-colors duration-150 p-4 mt-2 rounded-md font-bold hover:bg-secondary-400 text-action-950">
-            {t("contactUs")}
-          </Button>
+    <section className="">
+      <div className="relative grid grid-cols-1 gap-8 lg:grid-cols-3 lg:items-center lg:gap-16 justify-between content-container">
+        <div className="sm:mx-auto lg:col-span-1 flex flex-col gap-8">
+          <h2 className="heading text-gray-900">{t("heading")}</h2>
+          <div className="flex flex-col gap-4">
+            <p className="body text-gray-700">{t("description")}</p>
+            <Button className="bg-secondary-300 transition-colors duration-150 rounded-md font-bold hover:bg-secondary-400 text-action-950 max-w-fit">
+              {t("contactUs")}
+            </Button>
+          </div>
         </div>
-        <div className="-mx-6  p-6 lg:col-span-2 lg:mx-0 sm:w-full md:w-3/4 lg:w-full">
+        <div className="lg:col-span-2 lg:mx-0 sm:w-full md:w-3/4 lg:w-full">
           <div className="space-y-4">
             {fqas.map((fqa, index) => (
               <QuestionAnswer

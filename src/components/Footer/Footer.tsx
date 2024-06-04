@@ -21,18 +21,18 @@ async function Footer() {
             </ul>
           </div>
           <div className="p-5">
-            <p className="font-bold text-2xl pb-4">Address</p>
-            <ul className="text-gray-300 ">
-              <li className=" text-md pb-2 font-semibold transition-colors duration-150 hover:text-secondary-300 cursor-pointer">
+            <p className="semibold pb-4">Address</p>
+            <ul className="text-gray-300">
+              <li className=" body pb-2 font-semibold transition-colors duration-150 hover:text-secondary-300 cursor-pointer">
                 Lorem ipsum
               </li>
-              <li className=" text-md pb-2 font-semibold transition-colors duration-150 hover:text-secondary-300 cursor-pointer">
+              <li className=" body pb-2 font-semibold transition-colors duration-150 hover:text-secondary-300 cursor-pointer">
                 lorem ipsum
               </li>
-              <li className=" text-md pb-2 font-semibold transition-colors duration-150 hover:text-secondary-300 cursor-pointer">
+              <li className=" body pb-2 font-semibold transition-colors duration-150 hover:text-secondary-300 cursor-pointer">
                 lorem ipsum
               </li>
-              <li className=" text-md pb-2 font-semibold transition-colors duration-150 hover:text-secondary-300 cursor-pointer">
+              <li className=" body pb-2 font-semibold transition-colors duration-150 hover:text-secondary-300 cursor-pointer">
                 lorem ipsum
               </li>
             </ul>
@@ -43,20 +43,21 @@ async function Footer() {
               <LocaleLink
                 key={item.id}
                 href={item.url}
-                className="text-gray-500 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer"
+                style={{ textTransform: "capitalize" }}
+                className="text-gray-300 body pb-2 font-semibold transition-colors duration-150 hover:text-secondary-300 cursor-pointer"
               >
                 {t(item.id)}
               </LocaleLink>
             ))}
           </div>
           <div className="p-5">
-            <p className="font-bold text-2xl pb-4">Support</p>
+            <p className="semibold pb-4">Support</p>
             <ul className="text-gray-300 ">
-              <li className=" text-md pb-2 font-semibold transition-colors duration-150 hover:text-secondary-300 cursor-pointer">
+              <li className=" body pb-2 font-semibold transition-colors duration-150 hover:text-secondary-300 cursor-pointer">
                 Contact
               </li>
 
-              <li className=" text-md pb-2 font-semibold transition-colors duration-150 hover:text-secondary-300 cursor-pointer">
+              <li className=" body pb-2 font-semibold transition-colors duration-150 hover:text-secondary-300 cursor-pointer">
                 Videos
               </li>
             </ul>
@@ -64,9 +65,7 @@ async function Footer() {
         </div>
       </div>
       <div className="flex flex-col justify-center items-center text-center  p-5 bg-secondary-950">
-        <h1 className=" font-semibold">
-          &copy; 2023-2024 All rights reserved
-        </h1>
+        <h1 className=" font-semibold">&copy; 2023-2024 All rights reserved</h1>
       </div>
     </footer>
   );

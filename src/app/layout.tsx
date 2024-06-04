@@ -17,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html className={`${notoSans.variable}`}>
+    <html className={`${notoSans.variable} scroll-smooth scroll-pt-12`}>
       <body>{children}</body>
     </html>
   );
