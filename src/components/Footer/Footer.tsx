@@ -50,18 +50,6 @@ async function Footer() {
               </LocaleLink>
             ))}
           </div>
-          <div className="p-5">
-            <p className="semibold pb-4">Support</p>
-            <ul className="text-gray-300 ">
-              <li className=" body pb-2 font-semibold transition-colors duration-150 hover:text-secondary-300 cursor-pointer">
-                Contact
-              </li>
-
-              <li className=" body pb-2 font-semibold transition-colors duration-150 hover:text-secondary-300 cursor-pointer">
-                Videos
-              </li>
-            </ul>
-          </div>
         </div>
       </div>
       <div className="flex flex-col justify-center items-center text-center  p-5 bg-secondary-950">

@@ -22,9 +22,10 @@ const Story: React.FC<{ data: string }> = ({ data }) => {
             observer.observe(containerRef.current);
         }
 
+        const ref = containerRef.current;
         return () => {
-            if (containerRef.current) {
-                observer.unobserve(containerRef.current);
+            if (ref) {
+                observer.unobserve(ref);
             }
         };
     }, []);

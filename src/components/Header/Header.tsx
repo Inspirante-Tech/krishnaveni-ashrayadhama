@@ -4,6 +4,7 @@ import { navigation } from "~/constants";
 // import MenuSvg from "~/assets/svg/MenuSvg";
 import { useTranslations } from "next-intl";
 import LocaleLink from "../ui/LocaleLink";
+import LocalSwitcher from "./LocaleSwitcher";
 import styles from "./styles.module.css";
 import { usePathname } from "next/navigation";
 import { useEffect } from "react";

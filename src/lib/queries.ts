@@ -167,8 +167,6 @@ export async function fetchVriddhashramaPage(locale: string) {
 
     let page = await client.fetch<VriddhashramaCenter>(query);
 
-    console.log(page)
-
     return {
         ...page,
         features: page.features.map(feature => ({

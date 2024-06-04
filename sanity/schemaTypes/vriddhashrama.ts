@@ -43,8 +43,10 @@ export default {
         })
     ],
     preview: {
-        select: {
-            title: `Vriddhashrama`
+        prepare() {
+            return {
+                title:"Vriddhashrama"
+            }
         }
-    },
+    }
 }

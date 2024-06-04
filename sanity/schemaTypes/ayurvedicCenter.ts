@@ -35,13 +35,26 @@ export default {
                     type: "feature"
                 })
             ]
+        }),
+        defineField({
+            name: 'doctors',
+            title: 'Doctors',
+            type: 'array',
+            validation: (Rule) => Rule.required(),
+            of: [
+                defineField({
+                    name: "doctor",
+                    title: "Doctor",
+                    type: "doctor"
+                })
+            ]
         })
     ],
     preview: {
-        prepare(){
+        prepare() {
             return {
-                "title":"Ayruvedic center"
+                title: "Ayurvedic Center"
             }
         }
-    },
+    }
 }
