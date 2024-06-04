@@ -29,9 +29,10 @@ const Photo: React.FC<PhotoProps> = ({ url, alt, callback }) => {
             observer.observe(imageRef.current);
         }
 
+        const ref = imageRef.current;
         return () => {
-            if (imageRef.current) {
-                observer.unobserve(imageRef.current);
+            if (ref) {
+                observer.unobserve(ref);
             }
         };
     }, []);
