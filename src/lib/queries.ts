@@ -136,3 +136,44 @@ export async function fetchHomePage(locale: string) {
         }))
     }
 }
+
+
+interface VriddhashramaCenter {
+    title: string,
+    description: string,
+    videoLink: string,
+    features: {
+        image: Image,
+        title: string,
+        description: string
+        
+    }[]
+    rules:[any]
+}
+
+export async function fetchVriddhashramaPage(locale: string) {
+
+    const query = `*[_type == "vriddhashrama"][0]{
+        "title":${coalesce("title",locale)},
+        "description":${coalesce("description",locale)},
+          videoLink,
+          "features":features[]{
+            "title":${coalesce("title",locale)},
+            image,
+            "description":${coalesce("description",locale)},
+          },
+          "rules":${coalesce("rules",locale)}
+      }`
+
+    let page = await client.fetch<VriddhashramaCenter>(query);
+
+    console.log(page)
+
+    return {
+        ...page,
+        features: page.features.map(feature => ({
+            ...feature,
+            image: urlForImage(feature.image)
+        }))
+    }
+}

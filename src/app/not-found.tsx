@@ -10,8 +10,7 @@ export default function NotFound() {
         <div className="mx-auto max-w-xl text-center">
           <h1 className="text-7xl font-extrabold sm:text-9xl">OOPS!</h1>
           <strong className="font-extrabold text-red-700 sm:block heading">
-            {" "}
-            404 | page could not be found{" "}
+            404 | page could not be found
           </strong>
 
           <p className="mt-4 sm:text-xl/relaxed text-sm">

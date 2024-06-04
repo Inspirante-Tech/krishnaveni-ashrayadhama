@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { questionAndAnswers } from "~/constants";
 import { Button } from "../ui/button";
 import { FqaType } from "~/lib/types";
+import { useTranslations } from "next-intl";
 
 const QuestionAnswer = ({
   question,
@@ -53,6 +54,7 @@ const QuestionAnswer = ({
 };
 
 const Fqas = ({ fqas }: { fqas: FqaType[] }) => {
+  const t=useTranslations("home.fqas");
   const [visibleIndexes, setVisibleIndexes] = useState<number[]>([]);
 
   useEffect(() => {
@@ -73,15 +75,13 @@ const Fqas = ({ fqas }: { fqas: FqaType[] }) => {
       <div className="relative grid grid-cols-1 gap-4 lg:grid-cols-3 lg:items-center lg:gap-16 justify-between content-container">
         <div className="text-center sm:mx-auto lg:col-span-1">
           <h2 className="heading text-gray-900 sm:mt-5">
-            Frequently Asked Questions
+            {t("heading")}
           </h2>
           <p className="mt-4 text-gray-700">
-            Explore common questions and find answers below. If you don&#39;t
-            see what you&#39;re looking for, feel free to contact us for
-            assistance.
+            {t("description")}
           </p>
           <Button className="sm:mt-2 bg-secondary-300 transition-colors duration-150 p-4 mt-2 rounded-md font-bold hover:bg-secondary-400 text-action-950">
-            Contact us
+            {t("contactUs")}
           </Button>
         </div>
         <div className="-mx-6  p-6 lg:col-span-2 lg:mx-0 sm:w-full md:w-3/4 lg:w-full">
