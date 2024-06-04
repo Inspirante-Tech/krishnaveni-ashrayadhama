@@ -38,10 +38,10 @@ export default {
         })
     ],
     preview: {
-        prepare(){
+        prepare() {
             return {
-                "title":"Ayruvedic center"
+                title: "Ayurvedic Center"
             }
         }
-    },
+    }
 }

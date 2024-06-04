@@ -14,9 +14,7 @@ export default async function Home() {
   return (
     <>
       <Hero />
-      <main 
-      // className="my-12"
-      >
+      <main>
         <Story data={data.story}/>
         <Facilities facilities={data.facilities}/>
         <Information data={data.whoweare}/>
