@@ -5,6 +5,7 @@ import Button from "../design/Button";
 import MenuSvg from "~/assets/svg/MenuSvg";
 import { useTranslations } from "next-intl";
 import LocaleLink from "../ui/LocaleLink";
+import LocalSwitcher from "./LocaleSwitcher";
 
 const Header = () => {
   const t = useTranslations("links");
@@ -42,6 +43,7 @@ const Header = () => {
                 {t(item.id)}
               </LocaleLink>
             ))}
+            <LocalSwitcher/>
           </div>
         </nav>
 
