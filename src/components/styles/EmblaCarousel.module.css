@@ -3,6 +3,9 @@
 .embla {
     position: relative;
     width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
   }
   
   .embla__viewport {
@@ -18,13 +21,18 @@
     -moz-user-select: none;
     -ms-user-select: none;
     touch-action: pan-y;
-    margin-left: -10px; /* Adjust spacing between slides if necessary */
+    /* margin-left: -10px; Adjust spacing between slides if necessary */
   }
   
   .embla__slide {
     position: relative;
     min-width: 100%;
-    padding-left: 10px; /* Adjust spacing between slides if necessary */
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    /* padding-left: 10px; Adjust spacing between slides if necessary */
   }
   
   .emblaThumbs {
@@ -46,14 +54,14 @@
     -moz-user-select: none;
     -ms-user-select: none;
     touch-action: pan-y;
-    margin-left: -10px; /* Adjust spacing between slides if necessary */
+    /* margin-left: -10px; Adjust spacing between slides if necessary */
   }
   
   .emblaThumbs__slide {
     position: relative;
     flex: 0 0 auto;
     width: 100px; /* Adjust thumbnail size if necessary */
-    padding-left: 10px; /* Adjust spacing between slides if necessary */
+    /* padding-left: 10px; */
     cursor: pointer;
   }
   

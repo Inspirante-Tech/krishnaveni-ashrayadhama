@@ -97,7 +97,7 @@ function Events({ events }: { events: EventType[] }) {
   }));
 
   return (
-    <section className="content-container bg-primary-50 rounded p-8">
+    <section className="content-container bg-primary-50 rounded p-8 ">
       <h1 className="text-3xl md:text-5xl font-bold  p-6 text-action-950">{t("heading")}</h1>
       <ThumbnailCarousel
         thumbnails={thumbnails}
