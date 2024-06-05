@@ -6,7 +6,7 @@ import Image from "next/image";
 
 function Hero() {
   return (
-    <div className="relative w-full h-full">
+    <div className="relative w-full h-full z-0">
       <Carousel>
         {HeroimageUrls.map((url, index) => (
           <Image

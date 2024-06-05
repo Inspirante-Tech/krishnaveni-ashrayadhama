@@ -1,10 +1,10 @@
-import {defineArrayMember, defineField, defineType} from 'sanity'
+import {defineField, defineType} from 'sanity'
 import { baseLanguage } from './locale'
 
 export default defineType({
   name: 'doctor',
   title: 'Doctor',
-  type: 'document',
+  type: 'object',
   fields: [
     defineField({
       name: 'name',
@@ -16,22 +16,16 @@ export default defineType({
       name: 'image',
       title: 'Image',
       type: 'image',
+      validation: (Rule) => Rule.required(),
       options: {
         hotspot: true,
       }
     }),
     defineField({
-      name: 'bio',
-      title: 'Bio',
-      type: 'array',
-      of: [
-        defineArrayMember({
-          title: 'Block',
-          type: 'block',
-          styles: [{title: 'Normal', value: 'normal'}],
-          lists: [],
-        })
-      ],
+      name: 'qualification',
+      title: 'Qualification',
+      type: 'localeString',
+      validation: (Rule) => Rule.required(),
     }),
   ],
   preview: {

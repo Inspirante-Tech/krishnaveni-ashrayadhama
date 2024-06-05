@@ -32,6 +32,7 @@ const Story: React.FC<{ data: string }> = ({ data }) => {
 
     return (
         <section
+            id='story'
             ref={containerRef}
             className={`transition-opacity duration-1000 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                 } text-justify`}

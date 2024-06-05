@@ -20,7 +20,6 @@ export default async function Home() {
         <Information data={data.whoweare}/>
         <Fqas fqas={data.fqas}/>
         <Testimonials testimonials={data.testimonials} />
-        <GetInTouch/>
       </main>
     </>
   );
