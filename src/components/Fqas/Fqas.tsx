@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { questionAndAnswers } from "~/constants";
-import { Button } from "../ui/button";
+import {Button}  from "../ui/button";
 import { FqaType } from "~/lib/types";
 import { useTranslations } from "next-intl";
 

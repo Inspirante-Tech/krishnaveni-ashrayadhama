@@ -11,7 +11,7 @@ export default async function Vridddhashrama() {
   const t = await getTranslations("vridddhashrama")
   const pageData = await fetchVriddhashramaPage(locale);
   return (
-    <main className="bg-white  page-container ">
+    <main className="bg-white">
       <section className="content-container">
         
         <h2 className="text-3xl   md:text-5xl font-bold mt-12 p-6 text-action-950 ">

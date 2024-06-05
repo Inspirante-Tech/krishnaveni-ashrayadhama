@@ -28,3 +28,15 @@ export type LocationType = {
     image: string,
     url: string
 }
+
+export type DoctorType = {
+    name:string,
+    image:string,
+    qualification:string
+}
+
+export type FeatureType = {
+    image: string,
+    title: string,
+    description: string
+}

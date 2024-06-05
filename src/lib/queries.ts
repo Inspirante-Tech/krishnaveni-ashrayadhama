@@ -52,6 +52,11 @@ interface AyurvedicCenter {
         image: Image,
         title: string,
         description: string
+    }[],
+    doctors:{
+        name:string,
+        qualification:string,
+        image:Image
     }[]
 }
 
@@ -65,7 +70,12 @@ export async function fetchAyrvedicCenterPage(locale: string) {
             "title":${coalesce("title",locale)},
             image,
             "description":${coalesce("description",locale)}
-          }
+          },
+          "doctors":doctors[]{
+            "name":${coalesce("name",locale)},
+            image,
+            "qualification":${coalesce("qualification",locale)}
+        }
       }`
 
     let page = await client.fetch<AyurvedicCenter>(query);
@@ -75,6 +85,10 @@ export async function fetchAyrvedicCenterPage(locale: string) {
         features: page.features.map(feature => ({
             ...feature,
             image: urlForImage(feature.image)
+        })),
+        doctors: page.doctors.map(doctor => ({
+            ...doctor,
+            image: urlForImage(doctor.image)
         }))
     }
 }

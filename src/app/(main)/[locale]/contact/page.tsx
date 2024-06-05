@@ -11,7 +11,7 @@ export default function Contact() {
             alt=""
             width={1000}
             height={1000}
-            src="https://planetofhotels.com/guide/sites/default/files/styles/paragraph__text_with_image___twi_image/public/2021-04/Sivananda-Ashram-2.jpg"
+            src="https://cdn.sanity.io/images/8q1t3fe9/production/9377f533bf2d22287be64f38d09c4130163fcf10-640x360.webp?fit=max&auto=format"
             className="absolute inset-0 h-full w-full w-870 object-cover  opacity-80 "
           />
 

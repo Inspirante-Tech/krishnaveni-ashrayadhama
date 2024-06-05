@@ -13,7 +13,7 @@ const NearbyPlaces = async ({ detail, locations }: { detail: [any], locations: L
             {t("heading")}
           </h2>
 
-          <div className="mt-4 text-gray-800">
+          <div className="mt-4 text-gray-800 md:text-left">
             <PortableText value={detail} />
           </div>
         </div>
