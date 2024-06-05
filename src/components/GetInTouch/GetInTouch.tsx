@@ -1,3 +1,5 @@
+
+
 function GetInTouch() {
   return (
     <section className=" bg-primary-50 content-container">
@@ -6,7 +8,7 @@ function GetInTouch() {
         {" "}
         Want to Spread Smile ?{" "}
       </strong>
-
+      
       <a
         className="inline-flex items-center gap-2  rounded-md border  bg-action-800 px-8 py-3 text-primary-300 hover:bg-transparent hover:text-white focus:outline-none focus:ring "
         href="#"
