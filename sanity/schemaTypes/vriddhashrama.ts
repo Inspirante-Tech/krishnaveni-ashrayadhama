@@ -40,7 +40,26 @@ export default {
             title: 'Rules and Regulation',
             name: 'rules',
             type: 'localeBlockArray',
-        })
+        }),
+        defineField({
+            title: 'Surrounding Details',
+            name: 'surrounding_detail',
+            type: 'localeBlockArray',
+        }),
+        defineField({
+            name: 'locations',
+            title: 'Locations',
+            type: 'array',
+            validation: (Rule) => Rule.required(),
+            of: [
+                defineField({
+                    name: "location",
+                    title: "Location",
+                    type: "location"
+                })
+            ]
+        }),
+
     ],
     preview: {
         prepare() {

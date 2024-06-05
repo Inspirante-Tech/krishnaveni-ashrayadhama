@@ -24,6 +24,7 @@ export default function LocalSwitcher() {
     <button
       className="subheading font-medium text-gray-900 hover:text-secondary-800 hover:scale-105 transition-all duration-150 ease-linear align-middle p-2"
       onClick={onClick}
+      disabled={isPending}
     >
       {localActive === "en" ? "ಕ" : "en"}
     </button>

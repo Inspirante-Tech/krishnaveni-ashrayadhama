@@ -28,7 +28,7 @@
 
 .heading {
   @apply text-lg md:text-xl lg:text-3xl;
-  @apply font-bold;
+  @apply font-bold capitalize;
 }
 
 .subheading {
@@ -103,3 +103,5 @@ dialog::backdrop {
 .menu-transition {
   transition: transform 0.3s ease;
 }
+
+

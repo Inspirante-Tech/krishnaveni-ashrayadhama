@@ -23,7 +23,7 @@ export default {
   ],
   preview: {
     select: {
-      title:`name.${baseLanguage!.id}`,
+      title:`short_description.${baseLanguage!.id}`,
       media: 'image',
     }
   },

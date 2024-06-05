@@ -8,33 +8,20 @@ import { fetchAyrvedicCenterPage } from "~/lib/queries";
 async function page() {
   const loacle = await getLocale();
   const pageData = await fetchAyrvedicCenterPage(loacle);
-
   return (
-    <main className="bg-white  page-container">
+    <main className="bg-white  pb-12">
       <section className="content-container">
-        <h2 className="text-3xl   md:text-5xl font-bold mt-12 p-6 text-action-950 ">
+        <h2 className="text-3xl   md:text-5xl font-bold mt-12 p-6 text-action-950 capitalize">
           {pageData.title}
         </h2>
         <p className="mt-1 text-gray-800 p-6">
           {pageData.description}
         </p>
       </section>
-      <Features data={pageData.features} />
+        <Features data={pageData.features} heading="Services Offered"/>
       <VideoSection videoSrc={pageData.videoLink} />
       <hr />
-      <ServicesOffered />
-      <Doctors />
-      <hr />
-      <div className="max-w-xl mt-1 border-t-2 border-black content-container">
-        <h2 className="text-3xl font-bold sm:text-4xl">
-          How can you avail our services
-        </h2>
-        <p className="mt-4 text-gray-800">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
-          dolores iure fugit totam iste obcaecati. Consequatur ipsa quod ipsum
-          sequi culpa delectus, cumque id tenetur quibusdam, quos fuga minima.
-        </p>
-      </div>
+      <Doctors doctors={pageData.doctors}/>
     </main>
   );
 }

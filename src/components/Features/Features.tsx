@@ -1,16 +1,20 @@
 import Image from "next/image";
+import { FeatureType } from "~/lib/types";
 
 interface Props {
-  data: {
-    title: string;
-    description: string;
-    image: string;
-  }[]
+  data: FeatureType[],
+  heading?:string
 }
 
-const ImageContent: React.FC<Props> = ({ data }) => {
+const ImageContent: React.FC<Props> = ({ data ,heading}) => {
   return (
     <section className="space-y-8 mt-10 content-container">
+      {heading && (
+        <h2 className="text-2xl text-center md:text-left font-bold  text-action-950 md:text-4xl uppercase">
+            {heading}
+        </h2>
+      )}
+      
       {data.map((section, index) => (
         <div
           key={index}

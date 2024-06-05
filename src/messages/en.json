@@ -13,7 +13,7 @@
         }
     },
     "events": {
-        "heading": "events"
+        "heading": "Events"
     },
     "gallery": {
         "heading": "Gallery"
@@ -21,7 +21,7 @@
     "links": {
         "heading":"Links",
         "aboutUs": "about us",
-        "specialities": "specialities",
+        "specialities": "Vriddhashram",
         "ayurvedicCenter": "ayurvedic center",
         "events": "events",
         "gallery": "gallery",
@@ -33,6 +33,9 @@
     "vridddhashrama":{
         "rulesAndRegulation":{
             "heading":"rules and regulations"
+        },
+        "surrounding":{
+            "heading":"Local Attractions & Surroundings"
         }
     }
 }
