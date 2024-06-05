@@ -8,25 +8,7 @@ import { usePathname } from "next/navigation";
 
 const Header = () => {
   const t = useTranslations("links");
-<<<<<<< HEAD
-  const [openNavigation, setOpenNavigation] = useState(false);
-  const [currentPathname, setCurrentPathname] = useState("");
-  const toggleNavigation = () => {
-    setOpenNavigation(!openNavigation);
-  };
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      setCurrentPathname(window.location.pathname);
-    }
-  }, []);
-  const closeNavigation = () => {
-    setOpenNavigation(false);
-  };
-
-=======
   const router = usePathname();
->>>>>>> 88f84c5113891fa3fdfffa78fa3d65a39e69e166
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-secondary-300 text-gray-900">
       <div className="max-w-screen-xl flex flex-row justify-between items-center px-3 md:px-12 mx-auto">
@@ -40,11 +22,6 @@ const Header = () => {
               key={item.id}
             >
               <LocaleLink
-<<<<<<< HEAD
-              onClick={closeNavigation}
-                key={item.id}
-=======
->>>>>>> 88f84c5113891fa3fdfffa78fa3d65a39e69e166
                 href={item.url}
                 className="h-full "
                 style={{
