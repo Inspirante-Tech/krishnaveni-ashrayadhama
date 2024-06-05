@@ -1,10 +1,10 @@
 import Image from "next/image";
 
- function About() {
+function About() {
   return (
     <main className="space-y-12 mt-16 ">
       <section className="content-container">
-        <h1 className="text-3xl text-black-900 text-center py-5 font-bold hover:text-green-500 transition ease-in-out duration-500">
+        <h1 className="text-3xl text-black-900 text-center py-5 font-bold">
           About Krishnaveni Vridddhashrama
         </h1>
         <p className="container mx-auto text-justify my-6">
@@ -33,7 +33,7 @@ import Image from "next/image";
           height={400}
         />
         <div className="flex-grow">
-          <p className="text-3xl py-8 my-5 font-semibold hover:text-green-500 transition ease-in-out duration-500">
+          <p className="text-3xl py-8 my-5 font-semibold">
             Why This Initiative?
           </p>
           <p className="text-justify">
@@ -61,7 +61,7 @@ import Image from "next/image";
           width={600}
         />
         <div className="md:order-first order-last md:p-4">
-          <p className="text-3xl py-8 my-5 font-semibold hover:text-green-500 transition ease-in-out duration-500">
+          <p className="text-3xl py-8 my-5 font-semibold">
             Why This Initiative?
           </p>
           <p className="text-justify">
