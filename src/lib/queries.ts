@@ -1,7 +1,6 @@
 import { client } from "~/sanity/lib/client";
 import type { Image } from 'sanity'
 import { urlForImage } from "~/sanity/lib/image";
-import { title } from "process";
 
 const BASELOCALE = "en"
 
@@ -97,7 +96,8 @@ interface Home {
         image: Image,
         name: string,
         statement: string
-    }[]
+    }[],
+    carosuel:Image[]
 
 }
 
@@ -119,7 +119,8 @@ export async function fetchHomePage(locale: string) {
           "name":${coalesce("name",locale)},
           image,
           "statement":${coalesce("statement",locale)},
-        } 
+        },
+        carosuel
       }`
 
     let page = await client.fetch<Home>(query);
@@ -133,7 +134,8 @@ export async function fetchHomePage(locale: string) {
         testimonials: page.testimonials.map(testimonial => ({
             ...testimonial,
             image: urlForImage(testimonial.image)
-        }))
+        })),
+        carosuel:page.carosuel.map(image=>urlForImage(image))
     }
 }
 
@@ -148,7 +150,13 @@ interface VriddhashramaCenter {
         description: string
         
     }[]
-    rules:[any]
+    rules:[any],
+    surrounding_detail:[any],
+    locations:{
+        name:string,
+        image:Image,
+        url:string
+    }[]
 }
 
 export async function fetchVriddhashramaPage(locale: string) {
@@ -162,16 +170,25 @@ export async function fetchVriddhashramaPage(locale: string) {
             image,
             "description":${coalesce("description",locale)},
           },
-          "rules":${coalesce("rules",locale)}
+          "rules":${coalesce("rules",locale)},
+          "surrounding_detail":${coalesce("surrounding_detail",locale)},
+          "locations":locations[]{
+            "name":${coalesce("name",locale)},
+            image,
+            url
+          }
       }`
 
     let page = await client.fetch<VriddhashramaCenter>(query);
-
     return {
         ...page,
         features: page.features.map(feature => ({
             ...feature,
             image: urlForImage(feature.image)
+        })),
+        locations: page.locations.map(location => ({
+            ...location,
+            image: urlForImage(location.image)
         }))
     }
 }

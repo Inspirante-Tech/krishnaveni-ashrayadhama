@@ -31,7 +31,7 @@ export default async function Vridddhashrama() {
 
         <RulesandRegulation rules={pageData.rules}/>
       </div>
-      <NearbyPlaces />
+      <NearbyPlaces detail={pageData.surrounding_detail} locations={pageData.locations}/>
     </main>
   );
 }

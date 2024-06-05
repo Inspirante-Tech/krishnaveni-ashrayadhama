@@ -37,7 +37,6 @@ export default defineType({
   preview: {
     select: {
       title: `title.${baseLanguage!.id}`,
-      date: 'date',
       media: 'image',
     }
   },

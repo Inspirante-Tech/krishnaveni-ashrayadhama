@@ -11,7 +11,8 @@ import features from './schemaTypes/feature'
 import fqa from './schemaTypes/fqa'
 import facility from './schemaTypes/facility'
 import testimonial from './schemaTypes/testimonial'
+import location from './schemaTypes/location'
 
 export const schema: { types: SchemaTypeDefinition[] } = {
-  types: [localeString,localeText,localeBlockArray,gallery,event,ayurvedicCenter,features,vriddhashrama, doctor,Home,fqa,facility,testimonial],
+  types: [localeString,localeText,localeBlockArray, location,gallery,event,ayurvedicCenter,features,vriddhashrama, doctor,Home,fqa,facility,testimonial],
 }
