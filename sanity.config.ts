@@ -30,7 +30,7 @@ import {schema} from './sanity/schema'
 // Define the actions that should be available for singleton documents
 const singletonActions = new Set(["publish", "discardChanges", "restore"])
 
-const multiInstanceSchemas=["gallery","event","testimonial","contact"]
+const multiInstanceSchemas=["gallery","events","testimonial","contact"]
 const multiInstanceTypes = schema.types.filter(type=>multiInstanceSchemas.includes(type.name))
 const singletonTypes = schema.types.filter(type=>!multiInstanceSchemas.includes(type.name))
 

@@ -159,7 +159,7 @@ const ThumbnailCarousel: React.FC<PropType> = ({ thumbnails, initialIndex = 0, o
                 width={500}
                 height={500}
                 alt={thumbnail.alt}
-                className="rounded-t aspect-[1.2]"
+                className="rounded-t  object-contain"
               />
               <div className="p-2">
                 <h2 className="text-xl">{thumbnail.title}</h2>
@@ -184,7 +184,7 @@ const ThumbnailCarousel: React.FC<PropType> = ({ thumbnails, initialIndex = 0, o
                   width={100}
                   height={100}
                   alt={thumbnail.alt}
-                  className="rounded aspect-[1.2] "
+                  className="rounded object-cover aspect-square"
                 />
               </div>
             ))}

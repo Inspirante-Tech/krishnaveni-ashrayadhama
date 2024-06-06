@@ -112,25 +112,20 @@ export function Gallery({ images }: { images: ImageType[] }) {
         ref={dialogRef}
         className="w-[80%] h-[80%] bg-primary-200 rounded photodialog"
         onClick={onClose}
+        onScroll={e=>e.stopPropagation()}
       >
-        {selectedImageIndex !== null && (
-          <div onClick={(e) => e.stopPropagation()}>
-            <ThumbnailCarousel
-              thumbnails={thumbnails}
-              initialIndex={selectedImageIndex}
-              onThumbnailClick={(thumbnail) => {
-                const index = thumbnails.findIndex((img) => img.id === thumbnail.id);
-                setSelectedImageIndex(index);
-              }}
-            />
-          </div>
-        )}
+        <div className="w-full h-full" onClick={e=>e.stopPropagation()}>
+        <ThumbnailCarousel
+          thumbnails={thumbnails}
+          onThumbnailClick={onSelect}
+        />
 
         <form method="dialog" className="absolute top-0 right-0 z-10">
           <button className="m-4" onClick={onClose}>
             <CircleX className="text-red-500" size={32} />
           </button>
         </form>
+        </div>
       </dialog>
     </section>
   );

@@ -177,6 +177,8 @@ function Events({ events }: { events: EventType[] }) {
     setSelectedEventIndex(null);
   };
 
+  const selectedEvent = selectedEventIndex !== null ? events[selectedEventIndex] : null;
+
   return (
     <section className="content-container bg-primary-300 rounded p-8">
       <h1 className="font-bold text-3xl mb-4">{t("heading")}</h1>
@@ -191,8 +193,8 @@ function Events({ events }: { events: EventType[] }) {
               src={event.image}
               width={500}
               height={500}
-              alt={event.title}
-              className="rounded-t aspect-[1.2]"
+              alt={event.title} 
+              className="rounded object-contain"
             />
             <div className="p-2">
               <h2 className="text-xl">{event.title}</h2>
@@ -206,11 +208,11 @@ function Events({ events }: { events: EventType[] }) {
         className="w-[80%] h-[80%] bg-secondary-200 rounded eventdialog"
         onClick={(e) => e.currentTarget.close()}
       >
-        {selectedEventIndex !== null && (
+        {selectedEvent && (
           <div onClick={(e) => e.stopPropagation()}>
             <ThumbnailCarousel
               thumbnails={thumbnails}
-              initialIndex={selectedEventIndex}
+              initialIndex={selectedEventIndex !== null ? selectedEventIndex : undefined}
               onThumbnailClick={(thumbnail) => {
                 const index = events.findIndex((event) => event.id === thumbnail.id);
                 if (index !== -1) {

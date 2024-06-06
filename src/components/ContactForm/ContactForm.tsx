@@ -106,7 +106,7 @@ const ContactForm = () => {
         </div>
       </form>
 
-      <dialog ref={dialogRef} className="sm:max-w-[425px] bg-white rounded-lg relative" onClick={() => dialogRef.current?.close()}>
+      <dialog ref={dialogRef} className="sm:max-w-[425px] bg-white rounded-lg relative " onClick={() => dialogRef.current?.close()}>
         <Button className="absolute top-5 right-2">
           <X />
         </Button>
