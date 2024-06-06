@@ -7,11 +7,11 @@ interface Props {
 }
 
 function Carousel({ children }: Props) {
-    const [currentIndex, setCurrentIndex] = useState(0);
+    const [_, setCurrentIndex] = useState(0);
     const [timerId, setTimerId] = useState<Timer>();
     const carouselRef = useRef<HTMLDivElement>(null);
     const itemCount = React.Children.count(children);
-    function move(prvs: boolean ,isButtonClick: boolean = false) {
+    function move(prvs: boolean, isButtonClick: boolean = false) {
         setCurrentIndex(currentIndex => {
             let to;
             if (prvs) {
@@ -19,17 +19,22 @@ function Carousel({ children }: Props) {
             } else {
                 to = (currentIndex + 1) % itemCount;
             }
-            if (isButtonClick) {
-                clearInterval(timerId);
-                setTimerId(setInterval(() => {
-                    move(false, false);
-                }, 3000));
-            }
             if (carouselRef.current) {
                 carouselRef.current.scrollLeft = carouselRef.current?.clientWidth * to
             }
             return to
         })
+        if (isButtonClick) {
+            setTimerId((timerId) => {
+                console.log("inside fn")
+                clearInterval(timerId);
+                return setInterval(() => {
+                    console.log("called")
+                    move(prvs, false);
+                }, 3000)
+            });
+        }
+        
     }
 
     useEffect(() => {
@@ -37,7 +42,6 @@ function Carousel({ children }: Props) {
             move(false);
         }, 3000));
         return () => clearTimeout(timerId);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return (

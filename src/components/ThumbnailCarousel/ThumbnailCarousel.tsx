@@ -25,7 +25,7 @@ const ThumbnailCarousel: React.FC<PropType> = ({ thumbnails, initialIndex = 0, o
     containScroll: 'keepSnaps',
     dragFree: true,
   });
-
+  console.log(thumbnails)
   const onThumbClick = useCallback(
     (index: number) => {
       if (!emblaMainApi || !emblaThumbsApi) return;

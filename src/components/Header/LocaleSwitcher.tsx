@@ -9,9 +9,14 @@ export default function LocalSwitcher() {
   const path = usePathname();
   const localActive = useLocale();
 
+  console.log(path);
+
   const onClick = () => {
+    const toPath = path.split("/");
+    toPath[1] = localActive === "en" ? "kn" : "en";
+    const newPath = toPath.join("/");
     startTransition(() => {
-      router.push(localActive === "en" ? "kn" : "en");
+      router.replace(newPath);
       router.refresh();
     });
   };
@@ -19,6 +24,7 @@ export default function LocalSwitcher() {
     <button
       className="subheading font-medium text-gray-900 hover:text-secondary-800 hover:scale-105 transition-all duration-150 ease-linear align-middle p-2"
       onClick={onClick}
+      disabled={isPending}
     >
       {localActive === "en" ? "ಕ" : "en"}
     </button>
