@@ -14,8 +14,8 @@ export default function Contact() {
             className="absolute inset-0 h-full w-full w-870 object-cover  opacity-80 "
           />
 
-          <div className="hidden lg:relative lg:block lg:p-12">
-            <h2 className="mt-6 text-3xl font-bold text-white sm:text-3xl md:text-4xl">
+          <div className="hidden  lg:relative lg:block lg:p-12 p-1">
+            <h2 className="mt-16 text-3xl font-bold text-white sm:text-3xl md:text-4xl">
               Welcome to vriddhashrama
             </h2>
 
