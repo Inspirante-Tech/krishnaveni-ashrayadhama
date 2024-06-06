@@ -5,7 +5,7 @@ export const navigation = [
   },
   {
     id: "specialities",
-    url: "/vriddhashrama",
+    url: "/ashraya-dhama",
   },
   {
     id: "ayurvedicCenter",
