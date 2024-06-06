@@ -11,7 +11,7 @@ function Events({ events }: { events: EventType[] }) {
   const t = useTranslations("events");
   const dialogRef = useRef<HTMLDialogElement>(null);
   const [selectedEvent, setSelectedEvent] = useState<EventType | null>(null);
-
+  
   const thumbnails = events.map(event => ({
     id: event.id,
     image: event.image,

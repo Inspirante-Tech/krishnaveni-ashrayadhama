@@ -28,7 +28,11 @@
         "contact": "contact"
     },
     "ayurvedicCenter":{
-        "heading":"ayurvedic center"
+        "heading":"ayurvedic center",
+        "doctors":{
+            "heading":"doctors",
+            "description":""
+        }
     },
     "vridddhashrama":{
         "rulesAndRegulation":{
@@ -37,5 +41,8 @@
         "surrounding":{
             "heading":"Local Attractions & Surroundings"
         }
+    },
+    "aboutUs":{
+        "heading":"about us"
     }
 }
