@@ -2,7 +2,7 @@ import { defineField, defineType } from 'sanity'
 import { baseLanguage } from './locale'
 
 export default defineType({
-  name: 'event',
+  name: 'events',
   title: 'Event',
   type: 'document',
   fields: [

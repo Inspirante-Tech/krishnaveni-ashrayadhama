@@ -24,7 +24,7 @@ export async function fetchGalleryImages() {
     }))
 }
 
-const EVENT_QUERY = `*[_type == "event"]{'id':_id,title,date,description,image,"alt":image.alt}`
+const EVENT_QUERY = `*[_type == "events"]{'id':_id,title,date,description,image,"alt":image.alt}`
 
 interface EventResponse {
     id: string,
@@ -35,7 +35,14 @@ interface EventResponse {
     alt: string
 }
 
-export async function fetchEvents() {
+export async function fetchEvents(locale:string) {
+    const EVENT_QUERY = `*[_type == "events"]{
+        'id':_id,
+        "title":${coalesce("title",locale)},
+        date,
+        "description":${coalesce("description",locale)},
+        image,
+    }`
     let events = await client.fetch<EventResponse[]>(EVENT_QUERY);
     return events.map(event => ({
         ...event,

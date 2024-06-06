@@ -66,7 +66,15 @@ body {
 }
 
 dialog::backdrop {
-  background-color: rgba(64, 56, 56, 0.401);
+  background-color: rgba(32, 31, 31, 0.853);
+}
+
+dialog[open]{
+  body{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+  }
 }
 
 .eventdialog[open] {

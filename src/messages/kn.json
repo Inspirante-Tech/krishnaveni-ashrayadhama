@@ -29,7 +29,11 @@
         "contact": "ಸಂಪರ್ಕಿಸಿ"
     },
     "ayurvedicCenter":{
-        "heading":"ಆಯುರ್ವೇದ ಕೇಂದ್ರ"
+        "heading":"ಆಯುರ್ವೇದ ಕೇಂದ್ರ",
+        "doctors":{
+            "heading":"doctors",
+            "description":""
+        }
     },
     "vridddhashrama":{
         "rulesAndRegulation":{
@@ -38,5 +42,8 @@
         "surrounding":{
             "heading":"ಸ್ಥಳೀಯ ಆಕರ್ಷಣೆಗಳು ಮತ್ತು ಸುತ್ತಮುತ್ತಲಿನ ಪ್ರದೇಶಗಳು"
         }
+    },
+    "aboutUs":{
+        "heading":"ನಮ್ಮ ಬಗ್ಗೆ"
     }
 }
