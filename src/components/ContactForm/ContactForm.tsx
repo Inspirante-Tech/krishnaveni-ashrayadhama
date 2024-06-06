@@ -1,13 +1,22 @@
 "use client"
-import { useRef } from "react";
-import {Button} from "../ui/button";
+import {useRef } from "react";
+import { Button } from "../ui/button";
 import { X } from "lucide-react";
+import { uploadContact, uploadTestimonial } from "~/app/(main)/[locale]/contact/actions";
+import { client } from "~/sanity/lib/client";
 
 const ContactForm = () => {
   const dialogRef = useRef<HTMLDialogElement>(null);
 
   const openDialog = () => {
     dialogRef.current?.showModal();
+  }
+
+  async function testimonialAction(data:FormData){
+    const response = await client.assets.upload("image",data.get("image") as File)
+    data.set("image",response._id);
+    uploadTestimonial(data);
+    dialogRef.current?.close()
   }
 
   return (
@@ -21,104 +30,68 @@ const ContactForm = () => {
           </Button>
         </div>
       </section>
-      <form action="#" className="mt-8 grid grid-cols-6 gap-6">
-        <div className="col-span-6 sm:col-span-3">
-          <label
-            htmlFor="FirstName"
-            className="block text-sm font-medium text-gray-700"
-          >
-            First Name
-          </label>
-
+      <form  className="mt-8 flex flex-col gap-2" action={uploadContact}>
+        <label
+          className="block text-sm font-medium text-gray-700"
+        >
+          <span>Name</span>
           <input
             type="text"
-            id="FirstName"
-            name="first_name"
-            className="mt-1 w-full h-9 border rounded-md border-gray-800 bg-white text-sm text-gray-700 shadow-sm"
+            name="name"
+            pattern="[A-z]+"
+            required
+            className="mt-1 w-full h-9 border rounded-md border-gray-800 bg-white text-sm text-gray-700 shadow-sm p-2"
           />
-        </div>
+        </label>
 
-        <div className="col-span-6 sm:col-span-3">
-          <label
-            htmlFor="LastName"
-            className="block text-sm font-medium text-gray-700"
-          >
-            Last Name
-          </label>
-
-          <input
-            type="text"
-            id="LastName"
-            name="last_name"
-            className="mt-1 w-full h-9 border rounded-md border-gray-800 bg-white text-sm text-gray-700 shadow-sm"
-          />
-        </div>
-
-        <div className="col-span-6">
-          <label
-            htmlFor="Email"
-            className="block text-sm font-medium text-gray-700"
-          >
-            Email
-          </label>
-
+        <label
+          className="block text-sm font-medium text-gray-700"
+        >
+          <span>Email</span>
           <input
             type="email"
-            id="Email"
             name="email"
-            className="mt-1 w-full h-9 border rounded-md border-gray-800 bg-white text-sm text-gray-700 shadow-sm"
+            className="mt-1 w-full h-9 border rounded-md border-gray-800 bg-white text-sm text-gray-700 shadow-sm p-2"
           />
-        </div>
+        </label>
 
-        <div className="col-span-6 sm:col-span-3">
-          <label
-            htmlFor="Phoneno"
-            className="block text-sm font-medium text-gray-700"
-          >
-            Phoneno
-          </label>
-
+        <label
+          className="block text-sm font-medium text-gray-700"
+        >
+          <span>Phone number</span>
           <input
-            type="Phoneno"
-            id="Phoneno"
-            name="Phoneno"
-            className="mt-1 h-9 border rounded-md border-gray-800 bg-white text-sm text-gray-700 shadow-sm w-full"
+            type="tel"
+            name="phoneNo"
+            required
+            className="mt-1 w-full h-9 border rounded-md border-gray-800 bg-white text-sm text-gray-700 shadow-sm p-2"
           />
-        </div>
+        </label>
 
-        <div className="col-span-6">
-          <label
-            htmlFor="Message"
-            className="block text-sm font-medium text-gray-700"
-          >
-            Message
-          </label>
-
+        <label
+          className="block text-sm font-medium text-gray-700"
+        >
+          <span>Message</span>
           <textarea
-            id="Message"
-            name="Message"
-            className="mt-1 w-full h-32 rounded-md border border-gray-800 bg-white text-sm text-gray-700 shadow-sm"
+            name="message"
+            required
+            className="mt-1 w-full h-32 rounded-md border border-gray-800 bg-white text-sm text-gray-700 shadow-sm p-2"
           ></textarea>
-        </div>
+        </label>
 
-        <div className="col-span-6">
-          <label
-            htmlFor="MarketingAccept"
-            className="flex gap-4 border-gray-500"
-          >
-            <input
-              type="checkbox"
-              id="MarketingAccept"
-              name="marketing_accept"
-              className="size-5 h-9 rounded-md border-gray-800 bg-white shadow-sm"
-            />
+        <label
+          className="flex gap-4 border-gray-500"
+        >
+          <input
+            type="checkbox"
+            name="marketing_accept"
+            className="size-5 h-9 rounded-md border-gray-800 bg-white shadow-sm"
+          />
+          <span className="text-sm text-gray-700">
+            I want to receive emails about events, product updates and company
+            announcements.
+          </span>
 
-            <span className="text-sm text-gray-700">
-              I want to receive emails about events, product updates and company
-              announcements.
-            </span>
-          </label>
-        </div>
+        </label>
 
         <div className="col-span-6 sm:flex sm:items-center sm:gap-4">
           <Button className="bg-secondary-300 text-action-950 font-bold p-4 text-md border hover:border-black hover:bg-primary-50 hover:text-black">
@@ -129,44 +102,75 @@ const ContactForm = () => {
             <Button className="text-gray-700 underline" onClick={openDialog}>
               Did You submit Review
             </Button>
-            .
           </p>
         </div>
       </form>
+
       <dialog ref={dialogRef} className="sm:max-w-[425px] bg-white rounded-lg relative" onClick={() => dialogRef.current?.close()}>
         <Button className="absolute top-5 right-2">
           <X />
         </Button>
-        <form method="dialog" className="p-6 flex flex-col gap-4" onClick={e => e.stopPropagation()}>
+        <form className="p-6 flex flex-col gap-4" onClick={e => e.stopPropagation()} action={testimonialAction}>
           <h1 className="text-2xl font-bold text-action-950">Submit Your Testimonial</h1>
           <p className="text-sm text-gray-500">We value your feedback! Please share your experience with us.</p>
-          <div className="col-span-6 sm:col-span-3">
-            <label
-              className="block text-sm font-medium text-gray-700"
-            >
-              <span>FullName</span>
-              <input
-                type="text"
-                name="fullname"
-                className="mt-1 w-full h-9 border rounded-md border-gray-800 bg-white text-sm text-gray-700 shadow-sm p-2"
-              />
-            </label>
+          <label
+            className="block text-sm font-medium text-gray-700"
+          >
+            <span>Name</span>
+            <input
+              type="text"
+              name="name"
+              className="mt-1 w-full h-9 border rounded-md border-gray-800 bg-white text-sm text-gray-700 shadow-sm p-2"
+            />
+          </label>
 
-          </div>
-          <div className="col-span-6">
-            <label
-              className="block text-sm font-medium text-gray-700"
-            >
-              <span>Review</span>
-              <textarea
-                name="review"
-                className="mt-1 w-full h-32 rounded-md border border-gray-800 bg-white text-sm text-gray-700 shadow-sm p-2"
-              ></textarea>
-            </label>
+          <label
+            className="block text-sm font-medium text-gray-700"
+          >
+            <span>Email</span>
+            <input
+              type="email"
+              name="email"
+              className="mt-1 w-full h-9 border rounded-md border-gray-800 bg-white text-sm text-gray-700 shadow-sm p-2"
+            />
+          </label>
 
-          </div>
+          <label
+            className="block text-sm font-medium text-gray-700"
+          >
+            <span>Phone number</span>
+            <input
+              type="tel"
+              name="phoneNo"
+              required
+              className="mt-1 w-full h-9 border rounded-md border-gray-800 bg-white text-sm text-gray-700 shadow-sm p-2"
+            />
+          </label>
+
+          <label
+            className="block text-sm font-medium text-gray-700"
+          >
+            <span>Profile Image</span>
+            <input
+              type="file"
+              name="image"
+              accept="image/png, image/jpeg"
+              className="mt-1 w-full h-9 border rounded-md border-gray-800 bg-white text-sm text-gray-700 shadow-sm p-1"
+            />
+          </label>
+
+          <label
+            className="block text-sm font-medium text-gray-700"
+          >
+            <span>Review</span>
+            <textarea
+              name="review"
+              className="mt-1 w-full h-32 rounded-md border border-gray-800 bg-white text-sm text-gray-700 shadow-sm p-2"
+            ></textarea>
+          </label>
           <Button
             className="bg-secondary-300 text-action-950 font-bold p-4 text-md border hover:border-black hover:bg-primary-50 hover:text-black"
+            onClick={()=>dialogRef.current?.close()}
           >
             Submit Review
           </Button>

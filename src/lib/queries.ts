@@ -129,7 +129,7 @@ export async function fetchHomePage(locale: string) {
           image,
           "description":${coalesce("description",locale)},
         },
-          "testimonials":testimonials[]{
+          "testimonials":testimonials[]->{
           "name":${coalesce("name",locale)},
           image,
           "statement":${coalesce("statement",locale)},
