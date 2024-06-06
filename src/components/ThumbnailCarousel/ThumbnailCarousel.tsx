@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useCallback } from 'react';
 import { EmblaOptionsType } from 'embla-carousel';
 import useEmblaCarousel from 'embla-carousel-react';
@@ -14,12 +13,13 @@ type Thumbnail = {
 
 type PropType = {
   thumbnails: Thumbnail[];
+  initialIndex?: number;
   options?: EmblaOptionsType;
   onThumbnailClick?: (thumbnail: Thumbnail) => void;
 };
 
-const ThumbnailCarousel: React.FC<PropType> = ({ thumbnails, options, onThumbnailClick }) => {
-  const [selectedIndex, setSelectedIndex] = useState(0);
+const ThumbnailCarousel: React.FC<PropType> = ({ thumbnails, initialIndex = 0, options, onThumbnailClick }) => {
+  const [selectedIndex, setSelectedIndex] = useState(initialIndex);
   const [emblaMainRef, emblaMainApi] = useEmblaCarousel(options);
   const [emblaThumbsRef, emblaThumbsApi] = useEmblaCarousel({
     containScroll: 'keepSnaps',
@@ -30,9 +30,9 @@ const ThumbnailCarousel: React.FC<PropType> = ({ thumbnails, options, onThumbnai
     (index: number) => {
       if (!emblaMainApi || !emblaThumbsApi) return;
       emblaMainApi.scrollTo(index);
-      // onThumbnailClick && onThumbnailClick(thumbnails[index]); // Removed callback here
+      onThumbnailClick && onThumbnailClick(thumbnails[index]);
     },
-    [emblaMainApi, emblaThumbsApi]
+    [emblaMainApi, emblaThumbsApi, onThumbnailClick, thumbnails]
   );
 
   const onSelect = useCallback(() => {
@@ -43,9 +43,10 @@ const ThumbnailCarousel: React.FC<PropType> = ({ thumbnails, options, onThumbnai
 
   useEffect(() => {
     if (!emblaMainApi) return;
+    emblaMainApi.scrollTo(initialIndex); // Set initial index
     onSelect();
     emblaMainApi.on('select', onSelect).on('reInit', onSelect);
-  }, [emblaMainApi, onSelect]);
+  }, [emblaMainApi, initialIndex, onSelect]);
 
   return (
     <div className={styles.embla}>
@@ -53,7 +54,7 @@ const ThumbnailCarousel: React.FC<PropType> = ({ thumbnails, options, onThumbnai
         {/* Main Image component */}
         <div className={styles.embla__container}>
           {thumbnails.map((thumbnail, index) => (
-            <div key={thumbnail.id} className={styles.embla__slide} onClick={() => onThumbnailClick && onThumbnailClick(thumbnail)}>
+            <div key={thumbnail.id} className={styles.embla__slide}>
               <Image
                 src={thumbnail.image}
                 width={500}
@@ -68,12 +69,17 @@ const ThumbnailCarousel: React.FC<PropType> = ({ thumbnails, options, onThumbnai
           ))}
         </div>
       </div>
-       {/* Thumbnail component */}
+      {/* Thumbnail component */}
       <div className={styles.emblaThumbs}>
         <div className={styles.emblaThumbs__viewport} ref={emblaThumbsRef}>
           <div className={styles.emblaThumbs__container}>
             {thumbnails.map((thumbnail, index) => (
-              <div key={thumbnail.id} onClick={() => onThumbClick(index)} className={`${styles.emblaThumbs__slide} ${index === selectedIndex ? styles.emblaThumbs__slide__selected : ''} `}>
+              <div 
+                key={thumbnail.id} 
+                onClick={() => onThumbClick(index)} 
+                onMouseDown={(e) => e.stopPropagation()}  // Stop event propagation
+                className={`${styles.emblaThumbs__slide} ${index === selectedIndex ? styles.emblaThumbs__slide__selected : ''} `}
+              >
                 <Image
                   src={thumbnail.image}
                   width={100}
@@ -86,10 +92,8 @@ const ThumbnailCarousel: React.FC<PropType> = ({ thumbnails, options, onThumbnai
           </div>
         </div>
       </div>
-
     </div>
   );
 };
 
 export default ThumbnailCarousel;
-
