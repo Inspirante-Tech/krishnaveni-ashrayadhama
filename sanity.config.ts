@@ -30,9 +30,9 @@ import {schema} from './sanity/schema'
 // Define the actions that should be available for singleton documents
 const singletonActions = new Set(["publish", "discardChanges", "restore"])
 
-const multiInstanceSchemas=["gallery","event"]
+const multiInstanceSchemas=["gallery","event","testimonial","contact"]
 const multiInstanceTypes = schema.types.filter(type=>multiInstanceSchemas.includes(type.name))
-const singletonTypes = schema.types.filter(type=>multiInstanceSchemas.includes(type.name))
+const singletonTypes = schema.types.filter(type=>!multiInstanceSchemas.includes(type.name))
 
 export default defineConfig({
   name: "default",
@@ -88,8 +88,9 @@ export default defineConfig({
     // For singleton types, filter out actions that are not explicitly included
     // in the `singletonActions` list defined above
     actions: (input, context) =>
-      singletonTypes.filter(type=>context.schemaType===type.name).length
-        ? input.filter(({ action }) => action && singletonActions.has(action))
-        : input,
+      singletonTypes.filter(type=>context.schemaType===type.name).length 
+    ? input.filter(({ action }) => action && singletonActions.has(action))
+        : 
+        input,
   },
 })

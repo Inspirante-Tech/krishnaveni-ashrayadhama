@@ -62,7 +62,9 @@ export default defineType({
             of: [
                 defineField({
                     name: 'testimonial',
-                    type: "testimonial"
+                    type: 'reference',
+                    weak: true,
+                    to: [{type: 'testimonial'}],
                 })
             ],
             validation: Rule => Rule.unique()
