@@ -2,7 +2,7 @@ import Image from "next/image";
 
 function About() {
   return (
-    <main className="space-y-12 mt-16 ">
+    <main className="space-y-12 mt-16 min-h-screen">
       <section className="content-container">
         <h1 className="text-3xl text-black-900 text-center py-5 font-bold">
           About Krishnaveni Vridddhashrama

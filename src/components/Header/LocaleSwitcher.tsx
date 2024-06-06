@@ -9,8 +9,6 @@ export default function LocalSwitcher() {
   const path = usePathname();
   const localActive = useLocale();
 
-  console.log(path);
-
   const onClick = () => {
     const toPath = path.split("/");
     toPath[1] = localActive === "en" ? "kn" : "en";

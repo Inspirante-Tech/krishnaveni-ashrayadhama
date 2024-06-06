@@ -32,12 +32,12 @@
 }
 
 .subheading {
-  @apply text-base md:text-lg lg:text-xl;
+  @apply text-lg lg:text-xl;
   /* @apply font-bold; */
 }
 
 .body {
-  @apply text-sm md:text-base lg:text-lg;
+  @apply text-base lg:text-lg;
 }
 
 .caption {
@@ -103,5 +103,3 @@ dialog::backdrop {
 .menu-transition {
   transition: transform 0.3s ease;
 }
-
-

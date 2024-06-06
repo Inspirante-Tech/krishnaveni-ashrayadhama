@@ -10,32 +10,30 @@ const Header = () => {
   const t = useTranslations("links");
   const router = usePathname();
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-secondary-300 text-gray-900">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-secondary-200 text-gray-900">
       <div className="max-w-screen-xl flex flex-row justify-between items-center px-3 md:px-12 mx-auto">
         <LocaleLink href="/" className="flex items-center">
           Logo
         </LocaleLink>
         <div className="lg:flex flex-row md:gap-4 lg:gap-8 hidden">
           {navigation.map((item) => (
-            <div
-              className="py-4 lg:py-6 border-gray-900 hover:border-secondary-800 hover:text-secondary-800 hover:scale-105 transition-all duration-150 ease-linear"
-              key={item.id}
-            >
-              <LocaleLink
-                href={item.url}
-                className="h-full "
-                style={{
-                  textTransform: "capitalize",
-                  borderBottom:
-                    "/" + router.split("/")[router.split("/").length - 1] ===
-                    item.url
-                      ? "2px solid"
-                      : "none",
-                }}
-              >
-                {t(item.id)}
-              </LocaleLink>
-            </div>
+            <LocaleLink href={item.url} key={item.id}>
+              <div className="py-4 lg:py-6 border-gray-900 hover:border-secondary-800 hover:text-secondary-800 hover:scale-105 transition-all duration-150 ease-linear">
+                <div
+                  className="h-full "
+                  style={{
+                    textTransform: "capitalize",
+                    borderBottom:
+                      "/" + router.split("/")[router.split("/").length - 1] ===
+                      item.url
+                        ? "2px solid"
+                        : "none",
+                  }}
+                >
+                  {t(item.id)}
+                </div>
+              </div>
+            </LocaleLink>
           ))}
         </div>
         <div className="flex gap-6 justify-center items-center">

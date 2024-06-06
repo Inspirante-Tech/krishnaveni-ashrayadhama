@@ -26,10 +26,8 @@ function Carousel({ children }: Props) {
         })
         if (isButtonClick) {
             setTimerId((timerId) => {
-                console.log("inside fn")
                 clearInterval(timerId);
                 return setInterval(() => {
-                    console.log("called")
                     move(prvs, false);
                 }, 3000)
             });
