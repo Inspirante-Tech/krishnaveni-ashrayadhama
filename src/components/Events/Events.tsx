@@ -44,7 +44,7 @@ function Events({ events }: { events: EventType[] }) {
               width={500}
               height={500}
               alt={selectedEvent.title}
-              className="rounded"
+              className="rounded object-contain"
             />
             <div className="space-y-4 md:min-w-52">
               <h1 className="font-bold text-4xl">{selectedEvent.title}</h1>

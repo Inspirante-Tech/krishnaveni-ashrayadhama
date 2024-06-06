@@ -45,7 +45,9 @@ export function Gallery({ images }: { images: ImageType[] }) {
         ref={dialogRef}
         className="w-[80%] h-[80%] bg-primary-200 rounded  photodialog"
         onClick={onClose}
+        onScroll={e=>e.stopPropagation()}
       >
+        <div className="w-full h-full" onClick={e=>e.stopPropagation()}>
         <ThumbnailCarousel
           thumbnails={thumbnails}
           onThumbnailClick={onSelect}
@@ -55,7 +57,8 @@ export function Gallery({ images }: { images: ImageType[] }) {
           <button className="m-4" onClick={onClose}>
             <CircleX className="text-red-500" size={32} />
           </button>
-        </form> *
+        </form>
+        </div>
       </dialog>
     </section>
   );
