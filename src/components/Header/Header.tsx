@@ -5,13 +5,14 @@ import LocaleLink from "../ui/LocaleLink";
 import LocalSwitcher from "./LocaleSwitcher";
 import styles from "./styles.module.css";
 import { usePathname } from "next/navigation";
+import { useEffect, useRef } from "react";
 
 const Header = () => {
   const t = useTranslations("links");
   const router = usePathname();
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-secondary-200 text-gray-900">
-      <div className="max-w-screen-xl flex flex-row justify-between items-center px-3 md:px-12 mx-auto">
+      <div className="max-w-screen-2xl flex flex-row justify-between items-center px-3 md:px-12 mx-auto">
         <LocaleLink href="/" className="flex items-center">
           Logo
         </LocaleLink>
@@ -51,17 +52,32 @@ function MobileNav() {
   const t = useTranslations("links");
   const router = usePathname();
 
+  const input = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    const toggle = (e: MouseEvent) => {
+      if (e.target)
+        if (input.current?.checked && e.target !== input.current) {
+          input.current.checked = false;
+        }
+    };
+
+    window.addEventListener("mousedown", (e) => toggle(e));
+    return () => window.removeEventListener("mousedown", (e) => toggle(e));
+  }, []);
+
   return (
     <div
       id={styles.menuToggle}
-      className="flex flex-col relative select-none rounded-xl lg:hidden py-6"
+      className="flex flex-col relative select-none rounded-xl lg:hidden "
     >
       <input
-        id={styles.input}
+        ref={input}
+        id="toggleSwitch"
         type="checkbox"
-        className="absolute h-full w-full cursor-pointer z-50 opacity-0"
+        className={`absolute h-full w-full cursor-pointer z-50 opacity-0 ${styles.input}`}
       />
-      <div className="relative w-6 h-[14px] overflow-clip">
+      <div className="relative w-6 h-[14px] overflow-clip py-6 mb-3">
         <span
           className={`flex w-6 h-[2px] mb-1 relative rounded-full z-20 origin-[left_center] transition-all duration-500 bg-gray-900 ${styles.span}`}
         ></span>
@@ -74,7 +90,7 @@ function MobileNav() {
       </div>
       <div
         id={styles.menu}
-        className="p-8 list-none fixed top-0 right-0 translate-x-full h-screen bg-secondary-300 flex flex-col justify-center items-center transition-all duration-500 ease-in-out z-10 gap-4 subheading"
+        className="p-8 list-none fixed top-0 right-0 translate-x-full h-screen bg-secondary-200 flex flex-col justify-center items-center transition-all duration-500 ease-in-out z-10 gap-4 subheading"
       >
         {navigation.map((item) => (
           <LocaleLink

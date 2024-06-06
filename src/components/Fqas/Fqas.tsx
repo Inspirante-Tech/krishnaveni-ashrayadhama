@@ -77,7 +77,7 @@ const Fqas = ({ fqas }: { fqas: FqaType[] }) => {
   return (
     <section className="">
       <div className="relative grid grid-cols-1 gap-8 lg:grid-cols-3 lg:items-center lg:gap-16 justify-between content-container">
-        <div className="sm:mx-auto lg:col-span-1 flex flex-col gap-8">
+        <div className="sm:mx-auto lg:col-span-1 flex flex-col md:gap-4 gap-2">
           <h2 className="heading text-gray-900">{t("heading")}</h2>
           <div className="flex flex-col gap-4">
             <p className="body text-gray-700">{t("description")}</p>

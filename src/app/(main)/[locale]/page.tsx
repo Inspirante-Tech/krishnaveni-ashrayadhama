@@ -12,12 +12,12 @@ export default async function Home() {
   const data = await fetchHomePage(locale);
   return (
     <>
-      <Hero carouselImages={data.carosuel}/>
-      <main>
-        <Story data={data.story}/>
-        <Facilities facilities={data.facilities}/>
-        <Information data={data.whoweare}/>
-        <Fqas fqas={data.fqas}/>
+      <main className="space-y-8">
+        <Hero carouselImages={data.carosuel} />
+        <Story data={data.story} />
+        <Facilities facilities={data.facilities} />
+        <Information data={data.whoweare} />
+        <Fqas fqas={data.fqas} />
         <Testimonials testimonials={data.testimonials} />
       </main>
     </>

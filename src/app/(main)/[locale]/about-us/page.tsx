@@ -1,13 +1,17 @@
 import Image from "next/image";
+import { aboutContent } from "~/constants";
 
 function About() {
   return (
-    <main className="space-y-12 mt-16 min-h-screen">
-      <section className="content-container">
-        <h1 className="text-3xl text-black-900 text-center py-5 font-bold">
-          About Krishnaveni Vridddhashrama
+    <main className="space-y-16 md:space-y-20 min-h-screen content-container">
+      <section className="flex md:gap-4 gap-2 flex-col pt-20">
+        <h1
+          className="text-gray-900 text-left heading"
+          style={{ textTransform: "capitalize" }}
+        >
+          About Ashraya Dhama
         </h1>
-        <p className="container mx-auto text-justify my-6">
+        <p className="body text-justify">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
           asperiores aut tempore voluptatibus minus placeat ad eveniet numquam
           voluptatum accusantium. Ipsa voluptatum consequuntur sit fugit
@@ -24,62 +28,31 @@ function About() {
           similique neque officiis modi quo veritatis aspernatur quidem nisi in
         </p>
       </section>
-      <section className="grid grid-cols-1 md:grid-cols-2 justify-between gap-4  items-center content-container">
-        <Image
-          className="object-cover float-right rounded-2xl hover:shadow-xl transition ease-out duration-500"
-          src="https://placehold.co/600x400/png"
-          alt="Text box with number"
-          width={600}
-          height={400}
-        />
-        <div className="flex-grow">
-          <p className="text-3xl py-8 my-5 font-semibold">
-            Why This Initiative?
-          </p>
-          <p className="text-justify">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam soluta
-            labore quaerat error! Alias consequatur distinctio atque ab magnam
-            nulla odio nesciunt officiis nisi quia! Nemo natus mollitia
-            similique voluptate, cupiditate voluptatem nostrum accusantium earum
-            dolorum ipsum ipsam nulla eligendi deserunt magnam ipsa quisquam
-            beatae sapiente aut perferendis alias deleniti quos. Labore, quae
-            pariatur officiis totam assumenda ab voluptate blanditiis eveniet id
-            eos exercitationem corporis modi ut asperiores mollitia, veniam
-            unde, aut distinctio molestiae eum odit. Harum mollitia ea beatae.
-            Officiis explicabo omnis illum. Est deleniti cumque aliquam impedit
-            a sit, dolores quo incidunt cupiditate quod ducimus cum laboriosam
-            odio.
-          </p>
-        </div>
-      </section>
-      <section className="grid grid-cols-1 md:grid-cols-2 items-center content-container">
-        <Image
-          className="object-cover float-right rounded-2xl hover:shadow-xl transition ease-out duration-500 md:order-last order-first"
-          src="https://placehold.co/600x400/png"
-          alt="Text box with number"
-          height={400}
-          width={600}
-        />
-        <div className="md:order-first order-last md:p-4">
-          <p className="text-3xl py-8 my-5 font-semibold">
-            Why This Initiative?
-          </p>
-          <p className="text-justify">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam soluta
-            labore quaerat error! Alias consequatur distinctio atque ab magnam
-            nulla odio nesciunt officiis nisi quia! Nemo natus mollitia
-            similique voluptate, cupiditate voluptatem nostrum accusantium earum
-            dolorum ipsum ipsam nulla eligendi deserunt magnam ipsa quisquam
-            beatae sapiente aut perferendis alias deleniti quos. Labore, quae
-            pariatur officiis totam assumenda ab voluptate blanditiis eveniet id
-            eos exercitationem corporis modi ut asperiores mollitia, veniam
-            unde, aut distinctio molestiae eum odit. Harum mollitia ea beatae.
-            Officiis explicabo omnis illum. Est deleniti cumque aliquam impedit
-            a sit, dolores quo incidunt cupiditate quod ducimus cum laboriosam
-            odio.
-          </p>
-        </div>
-      </section>
+      {aboutContent.map((content, idx) => (
+        <section
+          className={`flex flex-col md:flex-row gap-6 md:gap-10 ${idx % 2 === 0 ? "" : "md:flex-row-reverse"}`}
+          key={`aboutContent${idx}`}
+        >
+          <div className="relative rounded-2xl hover:shadow-xl transition ease-out duration-500 basis-auto md:basis-1/2 overflow-clip aspect-video md:aspect-auto group">
+            <Image
+              className="object-cover group-hover:scale-105 transition ease-out duration-700"
+              src={content.img}
+              alt={content.title}
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+          </div>
+          <div className="md:basis-1/2 basis-auto flex flex-col gap-2 md:gap-4">
+            <p
+              className="heading text-gray-900"
+              style={{ textTransform: "capitalize" }}
+            >
+              {content.title}
+            </p>
+            <p className="body text-justify">{content.content}</p>
+          </div>
+        </section>
+      ))}
     </main>
   );
 }

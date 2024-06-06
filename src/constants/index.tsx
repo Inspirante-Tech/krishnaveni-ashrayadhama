@@ -474,9 +474,10 @@ export const krishnaveniVriddhashramRules = [
   },
 ];
 
-export const VridddhashramaPageVideo = "https://www.youtube.com/embed/zD43hknPtLc";
-export const AyurvedicPagePageVideo = "https://www.youtube.com/embed/zD43hknPtLc";
-
+export const VridddhashramaPageVideo =
+  "https://www.youtube.com/embed/zD43hknPtLc";
+export const AyurvedicPagePageVideo =
+  "https://www.youtube.com/embed/zD43hknPtLc";
 
 export const facilities = [
   {
@@ -534,39 +535,59 @@ export const content = [
 export const DoctorsDetails = [
   {
     iamge: "https://www.pngmart.com/files/21/Male-Doctor-PNG-Isolated-HD.png",
-    name: "Docter 1"
+    name: "Docter 1",
   },
   {
     iamge: "https://www.pngmart.com/files/21/Male-Doctor-PNG-Isolated-HD.png",
-    name: "Docter 2"
+    name: "Docter 2",
   },
   {
     iamge: "https://www.pngmart.com/files/21/Male-Doctor-PNG-Isolated-HD.png",
-    name: "Docter 3"
+    name: "Docter 3",
   },
   {
     iamge: "https://www.pngmart.com/files/21/Male-Doctor-PNG-Isolated-HD.png",
-    name: "Docter 4"
+    name: "Docter 4",
   },
   {
     iamge: "https://www.pngmart.com/files/21/Male-Doctor-PNG-Isolated-HD.png",
-    name: "Docter 5"
+    name: "Docter 5",
   },
   {
     iamge: "https://www.pngmart.com/files/21/Male-Doctor-PNG-Isolated-HD.png",
-    name: "Docter 6"
+    name: "Docter 6",
   },
   {
     iamge: "https://www.pngmart.com/files/21/Male-Doctor-PNG-Isolated-HD.png",
-    name: "Docter 7"
+    name: "Docter 7",
   },
   {
     iamge: "https://www.pngmart.com/files/21/Male-Doctor-PNG-Isolated-HD.png",
-    name: "Docter 8"
+    name: "Docter 8",
   },
   {
     iamge: "https://www.pngmart.com/files/21/Male-Doctor-PNG-Isolated-HD.png",
-    name: "Docter 9"
+    name: "Docter 9",
   },
+];
 
+export const aboutContent = [
+  {
+    title: "Why This Initiative?",
+    content:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam soluta labore quaerat error! Alias consequatur distinctio atque ab magnam nulla odio nesciunt officiis nisi quia! Nemo natus mollitia similique voluptate, cupiditate voluptatem nostrum accusantium earum dolorum ipsum ipsam nulla eligendi deserunt magnam ipsa quisquam beatae sapiente aut perferendis alias deleniti quos. Labore, quae pariatur officiis totam assumenda ab voluptate blanditiis eveniet id eos exercitationem corporis modi ut asperiores mollitia, veniam unde, aut distinctio molestiae eum odit. Harum mollitia ea beatae. Officiis explicabo omnis illum. Est deleniti cumque aliquam impedit a sit, dolores quo incidunt cupiditate quod ducimus cum laboriosam odio.",
+    img: "https://placehold.co/600x400/png",
+  },
+  {
+    title: "Why This Initiative?",
+    content:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam soluta labore quaerat error! Alias consequatur distinctio atque ab magnam nulla odio nesciunt officiis nisi quia! Nemo natus mollitia similique voluptate, cupiditate voluptatem nostrum accusantium earum dolorum ipsum ipsam nulla eligendi deserunt magnam ipsa quisquam beatae sapiente aut perferendis alias deleniti quos. Labore, quae pariatur officiis totam assumenda ab voluptate blanditiis eveniet id eos exercitationem corporis modi ut asperiores mollitia, veniam unde, aut distinctio molestiae eum odit. Harum mollitia ea beatae. Officiis explicabo omnis illum. Est deleniti cumque aliquam impedit a sit, dolores quo incidunt cupiditate quod ducimus cum laboriosam odio.",
+    img: "https://placehold.co/600x400/png",
+  },
+  {
+    title: "Why This Initiative?",
+    content:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam soluta labore quaerat error! Alias consequatur distinctio atque ab magnam nulla odio nesciunt officiis nisi quia! Nemo natus mollitia similique voluptate, cupiditate voluptatem nostrum accusantium earum dolorum ipsum ipsam nulla eligendi deserunt magnam ipsa quisquam beatae sapiente aut perferendis alias deleniti quos. Labore, quae pariatur officiis totam assumenda ab voluptate blanditiis eveniet id eos exercitationem corporis modi ut asperiores mollitia, veniam unde, aut distinctio molestiae eum odit. Harum mollitia ea beatae. Officiis explicabo omnis illum. Est deleniti cumque aliquam impedit a sit, dolores quo incidunt cupiditate quod ducimus cum laboriosam odio.",
+    img: "https://placehold.co/600x400/png",
+  },
 ];

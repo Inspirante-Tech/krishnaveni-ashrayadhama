@@ -37,7 +37,7 @@ const Story: React.FC<{ data: string }> = ({ data }) => {
             className={`transition-opacity duration-1000 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                 } text-justify`}
         >
-            <div className='content-container flex gap-8 flex-col'>
+            <div className='content-container flex md:gap-4 gap-2 flex-col'>
                 <h2 className="heading text-gray-900">Our Story</h2>
                 {[data].map((info, index) => (
                     <p className="body" key={index}>
