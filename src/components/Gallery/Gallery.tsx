@@ -1,3 +1,4 @@
+
 "use client";
 import { CircleX } from "lucide-react";
 import { useRef, useState } from "react";
@@ -12,7 +13,8 @@ export function Gallery({ images }: { images: ImageType[] }) {
   const [selectedImage, setSelectedImage] = useState<ImageType | null>(null);
   const dialogRef = useRef<HTMLDialogElement>(null);
 
-  const onSelect = (image: ImageType) => {
+  const onSelect = (index: number) => {
+    const image = images[index];
     setSelectedImage(image);
     dialogRef.current && dialogRef.current.showModal();
     document.body.classList.add("prevent-scroll");
@@ -33,21 +35,21 @@ export function Gallery({ images }: { images: ImageType[] }) {
 
   return (
     <section className="my-4 content-container bg-white">
-      <h2 className="font-bold text-3xl md:text-5xl mb-4">{t("heading")}</h2>
-      <hr/>
-      <div className="grid grid-cols-1 mt-2  sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        {images.map((image) => (
+      <h2 className="heading spcae-y-2">{t("heading")}</h2>
+      <hr />
+      <div className="grid grid-cols-1 mt-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 body">
+        {images.map((image, index) => (
           <Photo
             key={image.id}
             url={image.image}
-            alt={image.alt}
-            callback={() => onSelect(image)}
+            alt={image.description}
+            callback={() => onSelect(index)}
           />
         ))}
       </div>
       <dialog
         ref={dialogRef}
-        className="w-[80%] h-[100%] p-2 md:p-15  bg-gray-100 rounded-xl  eventdialog overflow-hidden"
+        className="w-[100%] h-[100%] md:w-[90%] p-2 md:p-15 bg-gray-100 rounded-xl eventdialog overflow-hidden"
         onClick={onClose}
       >
         <div className="w-full h-full mt-12 md:mt-1" onClick={(e) => e.stopPropagation()}>
@@ -70,3 +72,4 @@ export function Gallery({ images }: { images: ImageType[] }) {
     </section>
   );
 }
+

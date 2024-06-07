@@ -33,6 +33,7 @@
 
 .subheading {
   @apply text-lg lg:text-xl;
+  @apply font-semibold
   /* @apply font-bold; */
 }
 

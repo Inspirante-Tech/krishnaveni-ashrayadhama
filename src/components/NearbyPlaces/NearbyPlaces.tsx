@@ -6,14 +6,14 @@ import { LocationType } from "~/lib/types";
 const NearbyPlaces = async ({ detail, locations }: { detail: [any], locations: LocationType[] }) => {
   const t = await getTranslations("vridddhashrama.surrounding")
   return (
-    <section className="bg-white  mt-4">
-      <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
+    <section className="bg-white  mt-10">
+      <div className="mx-auto max-w-screen-xl ">
         <div className="mx-auto  text-center">
           <h2 className="text-2xl text-center md:text-left font-bold  text-action-950 md:text-4xl">
             {t("heading")}
           </h2>
 
-          <div className="mt-4 text-gray-800 md:text-left">
+          <div className="mt-4 text-gray-800 md:text-left leading-relaxed">
             <PortableText value={detail} />
           </div>
         </div>

@@ -9,7 +9,7 @@ import { useTranslations } from "next-intl";
 function Doctors({doctors}:{doctors:DoctorType[]}) {
   const t= useTranslations("ayurvedicCenter.doctors")
   return (
-    <section className="bg-primary-100 content-container py-12 lg:py-16 w-full relative">
+    <section className="bg-primary-100 content-container  w-full relative">
       <h2 className="text-center text-gray-900 heading">
         {t("heading")}
       </h2>
