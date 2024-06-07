@@ -9,18 +9,18 @@ async function page() {
   const loacle = await getLocale();
   const pageData = await fetchAyrvedicCenterPage(loacle);
   return (
-    <main className="bg-white  pb-12">
-      <section className="content-container">
-        <h2 className="text-3xl   md:text-5xl font-bold mt-12 p-6 text-action-950 capitalize">
+    <main className=" pb-12 space-y-16 md:space-y-20 min-h-screen content-container">
+      <section className="flex md:gap-4 gap-2 flex-col pt-20">
+        <h2 className="text-gray-900 text-left heading" style={{ textTransform: "capitalize" }}>
           {pageData.title}
         </h2>
-        <p className="mt-1 text-gray-800 p-6">
+        <p className="body">
           {pageData.description}
         </p>
       </section>
         <Features data={pageData.features} heading="Services Offered"/>
       <VideoSection videoSrc={pageData.videoLink} />
-      <hr />
+      {/* <hr /> */}
       <Doctors doctors={pageData.doctors}/>
     </main>
   );

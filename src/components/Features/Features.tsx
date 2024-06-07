@@ -8,9 +8,9 @@ interface Props {
 
 const ImageContent: React.FC<Props> = ({ data ,heading}) => {
   return (
-    <section className="space-y-8 mt-10 content-container">
+    <section className="space-y-8">
       {heading && (
-        <h2 className="text-2xl text-center md:text-left font-bold  text-action-950 md:text-4xl uppercase">
+        <h2 className="text-gray-900 text-left heading">
             {heading}
         </h2>
       )}
@@ -22,8 +22,8 @@ const ImageContent: React.FC<Props> = ({ data ,heading}) => {
             } items-center`}
         >
           <div className="md:w-1/2 p-4">
-            <h2 className="text-2xl font-bold mb-4">{section.title}</h2>
-            <p className="text-lg text-gray-700">{section.description}</p>
+            <h2 className="subheading mb-4">{section.title}</h2>
+            <p className="body">{section.description}</p>
           </div>
           <div className="md:w-1/2 p-4">
             <Image
