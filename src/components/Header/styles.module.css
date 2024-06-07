@@ -1,17 +1,17 @@
-#input:checked ~ div .span {
+.input:checked ~ div .span {
   opacity: 1;
   transform: rotate(-30.25deg);
 }
 
-#input:checked ~ div .span:nth-last-child(2) {
+.input:checked ~ div .span:nth-last-child(2) {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
 
-#input:checked ~ div .span:nth-last-child(3) {
+.input:checked ~ div .span:nth-last-child(3) {
   transform: rotate(30.25deg);
 }
 
-#input:checked ~ #menu {
+.input:checked ~ #menu {
   transform: translate(0, 0);
 }

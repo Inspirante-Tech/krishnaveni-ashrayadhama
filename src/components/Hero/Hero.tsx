@@ -1,14 +1,12 @@
-import { HeroimageUrls } from "~/constants";
 import Carousel from "./Carousel";
 import ScrollDown from "./ScrollDown";
-
 import Image from "next/image";
 
-function Hero() {
+function Hero({carouselImages}:{carouselImages:string[]}) {
   return (
     <div className="relative w-full h-full z-0">
       <Carousel>
-        {HeroimageUrls.map((url, index) => (
+        {carouselImages.map((url, index) => (
           <Image
             key={index}
             width={600}

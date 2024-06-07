@@ -21,24 +21,24 @@ async function Footer() {
             </ul>
           </div>
           <div className="p-5">
-            <p className="semibold pb-4">Address</p>
-            <ul className="text-gray-300">
-              <li className=" body pb-2 font-semibold transition-colors duration-150 hover:text-secondary-300 cursor-pointer">
+            <p className="heading pb-4">Address</p>
+            <ul className="">
+              <li className="text-gray-300 body pb-2 font-semibold transition-colors duration-150 hover:text-secondary-300 cursor-pointer">
                 Lorem ipsum
               </li>
-              <li className=" body pb-2 font-semibold transition-colors duration-150 hover:text-secondary-300 cursor-pointer">
+              <li className="text-gray-300 body pb-2 font-semibold transition-colors duration-150 hover:text-secondary-300 cursor-pointer">
                 lorem ipsum
               </li>
-              <li className=" body pb-2 font-semibold transition-colors duration-150 hover:text-secondary-300 cursor-pointer">
+              <li className="text-gray-300 body pb-2 font-semibold transition-colors duration-150 hover:text-secondary-300 cursor-pointer">
                 lorem ipsum
               </li>
-              <li className=" body pb-2 font-semibold transition-colors duration-150 hover:text-secondary-300 cursor-pointer">
+              <li className="text-gray-300 body pb-2 font-semibold transition-colors duration-150 hover:text-secondary-300 cursor-pointer">
                 lorem ipsum
               </li>
             </ul>
           </div>
           <div className="p-5 flex flex-col gap-1">
-            <h1 className="heading mb-4">{t("heading")}</h1>
+            <p className="heading mb-4">{t("heading")}</p>
             {navigation.map((item) => (
               <LocaleLink
                 key={item.id}
@@ -53,7 +53,9 @@ async function Footer() {
         </div>
       </div>
       <div className="flex flex-col justify-center items-center text-center  p-5 bg-secondary-950">
-        <h1 className=" font-semibold">&copy; 2023-2024 All rights reserved</h1>
+        <h1 className="text-gray-300 font-semibold">
+          &copy; 2023-2024 All rights reserved
+        </h1>
       </div>
     </footer>
   );

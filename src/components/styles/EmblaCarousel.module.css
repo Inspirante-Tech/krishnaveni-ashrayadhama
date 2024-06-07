@@ -60,7 +60,8 @@
   .emblaThumbs__slide {
     position: relative;
     flex: 0 0 auto;
-    width: 100px; /* Adjust thumbnail size if necessary */
+    width: 50px;
+    margin: 2px; /* Adjust thumbnail size if necessary */
     /* padding-left: 10px; */
     cursor: pointer;
   }
@@ -68,7 +69,8 @@
   .emblaThumbs__slide__selected {
     border: 2px solid #000; /* Customize the border color and width */
     box-sizing: border-box;
-    margin-left:0.1rem;
-    padding: 0.1rem; /* Ensure the border doesn't affect the element's size */
+    padding: 2px;
+     
+    /* Ensure the border doesn't affect the element's size */
   }
   

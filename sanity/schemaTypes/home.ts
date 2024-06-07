@@ -6,14 +6,8 @@ export default defineType({
     type: "document",
     fields: [
         defineField({
-            name: "language",
-            type: "string",
-            hidden: true,
-            readOnly: true
-        }),
-        defineField({
             name: "story",
-            title: "Story section",
+            title: "Content Section 1",
             type: "localeText",
             validation: (Rule) => Rule.required(),
         }),
@@ -40,7 +34,7 @@ export default defineType({
         }),
         defineField({
             name: "whoweare",
-            title: "whoweare section",
+            title: "Content Section 1",
             type: "localeText",
             validation: (Rule) => Rule.required(),
         }),
@@ -62,7 +56,9 @@ export default defineType({
             of: [
                 defineField({
                     name: 'testimonial',
-                    type: "testimonial"
+                    type: 'reference',
+                    weak: true,
+                    to: [{type: 'testimonial'}],
                 })
             ],
             validation: Rule => Rule.unique()

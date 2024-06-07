@@ -13,7 +13,7 @@
         }
     },
     "events": {
-        "heading": "events"
+        "heading": "Events"
     },
     "gallery": {
         "heading": "Gallery"
@@ -21,18 +21,28 @@
     "links": {
         "heading":"Links",
         "aboutUs": "about us",
-        "specialities": "specialities",
+        "specialities": "Vriddhashram",
         "ayurvedicCenter": "ayurvedic center",
         "events": "events",
         "gallery": "gallery",
         "contact": "contact"
     },
     "ayurvedicCenter":{
-        "heading":"ayurvedic center"
+        "heading":"ayurvedic center",
+        "doctors":{
+            "heading":"doctors",
+            "description":""
+        }
     },
     "vridddhashrama":{
         "rulesAndRegulation":{
             "heading":"rules and regulations"
+        },
+        "surrounding":{
+            "heading":"Local Attractions & Surroundings"
         }
+    },
+    "aboutUs":{
+        "heading":"about us"
     }
 }

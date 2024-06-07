@@ -1,11 +1,13 @@
-h1,h2,h3{
-    @apply text-[18px] md:text-[24px] font-bold text-action-900 mb-4 uppercase
-}
-
-ul{
-    @apply list-disc pl-5
-}
-
-li{
-    @apply text-gray-800 text-[14px] md:text-[19px] leading-relaxed tracking-wide text-justify mb-2
+article{
+    h1,h2,h3{
+        @apply text-[18px] md:text-[24px] font-bold text-action-900 mb-4 uppercase
+    }
+    
+    ul{
+        @apply list-disc pl-5
+    }
+    
+    li{
+        @apply text-gray-800 text-[14px] md:text-[19px] leading-relaxed tracking-wide text-justify mb-2
+    }
 }

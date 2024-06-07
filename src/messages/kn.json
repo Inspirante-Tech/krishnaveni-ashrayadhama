@@ -22,18 +22,28 @@
     "links":{
         "heading":"ಲಿಂಕ್‌ಗಳು",
         "aboutUs":"ನಮ್ಮ ಬಗ್ಗೆ",
-        "specialities":"ವಿಶೇಷತೆಗಳು",
+        "specialities":"ವೃದ್ಧಾಶ್ರಮ",
         "ayurvedicCenter":"ಆಯುರ್ವೇದ ಕೇಂದ್ರ",
         "events":"ಕಾರ್ಯಕ್ರಮಗಳು",
         "gallery":"ಗ್ಯಾಲರಿ",
         "contact": "ಸಂಪರ್ಕಿಸಿ"
     },
     "ayurvedicCenter":{
-        "heading":"ಆಯುರ್ವೇದ ಕೇಂದ್ರ"
+        "heading":"ಆಯುರ್ವೇದ ಕೇಂದ್ರ",
+        "doctors":{
+            "heading":"doctors",
+            "description":""
+        }
     },
     "vridddhashrama":{
         "rulesAndRegulation":{
             "heading":"ನಿಯಮಗಳು ಮತ್ತು ನಿಬಂಧನೆಗಳು"
+        },
+        "surrounding":{
+            "heading":"ಸ್ಥಳೀಯ ಆಕರ್ಷಣೆಗಳು ಮತ್ತು ಸುತ್ತಮುತ್ತಲಿನ ಪ್ರದೇಶಗಳು"
         }
+    },
+    "aboutUs":{
+        "heading":"ನಮ್ಮ ಬಗ್ಗೆ"
     }
 }

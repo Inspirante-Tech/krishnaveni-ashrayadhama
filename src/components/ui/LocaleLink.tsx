@@ -6,6 +6,7 @@ export default function LocaleLink ({ href, ...props}:  React.ComponentProps<typ
     const locale = useLocale();
     return (
         <Link href={`/${locale}${href}`} {...props} >
+            {props.children}
         </Link>
     )
 }

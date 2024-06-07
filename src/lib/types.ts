@@ -6,15 +6,15 @@ type ArrayElementType<T> = T extends (infer U)[] ? U : never;
 export type EventType = ArrayElementType<ResolvedType<ReturnType<typeof fetchEvents>>>
 export type GalleryType = ArrayElementType<ResolvedType<ReturnType<typeof fetchGalleryImages>>>
 
-export type FacilityType ={
+export type FacilityType = {
     image: string,
     title: string,
     description: string
 }
 
-export type FqaType ={
-    question:string,
-    answer:string
+export type FqaType = {
+    question: string,
+    answer: string
 }
 
 export type TestimonialType = {
@@ -23,3 +23,32 @@ export type TestimonialType = {
     statement: string
 }
 
+export type LocationType = {
+    name: string,
+    image: string,
+    url: string
+}
+
+export type DoctorType = {
+    name: string,
+    image: string,
+    qualification: string
+}
+
+export type FeatureType = {
+    image: string,
+    title: string,
+    description: string
+}
+
+export type SectionType = {
+    title: string,
+    content: string,
+    image: string
+}
+
+export type ImageType =  {
+    image: string,
+    id: string,
+    description: string
+  }
