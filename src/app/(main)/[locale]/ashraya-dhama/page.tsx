@@ -14,7 +14,7 @@ export default async function Vridddhashrama() {
     <main className="bg-white">
       <section className="content-container">
         
-        <h2 className="text-3xl   md:text-5xl font-bold mt-12 p-6 text-action-950 ">
+        <h2 className="text-3xl  heading   md:text-5xl font-bold mt-12 p-6 text-action-950 ">
           {pageData.title}
         </h2>
         <p className="mt-1 text-gray-800 p-6">
