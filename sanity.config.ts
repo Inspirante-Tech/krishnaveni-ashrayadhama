@@ -36,7 +36,7 @@ const singletonTypes = schema.types.filter(type=>!multiInstanceSchemas.includes(
 
 export default defineConfig({
   name: "default",
-  title: "Your Awesome CMS",
+  title: "Krishaveni AshrayaDhama",
 
   basePath: '/admin',
   projectId,

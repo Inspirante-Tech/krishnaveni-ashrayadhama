@@ -30,9 +30,9 @@ export type LocationType = {
 }
 
 export type DoctorType = {
-    name:string,
-    image:string,
-    qualification:string
+    name: string,
+    image: string,
+    qualification: string
 }
 
 export type FeatureType = {
@@ -40,3 +40,15 @@ export type FeatureType = {
     title: string,
     description: string
 }
+
+export type SectionType = {
+    title: string,
+    content: string,
+    image: string
+}
+
+export type ImageType =  {
+    image: string,
+    id: string,
+    description: string
+  }

@@ -8,7 +8,7 @@ import { useTranslations } from "next-intl";
 import ThumbnailCarousel from "../ThumbnailCarousel/ThumbnailCarousel";
 
 function Events({ events }: { events: EventType[] }) {
-  const t = useTranslations("gallery");
+  const t = useTranslations("events");
   const dialogRef = useRef<HTMLDialogElement>(null);
   const [selectedEventIndex, setSelectedEventIndex] = useState<number | null>(
     null
@@ -24,11 +24,13 @@ function Events({ events }: { events: EventType[] }) {
   const openDialog = (index: number) => {
     setSelectedEventIndex(index);
     dialogRef.current && dialogRef.current.showModal();
+    document.body.classList.add("prevent-scroll")
   };
 
   const closeDialog = () => {
     dialogRef.current && dialogRef.current.close();
     setSelectedEventIndex(null);
+    document.body.classList.remove("prevent-scroll");
   };
 
   const selectedEvent =
@@ -50,7 +52,7 @@ function Events({ events }: { events: EventType[] }) {
               width={250}
               height={250}
               alt={event.title}
-              className="rounded object-contain"
+              className="rounded object-over w-auto"
             />
             <div className="bg-white p-4 sm:p-6">
               <time
@@ -79,14 +81,7 @@ function Events({ events }: { events: EventType[] }) {
               initialIndex={
                 selectedEventIndex !== null ? selectedEventIndex : undefined
               }
-              onThumbnailClick={(thumbnail) => {
-                const index = events.findIndex(
-                  (event) => event.id === thumbnail.id
-                );
-                if (index !== -1) {
-                  openDialog(index);
-                }
-              }}
+              onThumbnailClick={openDialog}
             />
             <form method="dialog" className="absolute top-0 right-0 z-10">
               <button className="m-4" onClick={closeDialog}>

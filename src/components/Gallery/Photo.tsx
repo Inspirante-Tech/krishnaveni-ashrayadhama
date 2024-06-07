@@ -37,13 +37,13 @@ const Photo: React.FC<PhotoProps> = ({ url, alt, callback }) => {
         };
     }, []);
     return (
-        <div className="relative overflow-hidden rounded-xl shadow-lg"
+        <div className="relative overflow-hidden rounded-xl shadow-lg h-min"
             onClick={callback}
         >
             <Image
                 ref={imageRef}
                 className={`transition-opacity duration-1000 transform ${isVisible ? "opacity-100" : "opacity-0"
-                    } w-full h-auto`}
+                    } w-full`}
                 src={url}
                 alt={alt}
                 width={232}

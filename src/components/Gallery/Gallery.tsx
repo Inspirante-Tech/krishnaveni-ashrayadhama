@@ -1,10 +1,11 @@
 "use client";
 import { CircleX } from "lucide-react";
 import { useRef, useState } from "react";
-import { type Image as ImageType } from "./types";
+
 import Photo from "./Photo";
 import { useTranslations } from "next-intl";
 import ThumbnailCarousel from "../ThumbnailCarousel/ThumbnailCarousel";
+import { ImageType } from "~/lib/types";
 
 export function Gallery({ images }: { images: ImageType[] }) {
   const t = useTranslations("gallery");
@@ -14,19 +15,20 @@ export function Gallery({ images }: { images: ImageType[] }) {
   const onSelect = (image: ImageType) => {
     setSelectedImage(image);
     dialogRef.current && dialogRef.current.showModal();
+    document.body.classList.add("prevent-scroll");
   };
 
   const onClose = () => {
     setSelectedImage(null);
-    
     dialogRef.current && dialogRef.current.close();
+    document.body.classList.remove("prevent-scroll");
   };
 
   const thumbnails = images.map((image) => ({
     id: image.id,
     image: image.image,
-    title: image.alt,
-    alt: image.alt,
+    title: image.description,
+    alt: image.description,
   }));
 
   return (

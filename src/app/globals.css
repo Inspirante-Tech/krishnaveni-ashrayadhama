@@ -111,3 +111,8 @@ dialog[open]{
 .menu-transition {
   transition: transform 0.3s ease;
 }
+
+.prevent-scroll{
+  height: 100vw;
+  overflow: hidden;
+}

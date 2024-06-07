@@ -109,7 +109,7 @@ type PropType = {
   thumbnails: Thumbnail[];
   options?: EmblaOptionsType;
   initialIndex?: number;
-  onThumbnailClick?: (thumbnail: Thumbnail) => void;
+  onThumbnailClick?: (index:number) => void;
 };
 
 const ThumbnailCarousel: React.FC<PropType> = ({ thumbnails, options, initialIndex = 0, onThumbnailClick }) => {
@@ -125,7 +125,7 @@ const ThumbnailCarousel: React.FC<PropType> = ({ thumbnails, options, initialInd
       if (!emblaMainApi || !emblaThumbsApi) return;
       emblaMainApi.scrollTo(index);
       setSelectedIndex(index);
-      onThumbnailClick && onThumbnailClick(thumbnails[index]);
+      onThumbnailClick && onThumbnailClick(index);
     },
     [emblaMainApi, emblaThumbsApi, thumbnails, onThumbnailClick]
   );
@@ -155,6 +155,7 @@ const ThumbnailCarousel: React.FC<PropType> = ({ thumbnails, options, initialInd
                 height={500}
                 alt={thumbnail.alt}
                 className={`rounded-t aspect-[1.2]  ${index === selectedIndex ? styles.selected : ''}`}
+                priority={false}
               />
               <div className="p-2">
                 <h2 className="text-2xl font-bold">{thumbnail.title}</h2>
@@ -173,7 +174,8 @@ const ThumbnailCarousel: React.FC<PropType> = ({ thumbnails, options, initialInd
                   width={50}
                   height={50}
                   alt={thumbnail.alt}
-                  className="rounded aspect-[1.2] object-cover "
+                  className="rounded aspect-[1.2] object-cover"
+                  priority={false}
                 />
               </div>
             ))}

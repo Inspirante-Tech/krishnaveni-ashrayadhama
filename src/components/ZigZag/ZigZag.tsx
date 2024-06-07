@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function ZigZag({
   contents,
 }: {
-  contents: { img: string; title: string; content: string }[];
+  contents: { image: string; title: string; content: string }[];
 }) {
   return (
     <>
@@ -15,7 +15,7 @@ export default function ZigZag({
           <div className="relative rounded-2xl hover:shadow-xl transition ease-out duration-500 basis-auto md:basis-1/2 overflow-clip aspect-video md:aspect-auto group">
             <Image
               className="object-cover group-hover:scale-105 transition ease-out duration-700"
-              src={content.img}
+              src={content.image}
               alt={content.title}
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
