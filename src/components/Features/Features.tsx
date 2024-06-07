@@ -31,8 +31,7 @@ const ImageContent: React.FC<Props> = ({ data ,heading}) => {
               alt={section.title}
               width={600}
               height={400}
-              className="rounded-xl object-cover w-full h-full"
-            />
+              className="rounded-xl object-cover w-full h-full transform transition-transform duration-300 hover:scale-105"            />
           </div>
         </div>
       ))}

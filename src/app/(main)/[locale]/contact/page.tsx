@@ -26,9 +26,9 @@ export default function Contact() {
           </div>
         </section>
 
-        <main className="flex items-center justify-center px-8 py-8 sm:px-12 lg:col-span-7 lg:px-16 lg:py-12 xl:col-span-6">
+        <main className="flex items-center justify-center px-2 py-8 sm:px-12 lg:col-span-7 lg:px-16 lg:py-12 xl:col-span-6">
           <div className="max-w-xl lg:max-w-3xl">
-            <div className="relative -mt-16 block lg:hidden">
+            <div className="relative md:-mt-16  mt-5 block lg:hidden">
               <h1 className="mt-2  text-gray-900 heading">
                 Welcome to vriddhashrama
               </h1>
