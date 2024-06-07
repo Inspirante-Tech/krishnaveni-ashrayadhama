@@ -5,33 +5,36 @@ import RulesandRegulation from "~/components/RulesandRegulation/RulesandRegulati
 import VideoSection from "~/components/VideoSection/VideoSection";
 import { fetchVriddhashramaPage } from "~/lib/queries";
 
-
 export default async function Vridddhashrama() {
   const locale = await getLocale();
-  const t = await getTranslations("vridddhashrama")
+  const t = await getTranslations("vridddhashrama");
   const pageData = await fetchVriddhashramaPage(locale);
   return (
-    <main className="bg-white">
-      <section className="content-container">
-        
-        <h2 className="text-3xl  heading   md:text-5xl font-bold mt-12 p-6 text-action-950 ">
+    <main className=" bg-white  content-container">
+      <section className="flex md:gap-4 gap-2 flex-col pt-20">
+        <h2
+          className="text-gray-900 text-left heading"
+          style={{ textTransform: "capitalize" }}
+        >
           {pageData.title}
         </h2>
-        <p className="mt-1 text-gray-800 p-6">
-          {pageData.description}
-        </p>
+        <p className="body">{pageData.description}</p>
       </section>
+      <hr/>
 
-      <ImageContent  data={pageData.features}/>
-      <VideoSection  videoSrc={pageData.videoLink} />
+      <ImageContent data={pageData.features}  heading="Facilities"/>
+      <VideoSection videoSrc={pageData.videoLink} />
       <div>
         <h2 className="text-2xl md:text-3xl uppercase font-bold text-center mt-10  text-action-950">
           {t("rulesAndRegulation.heading")}
         </h2>
 
-        <RulesandRegulation rules={pageData.rules}/>
+        <RulesandRegulation rules={pageData.rules} />
       </div>
-      <NearbyPlaces detail={pageData.surrounding_detail} locations={pageData.locations}/>
+      <NearbyPlaces
+        detail={pageData.surrounding_detail}
+        locations={pageData.locations}
+      />
     </main>
   );
 }

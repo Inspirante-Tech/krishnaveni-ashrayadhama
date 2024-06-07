@@ -38,7 +38,7 @@ function Events({ events }: { events: EventType[] }) {
 
   return (
     <section className="content-container bg-white rounded p-8">
-      <h1 className=" title space-y-2">{t("heading")}</h1>
+      <h1 className=" heading space-y-2">{t("heading")}</h1>
       <hr/>
       <div className="flex flex-wrap gap-8 justify-around mt-2 body">
         {events.map((event, index) => (
