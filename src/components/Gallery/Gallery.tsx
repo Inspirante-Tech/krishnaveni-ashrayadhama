@@ -9,17 +9,17 @@ import { ImageType } from "~/lib/types";
 
 export function Gallery({ images }: { images: ImageType[] }) {
   const t = useTranslations("gallery");
-  const [selectedImage, setSelectedImage] = useState<ImageType | null>(null);
+  const [selectedImageIndex, setSelectedImageIndex] = useState<number | null|undefined>(null);
   const dialogRef = useRef<HTMLDialogElement>(null);
 
-  const onSelect = (image: ImageType) => {
-    setSelectedImage(image);
+  const onSelect = (index:number) => {
+    setSelectedImageIndex(index);
     dialogRef.current && dialogRef.current.showModal();
     document.body.classList.add("prevent-scroll");
   };
 
   const onClose = () => {
-    setSelectedImage(null);
+    setSelectedImageIndex(null);
     dialogRef.current && dialogRef.current.close();
     document.body.classList.remove("prevent-scroll");
   };
@@ -36,12 +36,12 @@ export function Gallery({ images }: { images: ImageType[] }) {
       <h2 className="font-bold text-3xl md:text-5xl mb-4">{t("heading")}</h2>
       <hr/>
       <div className="grid grid-cols-1 mt-2  sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        {images.map((image) => (
+        {images.map((image,index) => (
           <Photo
             key={image.id}
             url={image.image}
-            alt={image.alt}
-            callback={() => onSelect(image)}
+            alt={image.description}
+            callback={() => onSelect(index)}
           />
         ))}
       </div>
@@ -51,12 +51,10 @@ export function Gallery({ images }: { images: ImageType[] }) {
         onClick={onClose}
       >
         <div className="w-full h-full mt-12 md:mt-1" onClick={(e) => e.stopPropagation()}>
-          {selectedImage && (
+          {selectedImageIndex!=null && (
             <ThumbnailCarousel
               thumbnails={thumbnails}
-              initialIndex={thumbnails.findIndex(
-                (thumbnail) => thumbnail.id === selectedImage.id
-              )}
+              initialIndex={selectedImageIndex}
               onThumbnailClick={onSelect}
             />
           )}
