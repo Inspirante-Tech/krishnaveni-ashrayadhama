@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function ZigZag({
   contents,
 }: {
-  contents: { image: string; title: string; content: string }[];
+  contents: { image: string; title: string; description: string }[];
 }) {
   return (
     <>
@@ -28,7 +28,9 @@ export default function ZigZag({
             >
               {content.title}
             </p>
-            <p className="body text-justify  leading-relaxed ">{content.content}</p>
+            <p className="body text-justify  leading-relaxed ">
+              {content.description}
+            </p>
           </div>
         </section>
       ))}

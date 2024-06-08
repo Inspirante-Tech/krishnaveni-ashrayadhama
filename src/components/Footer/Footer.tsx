@@ -6,7 +6,7 @@ import { getTranslations } from "next-intl/server";
 async function Footer() {
   const t = await getTranslations("links");
   return (
-    <footer className="text-white">
+    <footer className="text-white mt-10">
       <div className="bg-secondary-900 h-1/2 w-full ">
         <div className="content-container flex md:flex-row flex-col justify-around items-start">
           <div className="p-5 ">
