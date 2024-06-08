@@ -38,9 +38,9 @@ function Events({ events }: { events: EventType[] }) {
 
   return (
     <section className="content-container bg-white rounded p-8">
-      <h1 className="font-bold text-3xl md:text-5xl mb-4">{t("heading")}</h1>
+      <h1 className=" heading space-y-2">{t("heading")}</h1>
       <hr/>
-      <div className="flex flex-wrap gap-8 justify-around mt-2">
+      <div className="flex flex-wrap gap-8 justify-around mt-2 body">
         {events.map((event, index) => (
           <div
             key={event.id}
@@ -52,7 +52,7 @@ function Events({ events }: { events: EventType[] }) {
               width={250}
               height={250}
               alt={event.title}
-              className="rounded object-over w-auto"
+              className="rounded object-over w-auto caption"
             />
             <div className="bg-white p-4 sm:p-6">
               <time

@@ -15,25 +15,25 @@ export default function Contact() {
           />
 
           <div className="hidden  lg:relative lg:block lg:p-12 p-1">
-            <h2 className="mt-16 text-3xl font-bold text-white sm:text-3xl md:text-4xl">
+            <h2 className="mt-16 text-white heading">
               Welcome to vriddhashrama
             </h2>
 
-            <p className="mt-4 leading-relaxed text-white/90">
+            <p className="mt-4 body text-white/90">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi
               nam dolorum aliquam, quibusdam aperiam voluptatum.
             </p>
           </div>
         </section>
 
-        <main className="flex items-center justify-center px-8 py-8 sm:px-12 lg:col-span-7 lg:px-16 lg:py-12 xl:col-span-6">
+        <main className="flex items-center justify-center px-2 py-8 sm:px-12 lg:col-span-7 lg:px-16 lg:py-12 xl:col-span-6">
           <div className="max-w-xl lg:max-w-3xl">
-            <div className="relative -mt-16 block lg:hidden">
-              <h1 className="mt-2 text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl">
+            <div className="relative md:-mt-16  mt-5 block lg:hidden">
+              <h1 className="mt-2  text-gray-900 heading">
                 Welcome to vriddhashrama
               </h1>
 
-              <p className="mt-4 leading-relaxed text-gray-500">
+              <p className="mt-4 body text-gray-500">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                 Eligendi nam dolorum aliquam, quibusdam aperiam voluptatum.
               </p>
