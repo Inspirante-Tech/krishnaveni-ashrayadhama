@@ -5,7 +5,7 @@ import LocaleLink from "../ui/LocaleLink";
 import LocalSwitcher from "./LocaleSwitcher";
 import styles from "./styles.module.css";
 import { usePathname } from "next/navigation";
-import { useEffect, useRef, useTransition } from "react";
+import { useEffect, useRef } from "react";
 
 const Header = () => {
   const t = useTranslations("links");

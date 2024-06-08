@@ -1,4 +1,3 @@
-
 "use client";
 import { CircleX } from "lucide-react";
 import { useRef, useState } from "react";
@@ -10,18 +9,17 @@ import { ImageType } from "~/lib/types";
 
 export function Gallery({ images }: { images: ImageType[] }) {
   const t = useTranslations("gallery");
-  const [selectedImage, setSelectedImage] = useState<ImageType | null>(null);
+  const [selectedImageIndex, setSelectedImageIndex] = useState<number | null|undefined>(null);
   const dialogRef = useRef<HTMLDialogElement>(null);
 
-  const onSelect = (index: number) => {
-    const image = images[index];
-    setSelectedImage(image);
+  const onSelect = (index:number) => {
+    setSelectedImageIndex(index);
     dialogRef.current && dialogRef.current.showModal();
     document.body.classList.add("prevent-scroll");
   };
 
   const onClose = () => {
-    setSelectedImage(null);
+    setSelectedImageIndex(null);
     dialogRef.current && dialogRef.current.close();
     document.body.classList.remove("prevent-scroll");
   };
@@ -37,8 +35,8 @@ export function Gallery({ images }: { images: ImageType[] }) {
     <section className="my-4 content-container bg-white">
       <h2 className="heading spcae-y-2">{t("heading")}</h2>
       <hr />
-      <div className="grid grid-cols-1 mt-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 body">
-        {images.map((image, index) => (
+      <div className="grid grid-cols-1 mt-2  sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        {images.map((image,index) => (
           <Photo
             key={image.id}
             url={image.image}
@@ -53,12 +51,10 @@ export function Gallery({ images }: { images: ImageType[] }) {
         onClick={onClose}
       >
         <div className="w-full h-full mt-12 md:mt-1" onClick={(e) => e.stopPropagation()}>
-          {selectedImage && (
+          {selectedImageIndex!=null && (
             <ThumbnailCarousel
               thumbnails={thumbnails}
-              initialIndex={thumbnails.findIndex(
-                (thumbnail) => thumbnail.id === selectedImage.id
-              )}
+              initialIndex={selectedImageIndex}
               onThumbnailClick={onSelect}
             />
           )}
