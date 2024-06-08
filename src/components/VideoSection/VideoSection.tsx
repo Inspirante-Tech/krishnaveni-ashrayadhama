@@ -9,12 +9,12 @@ const VideoSection: React.FC<VideoSectionProps> = ({ videoSrc }) => {
 
   return (
     <section className="content-container">
-      <iframe
+      {videoSrc && <iframe
         src={finalVideoSrc}
         title="YouTube video player"
         allowFullScreen
         className="w-full aspect-video rounded-2xl"
-      ></iframe>
+      ></iframe>}
     </section>
   );
 };
