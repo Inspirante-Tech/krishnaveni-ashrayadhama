@@ -30,7 +30,7 @@ export default function ZigZag({
               {content.title}
             </p>
             <p className="body text-justify  leading-relaxed ">
-              {content.content}
+              {content.description}
             </p>
           </div>
         </section>

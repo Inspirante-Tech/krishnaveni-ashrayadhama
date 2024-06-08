@@ -221,7 +221,7 @@ export async function fetchVriddhashramaPage(locale: string) {
 type AboutPage = {
     sections: {
         title: string,
-        content: string,
+        description: string,
         image: Image
     }[]
 }
@@ -232,7 +232,7 @@ export async function fetchAboutPage(locale: string) {
         "sections":sections[]{
             "title":${coalesce("title", locale)},
             image,
-            "content":${coalesce("content", locale)}
+            "description":${coalesce("content", locale)}
         }
       }`
 
