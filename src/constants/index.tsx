@@ -404,6 +404,7 @@ export const AyurvedicImageContentsImageContents = [
     reverse: true,
   },
 ];
+ 
 
 export const krishnaveniVriddhashramRules = [
   {

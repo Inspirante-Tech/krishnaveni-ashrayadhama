@@ -47,11 +47,11 @@ function Carousel({ children }: Props) {
             <div className="flex  w-full h-full overflow-x-scroll scroll-smooth snap-mandatory snap-x no-scrollbar relative pointer-events-none" ref={carouselRef}>
                 {children}
             </div>
-            <button className="rounded-full p-3 aspect-square  bg-gray-200/75 absolute top-[50%] left-4 z-10  -translate-y-[50%] md:scale-100 scale-75" onClick={() => move(true, true)}>
+            <button className="bg-opacity-10 rounded-full p-3 aspect-square  bg-gray-50/70 absolute top-[50%] left-4 z-10  -translate-y-[50%] md:scale-100 scale-75" onClick={() => move(true, true)}>
                 <ChevronLeft size={32} />
             </button>
 
-            <button className="rounded-full p-3 aspect-square  bg-gray-200/75 absolute top-[50%] left-full z-10 -translate-x-[150%] -translate-y-[50%] md:scale-100 scale-75" onClick={() => move(false, true)}>
+            <button className=" bg-opacity-10 rounded-full p-3 aspect-square  bg-gray-50/75 absolute top-[50%] left-full z-10 -translate-x-[150%] -translate-y-[50%] md:scale-100 scale-75" onClick={() => move(false, true)}>
                 <ChevronRight size={32} />
             </button>
         </div>
