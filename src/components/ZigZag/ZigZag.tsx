@@ -1,9 +1,10 @@
 import Image from "next/image";
+import { SectionType } from "~/lib/types";
 
 export default function ZigZag({
   contents,
 }: {
-  contents: { image: string; title: string; description: string }[];
+  contents:SectionType[]
 }) {
   return (
     <>
@@ -29,7 +30,7 @@ export default function ZigZag({
               {content.title}
             </p>
             <p className="body text-justify  leading-relaxed ">
-              {content.description}
+              {content.content}
             </p>
           </div>
         </section>

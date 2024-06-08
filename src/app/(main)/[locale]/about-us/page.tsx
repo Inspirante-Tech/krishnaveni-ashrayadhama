@@ -9,12 +9,7 @@ async function About() {
   return (
     <main className="space-y-16 md:space-y-20 min-h-screen content-container">
       <section className="flex md:gap-4 gap-2 flex-col pt-20">
-        <div
-          className="text-gray-900 text-left heading"
-          style={{ textTransform: "capitalize" }}
-        >
-          {t("heading")}
-        </h1>
+        <h1 className="text-gray-900 text-left heading capitalize">{t("heading")}</h1>
       </section>
       <ZigZag contents={data.sections} />
     </main>
