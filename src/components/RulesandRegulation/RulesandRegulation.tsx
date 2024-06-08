@@ -4,7 +4,7 @@ import "./style.css"
 const RulesandRegulation = ({ rules }: { rules: [any] }) => {
   return (
     <article>
-      <section className="space-y-4 content-container mt-3 md:mt-1">
+      <section className="space-y-4 mt-3 md:mt-1 leading-relaxed">
         <PortableText value={rules} />
       </section>
     </article>

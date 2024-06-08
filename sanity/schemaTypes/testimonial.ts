@@ -35,13 +35,7 @@ export default defineType({
             title: 'Statement',
             type: 'localeString',
             validation: (Rule) => Rule.required(),
-        }),
-        defineField({
-            name: 'show',
-            title: 'Show in Website',
-            type: 'boolean',
-            initialValue:false,
-        }),
+        })
     ],
     preview: {
         select: {

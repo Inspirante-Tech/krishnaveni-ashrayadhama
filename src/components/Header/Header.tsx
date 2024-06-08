@@ -51,14 +51,17 @@ export default Header;
 function MobileNav() {
   const t = useTranslations("links");
   const router = usePathname();
-
   const input = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     const toggle = (e: MouseEvent) => {
       if (e.target)
         if (input.current?.checked && e.target !== input.current) {
-          input.current.checked = false;
+          setTimeout(() => {
+            if (input.current) {
+              input.current.checked = !input.current.checked;
+            }
+          }, 500);
         }
     };
 

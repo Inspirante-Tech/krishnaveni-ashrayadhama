@@ -9,8 +9,8 @@ import { useTranslations } from "next-intl";
 function Doctors({doctors}:{doctors:DoctorType[]}) {
   const t= useTranslations("ayurvedicCenter.doctors")
   return (
-    <section className="bg-primary-100 content-container py-12 lg:py-16 w-full relative sm:mt-2 mt-3">
-      <h2 className="text-center text-2xl sm:text-5xl font-bold tracking-tight text-gray-900 mt-2 mb-6 pt-12 sm:pt-16">
+    <section className="bg-primary-100 content-container  w-full relative">
+      <h2 className="text-center text-gray-900 heading">
         {t("heading")}
       </h2>
       <p className="text-center text-sm text-gray-700">
@@ -38,7 +38,7 @@ function Doctors({doctors}:{doctors:DoctorType[]}) {
                       className="rounded-full object-cover aspect-square"
                     />
                   </div>
-                  <p className="text-sm sm:text-base font-medium text-gray-900">
+                  <p className="caption">
                     {doctor.name}
                   </p>
                  

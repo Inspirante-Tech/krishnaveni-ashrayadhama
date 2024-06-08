@@ -8,9 +8,9 @@ interface Props {
 
 const ImageContent: React.FC<Props> = ({ data ,heading}) => {
   return (
-    <section className="space-y-8 mt-10 content-container">
+    <section className="space-y-4">
       {heading && (
-        <h2 className="text-2xl text-center md:text-left font-bold  text-action-950 md:text-4xl uppercase">
+        <h2 className="text-gray-900 text-left heading mt-8">
             {heading}
         </h2>
       )}
@@ -21,9 +21,9 @@ const ImageContent: React.FC<Props> = ({ data ,heading}) => {
           className={`flex flex-col md:flex-row border-b-orange-300 ${index % 2 !== 0 ? "md:flex-row-reverse" : ""
             } items-center`}
         >
-          <div className="md:w-1/2 p-4">
-            <h2 className="text-2xl font-bold mb-4">{section.title}</h2>
-            <p className="text-lg text-gray-700">{section.description}</p>
+          <div className="md:w-1/2 p-1">
+            <h2 className="subheading mb-4">{section.title}</h2>
+            <p className="body text-justify leading-relaxed">{section.description}</p>
           </div>
           <div className="md:w-1/2 p-4">
             <Image
@@ -31,8 +31,7 @@ const ImageContent: React.FC<Props> = ({ data ,heading}) => {
               alt={section.title}
               width={600}
               height={400}
-              className="rounded-xl object-cover w-full h-full"
-            />
+              className="rounded-xl object-cover w-full h-full transform transition-transform duration-300 hover:scale-105"            />
           </div>
         </div>
       ))}

@@ -1,4 +1,5 @@
 import { defineField, defineType } from 'sanity'
+import { baseLanguage } from './locale'
 
 export default defineType({
     name: 'section',
@@ -25,7 +26,7 @@ export default defineType({
     ],
     preview: {
         select: {
-            title: `name`,
+            title: `title.${baseLanguage!.id}`,
             media:"image"
         },
     },

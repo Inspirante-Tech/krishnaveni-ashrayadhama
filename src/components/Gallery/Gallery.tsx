@@ -1,60 +1,60 @@
 "use client";
 import { CircleX } from "lucide-react";
 import { useRef, useState } from "react";
-import { type Image as ImageType } from "./types";
+
 import Photo from "./Photo";
 import { useTranslations } from "next-intl";
 import ThumbnailCarousel from "../ThumbnailCarousel/ThumbnailCarousel";
+import { ImageType } from "~/lib/types";
 
 export function Gallery({ images }: { images: ImageType[] }) {
   const t = useTranslations("gallery");
-  const [selectedImage, setSelectedImage] = useState<ImageType | null>(null);
+  const [selectedImageIndex, setSelectedImageIndex] = useState<number | null|undefined>(null);
   const dialogRef = useRef<HTMLDialogElement>(null);
 
-  const onSelect = (image: ImageType) => {
-    setSelectedImage(image);
+  const onSelect = (index:number) => {
+    setSelectedImageIndex(index);
     dialogRef.current && dialogRef.current.showModal();
+    document.body.classList.add("prevent-scroll");
   };
 
   const onClose = () => {
-    setSelectedImage(null);
-    
+    setSelectedImageIndex(null);
     dialogRef.current && dialogRef.current.close();
+    document.body.classList.remove("prevent-scroll");
   };
 
   const thumbnails = images.map((image) => ({
     id: image.id,
     image: image.image,
-    title: image.alt,
-    alt: image.alt,
+    title: image.description,
+    alt: image.description,
   }));
 
   return (
     <section className="my-4 content-container bg-white">
-      <h2 className="font-bold text-3xl md:text-5xl mb-4">{t("heading")}</h2>
-      <hr/>
+      <h2 className="heading spcae-y-2">{t("heading")}</h2>
+      <hr />
       <div className="grid grid-cols-1 mt-2  sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        {images.map((image) => (
+        {images.map((image,index) => (
           <Photo
             key={image.id}
             url={image.image}
-            alt={image.alt}
-            callback={() => onSelect(image)}
+            alt={image.description}
+            callback={() => onSelect(index)}
           />
         ))}
       </div>
       <dialog
         ref={dialogRef}
-        className="w-[80%] h-[100%] p-2 md:p-15  bg-gray-100 rounded-xl  eventdialog overflow-hidden"
+        className="w-[100%] h-[100%] md:w-[90%] p-2 md:p-15 bg-gray-100 rounded-xl eventdialog overflow-hidden"
         onClick={onClose}
       >
         <div className="w-full h-full mt-12 md:mt-1" onClick={(e) => e.stopPropagation()}>
-          {selectedImage && (
+          {selectedImageIndex!=null && (
             <ThumbnailCarousel
               thumbnails={thumbnails}
-              initialIndex={thumbnails.findIndex(
-                (thumbnail) => thumbnail.id === selectedImage.id
-              )}
+              initialIndex={selectedImageIndex}
               onThumbnailClick={onSelect}
             />
           )}
@@ -68,3 +68,4 @@ export function Gallery({ images }: { images: ImageType[] }) {
     </section>
   );
 }
+
