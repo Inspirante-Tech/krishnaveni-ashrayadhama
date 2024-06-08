@@ -574,20 +574,20 @@ export const DoctorsDetails = [
 export const aboutContent = [
   {
     title: "Why This Initiative?",
-    content:
+    description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam soluta labore quaerat error! Alias consequatur distinctio atque ab magnam nulla odio nesciunt officiis nisi quia! Nemo natus mollitia similique voluptate, cupiditate voluptatem nostrum accusantium earum dolorum ipsum ipsam nulla eligendi deserunt magnam ipsa quisquam beatae sapiente aut perferendis alias deleniti quos. Labore, quae pariatur officiis totam assumenda ab voluptate blanditiis eveniet id eos exercitationem corporis modi ut asperiores mollitia, veniam unde, aut distinctio molestiae eum odit. Harum mollitia ea beatae. Officiis explicabo omnis illum. Est deleniti cumque aliquam impedit a sit, dolores quo incidunt cupiditate quod ducimus cum laboriosam odio.",
-    img: "https://placehold.co/600x400/png",
+    image: "https://placehold.co/600x400/png",
   },
   {
     title: "Why This Initiative?",
-    content:
+    description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam soluta labore quaerat error! Alias consequatur distinctio atque ab magnam nulla odio nesciunt officiis nisi quia! Nemo natus mollitia similique voluptate, cupiditate voluptatem nostrum accusantium earum dolorum ipsum ipsam nulla eligendi deserunt magnam ipsa quisquam beatae sapiente aut perferendis alias deleniti quos. Labore, quae pariatur officiis totam assumenda ab voluptate blanditiis eveniet id eos exercitationem corporis modi ut asperiores mollitia, veniam unde, aut distinctio molestiae eum odit. Harum mollitia ea beatae. Officiis explicabo omnis illum. Est deleniti cumque aliquam impedit a sit, dolores quo incidunt cupiditate quod ducimus cum laboriosam odio.",
-    img: "https://placehold.co/600x400/png",
+    image: "https://placehold.co/600x400/png",
   },
   {
     title: "Why This Initiative?",
-    content:
+    description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam soluta labore quaerat error! Alias consequatur distinctio atque ab magnam nulla odio nesciunt officiis nisi quia! Nemo natus mollitia similique voluptate, cupiditate voluptatem nostrum accusantium earum dolorum ipsum ipsam nulla eligendi deserunt magnam ipsa quisquam beatae sapiente aut perferendis alias deleniti quos. Labore, quae pariatur officiis totam assumenda ab voluptate blanditiis eveniet id eos exercitationem corporis modi ut asperiores mollitia, veniam unde, aut distinctio molestiae eum odit. Harum mollitia ea beatae. Officiis explicabo omnis illum. Est deleniti cumque aliquam impedit a sit, dolores quo incidunt cupiditate quod ducimus cum laboriosam odio.",
-    img: "https://placehold.co/600x400/png",
+    image: "https://placehold.co/600x400/png",
   },
 ];

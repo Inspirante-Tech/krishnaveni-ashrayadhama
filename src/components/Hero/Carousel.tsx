@@ -38,7 +38,7 @@ function Carousel({ children }: Props) {
     useEffect(() => {
         setTimerId(setInterval(() => {
             move(false);
-        }, 3000));
+        }, 7500));
         return () => clearTimeout(timerId);
     }, []);
 

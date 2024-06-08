@@ -11,8 +11,8 @@ const Header = () => {
   const t = useTranslations("links");
   const router = usePathname();
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-secondary-200/95 backdrop:blur-lg text-gray-900 shadow-lg">
-      <div className="max-w-screen-2xl flex flex-row justify-between items-center px-3 md:px-12 mx-auto">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-secondary-200/95 backdrop-blur-[2px] text-gray-900 shadow-lg">
+      <div className="max-w-screen-xl flex flex-row justify-between items-center px-3 md:px-12 mx-auto">
         <LocaleLink href="/" className="flex items-center">
           Logo
         </LocaleLink>
@@ -37,7 +37,7 @@ const Header = () => {
             </LocaleLink>
           ))}
         </div>
-        <div className="flex gap-6 justify-center items-center">
+        <div className="flex gap-4">
           <LocalSwitcher />
           <MobileNav />
         </div>

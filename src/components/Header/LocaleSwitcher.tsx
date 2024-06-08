@@ -2,6 +2,12 @@
 import { useLocale } from "next-intl";
 import { usePathname, useRouter } from "next/navigation";
 import { ChangeEvent, useTransition } from "react";
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "../ui/hover-card";
+import { Globe, Languages } from "lucide-react";
 
 export default function LocalSwitcher() {
   const [isPending, startTransition] = useTransition();
@@ -9,9 +15,9 @@ export default function LocalSwitcher() {
   const path = usePathname();
   const localActive = useLocale();
 
-  const onClick = () => {
+  const onClick = (checked: boolean) => {
     const toPath = path.split("/");
-    toPath[1] = localActive === "en" ? "kn" : "en";
+    toPath[1] = checked ? "kn" : "en";
     const newPath = toPath.join("/");
     startTransition(() => {
       router.replace(newPath);
@@ -19,12 +25,28 @@ export default function LocalSwitcher() {
     });
   };
   return (
-    <button
-      className="subheading font-medium text-gray-900 hover:text-secondary-800 hover:scale-105 transition-all duration-150 ease-linear align-middle p-2"
-      onClick={onClick}
-      disabled={isPending}
-    >
-      {localActive === "en" ? "ಕ" : "en"}
-    </button>
+    <HoverCard openDelay={300}>
+      <HoverCardTrigger asChild>
+        <button className="p-2 block">
+          <Globe size={24} strokeWidth={1.5} />
+        </button>
+      </HoverCardTrigger>
+      <HoverCardContent className="bg-secondary-200 w-32 p-1 shadow-xl">
+        <div className="flex flex-col gap-1">
+          <button
+            onClick={() => onClick(true)}
+            className="p-2 body hover:bg-secondary-300/50 transition-colors duration-300 rounded-md ease-linear"
+          >
+            ಕನ್ನಡ
+          </button>
+          <button
+            onClick={() => onClick(false)}
+            className="p-2 body hover:bg-secondary-300/50 transition-colors duration-300 rounded-md ease-linear"
+          >
+            English
+          </button>
+        </div>
+      </HoverCardContent>
+    </HoverCard>
   );
 }

@@ -6,12 +6,12 @@ function About() {
   return (
     <main className="space-y-16 md:space-y-20 min-h-screen content-container">
       <section className="flex md:gap-4 gap-2 flex-col pt-20">
-        <h1
+        <div
           className="text-gray-900 text-left heading"
           style={{ textTransform: "capitalize" }}
         >
           About Ashraya Dhama
-        </h1>
+        </div>
         <p className="body text-justify">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
           asperiores aut tempore voluptatibus minus placeat ad eveniet numquam
