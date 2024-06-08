@@ -35,7 +35,7 @@ const Information: React.FC<{ data: string }> = ({ data }) => {
   return (
     <section
       ref={containerRef}
-      className={`transition-opacity duration-1000 transform ${
+      className={`transition-opacity duration-1000 transform bg-secondary-100 md:bg-transparent ${
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
       } text-justify`}
     >
