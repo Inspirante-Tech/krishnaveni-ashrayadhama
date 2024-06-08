@@ -39,6 +39,7 @@
 
 .body {
   @apply text-base lg:text-lg;
+  @apply font-extralight;
 }
 
 .caption {
@@ -48,7 +49,7 @@
 
 /* layout */
 .content-container {
-  @apply max-w-screen-2xl;
+  @apply max-w-screen-xl;
   @apply mx-auto;
   @apply p-4 py-6 md:p-12 md:py-12;
 }

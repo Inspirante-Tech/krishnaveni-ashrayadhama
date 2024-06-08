@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface VideoSectionProps {
   videoSrc: string;
@@ -9,12 +9,12 @@ const VideoSection: React.FC<VideoSectionProps> = ({ videoSrc }) => {
 
   return (
     <section className="content-container">
-      <iframe
+      {videoSrc && <iframe
         src={finalVideoSrc}
         title="YouTube video player"
         allowFullScreen
-        className="w-full aspect-video"
-      ></iframe>
+        className="w-full aspect-video rounded-2xl"
+      ></iframe>}
     </section>
   );
 };
