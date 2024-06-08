@@ -2,7 +2,10 @@ article {
   h1,
   h2,
   h3 {
-    @apply text-[18px] md:text-[24px] font-bold text-action-900 mb-4 uppercase;
+    @apply text-gray-900 my-4;
+    @apply text-lg lg:text-xl;
+    @apply font-semibold;
+    text-transform: capitalize;
   }
 
   ul {
@@ -10,6 +13,8 @@ article {
   }
 
   li {
-    @apply text-gray-800 text-[14px] md:text-[19px] leading-relaxed tracking-wide text-justify mb-2;
+    @apply leading-relaxed tracking-wide text-justify mb-2;
+    @apply text-base lg:text-lg;
+    @apply font-extralight;
   }
 }

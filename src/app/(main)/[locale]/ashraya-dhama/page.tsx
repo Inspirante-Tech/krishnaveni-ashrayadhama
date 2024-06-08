@@ -9,7 +9,6 @@ import { fetchVriddhashramaPage } from "~/lib/queries";
 export default async function Vridddhashrama() {
   const locale = await getLocale();
   const t = await getTranslations("vridddhashrama");
-  const t = await getTranslations("vridddhashrama");
   const pageData = await fetchVriddhashramaPage(locale);
 
   console.log(pageData.rules);
@@ -31,17 +30,12 @@ export default async function Vridddhashrama() {
       <ZigZag contents={pageData.features} />
       <VideoSection videoSrc={pageData.videoLink} />
       <div>
-        <h2 className="text-2xl md:text-3xl uppercase font-bold text-center mt-10  text-action-950">
+        <h2 className="heading capitalize mt-10  text-action-950">
           {t("rulesAndRegulation.heading")}
         </h2>
 
         <RulesandRegulation rules={pageData.rules} />
-        <RulesandRegulation rules={pageData.rules} />
       </div>
-      <NearbyPlaces
-        detail={pageData.surrounding_detail}
-        locations={pageData.locations}
-      />
       <NearbyPlaces
         detail={pageData.surrounding_detail}
         locations={pageData.locations}
