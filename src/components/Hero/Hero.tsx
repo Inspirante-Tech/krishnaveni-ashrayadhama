@@ -3,9 +3,9 @@ import ScrollDown from "./ScrollDown";
 import Image from "next/image";
 import LocaleLink from "../ui/LocaleLink";
 import styles from "./styles.module.css";
+import { Button } from "../ui/button";
 function Hero({ carouselImages }: { carouselImages: string[] }) {
   return (
-    
     <div className="relative w-full h-full">
       <Carousel>
         {carouselImages.map((url, index) => (
@@ -20,21 +20,23 @@ function Hero({ carouselImages }: { carouselImages: string[] }) {
           </div>
         ))}
       </Carousel>
-      <div className="absolute bottom-1/4 left-3 md:left-16 lg:left-24 transform translate-y-1/2 z-10 text-white">
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold md:mb-4 mb-1 mt-3 ">
-          Krishnaveni Ashrayadhama
-        </h1>
-        <p className="mb-2 md:mb-4 text-gray-200 text-sm md:text-base lg:text-lg leading-relaxed">
-          The Salmara Govinda Bhat Trust preserves their legacy
-        </p>
-        <LocaleLink href="/contact">
-          <button className="bg-primary-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-            Get In Touch
-          </button>
-        </LocaleLink>
+      <div className="absolute bottom-28 md:bottom-28 w-full transform z-10 text-white">
+        <div className="content-container mx-auto flex flex-col gap-4 md:gap-8 items-center text-center">
+          <div className="flex flex-col gap-2 md:gap-4">
+            <h1 className="title">Krishnaveni Ashrayadhama</h1>
+            <p className="text-gray-200 subheading leading-relaxed">
+              Nurturing Legacy, Empowering Well-being
+            </p>
+          </div>
+          <LocaleLink href="/contact">
+            <Button className="body h-12 px-6 rounded-lg">Get In Touch</Button>
+          </LocaleLink>
+        </div>
       </div>
+      <div
+        className={`absolute bg-gradient-to-t from-black/75 from-25% to-transparent w-full h-3/5 bottom-0`}
+      ></div>
       <ScrollDown />
-      <div className={`absolute bg-gradient-to-t   to-transparent`}></div>
     </div>
   );
 }
