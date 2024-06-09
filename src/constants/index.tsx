@@ -5,7 +5,18 @@ export const navigation = [
   },
   {
     id: "specialities",
-    url: "/ashraya-dhama",
+    url: {
+      "heading":"ashrayaDhama",
+      urls:[
+        {
+          id: "specialities",
+          url: "/ashraya-dhama/specialities",
+        },{
+          id: "rulesRegulations",
+          url: "/ashraya-dhama/rules-regulations",
+        }
+      ]
+    }
   },
   {
     id: "ayurvedicCenter",

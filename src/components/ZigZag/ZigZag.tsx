@@ -1,9 +1,10 @@
 import Image from "next/image";
+import { SectionType } from "~/lib/types";
 
 export default function ZigZag({
   contents,
 }: {
-  contents: { image: string; title: string; description: string }[];
+  contents:SectionType[]
 }) {
   return (
     <>

@@ -49,16 +49,30 @@ async function Footer() {
           </div>
           <div className="p-5 flex flex-col gap-1">
             <p className="heading mb-4 !text-gray-100">{t("heading")}</p>
-            {navigation.map((item) => (
-              <LocaleLink
-                key={item.id}
-                href={item.url}
-                style={{ textTransform: "capitalize" }}
-                className="text-gray-300 body pb-2 font-semibold transition-colors duration-150 hover:text-secondary-300 cursor-pointer"
-              >
-                {t(item.id)}
-              </LocaleLink>
-            ))}
+            {navigation.map((item) => {
+              if (typeof item.url === "string") {
+                return (
+                  <LocaleLink
+                    key={item.id}
+                    href={item.url}
+                    style={{ textTransform: "capitalize" }}
+                    className="text-gray-300 body pb-2 font-semibold transition-colors duration-150 hover:text-secondary-300 cursor-pointer"
+                  >
+                    {t(item.id)}
+                  </LocaleLink>
+                );
+              }
+              return item.url.urls.map((subItem) => (
+                <LocaleLink
+                  key={subItem.id}
+                  href={subItem.url}
+                  style={{ textTransform: "capitalize" }}
+                  className="text-gray-300 body pb-2 font-semibold transition-colors duration-150 hover:text-secondary-300 cursor-pointer"
+                >
+                  {t(subItem.id)}
+                </LocaleLink>
+              ));
+            })}
           </div>
         </div>
       </div>

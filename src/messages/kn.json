@@ -22,11 +22,13 @@
     "links":{
         "heading":"ಲಿಂಕ್‌ಗಳು",
         "aboutUs":"ನಮ್ಮ ಬಗ್ಗೆ",
-        "specialities":"ವೃದ್ಧಾಶ್ರಮ",
+        "specialities":"ವಿಶೇಷತೆಗಳು",
+        "ashrayaDhama":"ಆಶ್ರಯ ಧಾಮ",
         "ayurvedicCenter":"ಆಯುರ್ವೇದ ಕೇಂದ್ರ",
         "events":"ಕಾರ್ಯಕ್ರಮಗಳು",
         "gallery":"ಗ್ಯಾಲರಿ",
-        "contact": "ಸಂಪರ್ಕಿಸಿ"
+        "contact": "ಸಂಪರ್ಕಿಸಿ",
+        "rulesRegulations":"ನಿಯಮಗಳು ಮತ್ತು ನಿಬಂಧನೆಗಳು"
     },
     "ayurvedicCenter":{
         "heading":"ಆಯುರ್ವೇದ ಕೇಂದ್ರ",

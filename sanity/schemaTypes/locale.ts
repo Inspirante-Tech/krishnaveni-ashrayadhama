@@ -6,8 +6,8 @@ import { defineType} from 'sanity'
 // fields to hold translated values. We'll use this array
 // of languages to determine which fields to define.
 const supportedLanguages = [
-    { id: 'en', title: 'English', isDefault: true },
-    { id: 'kn', title: 'Kannada' },
+    { id: 'en', title: 'English' },
+    { id: 'kn', title: 'Kannada', isDefault: true},
 ]
 
 export const baseLanguage = supportedLanguages.find(l => l.isDefault)

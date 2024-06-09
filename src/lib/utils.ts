@@ -14,8 +14,14 @@ export async function delayAsyncFunction<T extends (...args: any[]) => Promise<a
     });
 }
 
+export function assertValue<T>(v: T | undefined, errorMessage: string): T {
+  if (v === undefined) {
+    throw new Error(errorMessage)
+  }
+
+  return v
+}
+
 export function formatDate(date:string) {
   return new Intl.DateTimeFormat('en-US').format(new Date(date))
 }
-
-
