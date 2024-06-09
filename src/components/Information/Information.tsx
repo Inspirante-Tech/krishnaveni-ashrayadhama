@@ -41,7 +41,7 @@ const Information: React.FC<{ data: string }> = ({ data }) => {
     >
       <div className="content-container flex items-end flex-row-reverse">
         <div className="relative xl:max-w-4xl md:shadow-xl rounded-2xl z-0">
-          <div className="relative md:bg-secondary-100 rounded-2xl flex md:gap-4 gap-2 flex-col xl:p-16 lg:p-24 md:p-12">
+          <div className="relative md:bg-gradient-to-tl md:from-secondary-200 md:to-secondary-100 rounded-2xl flex md:gap-4 gap-2 flex-col xl:p-16 lg:p-24 md:p-12">
             <h2 className="heading text-gray-900">Who We Are</h2>
             <div className="h-1 w-14 bg-secondary-500 rounded-full"></div>
             {[data].map((info, index) => (

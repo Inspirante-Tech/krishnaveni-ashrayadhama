@@ -47,7 +47,7 @@ export function Gallery({ images }: { images: ImageType[] }) {
       </div>
       <dialog
         ref={dialogRef}
-        className="w-[100%] h-[100%] md:w-[90%] p-2 md:p-15 bg-gray-100 rounded-xl eventdialog overflow-hidden"
+        className="w-[100%] h-[100%] md:w-[90%] p-2 md:p-15 rounded-xl eventdialog overflow-hidden"
         onClick={onClose}
       >
         <div className="w-full h-full mt-12 md:mt-1" onClick={(e) => e.stopPropagation()}>

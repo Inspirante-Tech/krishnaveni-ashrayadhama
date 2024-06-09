@@ -4,7 +4,7 @@ import type { FacilityType } from "~/lib/types";
 
 const FacilityCard = ({ facility }: { facility: FacilityType }) => {
   return (
-    <div className="flex justify-evenly w-full basis-auto md:basis-[45%] lg:basis-auto lg:max-w-64 transition duration-200 ease-out hover:-translate-y-2 shadow-lg hover:shadow-2xl rounded-lg overflow-clip bg-secondary-50">
+    <div className="flex justify-evenly w-full basis-auto md:basis-[45%] lg:basis-auto lg:max-w-64 transition duration-200 ease-out hover:-translate-y-2 shadow-lg hover:shadow-2xl rounded-lg overflow-clip bg-gradient-to-t from-primary-400 to-primary-200">
       <div className="relative p-6 py-8 gap-4 flex flex-col">
         <Image
           src={facility.image}

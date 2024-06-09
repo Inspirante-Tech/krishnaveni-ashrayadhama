@@ -35,7 +35,7 @@ function Testimonials({ testimonials }: { testimonials: TestimonialType[] }) {
                   key={index}
                   className="lg:basis-1/3 md:basis-1/2 max-w-fit"
                 >
-                  <div className="p-4 md:p-8  flex flex-col gap-4 bg-secondary-50 shadow-lg rounded-lg ">
+                  <div className="p-4 md:p-8  flex flex-col gap-4 bg-secondary-200 shadow-lg rounded-lg ">
                     <div className="flex items-center gap-4">
                       <Image
                         width={60}

@@ -37,7 +37,7 @@ function Events({ events }: { events: EventType[] }) {
     selectedEventIndex !== null ? events[selectedEventIndex] : null;
 
   return (
-    <section className="content-container bg-white rounded p-8">
+    <section className="content-container rounded p-8">
       <h1 className=" heading space-y-2">{t("heading")}</h1>
       <hr/>
       <div className="flex flex-wrap gap-8 justify-around mt-2 body">

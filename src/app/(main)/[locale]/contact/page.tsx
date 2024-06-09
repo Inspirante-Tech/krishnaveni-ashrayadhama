@@ -3,8 +3,8 @@ import Contactform from "~/components/ContactForm/ContactForm";
 
 export default function Contact() {
   return (
-    <main className="bg-white content-container mt-20">
-      <div className="lg:grid lg:min-h-screen lg:grid-cols-12">
+    <main className="content-container">
+      <div className="lg:grid lg:min-h-screen lg:grid-cols-12 pt-20">
         <section className="relative flex h-32 items-end bg-gray-900 lg:col-span-5 lg:h-full xl:col-span-6">
           <Image
             alt=""
