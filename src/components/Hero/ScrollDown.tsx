@@ -8,7 +8,7 @@ function ScrollDown() {
       className={`absolute left-[50%] bottom-[5%] ${styles.bounce}`}
     >
       <a href="#story">
-        <ChevronDown size={64} />
+        <ChevronDown size={64} color="white" />
       </a>
     </span>
   );

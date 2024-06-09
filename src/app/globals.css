@@ -22,7 +22,7 @@
 
 /* font sizes */
 .title {
-  @apply text-3xl lg:text-4xl;
+  @apply text-4xl lg:text-6xl;
   @apply font-bold;
 }
 
@@ -32,9 +32,9 @@
 }
 
 .subheading {
-  @apply text-lg lg:text-xl;
-  @apply font-semibold
-  /* @apply font-bold; */;
+  @apply text-lg lg:text-[1.675rem] leading-9;
+  @apply font-semibold;
+  /* @apply font-bold; */
 }
 
 .body {
@@ -117,15 +117,4 @@ dialog[open] {
 .prevent-scroll {
   height: 100vw;
   overflow: hidden;
-}
-.bg-gradient-to-t {
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-  height: 50vh;
-  background: linear-gradient(
-    to top,
-    rgba(230, 228, 228, 0.5) 0%, 
-    rgba(41, 41, 41, 0) 100%
-  );
 }
