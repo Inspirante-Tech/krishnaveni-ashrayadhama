@@ -12,7 +12,7 @@ export const navigation = [
           id: "specialities",
           url: "/ashraya-dhama/specialities",
         },{
-          id: "rules and regulations",
+          id: "rulesRegulations",
           url: "/ashraya-dhama/rules-regulations",
         }
       ]
