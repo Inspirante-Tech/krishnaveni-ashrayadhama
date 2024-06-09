@@ -4,9 +4,11 @@ import { Button } from "../ui/button";
 import { X } from "lucide-react";
 import { uploadContact, uploadTestimonial } from "~/app/(main)/[locale]/contact/actions";
 import { client } from "~/sanity/lib/client";
+import {useGoogleReCaptcha} from "react-google-recaptcha-v3"
 
 const ContactForm = () => {
   const dialogRef = useRef<HTMLDialogElement>(null);
+  const {executeRecaptcha} =  useGoogleReCaptcha();
 
   const openDialog = () => {
     dialogRef.current?.showModal();
@@ -15,7 +17,14 @@ const ContactForm = () => {
   async function testimonialAction(data:FormData){
     const response = await client.assets.upload("image",data.get("image") as File)
     data.set("image",response._id);
-    uploadTestimonial(data);
+
+    if(executeRecaptcha){
+      const gRecaptchaToken = await executeRecaptcha(`krishnaveni ${data.get("name")}`)
+      uploadTestimonial(data);
+    }else{
+      console.error("recaptcha not available")
+    }
+    
     dialogRef.current?.close()
   }
 
