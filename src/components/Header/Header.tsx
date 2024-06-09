@@ -6,10 +6,12 @@ import LocalSwitcher from "./LocaleSwitcher";
 import styles from "./styles.module.css";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef } from "react";
+import NestedLink from "./NestedLink"
 
 const Header = () => {
   const t = useTranslations("links");
   const router = usePathname();
+
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-secondary-200/95 backdrop-blur-[2px] text-gray-900 shadow-lg">
       <div className="max-w-screen-xl flex flex-row justify-between items-center px-3 md:px-12 mx-auto">
@@ -17,25 +19,21 @@ const Header = () => {
           Logo
         </LocaleLink>
         <div className="lg:flex flex-row md:gap-4 lg:gap-8 hidden">
-          {navigation.map((item) => (
-            <LocaleLink href={item.url} key={item.id}>
-              <div className="py-4 lg:py-6 border-gray-900 hover:border-secondary-800 hover:text-secondary-800 hover:scale-105 transition-all duration-150 ease-linear">
-                <div
-                  className="h-full "
-                  style={{
-                    textTransform: "capitalize",
-                    borderBottom:
-                      "/" + router.split("/")[router.split("/").length - 1] ===
-                      item.url
-                        ? "2px solid"
-                        : "none",
-                  }}
-                >
-                  {t(item.id)}
-                </div>
-              </div>
-            </LocaleLink>
-          ))}
+          {navigation.map((item) => {
+            if (typeof item.url === "string") {
+              return (
+                <LocaleLink href={item.url} key={item.id}>
+                  <span
+                    className={`py-4 lg:py-6 block hover:text-secondary-800 hover:scale-105 transition-all duration-150 ease-linear h-full capitalize  border-solid border-black ${router.includes(item.url) ? "border-b-2" : "border-none"}`}
+                  >
+                    {t(item.id)}
+                  </span>
+                </LocaleLink>
+              )
+            }
+            return <NestedLink urlObject={item.url} />
+          }
+          )}
         </div>
         <div className="flex gap-4">
           <LocalSwitcher />
@@ -95,7 +93,7 @@ function MobileNav() {
         id={styles.menu}
         className="p-8 list-none fixed top-0 right-0 translate-x-full h-screen bg-secondary-200 flex flex-col justify-center items-center transition-all duration-500 ease-in-out z-10 gap-4 subheading"
       >
-        {navigation.map((item) => (
+        {/* {navigation.map((item) => (
           <LocaleLink
             key={item.id}
             href={item.url}
@@ -103,7 +101,7 @@ function MobileNav() {
               textTransform: "capitalize",
               borderBottom:
                 "/" + router.split("/")[router.split("/").length - 1] ===
-                item.url
+                  item.url
                   ? "2px solid"
                   : "none",
             }}
@@ -111,8 +109,25 @@ function MobileNav() {
           >
             {t(item.id)}
           </LocaleLink>
-        ))}
+        ))} */}
+
+        {navigation.map((item) => {
+          if (typeof item.url === "string") {
+            return (
+              <LocaleLink href={item.url} key={item.id}>
+                <span
+                  className={`py-4 lg:py-6 block hover:text-secondary-800 hover:scale-105 transition-all duration-150 ease-linear h-full capitalize  border-solid border-black ${router.includes(item.url) ? "border-b-2" : "border-none"}`}
+                >
+                  {t(item.id)}
+                </span>
+              </LocaleLink>
+            )
+          }
+          return <NestedLink urlObject={item.url} />
+        }
+        )}
       </div>
     </div>
   );
 }
+

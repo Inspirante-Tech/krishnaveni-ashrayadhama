@@ -25,5 +25,3 @@ export function assertValue<T>(v: T | undefined, errorMessage: string): T {
 export function formatDate(date:string) {
   return new Intl.DateTimeFormat('en-US').format(new Date(date))
 }
-
-
