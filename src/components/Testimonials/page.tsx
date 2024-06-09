@@ -13,11 +13,6 @@ function Testimonials({ testimonials }: { testimonials: TestimonialType[] }) {
       <div className="content-container flex flex-col gap-8">
         <div className="flex flex-col md:gap-4 gap-2">
           <h2 className="heading text-gray-900">{t("heading")}</h2>
-          <p className="body text-gray-700">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-            quibusdam similique labore fuga impedit, consectetur facilis odit
-            accusantium quo, doloribus iste.
-          </p>
         </div>
         <div className="w-full flex justify-center">
           <Carousel
