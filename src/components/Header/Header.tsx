@@ -29,9 +29,13 @@ const Header = () => {
           {navigation.map((item) => {
             if (typeof item.url === "string") {
               return (
-                <LocaleLink href={item.url} key={item.id}>
+                <LocaleLink
+                  href={item.url}
+                  key={item.id}
+                  className="py-4 lg:py-6 "
+                >
                   <span
-                    className={`py-4 lg:py-6 block hover:text-secondary-800 hover:scale-105 transition-all duration-150 ease-linear h-full capitalize  border-solid border-black ${router.includes(item.url) ? "border-b-2" : "border-none"}`}
+                    className={`block w-max hover:text-secondary-800 hover:scale-105 transition-all duration-150 ease-linear h-full capitalize  border-solid border-black ${router.includes(item.url) ? "border-b-2" : "border-none"}`}
                   >
                     {t(item.id)}
                   </span>
@@ -59,7 +63,11 @@ function MobileNav() {
 
   useEffect(() => {
     const toggle = (e: MouseEvent) => {
-      if (e.target)
+      console.log((e.target as HTMLElement).classList.contains("multiLink"));
+      if (
+        e.target &&
+        !(e.target as HTMLElement).classList.contains("multiLink")
+      )
         if (input.current?.checked && e.target !== input.current) {
           setTimeout(() => {
             if (input.current) {
@@ -69,7 +77,7 @@ function MobileNav() {
         }
     };
 
-    window.addEventListener("mousedown", (e) => toggle(e));
+    window.addEventListener("mousedown", (e) => toggle(e), { passive: false });
     return () => window.removeEventListener("mousedown", (e) => toggle(e));
   }, []);
 
@@ -97,32 +105,18 @@ function MobileNav() {
       </div>
       <div
         id={styles.menu}
-        className="p-8 list-none fixed top-0 right-0 translate-x-full h-screen bg-secondary-200 flex flex-col justify-center items-center transition-all duration-500 ease-in-out z-10 gap-4 subheading"
+        className="p-8 list-none fixed top-0 right-0 translate-x-full h-screen bg-primary-50 flex flex-col text-center justify-center transition-all duration-500 ease-in-out z-10 gap-4 subheading"
       >
-        {/* {navigation.map((item) => (
-          <LocaleLink
-            key={item.id}
-            href={item.url}
-            style={{
-              textTransform: "capitalize",
-              borderBottom:
-                "/" + router.split("/")[router.split("/").length - 1] ===
-                  item.url
-                  ? "2px solid"
-                  : "none",
-            }}
-            className="hover:border-secondary-800 hover:text-secondary-800 hover:scale-105"
-          >
-            {t(item.id)}
-          </LocaleLink>
-        ))} */}
-
         {navigation.map((item) => {
           if (typeof item.url === "string") {
             return (
-              <LocaleLink href={item.url} key={item.id}>
+              <LocaleLink
+                href={item.url}
+                key={item.id}
+                className={`w-full flex justify-center`}
+              >
                 <span
-                  className={`py-4 lg:py-6 block hover:text-secondary-800 hover:scale-105 transition-all duration-150 ease-linear h-full capitalize  border-solid border-black ${router.includes(item.url) ? "border-b-2" : "border-none"}`}
+                  className={`block hover:text-secondary-800 hover:scale-105 transition-all duration-150 ease-linear h-full capitalize pointer-events-none border-solid border-black ${router.includes(item.url) ? "border-b-2" : "border-none"}`}
                 >
                   {t(item.id)}
                 </span>

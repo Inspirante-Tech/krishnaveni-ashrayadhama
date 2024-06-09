@@ -2,20 +2,16 @@
 import Image from "next/image";
 import React from "react";
 import { Carousel, CarouselContent, CarouselItem } from "../ui/carousel";
-import AutoScroll from 'embla-carousel-auto-scroll'
+import AutoScroll from "embla-carousel-auto-scroll";
 import { DoctorType } from "~/lib/types";
 import { useTranslations } from "next-intl";
 
-function Doctors({doctors}:{doctors:DoctorType[]}) {
-  const t= useTranslations("ayurvedicCenter.doctors")
+function Doctors({ doctors }: { doctors: DoctorType[] }) {
+  const t = useTranslations("ayurvedicCenter.doctors");
   return (
-    <section className="bg-primary-100 content-container  w-full relative">
-      <h2 className="text-center text-gray-900 heading">
-        {t("heading")}
-      </h2>
-      <p className="text-center text-sm text-gray-700">
-        {t("description")}
-      </p>
+    <section className="content-container  w-full relative">
+      <h2 className="text-center text-gray-900 heading">{t("heading")}</h2>
+      <p className="text-center text-sm text-gray-700">{t("description")}</p>
       <div className="w-full flex justify-center sm:mt-2">
         <Carousel
           opts={{ loop: true, dragFree: false, watchDrag: false }}
@@ -28,8 +24,8 @@ function Doctors({doctors}:{doctors:DoctorType[]}) {
                 key={index}
                 className="flex-none p-2 md:p-3 lg:p-4 xl:p-6"
               >
-                <div className="flex flex-col items-center justify-center">
-                  <div className="mb-3">
+                <div className="flex flex-col gap-3 items-center justify-center">
+                  <div className="">
                     <Image
                       width={120}
                       height={120}
@@ -38,10 +34,10 @@ function Doctors({doctors}:{doctors:DoctorType[]}) {
                       className="rounded-full object-cover aspect-square"
                     />
                   </div>
-                  <p className="caption">
-                    {doctor.name}
-                  </p>
-                 
+                  <div className="flex flex-col gap-2 items-center">
+                    <p className="body">{doctor.name}</p>
+                    <p className="caption">{doctor.qualification}</p>
+                  </div>
                 </div>
               </CarouselItem>
             ))}
