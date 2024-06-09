@@ -9,10 +9,12 @@ import { ImageType } from "~/lib/types";
 
 export function Gallery({ images }: { images: ImageType[] }) {
   const t = useTranslations("gallery");
-  const [selectedImageIndex, setSelectedImageIndex] = useState<number | null|undefined>(null);
+  const [selectedImageIndex, setSelectedImageIndex] = useState<
+    number | null | undefined
+  >(null);
   const dialogRef = useRef<HTMLDialogElement>(null);
 
-  const onSelect = (index:number) => {
+  const onSelect = (index: number) => {
     setSelectedImageIndex(index);
     dialogRef.current && dialogRef.current.showModal();
     document.body.classList.add("prevent-scroll");
@@ -32,11 +34,13 @@ export function Gallery({ images }: { images: ImageType[] }) {
   }));
 
   return (
-    <section className="my-4 content-container bg-white">
+    <section className="content-container flex flex-col gap-2 md:gap-4">
       <h2 className="heading spcae-y-2">{t("heading")}</h2>
-      <hr />
-      <div className="grid grid-cols-1 mt-2  sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        {images.map((image,index) => (
+      <div
+        className="lg:columns-4 md:columns-3 columns-2 space-y-4"
+        style={{ columnFill: "balance" }}
+      >
+        {images.map((image, index) => (
           <Photo
             key={image.id}
             url={image.image}
@@ -50,8 +54,11 @@ export function Gallery({ images }: { images: ImageType[] }) {
         className="w-[100%] h-[100%] md:w-[90%] p-2 md:p-15 rounded-xl eventdialog overflow-hidden"
         onClick={onClose}
       >
-        <div className="w-full h-full mt-12 md:mt-1" onClick={(e) => e.stopPropagation()}>
-          {selectedImageIndex!=null && (
+        <div
+          className="w-full h-full mt-12 md:mt-1"
+          onClick={(e) => e.stopPropagation()}
+        >
+          {selectedImageIndex != null && (
             <ThumbnailCarousel
               thumbnails={thumbnails}
               initialIndex={selectedImageIndex}
@@ -68,4 +75,3 @@ export function Gallery({ images }: { images: ImageType[] }) {
     </section>
   );
 }
-
