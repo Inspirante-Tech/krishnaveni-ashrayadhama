@@ -17,13 +17,23 @@ const Header = () => {
     <nav className="fixed top-0 left-0 w-full z-50 bg-primary-50/95 backdrop-blur-[2px] text-gray-900 shadow-lg">
       <div className="max-w-screen-xl flex flex-row justify-between items-center px-3 md:px-12 mx-auto">
         <LocaleLink href="/" className="flex items-center">
-          <Image
-            height={100}
-            width={100}
-            src={"/logo.png"}
-            alt="Logo"
-            className="object-contain object-center h-16 w-16"
-          />
+          {!router.includes("ayurvedic-center") ? (
+            <Image
+              height={100}
+              width={100}
+              src={"/logo.png"}
+              alt="Logo"
+              className="object-contain object-center h-16 w-16"
+            />
+          ) : (
+            <Image
+              height={100}
+              width={100}
+              src={"/ayurveda-logo.png"}
+              alt="Logo"
+              className="object-contain object-center h-16 w-16"
+            />
+          )}
         </LocaleLink>
         <div className="lg:flex flex-row md:gap-4 lg:gap-8 hidden">
           {navigation.map((item) => {

@@ -6,17 +6,18 @@ export const navigation = [
   {
     id: "specialities",
     url: {
-      "heading":"ashrayaDhama",
-      urls:[
+      heading: "ashrayaDhama",
+      urls: [
         {
           id: "specialities",
           url: "/ashraya-dhama/specialities",
-        },{
+        },
+        {
           id: "rulesRegulations",
           url: "/ashraya-dhama/rules-regulations",
-        }
-      ]
-    }
+        },
+      ],
+    },
   },
   {
     id: "ayurvedicCenter",
@@ -415,7 +416,6 @@ export const AyurvedicImageContentsImageContents = [
     reverse: true,
   },
 ];
- 
 
 export const krishnaveniVriddhashramRules = [
   {
