@@ -52,17 +52,17 @@ function Carousel({ children }: Props) {
         {children}
       </div>
       <button
-        className="rounded-full p-3 aspect-square  bg-gray-50/70 absolute top-1/2 left-4 z-10  -translate-y-full md:scale-100 scale-75"
+        className="rounded-full p-3 aspect-square  bg-primary-700/95 transition-colors duration-300 hover:bg-primary-600/90 cursor-pointer absolute top-1/2 left-4 z-10 -translate-y-full md:-translate-y-1/2 md:scale-100 scale-75"
         onClick={() => move(true, true)}
       >
-        <ChevronLeft size={32} />
+        <ChevronLeft size={32} className="text-primary-50" />
       </button>
 
       <button
-        className=" rounded-full p-3 aspect-square  bg-gray-50/70 absolute top-1/2 right-4 z-10 -translate-y-full md:scale-100 scale-75"
+        className=" rounded-full p-3 aspect-square  bg-primary-700/95 transition-colors duration-300 hover:bg-primary-600/90 cursor-pointer absolute top-1/2 right-4 z-10 -translate-y-full md:-translate-y-1/2 md:scale-100 scale-75"
         onClick={() => move(false, true)}
       >
-        <ChevronRight size={32} />
+        <ChevronRight size={32} className="text-primary-50" />
       </button>
     </div>
   );

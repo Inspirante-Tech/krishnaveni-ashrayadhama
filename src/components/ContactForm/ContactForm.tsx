@@ -66,7 +66,7 @@ const ContactForm = () => {
         <div className="flex flex-row md:flex-row  items-center justify-between">
           <h2 className="heading mt-5 md:mt-0 ">Get In Touch!</h2>
 
-          <Button className="bg-secondary-300 mt-5 md:mt-0 text-action-950 border-gray-500 font-bold p-4 text-md border hover:border-black hover:bg-primary-50 hover:text-black" onClick={openDialog}>
+          <Button className="mt-5 md:mt-0 text-action-950 border-gray-500 font-bold p-4 text-md border hover:border-black hover:bg-primary-50 hover:text-black" onClick={openDialog}>
             Submit Review
           </Button>
         </div>

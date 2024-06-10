@@ -1,0 +1,3 @@
+.dialog[open] .summary .marker {
+  transform: rotate(0deg);
+}

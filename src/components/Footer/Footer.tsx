@@ -2,6 +2,7 @@ import { navigation } from "~/constants";
 import { Instagram, Linkedin, Twitter, Youtube } from "lucide-react";
 import LocaleLink from "../ui/LocaleLink";
 import { getTranslations } from "next-intl/server";
+import Image from "next/image";
 
 async function Footer() {
   const t = await getTranslations("links");
@@ -11,7 +12,16 @@ async function Footer() {
         <div className="content-container flex md:flex-row flex-col justify-around items-start">
           <div className="p-5 ">
             <ul>
-              <p className="font-bold text-3xl pb-6">LOGO</p>
+              <div className="">
+                {/* <Image
+                  src={"/logo.png"}
+                  height={100}
+                  width={100}
+                  alt="Logo"
+                  className="object-center object-contain"
+                /> */}
+                Logo
+              </div>
               <div className="flex gap-6 pb-5">
                 <Instagram className="text-2xl cursor-pointer transition-colors duration-150 hover:text-secondary-300" />
                 <Twitter className="text-2xl cursor-pointer transition-colors duration-150 hover:text-secondary-300" />
@@ -21,7 +31,7 @@ async function Footer() {
             </ul>
           </div>
           <div className="p-5">
-            <p className="heading pb-4">Address</p>
+            <p className="heading pb-4 !text-gray-100">Address</p>
             <ul className="">
               <li className="text-gray-300 body pb-2 font-semibold transition-colors duration-150 hover:text-secondary-300 cursor-pointer">
                 Lorem ipsum
@@ -38,17 +48,31 @@ async function Footer() {
             </ul>
           </div>
           <div className="p-5 flex flex-col gap-1">
-            <p className="heading mb-4">{t("heading")}</p>
-            {navigation.map((item) => (
-              <LocaleLink
-                key={item.id}
-                href={item.url}
-                style={{ textTransform: "capitalize" }}
-                className="text-gray-300 body pb-2 font-semibold transition-colors duration-150 hover:text-secondary-300 cursor-pointer"
-              >
-                {t(item.id)}
-              </LocaleLink>
-            ))}
+            <p className="heading mb-4 !text-gray-100">{t("heading")}</p>
+            {navigation.map((item) => {
+              if (typeof item.url === "string") {
+                return (
+                  <LocaleLink
+                    key={item.id}
+                    href={item.url}
+                    style={{ textTransform: "capitalize" }}
+                    className="text-gray-300 body pb-2 font-semibold transition-colors duration-150 hover:text-secondary-300 cursor-pointer"
+                  >
+                    {t(item.id)}
+                  </LocaleLink>
+                );
+              }
+              return item.url.urls.map((subItem) => (
+                <LocaleLink
+                  key={subItem.id}
+                  href={subItem.url}
+                  style={{ textTransform: "capitalize" }}
+                  className="text-gray-300 body pb-2 font-semibold transition-colors duration-150 hover:text-secondary-300 cursor-pointer"
+                >
+                  {t(subItem.id)}
+                </LocaleLink>
+              ));
+            })}
           </div>
         </div>
       </div>

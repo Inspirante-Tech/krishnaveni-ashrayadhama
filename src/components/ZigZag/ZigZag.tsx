@@ -1,11 +1,7 @@
 import Image from "next/image";
 import { SectionType } from "~/lib/types";
 
-export default function ZigZag({
-  contents,
-}: {
-  contents:SectionType[]
-}) {
+export default function ZigZag({ contents }: { contents: SectionType[] }) {
   return (
     <>
       {contents.map((content, idx) => (
@@ -24,7 +20,7 @@ export default function ZigZag({
           </div>
           <div className="md:basis-1/2 basis-auto flex flex-col gap-2 md:gap-4">
             <p
-              className="heading text-gray-900"
+              className="subheading text-gray-900"
               style={{ textTransform: "capitalize" }}
             >
               {content.title}

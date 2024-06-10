@@ -31,17 +31,17 @@ export default function LocalSwitcher() {
           <Globe size={24} strokeWidth={1.5} />
         </button>
       </HoverCardTrigger>
-      <HoverCardContent className="bg-secondary-200 w-32 p-1 shadow-xl">
+      <HoverCardContent className="bg-primary-50/95 w-32 p-1 shadow-xl">
         <div className="flex flex-col gap-1">
           <button
             onClick={() => onClick(true)}
-            className="p-2 body hover:bg-secondary-300/50 transition-colors duration-300 rounded-md ease-linear"
+            className="p-2 body hover:bg-primary-300/50 transition-colors duration-300 rounded-md ease-linear"
           >
             ಕನ್ನಡ
           </button>
           <button
             onClick={() => onClick(false)}
-            className="p-2 body hover:bg-secondary-300/50 transition-colors duration-300 rounded-md ease-linear"
+            className="p-2 body hover:bg-primary-300/50 transition-colors duration-300 rounded-md ease-linear"
           >
             English
           </button>
