@@ -6,7 +6,7 @@ export default function ZigZag({ contents }: { contents: SectionType[] }) {
     <>
       {contents.map((content, idx) => (
         <section
-          className={`flex flex-col md:flex-row gap-6 md:gap-10 ${idx % 2 === 0 ? "" : "md:flex-row-reverse"}`}
+          className={`flex flex-col md:flex-row gap-6 md:gap-10 ${idx % 2 === 0 ? "" : "md:flex-row-reverse"} hover:shadow-2xl transition-shadow duration-300 ${idx % 2 === 0 ? "bg-gradient-to-br from-secondary-300/50 to-secondary-100/30" : "bg-gradient-to-bl from-primary-300/50 to-primary-100/30"} rounded-2xl`}
           key={`aboutContent${idx}`}
         >
           <div className="relative rounded-2xl hover:shadow-xl transition ease-out duration-500 basis-auto md:basis-1/2 overflow-clip aspect-video md:aspect-auto group">
@@ -18,7 +18,7 @@ export default function ZigZag({ contents }: { contents: SectionType[] }) {
               sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>
-          <div className="md:basis-1/2 basis-auto flex flex-col gap-2 md:gap-4">
+          <div className="md:basis-1/2 basis-auto flex flex-col gap-2 md:gap-4 px-10 md:py-12 pb-8">
             <p
               className="subheading text-gray-900"
               style={{ textTransform: "capitalize" }}

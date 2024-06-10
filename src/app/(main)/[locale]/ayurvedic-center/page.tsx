@@ -13,19 +13,25 @@ async function page() {
     <main className="content-container space-y-8">
       <section className="flex md:gap-4 gap-2 flex-col pt-20">
         <h2
-          className="text-gray-900 text-left heading"
+          className="text-gray-900 text-left heading w-fit"
           style={{ textTransform: "capitalize" }}
         >
           {pageData.title}
+          <div className="h-1 w-full bg-secondary-500 rounded-full mt-2"></div>
         </h2>
         <p className="body">{pageData.description}</p>
       </section>
-      <div className="flex flex-col md:gap-4 gap-2">
-        <p className="heading">Features (This is hardcoded!!)</p>
+      <div className="flex flex-col md:gap-12 gap-6">
+        <p className="heading w-fit">
+          Features
+          <div className="h-1 w-full mt-2 bg-secondary-500 rounded-full"></div>
+        </p>
         <ZigZag contents={pageData.features} />
       </div>
       <VideoSection videoSrc={pageData.videoLink} />
-      <Doctors doctors={pageData.doctors} />
+      <div className="flex justify-center bg-gradient-to-b from-primary-200 to-teal-100/50 rounded-2xl">
+        <Doctors doctors={pageData.doctors} />
+      </div>
     </main>
   );
 }

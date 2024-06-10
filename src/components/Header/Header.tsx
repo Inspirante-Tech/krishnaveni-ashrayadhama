@@ -17,13 +17,23 @@ const Header = () => {
     <nav className="fixed top-0 left-0 w-full z-50 bg-primary-50/95 backdrop-blur-[2px] text-gray-900 shadow-lg">
       <div className="max-w-screen-xl flex flex-row justify-between items-center px-3 md:px-12 mx-auto">
         <LocaleLink href="/" className="flex items-center">
-          <Image
-            height={100}
-            width={100}
-            src={"/logo.png"}
-            alt="Logo"
-            className="object-contain object-center h-16 w-16"
-          />
+          {!router.includes("ayurvedic-center") ? (
+            <Image
+              height={100}
+              width={100}
+              src={"/logo.png"}
+              alt="Logo"
+              className="object-contain object-center h-16 w-16"
+            />
+          ) : (
+            <Image
+              height={100}
+              width={100}
+              src={"/ayurveda-logo.png"}
+              alt="Logo"
+              className="object-contain object-center h-16 w-16"
+            />
+          )}
         </LocaleLink>
         <div className="lg:flex flex-row md:gap-4 lg:gap-8 hidden">
           {navigation.map((item) => {
@@ -105,7 +115,7 @@ function MobileNav() {
       </div>
       <div
         id={styles.menu}
-        className="p-8 list-none fixed top-0 right-0 translate-x-full h-screen bg-primary-50 flex flex-col text-center justify-center transition-all duration-500 ease-in-out z-10 gap-4 subheading"
+        className="p-8 list-none fixed top-0 right-0 translate-x-full h-screen bg-secondary-50 shadow-2xl flex flex-col text-center justify-center transition-all duration-500 ease-in-out z-10 gap-4 subheading"
       >
         {navigation.map((item) => {
           if (typeof item.url === "string") {
