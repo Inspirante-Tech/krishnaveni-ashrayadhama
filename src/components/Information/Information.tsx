@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
+import Reveal from "../Animations/reveal";
+import { Separator } from "../ui/separator";
 
 const Information: React.FC<{ data: string }> = ({ data }) => {
   const [isVisible, setIsVisible] = useState<boolean>(false);
@@ -40,17 +42,19 @@ const Information: React.FC<{ data: string }> = ({ data }) => {
       } text-justify`}
     >
       <div className="content-container flex items-end flex-row-reverse">
-        <div className="relative xl:max-w-4xl md:shadow-xl rounded-2xl z-0">
-          <div className="relative md:bg-gradient-to-tl md:from-secondary-200 md:to-secondary-100 rounded-2xl flex md:gap-4 gap-2 flex-col xl:p-16 lg:p-24 md:p-12">
-            <h2 className="heading text-gray-900">Who We Are</h2>
-            <div className="h-1 w-14 bg-secondary-500 rounded-full"></div>
-            {[data].map((info, index) => (
-              <p className="body" key={index}>
-                {info}
-              </p>
-            ))}
+        <Reveal>
+          <div className="relative xl:max-w-4xl md:shadow-xl rounded-2xl z-0">
+            <div className="relative md:bg-gradient-to-tl md:from-secondary-200 md:to-secondary-100 rounded-2xl flex md:gap-4 gap-2 flex-col xl:p-16 lg:p-24 md:p-12">
+              <h2 className="heading text-gray-900">Who We Are</h2>
+              <Separator color="secondary" />
+              {[data].map((info, index) => (
+                <p className="body" key={index}>
+                  {info}
+                </p>
+              ))}
+            </div>
           </div>
-        </div>
+        </Reveal>
         <Image
           src={"/story.jpg"}
           alt="Story"

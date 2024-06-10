@@ -1,7 +1,11 @@
 import { motion, useInView, useAnimation } from "framer-motion";
 import { useEffect, useRef } from "react";
 
-const Reveal = ({ ...props }: React.HTMLProps<HTMLDivElement>) => {
+interface Props extends React.HTMLProps<HTMLDivElement> {
+  delay?: number;
+}
+
+const Reveal = ({ delay = 0.35, ...props }: Props) => {
   const ref = useRef(null);
   const isInView = useInView(ref);
   const control = useAnimation();
@@ -30,7 +34,7 @@ const Reveal = ({ ...props }: React.HTMLProps<HTMLDivElement>) => {
         animate={control}
         transition={{
           duration: 0.65,
-          delay: 0.25,
+          delay: delay,
         }}
       >
         {props.children}
