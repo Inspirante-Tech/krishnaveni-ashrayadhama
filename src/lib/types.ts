@@ -47,8 +47,13 @@ export type SectionType = {
     image: string
 }
 
-export type ImageType =  {
+export type ImageType = {
     image: string,
     id: string,
     description: string
-  }
+}
+
+export type Message = {
+    type: "success" | "error",
+    message: string
+}

@@ -1,7 +1,13 @@
+"use client"
 import Image from "next/image";
+import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
+import { useLocale, useTranslations } from "next-intl";
 import Contactform from "~/components/ContactForm/ContactForm";
+import { recaptchaClientKey } from "~/lib/env";
 
-export default function Contact() {
+export default  function Contact() {
+  const locale =  useLocale();
+  const t = useTranslations("contact")
   return (
     <main className="bg-white content-container mt-20">
       <div className="lg:grid lg:min-h-screen lg:grid-cols-12">
@@ -16,12 +22,11 @@ export default function Contact() {
 
           <div className="hidden  lg:relative lg:block lg:p-12 p-1">
             <h2 className="mt-16 text-white heading">
-              Welcome to vriddhashrama
+                {t("heading")}
             </h2>
 
             <p className="mt-4 body text-white/90">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi
-              nam dolorum aliquam, quibusdam aperiam voluptatum.
+              {t("content")}
             </p>
           </div>
         </section>
@@ -39,7 +44,9 @@ export default function Contact() {
               </p>
             </div>
 
-            <Contactform />
+            <GoogleReCaptchaProvider reCaptchaKey={recaptchaClientKey} language={locale == "kn" ? "kannada" : "english"}>
+              <Contactform />
+            </GoogleReCaptchaProvider>
           </div>
         </main>
       </div>

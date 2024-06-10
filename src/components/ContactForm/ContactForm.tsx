@@ -2,15 +2,12 @@
 import { useEffect, useRef, useState } from "react";
 import { Button } from "../ui/button";
 import { X } from "lucide-react";
-import { uploadContact, uploadTestimonial } from "~/app/(main)/[locale]/contact/actions";
+import { uploadContact, uploadTestimonial } from "./actions";
 import { client } from "~/sanity/lib/client";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3"
 import * as Toast from '@radix-ui/react-toast';
-
-type Message = {
-  type: "success" | "error",
-  message: string
-}
+import { useTranslations } from "next-intl";
+import {type Message } from "~/lib/types";
 
 const ContactForm = () => {
   const [open, setOpen] = useState(false);
@@ -18,12 +15,13 @@ const ContactForm = () => {
   const { executeRecaptcha } = useGoogleReCaptcha();
   const messageRef = useRef<Message>({ type: "success", message: "" })
   const timerRef = useRef(0);
+  const t = useTranslations("contact.form")
 
   useEffect(() => {
     return () => clearTimeout(timerRef.current);
   }, []);
 
-  const showToast = (message:Message) => {
+  const showToast = (message: Message) => {
     messageRef.current = message
     setOpen(true);
     window.clearTimeout(timerRef.current);
@@ -43,9 +41,10 @@ const ContactForm = () => {
     if (executeRecaptcha) {
       const gRecaptchaToken = await executeRecaptcha(`krishnaveni ${data.get("name")}`)
       data.set("captcha", gRecaptchaToken)
-      uploadTestimonial(data);
+      const response = uploadTestimonial(data);
+      console.log(response)
     } else {
-      showToast({type:"error",message:"recaptcha not available"})
+      showToast({ type: "error", message: "recaptcha not available" })
     }
 
     dialogRef.current?.close()
@@ -53,7 +52,7 @@ const ContactForm = () => {
 
   async function contactAction(data: FormData) {
     if (executeRecaptcha) {
-      const gRecaptchaToken = await executeRecaptcha(`krishnaveni ${data.get("name")}`)
+      const gRecaptchaToken = await executeRecaptcha(`krishnaveni`)
       data.set("captcha", gRecaptchaToken)
       uploadContact(data);
     } else {
@@ -76,7 +75,7 @@ const ContactForm = () => {
         <label
           className="block text-sm font-medium text-gray-700"
         >
-          <span>Name</span>
+          <span>{t("name")}</span>
           <input
             type="text"
             name="name"
@@ -89,7 +88,7 @@ const ContactForm = () => {
         <label
           className="block text-sm font-medium text-gray-700"
         >
-          <span>Email</span>
+          <span>{t("email")}</span>
           <input
             type="email"
             name="email"
@@ -100,7 +99,7 @@ const ContactForm = () => {
         <label
           className="block text-sm font-medium text-gray-700"
         >
-          <span>Phone number</span>
+          <span>{t("phoneNo")}</span>
           <input
             type="tel"
             name="phoneNo"
@@ -112,7 +111,7 @@ const ContactForm = () => {
         <label
           className="block text-sm font-medium text-gray-700"
         >
-          <span>Message</span>
+          <span>{t("message")}</span>
           <textarea
             name="message"
             required
@@ -129,20 +128,19 @@ const ContactForm = () => {
             className="size-5 h-9 rounded-md border-gray-800 bg-white shadow-sm"
           />
           <span className="text-sm text-gray-700">
-            I want to receive emails about events, product updates and company
-            announcements.
+          {t("subscribeNote")}
           </span>
 
         </label>
 
         <div className="col-span-6 sm:flex sm:items-center sm:gap-4">
           <Button className="bg-secondary-300 text-action-950 font-bold p-4 text-md border hover:border-black hover:bg-primary-50 hover:text-black">
-            Submit Details
+            {t("submitDetails")}
           </Button>
 
           <p className="mt-4 text-sm text-gray-500 sm:mt-0">
             <Button className="text-gray-700 underline" onClick={openDialog}>
-              Did You submit Review
+            {t("submitReview")}
             </Button>
           </p>
         </div>
@@ -158,7 +156,7 @@ const ContactForm = () => {
           <label
             className="block text-sm font-medium text-gray-700"
           >
-            <span>Name</span>
+            <span>{t("name")}</span>
             <input
               type="text"
               name="name"
@@ -169,7 +167,7 @@ const ContactForm = () => {
           <label
             className="block text-sm font-medium text-gray-700"
           >
-            <span>Email</span>
+            <span>{t("email")}</span>
             <input
               type="email"
               name="email"
@@ -180,7 +178,7 @@ const ContactForm = () => {
           <label
             className="block text-sm font-medium text-gray-700"
           >
-            <span>Phone number</span>
+            <span>{t("phoneNo")}</span>
             <input
               type="tel"
               name="phoneNo"
@@ -192,7 +190,7 @@ const ContactForm = () => {
           <label
             className="block text-sm font-medium text-gray-700"
           >
-            <span>Profile Image</span>
+            <span>{t("profileImage")}</span>
             <input
               type="file"
               name="image"
@@ -204,7 +202,7 @@ const ContactForm = () => {
           <label
             className="block text-sm font-medium text-gray-700"
           >
-            <span>Review</span>
+            <span>{t("review")}</span>
             <textarea
               name="review"
               className="mt-1 w-full h-32 rounded-md border border-gray-800 bg-white text-sm text-gray-700 shadow-sm p-2"
@@ -214,7 +212,7 @@ const ContactForm = () => {
             className="bg-secondary-300 text-action-950 font-bold p-4 text-md border hover:border-black hover:bg-primary-50 hover:text-black"
             onClick={() => dialogRef.current?.close()}
           >
-            Submit Review
+            {t("submitReview")}
           </Button>
         </form>
       </dialog>
