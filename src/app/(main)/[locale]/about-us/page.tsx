@@ -14,7 +14,7 @@ async function About() {
           style={{ textTransform: "capitalize" }}
         >
           {t("heading")}
-        </h1>
+        </div>
       </section>
       <ZigZag contents={data.sections} />
     </main>
