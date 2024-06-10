@@ -34,6 +34,9 @@
         "doctors":{
             "heading":"doctors",
             "description":""
+        },
+        "features":{
+            "heading":"features"
         }
     },
     "vridddhashrama":{
@@ -46,5 +49,23 @@
     },
     "aboutUs":{
         "heading":"about us"
+    },
+    "contact":{
+        "heading":"Welcome To AshrayaDhama",
+        "content":"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi nam dolorum aliquam, quibusdam aperiam voluptatum.",
+        "form":{
+            "heading":"Get in Touch",
+            "name":"name",
+            "email":"email",
+            "phoneNo":"Phone Number",
+            "message":"message",
+            "submitDetails":"Submit Details",
+            "submitReview":"Submit Reviews",
+            "profileImage":"Profile Image",
+            "review":"Review",
+            "reviewTitle":"Submit Your Testimonial",
+            "reviewContent":"We value your feedback! Please share your experience with us.",
+            "subscribeNote":"I want to receive emails about events, product updates and company announcements."
+        }
     }
 }

@@ -1,7 +1,5 @@
-import { getLocale } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import Doctors from "~/components/Doctors/Doctors";
-import Features from "~/components/Features/Features";
-import ServicesOffered from "~/components/ServicesOffered/ServicesOffered";
 import VideoSection from "~/components/VideoSection/VideoSection";
 import ZigZag from "~/components/ZigZag/ZigZag";
 import { fetchAyrvedicCenterPage } from "~/lib/queries";
@@ -9,6 +7,7 @@ import { fetchAyrvedicCenterPage } from "~/lib/queries";
 async function page() {
   const loacle = await getLocale();
   const pageData = await fetchAyrvedicCenterPage(loacle);
+  const t = await getTranslations("ayurvedicCenter");
   return (
     <main className="content-container space-y-8">
       <section className="flex md:gap-4 gap-2 flex-col pt-20">
@@ -23,7 +22,7 @@ async function page() {
       </section>
       <div className="flex flex-col md:gap-12 gap-6">
         <p className="heading w-fit">
-          Features
+        {t("features.heading")}
           <div className="h-1 w-full mt-2 bg-secondary-500 rounded-full"></div>
         </p>
         <ZigZag contents={pageData.features} />

@@ -35,6 +35,9 @@
         "doctors":{
             "heading":"doctors",
             "description":""
+        },
+        "features":{
+            "heading":"ವೈಶಿಷ್ಟ್ಯಗಳು"
         }
     },
     "vridddhashrama":{
@@ -47,5 +50,23 @@
     },
     "aboutUs":{
         "heading":"ನಮ್ಮ ಬಗ್ಗೆ"
+    },
+    "contact":{
+        "heading":"ಸ್ವಾಗತ",
+        "content":"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi nam dolorum aliquam, quibusdam aperiam voluptatum.",
+        "form":{
+            "heading":"ಸಂಪರ್ಕದಲ್ಲಿರಲು",
+            "name":"ಹೆಸರು",
+            "email":"ಇಮೇಲ್",
+            "phoneNo":"ದೂರವಾಣಿ ಸಂಖ್ಯೆ",
+            "message":"ಸಂದೇಶ",
+            "submitDetails":"ವಿವರಗಳನ್ನು ಸಲ್ಲಿಸಿ",
+            "submitReview":"ವಿಮರ್ಶೆಯನ್ನು ಸಲ್ಲಿಸಿ",
+            "profileImage":"ಪ್ರೊಫೈಲ್ ಚಿತ್ರ",
+            "review":"ಸಮೀಕ್ಷೆ",
+            "reviewTitle":"ನಿಮ್ಮ ಪ್ರಶಂಸಾಪತ್ರವನ್ನು ಸಲ್ಲಿಸಿ",
+            "reviewContent":"ನಿಮ್ಮ ಪ್ರತಿಕ್ರಿಯೆಯನ್ನು ನಾವು ಗೌರವಿಸುತ್ತೇವೆ! ದಯವಿಟ್ಟು ನಿಮ್ಮ ಅನುಭವವನ್ನು ನಮ್ಮೊಂದಿಗೆ ಹಂಚಿಕೊಳ್ಳಿ",
+            "subscribeNote":"ಈವೆಂಟ್‌ಗಳು, ಉತ್ಪನ್ನ ನವೀಕರಣಗಳು ಮತ್ತು ಕಂಪನಿಯ ಪ್ರಕಟಣೆಗಳ ಕುರಿತು ಇಮೇಲ್‌ಗಳನ್ನು ಸ್ವೀಕರಿಸಲು ನಾನು ಬಯಸುತ್ತೇನೆ"
+        }
     }
 }

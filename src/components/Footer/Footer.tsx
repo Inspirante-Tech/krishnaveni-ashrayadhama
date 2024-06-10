@@ -48,15 +48,6 @@ async function Footer() {
               <li className="text-gray-300 body pb-2 font-semibold transition-colors duration-150 hover:text-secondary-300 cursor-pointer">
                 Lorem ipsum
               </li>
-              <li className="text-gray-300 body pb-2 font-semibold transition-colors duration-150 hover:text-secondary-300 cursor-pointer">
-                lorem ipsum
-              </li>
-              <li className="text-gray-300 body pb-2 font-semibold transition-colors duration-150 hover:text-secondary-300 cursor-pointer">
-                lorem ipsum
-              </li>
-              <li className="text-gray-300 body pb-2 font-semibold transition-colors duration-150 hover:text-secondary-300 cursor-pointer">
-                lorem ipsum
-              </li>
             </ul>
           </div>
           <div className="p-5 flex flex-col gap-1">
