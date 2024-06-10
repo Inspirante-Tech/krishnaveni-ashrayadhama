@@ -35,7 +35,7 @@ export function Gallery({ images }: { images: ImageType[] }) {
     <section className="my-4 content-container bg-white">
       <h2 className="heading spcae-y-2">{t("heading")}</h2>
       <hr />
-      <div className="grid grid-cols-1 mt-2  sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="columns-2 md:columns-4 gap-4 space-y-4">
         {images.map((image,index) => (
           <Photo
             key={image.id}
