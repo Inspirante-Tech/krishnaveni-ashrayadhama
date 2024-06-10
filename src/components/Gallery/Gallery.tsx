@@ -34,8 +34,8 @@ export function Gallery({ images }: { images: ImageType[] }) {
   }));
 
   return (
-    <section className="content-container flex flex-col gap-2 md:gap-4">
-      <h2 className="heading spcae-y-2">{t("heading")}</h2>
+    <section className="content-container flex flex-col ">
+      <h2 className="heading space-y-2">{t("heading")}</h2>
       <div
         className="lg:columns-4 md:columns-3 columns-2 space-y-4"
         style={{ columnFill: "balance" }}

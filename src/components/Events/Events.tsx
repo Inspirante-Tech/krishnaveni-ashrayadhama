@@ -40,19 +40,19 @@ function Events({ events }: { events: EventType[] }) {
     <section className="content-container rounded p-8">
       <h1 className=" heading space-y-2">{t("heading")}</h1>
       <hr/>
-      <div className="flex flex-wrap gap-8 justify-around mt-2 body">
+      <div className="lg:columns-4 md:columns-3 columns-2 space-y-4 body">
         {events.map((event, index) => (
           <div
             key={event.id}
             onClick={() => openDialog(index)}
-            className="overflow-hidden rounded-lg shadow transition hover:shadow-lg w-80 cursor-pointer"
+            className="overflow-hidden rounded-lg shadow transition hover:shadow-lg cursor-pointer"
           >
             <Image
               src={event.image}
               width={250}
               height={250}
               alt={event.title}
-              className="rounded w-full aspect-square object-cover"
+              className="rounded w-full object-cover"
             />
             <div className="bg-white p-4 sm:p-6">
               <time

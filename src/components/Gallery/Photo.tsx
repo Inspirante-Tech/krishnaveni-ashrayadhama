@@ -10,7 +10,7 @@ interface PhotoProps {
 }
 
 const Photo: React.FC<PhotoProps> = ({ url, alt, callback }) => {
-  const [isVisible, setIsVisible] = useState<boolean>(false);
+  const [isVisible, setIsVisible] = useState<boolean>(true);
   const imageRef = useRef<HTMLImageElement>(null);
 
   return (
