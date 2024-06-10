@@ -15,6 +15,7 @@ import location from './schemaTypes/location'
 import contact from './schemaTypes/contact'
 import section from './schemaTypes/section'
 import aboutus from './schemaTypes/aboutus'
+import contactDetails from './schemaTypes/contactDetails'
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [localeString,contact,localeText,localeBlockArray, location,gallery,event,ayurvedicCenter,features,vriddhashrama, doctor,Home,fqa,facility,testimonial,section,aboutus],

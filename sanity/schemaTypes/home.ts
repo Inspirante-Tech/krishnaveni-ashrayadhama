@@ -34,7 +34,7 @@ export default defineType({
         }),
         defineField({
             name: "whoweare",
-            title: "Content Section 1",
+            title: "Content Section 2",
             type: "localeText",
             validation: (Rule) => Rule.required(),
         }),

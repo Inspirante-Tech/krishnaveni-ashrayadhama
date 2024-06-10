@@ -84,7 +84,10 @@ const Fqas = ({ fqas }: { fqas: FqaType[] }) => {
           <div className="flex flex-col gap-4">
             <p className="body text-gray-700">{t("description")}</p>
             <LocaleLink href={"/contact"}>
-              <Button className="bg-primary-500 transition-colors duration-150 rounded-md font-bold hover:bg-primary-600 text-action-950 max-w-fit">
+              <Button
+                className="bg-primary-500 transition-colors duration-150 rounded-md font-bold hover:bg-primary-600 text-action-950 max-w-fit"
+                style={{ textTransform: "capitalize" }}
+              >
                 {t("contactUs")}
               </Button>
             </LocaleLink>
