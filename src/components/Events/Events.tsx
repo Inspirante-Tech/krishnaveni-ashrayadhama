@@ -45,14 +45,14 @@ function Events({ events }: { events: EventType[] }) {
           <div
             key={event.id}
             onClick={() => openDialog(index)}
-            className="overflow-hidden rounded-lg shadow transition hover:shadow-lg"
+            className="overflow-hidden rounded-lg shadow transition hover:shadow-lg w-80 cursor-pointer"
           >
             <Image
               src={event.image}
               width={250}
               height={250}
               alt={event.title}
-              className="rounded object-over w-auto caption"
+              className="rounded w-full aspect-square object-cover"
             />
             <div className="bg-white p-4 sm:p-6">
               <time
