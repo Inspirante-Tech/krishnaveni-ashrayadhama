@@ -24,7 +24,7 @@ function Events({ events }: { events: EventType[] }) {
   const openDialog = (index: number) => {
     setSelectedEventIndex(index);
     dialogRef.current && dialogRef.current.showModal();
-    document.body.classList.add("prevent-scroll")
+    document.body.classList.add("prevent-scroll");
   };
 
   const closeDialog = () => {
@@ -38,8 +38,10 @@ function Events({ events }: { events: EventType[] }) {
 
   return (
     <section className="content-container rounded p-8">
-      <h1 className=" heading space-y-2">{t("heading")}</h1>
-      <hr/>
+      <h1 className=" heading space-y-2 w-fit">
+        {t("heading")}
+        <div className="h-1 w-full mt-2 bg-secondary-500 rounded-full"></div>
+      </h1>
       <div className="flex flex-wrap gap-8 justify-around mt-2 body">
         {events.map((event, index) => (
           <div
@@ -75,7 +77,10 @@ function Events({ events }: { events: EventType[] }) {
         onClick={closeDialog}
       >
         {selectedEvent && (
-          <div className="w-full h-full mt-12 md:mt-1" onClick={(e) => e.stopPropagation()}>
+          <div
+            className="w-full h-full mt-12 md:mt-1"
+            onClick={(e) => e.stopPropagation()}
+          >
             <ThumbnailCarousel
               thumbnails={thumbnails}
               initialIndex={
