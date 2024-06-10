@@ -35,12 +35,11 @@ export default  function Contact() {
           <div className="max-w-xl lg:max-w-3xl">
             <div className="relative md:-mt-16  mt-5 block lg:hidden">
               <h1 className="mt-2  text-gray-900 heading">
-                Welcome to vriddhashrama
+                {t("heading")}
               </h1>
 
               <p className="mt-4 body text-gray-500">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Eligendi nam dolorum aliquam, quibusdam aperiam voluptatum.
+                {t("content")}
               </p>
             </div>
 

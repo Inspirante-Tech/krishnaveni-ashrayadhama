@@ -64,10 +64,10 @@ const ContactForm = () => {
     <Toast.Provider swipeDirection="right">
       <section className="col-span-6 sm:col-span-3">
         <div className="flex flex-row md:flex-row  items-center justify-between">
-          <h2 className="heading mt-5 md:mt-0 ">Get In Touch!</h2>
+          <h2 className="heading mt-5 md:mt-0 ">{t("heading")}</h2>
 
           <Button className="mt-5 md:mt-0 text-action-950 border-gray-500 font-bold p-4 text-md border hover:border-black hover:bg-primary-50 hover:text-black" onClick={openDialog}>
-            Submit Review
+            {t("submitReview")}
           </Button>
         </div>
       </section>
@@ -151,8 +151,8 @@ const ContactForm = () => {
           <X />
         </Button>
         <form className="p-6 flex flex-col gap-4" onClick={e => e.stopPropagation()} action={testimonialAction}>
-          <h1 className="text-2xl font-bold text-action-950">Submit Your Testimonial</h1>
-          <p className="text-sm text-gray-500">We value your feedback! Please share your experience with us.</p>
+          <h1 className="text-2xl font-bold text-action-950">{t("reviewTitle")}</h1>
+          <p className="text-sm text-gray-500">{t("reviewContent")}</p>
           <label
             className="block text-sm font-medium text-gray-700"
           >

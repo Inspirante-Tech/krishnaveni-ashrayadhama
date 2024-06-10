@@ -34,6 +34,9 @@
         "doctors":{
             "heading":"doctors",
             "description":""
+        },
+        "features":{
+            "heading":"features"
         }
     },
     "vridddhashrama":{
@@ -48,7 +51,7 @@
         "heading":"about us"
     },
     "contact":{
-        "heading":"Welcome To Vriddhashrama",
+        "heading":"Welcome To AshrayaDhama",
         "content":"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi nam dolorum aliquam, quibusdam aperiam voluptatum.",
         "form":{
             "heading":"Get in Touch",
