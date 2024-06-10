@@ -5,6 +5,7 @@ import { Button } from "../ui/button";
 import { FqaType } from "~/lib/types";
 import { useTranslations } from "next-intl";
 import LocaleLink from "../ui/LocaleLink";
+import Reveal from "../Animations/reveal";
 
 const QuestionAnswer = ({
   question,
@@ -19,7 +20,7 @@ const QuestionAnswer = ({
 
   return (
     <section
-      className={`  group border-s-4 border-primary-800/80 bg-gray-50 p-3 [&_summary::-webkit-details-marker]:hidden transform transition-opacity duration-500 ${
+      className={`  group border-s-4 border-primary-800/80 bg-gray-50 p-3 transform transition-opacity duration-500 ${
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"
       }`}
     >
@@ -92,12 +93,13 @@ const Fqas = ({ fqas }: { fqas: FqaType[] }) => {
         <div className="lg:col-span-2 lg:mx-0 sm:w-full md:w-3/4 lg:w-full">
           <div className="space-y-4">
             {fqas.map((fqa, index) => (
-              <QuestionAnswer
-                key={index}
-                question={fqa.question}
-                answer={fqa.answer}
-                isVisible={visibleIndexes.includes(index)}
-              />
+              <Reveal key={index} delay={index * 0.05}>
+                <QuestionAnswer
+                  question={fqa.question}
+                  answer={fqa.answer}
+                  isVisible={visibleIndexes.includes(index)}
+                />
+              </Reveal>
             ))}
           </div>
         </div>

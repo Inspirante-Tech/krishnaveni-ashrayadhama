@@ -16,7 +16,7 @@ export default async function Facilities({
         <Separator />
         <div className="flex flex-wrap justify-center gap-4 w-full px-4 md:px-0">
           {facilities.map((facility, index) => (
-            <FacilityCard key={index} facility={facility} />
+            <FacilityCard key={index} facility={facility} index={index} />
           ))}
         </div>
       </div>
