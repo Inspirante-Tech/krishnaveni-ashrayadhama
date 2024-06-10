@@ -4,11 +4,9 @@ import styles from "./styles.module.css";
 
 function ScrollDown() {
   return (
-    <span
-      className={`absolute left-[50%] bottom-[5%] ${styles.bounce}`}
-    >
+    <span className={`absolute left-[50%] bottom-[5%] ${styles.bounce}`}>
       <a href="#story">
-        <ChevronDown size={64} color="white" />
+        <ChevronDown size={64} className="text-primary-300" />
       </a>
     </span>
   );

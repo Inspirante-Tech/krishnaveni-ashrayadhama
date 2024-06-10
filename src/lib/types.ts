@@ -43,7 +43,7 @@ export type FeatureType = {
 
 export type SectionType = {
     title: string,
-    content: string,
+    description: string,
     image: string
 }
 

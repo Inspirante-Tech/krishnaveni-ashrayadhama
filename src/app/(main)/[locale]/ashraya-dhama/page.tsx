@@ -1,7 +1,7 @@
 import { getLocale, getTranslations } from "next-intl/server";
-import ImageContent from "~/components/Features/Features";
 import NearbyPlaces from "~/components/NearbyPlaces/NearbyPlaces";
 import RulesandRegulation from "~/components/RulesandRegulation/RulesandRegulation";
+import { Separator } from "~/components/ui/separator";
 import VideoSection from "~/components/VideoSection/VideoSection";
 import ZigZag from "~/components/ZigZag/ZigZag";
 import { fetchVriddhashramaPage } from "~/lib/queries";
@@ -11,8 +11,6 @@ export default async function Vridddhashrama() {
   const t = await getTranslations("vridddhashrama");
 
   const pageData = await fetchVriddhashramaPage(locale);
-
-  console.log(pageData.rules);
 
   return (
     <main className="content-container mx-auto space-y-16 md:space-y-20">

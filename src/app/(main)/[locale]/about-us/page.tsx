@@ -7,16 +7,20 @@ async function About() {
   const t = await getTranslations("aboutUs");
   const data = await fetchAboutPage(locale);
   return (
-    <main className="space-y-16 md:space-y-20 min-h-screen content-container">
-      <section className="flex md:gap-4 gap-2 flex-col pt-20">
+    <main className="flex flex-col md:gap-4 gap-2 min-h-screen content-container">
+      <div className="pt-20">
         <div
-          className="text-gray-900 text-left heading"
+          className="text-gray-900 text-left heading w-fit"
           style={{ textTransform: "capitalize" }}
         >
           {t("heading")}
+          <div className="h-1 w-full bg-secondary-500 rounded-full mt-2"></div>
         </div>
-      </section>
-      <ZigZag contents={data.sections} />
+      </div>
+
+      <div className="space-y-16 md:space-y-20 ">
+        <ZigZag contents={data.sections} />
+      </div>
     </main>
   );
 }

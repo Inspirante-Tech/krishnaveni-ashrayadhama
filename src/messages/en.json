@@ -21,11 +21,13 @@
     "links": {
         "heading":"Links",
         "aboutUs": "about us",
-        "specialities": "Vriddhashram",
+        "specialities": "specialities",
+        "ashrayaDhama":"ashraya dhama",
         "ayurvedicCenter": "ayurvedic center",
         "events": "events",
         "gallery": "gallery",
-        "contact": "contact"
+        "contact": "contact",
+        "rulesRegulations":"rules and regulations"
     },
     "ayurvedicCenter":{
         "heading":"ayurvedic center",

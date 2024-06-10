@@ -1,11 +1,11 @@
 import { client } from "~/sanity/lib/client";
 import type { Image } from 'sanity'
 import { urlForImage } from "~/sanity/lib/image";
+import { defaultLocale } from "./env";
 
-const BASELOCALE = "en"
 
 function coalesce(key: string, locale: string) {
-    return `coalesce(${key}.${locale}, ${key}.${BASELOCALE},"missing")`
+    return `coalesce(${key}.${locale}, ${key}.${defaultLocale},"missing")`
 }
 
 interface GalleryResponse {
@@ -22,9 +22,7 @@ export async function fetchGalleryImages(locale:string) {
             image
         }
     `
-    console.log(query)
     let gallery_images = await client.fetch<GalleryResponse[]>(query);
-    console.log(gallery_images.map(img=>urlForImage(img.image)))
     return gallery_images.map(gallery_image => ({
         ...gallery_image,
         image: urlForImage(gallery_image.image)
@@ -223,7 +221,7 @@ export async function fetchVriddhashramaPage(locale: string) {
 type AboutPage = {
     sections: {
         title: string,
-        content: string,
+        description: string,
         image: Image
     }[]
 }
@@ -234,7 +232,7 @@ export async function fetchAboutPage(locale: string) {
         "sections":sections[]{
             "title":${coalesce("title", locale)},
             image,
-            "content":${coalesce("content", locale)}
+            "description":${coalesce("content", locale)}
         }
       }`
 

@@ -29,6 +29,7 @@
 .heading {
   @apply text-2xl lg:text-3xl;
   @apply font-bold capitalize;
+  @apply text-secondary-800;
 }
 
 .subheading {
