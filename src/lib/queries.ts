@@ -14,7 +14,7 @@ interface GalleryResponse {
     description: string
 }
 
-export async function fetchGalleryImages(locale:string) {
+export async function fetchGalleryImages(locale: string) {
     const query = `
         *[_type == "gallery"]{
             'id':_id,
@@ -215,6 +215,25 @@ export async function fetchVriddhashramaPage(locale: string) {
             image: urlForImage(location.image)
         }))
     }
+}
+
+
+type ContactDetails = {
+    address: [any],
+    email: string,
+    phoneNo: string
+}
+
+export async function fetchContactDetails(locale: string) {
+
+    const query = `*[_type == "contactDetail"][0]{
+        "address":${coalesce("address", locale)},
+        email,
+        phoneNo
+      }`
+
+    let data = await client.fetch<ContactDetails>(query);
+    return data
 }
 
 
