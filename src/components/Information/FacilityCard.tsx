@@ -15,7 +15,7 @@ const FacilityCard = ({
       className="w-full basis-auto md:basis-[45%] lg:basis-auto lg:max-w-64 transition duration-200 ease-out group hover:-translate-y-2"
       delay={0.25 * index}
     >
-      <div className="flex justify-evenly w-full bg-gradient-to-t from-primary-400 to-primary-200 shadow-lg group-hover:shadow-2xl transition duration-200 ease-out rounded-lg overflow-clip">
+      <div className="flex justify-evenly w-full bg-gradient-to-tr from-secondary-200 to-secondary-100 shadow-lg group-hover:shadow-2xl transition duration-200 ease-out rounded-lg overflow-clip">
         <div className="relative p-6 py-8 gap-4 flex flex-col">
           <Image
             src={facility.image}

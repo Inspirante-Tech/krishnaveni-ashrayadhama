@@ -115,7 +115,7 @@ function MobileNav() {
       </div>
       <div
         id={styles.menu}
-        className="p-8 list-none fixed top-0 right-0 translate-x-full h-screen bg-primary-50 flex flex-col text-center justify-center transition-all duration-500 ease-in-out z-10 gap-4 subheading"
+        className="p-8 list-none fixed top-0 right-0 translate-x-full h-screen bg-secondary-50 shadow-2xl flex flex-col text-center justify-center transition-all duration-500 ease-in-out z-10 gap-4 subheading"
       >
         {navigation.map((item) => {
           if (typeof item.url === "string") {
