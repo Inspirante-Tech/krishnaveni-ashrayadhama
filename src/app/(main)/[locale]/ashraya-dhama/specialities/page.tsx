@@ -22,7 +22,6 @@ export default async function Vridddhashrama() {
         </div>
         <p className="body">{pageData.description}</p>
       </section>
-      <hr />
 
       <ZigZag contents={pageData.features} />
       <VideoSection videoSrc={pageData.videoLink} />
