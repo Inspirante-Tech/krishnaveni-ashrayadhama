@@ -10,6 +10,11 @@
         },
         "testimonials":{
             "heading":"testimonials"
+        },
+        "hero":{
+            "heading":"Krishnaveni Ashrayadhama",
+            "content":"Nurturing legacy, Empowering Well-being",
+            "cta":"Get in Touch"
         }
     },
     "events": {

@@ -13,17 +13,17 @@ async function page() {
             </h2>
 
             <section>
-                <table>
+                <table className=" border-2 border-black border-collapse rounded-md">
                     <tr className="grid grid-cols-2">
-                        <th>{t("table.title")}</th>
-                        <th>{t("table.detail")}</th>
+                        <th className="heading border border-black border-collapse p-4">{t("table.title")}</th>
+                        <th className="heading border border-black border-collapse p-4">{t("table.detail")}</th>
                     </tr>
                     <tbody>
                         {
                             data.rows.map(row => (
                                 <tr className="grid grid-cols-2">
-                                    <td>{row.title}</td>
-                                    <td>{row.detail}</td>
+                                    <td className="border border-black border-collapse p-4">{row.title}</td>
+                                    <td className="border border-black border-collapse p-4">{row.detail}</td>
                                 </tr>
                             ))
                         }
