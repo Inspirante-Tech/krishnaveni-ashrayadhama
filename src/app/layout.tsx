@@ -19,7 +19,6 @@ export default function RootLayout({
   return (
     <html className={`${notoSans.variable} scroll-smooth scroll-pt-12`}>
       <body>{children}</body>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/css-doodle/0.39.1/css-doodle.min.js"></script>
     </html>
   );
 }
