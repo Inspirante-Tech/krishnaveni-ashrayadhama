@@ -10,7 +10,7 @@ export default  function Contact() {
   const t = useTranslations("contact")
   return (
     <main className="content-container">
-      <div className="lg:grid lg:h-[80svh] lg:grid-cols-12 pt-20">
+      <div className="lg:grid  lg:grid-cols-12 pt-20">
         <section className="relative flex h-full items-end bg-gray-900 lg:col-span-5 lg:h-full xl:col-span-6 rounded-l-xl">
           <Image
             alt=""

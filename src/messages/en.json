@@ -27,7 +27,8 @@
         "events": "events",
         "gallery": "gallery",
         "contact": "contact",
-        "rulesRegulations":"rules and regulations"
+        "rulesRegulations":"rules and regulations",
+        "pricing":"pricing"
     },
     "ayurvedicCenter":{
         "heading":"ayurvedic center",
@@ -47,12 +48,19 @@
             "heading":"Local Attractions & Surroundings"
         }
     },
+    "pricing":{
+        "heading":"pricing",
+        "table":{
+            "title":"title",
+            "detail":"detail"
+        }
+    },
     "aboutUs":{
         "heading":"about us"
     },
     "contact":{
         "heading":"Welcome To AshrayaDhama",
-        "content":"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi nam dolorum aliquam, quibusdam aperiam voluptatum.",
+        "content":"Got a question or just want to say hello? Drop us a line below and let's make some magic happen!",
         "form":{
             "heading":"Get in Touch",
             "name":"name",

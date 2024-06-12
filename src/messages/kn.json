@@ -1,72 +1,79 @@
 {
-    "home":{
-        "facilities":
-        {
+    "home": {
+        "facilities": {
             "heading": "ಸೌಲಭ್ಯಗಳು"
         },
         "fqas": {
             "heading": "ಪದೇ ಪದೇ ಕೇಳಲಾಗುವ ಪ್ರಶ್ನೆಗಳು...",
-            "description":"ಸಾಮಾನ್ಯ ಪ್ರಶ್ನೆಗಳನ್ನು ಅನ್ವೇಷಿಸಿ ಮತ್ತು ಕೆಳಗಿನ ಉತ್ತರಗಳನ್ನು ಹುಡುಕಿ. ನೀವು ಹುಡುಕುತ್ತಿರುವುದನ್ನು ನೀವು ನೋಡದಿದ್ದರೆ, ಸಹಾಯಕ್ಕಾಗಿ ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಲು ಮುಕ್ತವಾಗಿರಿ.",
-            "contactUs":"ಸಂಪರ್ಕಿಸಿ"
+            "description": "ಸಾಮಾನ್ಯ ಪ್ರಶ್ನೆಗಳನ್ನು ಅನ್ವೇಷಿಸಿ ಮತ್ತು ಕೆಳಗಿನ ಉತ್ತರಗಳನ್ನು ಹುಡುಕಿ. ನೀವು ಹುಡುಕುತ್ತಿರುವುದನ್ನು ನೀವು ನೋಡದಿದ್ದರೆ, ಸಹಾಯಕ್ಕಾಗಿ ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಲು ಮುಕ್ತವಾಗಿರಿ.",
+            "contactUs": "ಸಂಪರ್ಕಿಸಿ"
         },
-        "testimonials":{
-            "heading":"ಪ್ರಶಂಸಾಪತ್ರಗಳು"
+        "testimonials": {
+            "heading": "ಪ್ರಶಂಸಾಪತ್ರಗಳು"
         }
     },
-    "events":{
-        "heading":"ಕಾರ್ಯಕ್ರಮಗಳು"
+    "events": {
+        "heading": "ಕಾರ್ಯಕ್ರಮಗಳು"
     },
-    "gallery":{
-        "heading":"ಗ್ಯಾಲರಿ"
+    "gallery": {
+        "heading": "ಗ್ಯಾಲರಿ"
     },
-    "links":{
-        "heading":"ಲಿಂಕ್‌ಗಳು",
-        "aboutUs":"ನಮ್ಮ ಬಗ್ಗೆ",
-        "specialities":"ವಿಶೇಷತೆಗಳು",
-        "ashrayaDhama":"ಆಶ್ರಯ ಧಾಮ",
-        "ayurvedicCenter":"ಆಯುರ್ವೇದ ಕೇಂದ್ರ",
-        "events":"ಕಾರ್ಯಕ್ರಮಗಳು",
-        "gallery":"ಗ್ಯಾಲರಿ",
+    "links": {
+        "heading": "ಲಿಂಕ್‌ಗಳು",
+        "aboutUs": "ನಮ್ಮ ಬಗ್ಗೆ",
+        "specialities": "ವಿಶೇಷತೆಗಳು",
+        "ashrayaDhama": "ಆಶ್ರಯ ಧಾಮ",
+        "ayurvedicCenter": "ಆಯುರ್ವೇದ ಕೇಂದ್ರ",
+        "events": "ಕಾರ್ಯಕ್ರಮಗಳು",
+        "gallery": "ಗ್ಯಾಲರಿ",
         "contact": "ಸಂಪರ್ಕಿಸಿ",
-        "rulesRegulations":"ನಿಯಮಗಳು ಮತ್ತು ನಿಬಂಧನೆಗಳು"
+        "rulesRegulations": "ನಿಯಮಗಳು ಮತ್ತು ನಿಬಂಧನೆಗಳು",
+        "pricing": "ಬೆಲೆ"
     },
-    "ayurvedicCenter":{
-        "heading":"ಆಯುರ್ವೇದ ಕೇಂದ್ರ",
-        "doctors":{
-            "heading":"doctors",
-            "description":""
+    "ayurvedicCenter": {
+        "heading": "ಆಯುರ್ವೇದ ಕೇಂದ್ರ",
+        "doctors": {
+            "heading": "ವೈದ್ಯರು",
+            "description": ""
         },
-        "features":{
-            "heading":"ವೈಶಿಷ್ಟ್ಯಗಳು"
+        "features": {
+            "heading": "ವೈಶಿಷ್ಟ್ಯಗಳು"
         }
     },
-    "vridddhashrama":{
-        "rulesAndRegulation":{
-            "heading":"ನಿಯಮಗಳು ಮತ್ತು ನಿಬಂಧನೆಗಳು"
+    "vridddhashrama": {
+        "rulesAndRegulation": {
+            "heading": "ನಿಯಮಗಳು ಮತ್ತು ನಿಬಂಧನೆಗಳು"
         },
-        "surrounding":{
-            "heading":"ಸ್ಥಳೀಯ ಆಕರ್ಷಣೆಗಳು ಮತ್ತು ಸುತ್ತಮುತ್ತಲಿನ ಪ್ರದೇಶಗಳು"
+        "surrounding": {
+            "heading": "ಸ್ಥಳೀಯ ಆಕರ್ಷಣೆಗಳು ಮತ್ತು ಸುತ್ತಮುತ್ತಲಿನ ಪ್ರದೇಶಗಳು"
         }
     },
-    "aboutUs":{
-        "heading":"ನಮ್ಮ ಬಗ್ಗೆ"
+    "pricing": {
+        "heading": "ಬೆಲೆ",
+        "table": {
+            "title": "ಶೀರ್ಷಿಕೆ",
+            "detail": "ವಿವರ"
+        }
     },
-    "contact":{
-        "heading":"ಸ್ವಾಗತ",
-        "content":"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi nam dolorum aliquam, quibusdam aperiam voluptatum.",
-        "form":{
-            "heading":"ಸಂಪರ್ಕದಲ್ಲಿರಲು",
-            "name":"ಹೆಸರು",
-            "email":"ಇಮೇಲ್",
-            "phoneNo":"ದೂರವಾಣಿ ಸಂಖ್ಯೆ",
-            "message":"ಸಂದೇಶ",
-            "submitDetails":"ವಿವರಗಳನ್ನು ಸಲ್ಲಿಸಿ",
-            "submitReview":"ವಿಮರ್ಶೆಯನ್ನು ಸಲ್ಲಿಸಿ",
-            "profileImage":"ಪ್ರೊಫೈಲ್ ಚಿತ್ರ",
-            "review":"ಸಮೀಕ್ಷೆ",
-            "reviewTitle":"ನಿಮ್ಮ ಪ್ರಶಂಸಾಪತ್ರವನ್ನು ಸಲ್ಲಿಸಿ",
-            "reviewContent":"ನಿಮ್ಮ ಪ್ರತಿಕ್ರಿಯೆಯನ್ನು ನಾವು ಗೌರವಿಸುತ್ತೇವೆ! ದಯವಿಟ್ಟು ನಿಮ್ಮ ಅನುಭವವನ್ನು ನಮ್ಮೊಂದಿಗೆ ಹಂಚಿಕೊಳ್ಳಿ",
-            "subscribeNote":"ಈವೆಂಟ್‌ಗಳು, ಉತ್ಪನ್ನ ನವೀಕರಣಗಳು ಮತ್ತು ಕಂಪನಿಯ ಪ್ರಕಟಣೆಗಳ ಕುರಿತು ಇಮೇಲ್‌ಗಳನ್ನು ಸ್ವೀಕರಿಸಲು ನಾನು ಬಯಸುತ್ತೇನೆ"
+    "aboutUs": {
+        "heading": "ನಮ್ಮ ಬಗ್ಗೆ"
+    },
+    "contact": {
+        "heading": "ಸ್ವಾಗತ",
+        "content": "ನಿಮ್ಮ ಬಳಿ ಪ್ರಶ್ನೆಯಿದೆಯೇ ಅಥವಾ ಕೇವಲ ಹಾಯ್ ಹೇಳಲು ಬಯಸುವಿರಾ? ಕೆಳಗಿನ ಫಾರ್ಮ್ ಅನ್ನು ಭರ್ತಿಮಾಡಿ ಮತ್ತು ನಾವು ಸೇರಿ ಯಾವುದಾದರೂ ಅದ್ಭುತವನ್ನು ನಿರ್ಮಿಸೋಣ!",
+        "form": {
+            "heading": "ಸಂಪರ್ಕದಲ್ಲಿರಲು",
+            "name": "ಹೆಸರು",
+            "email": "ಇಮೇಲ್",
+            "phoneNo": "ದೂರವಾಣಿ ಸಂಖ್ಯೆ",
+            "message": "ಸಂದೇಶ",
+            "submitDetails": "ವಿವರಗಳನ್ನು ಸಲ್ಲಿಸಿ",
+            "submitReview": "ವಿಮರ್ಶೆಯನ್ನು ಸಲ್ಲಿಸಿ",
+            "profileImage": "ಪ್ರೊಫೈಲ್ ಚಿತ್ರ",
+            "review": "ಸಮೀಕ್ಷೆ",
+            "reviewTitle": "ನಿಮ್ಮ ಪ್ರಶಂಸಾಪತ್ರವನ್ನು ಸಲ್ಲಿಸಿ",
+            "reviewContent": "ನಿಮ್ಮ ಪ್ರತಿಕ್ರಿಯೆಯನ್ನು ನಾವು ಗೌರವಿಸುತ್ತೇವೆ! ದಯವಿಟ್ಟು ನಿಮ್ಮ ಅನುಭವವನ್ನು ನಮ್ಮೊಂದಿಗೆ ಹಂಚಿಕೊಳ್ಳಿ",
+            "subscribeNote": "ಈವೆಂಟ್‌ಗಳು, ಉತ್ಪನ್ನ ನವೀಕರಣಗಳು ಮತ್ತು ಕಂಪನಿಯ ಪ್ರಕಟಣೆಗಳ ಕುರಿತು ಇಮೇಲ್‌ಗಳನ್ನು ಸ್ವೀಕರಿಸಲು ನಾನು ಬಯಸುತ್ತೇನೆ"
         }
     }
 }
