@@ -19,7 +19,7 @@ export default async function RootLayout({
         style={{ backgroundImage: "url(leafpatten.svg)", backgroundRepeat: "repeat", backgroundSize: "30%" }}
       >
 
-        <div className="bg-gradient-to-t from-primary-200/80 to-primary-50  relative z-10">
+        <div className="bg-gradient-to-t from-primary-200/80 to-primary-50  relative">
           <Header />
           {children}
           <Footer />
