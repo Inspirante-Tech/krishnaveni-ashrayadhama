@@ -2,7 +2,7 @@ import { defineField } from 'sanity'
 
 export default {
     name: 'vriddhashrama',
-    title: 'Vriddhashrama',
+    title: 'Ashraya Dhama',
     type: 'document',
     fields: [
         defineField({
@@ -21,7 +21,6 @@ export default {
             name: 'videoLink',
             title: 'Video Link',
             type: 'url',
-            validation: (Rule) => Rule.required(),
         }),
         defineField({
             name: 'features',

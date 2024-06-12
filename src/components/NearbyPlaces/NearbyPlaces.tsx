@@ -1,4 +1,3 @@
-import { Link } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import { PortableText } from "next-sanity";
 import Image from "next/image";
