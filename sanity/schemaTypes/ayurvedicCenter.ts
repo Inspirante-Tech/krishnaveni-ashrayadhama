@@ -21,7 +21,6 @@ export default {
             name: 'videoLink',
             title: 'Video Link',
             type: 'url',
-            validation: (Rule) => Rule.required(),
         }),
         defineField({
             name: 'features',

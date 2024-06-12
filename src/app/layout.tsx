@@ -1,8 +1,8 @@
 import { Noto_Sans } from "next/font/google";
 
 export const metadata = {
-  title: "Krishnaveni Vriddhashrama",
-  description: "Krishnaveni Vriddhashrama",
+  title: "Krishnaveni AshrayaDhama",
+  description: "Krishnaveni AshrayaDhama",
 };
 
 const notoSans = Noto_Sans({

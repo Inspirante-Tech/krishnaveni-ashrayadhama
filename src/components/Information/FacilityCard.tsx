@@ -24,7 +24,7 @@ const FacilityCard = ({
             height={200}
             width={200}
           />
-          <h1 className=" text-center text-lg font-semibold text-wrap max-w-40">{facility.title}</h1>
+          <h1 className="text-center text-lg font-semibold text-wrap max-w-40">{facility.title}</h1>
         </div>
       </div>
     </Reveal>
