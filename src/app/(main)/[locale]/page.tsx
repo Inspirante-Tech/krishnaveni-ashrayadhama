@@ -32,7 +32,7 @@ export default async function Home() {
             <div className="bg-gradient-to-br from-secondary-300/50 to-secondary-200/30  hover:shadow-2xl transition-shadow duration-300 p-4 rounded-l-2xl">
               <h2 className="subheading py-4">Forms</h2>
               <ul>
-                <li className="flex gap-2 items-center"> <FileDown className="inline" size={16} /> <a href="/">Pre admission rules</a></li>
+                <li className="flex gap-2 items-center"> <FileDown className="inline" size={16} /> <a href="/pre_admission_rules.pdf">Pre admission rules</a></li>
               </ul>
             </div>
             <div className="bg-gradient-to-bl from-primary-300/80 to-primary-200/30  hover:shadow-2xl transition-shadow duration-300  p-4 rounded-r-2xl">

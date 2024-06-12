@@ -1,8 +1,8 @@
 import { Noto_Sans } from "next/font/google";
 
 export const metadata = {
-  title: "Krishnaveni Vriddhashrama",
-  description: "Krishnaveni Vriddhashrama",
+  title: "Krishnaveni AshrayaDhama",
+  description: "Krishnaveni AshrayaDhama",
 };
 
 const notoSans = Noto_Sans({
@@ -19,6 +19,7 @@ export default function RootLayout({
   return (
     <html className={`${notoSans.variable} scroll-smooth scroll-pt-12`}>
       <body>{children}</body>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/css-doodle/0.39.1/css-doodle.min.js"></script>
     </html>
   );
 }
