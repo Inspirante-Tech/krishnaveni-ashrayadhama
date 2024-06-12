@@ -34,7 +34,6 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-google-recaptcha-v3": "^1.10.1",
-    "react-hook-form": "^7.51.5",
     "sanity": "^3.44.0",
     "scroll-lock": "^2.1.5",
     "sharp": "^0.33.4",

@@ -33,9 +33,6 @@ function Events({ events }: { events: EventType[] }) {
     document.body.classList.remove("prevent-scroll");
   };
 
-  const selectedEvent =
-    selectedEventIndex !== null ? events[selectedEventIndex] : null;
-
   return (
     <section className="content-container rounded p-8">
       <h1 className=" heading space-y-2 w-fit">
@@ -76,17 +73,14 @@ function Events({ events }: { events: EventType[] }) {
         className="w-[80%] h-[100%] p-2 md:p-15 bg-gray-100 rounded-xl  eventdialog overflow-hidden"
         onClick={closeDialog}
       >
-        {selectedEvent && (
+        {(selectedEventIndex !== null) && (
           <div
             className="w-full h-full mt-12 md:mt-1"
             onClick={(e) => e.stopPropagation()}
           >
             <ThumbnailCarousel
               thumbnails={thumbnails}
-              initialIndex={
-                selectedEventIndex !== null ? selectedEventIndex : undefined
-              }
-              onThumbnailClick={openDialog}
+              initialIndex={selectedEventIndex}
             />
             <form method="dialog" className="absolute top-0 right-0 z-10">
               <button className="m-4" onClick={closeDialog}>

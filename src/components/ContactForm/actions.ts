@@ -1,6 +1,7 @@
 "use server"
 import * as v from "valibot";
 import { assertValue } from "~/lib/utils";
+import { type Message } from "~/lib/types";
 
 const ProjectID = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID
 const DatasetName = process.env.NEXT_PUBLIC_SANITY_DATASET
@@ -52,13 +53,11 @@ async function verifyRecaptcha(captcha: string) {
         })
 }
 
-export async function uploadContact(formData: FormData) {
+export async function uploadContact(formData: FormData): Promise<Message> {
     const data = v.parse(ContactSchema, Object.fromEntries(formData.entries()));
 
     if (!verifyRecaptcha(data.captcha)) {
-        return {
-            error: "could not pass recaptcha"
-        }
+        return { type: "error", message: "could not verify recaptcha" }
     }
 
     try {
@@ -73,20 +72,17 @@ export async function uploadContact(formData: FormData) {
 
         await postToSanity(mutations)
     } catch (error) {
-        return { error: error }
+        console.error(error)
+        return { type: "error", message: "something went wrong" }
     }
-    return {
-        success: true
-    }
+    return { type: "success", message: "sucessfully submitted" }
 }
 
-export async function uploadTestimonial(formData: FormData) {
+export async function uploadTestimonial(formData: FormData): Promise<Message> {
     const data = v.parse(TestimonialSchema, Object.fromEntries(formData.entries()));
 
     if (!verifyRecaptcha(data.captcha)) {
-        return {
-            error: "could not pass recaptcha"
-        }
+        return { type: "error", message: "could not verify recaptcha" }
     }
 
     try {
@@ -114,9 +110,8 @@ export async function uploadTestimonial(formData: FormData) {
         ]
         await postToSanity(mutations)
     } catch (error) {
-        return { error: error }
+        console.error(error)
+        return { type: "error", message: "something went wrong" }
     }
-    return {
-        success: true
-    }
+    return { type: "success", message: "sucessfully submitted" }
 }
