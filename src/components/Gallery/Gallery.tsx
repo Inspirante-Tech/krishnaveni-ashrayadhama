@@ -70,7 +70,7 @@ export function Gallery({ images }: { images: ImageType[] }) {
           )}
           <form method="dialog" className="absolute top-0 right-0 z-10">
             <button className="m-4" onClick={onClose}>
-              <CircleX className="text-black" size={32} />
+              <CircleX className="text-red-700" size={32} />
             </button>
           </form>
         </div>

@@ -15,7 +15,7 @@ const FacilityCard = ({
       className="w-full basis-auto md:basis-[45%] lg:basis-auto lg:max-w-64 transition duration-200 ease-out group hover:-translate-y-2"
       delay={0.25 * index}
     >
-      <div className="flex justify-evenly w-full bg-gradient-to-tr from-secondary-200 to-secondary-100 shadow-lg group-hover:shadow-2xl transition duration-200 ease-out rounded-lg overflow-clip">
+      <div className="h-full flex justify-evenly bg-gradient-to-tr from-secondary-200 to-secondary-100 shadow-lg group-hover:shadow-2xl transition duration-200 ease-out rounded-lg overflow-clip">
         <div className="relative p-6 py-8 gap-4 flex flex-col">
           <Image
             src={facility.image}
@@ -24,10 +24,7 @@ const FacilityCard = ({
             height={200}
             width={200}
           />
-          <div className="text-center flex flex-col gap-4">
-            <h1 className="text-lg font-semibold">{facility.title}</h1>
-            {/* <h3 className="text-md ">{facility.description}</h3> */}
-          </div>
+          <h1 className=" text-center text-lg font-semibold text-wrap max-w-40">{facility.title}</h1>
         </div>
       </div>
     </Reveal>

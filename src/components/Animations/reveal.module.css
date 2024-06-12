@@ -1,0 +1,11 @@
+.revealContainer{
+    position: relative;
+    transform: translateY(75px);
+    opacity: 0;
+    transition: all 650ms ease-in;
+}
+
+.reveal{
+    transform: translateY(0px);
+    opacity: 1;
+}

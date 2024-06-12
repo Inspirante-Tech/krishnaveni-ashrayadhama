@@ -1,3 +1,4 @@
+import { Link } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import { PortableText } from "next-sanity";
 import Image from "next/image";
@@ -26,30 +27,26 @@ const NearbyPlaces = async ({
 
         <div className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {locations.map((location, index) => (
-            <div
+            <a
               key={index}
-              className="relative group border border-gray-300  rounded-xl overflow-hidden"
+              className="relative group border border-gray-300  rounded-xl overflow-hidden grid grid-rows-5"
+              href={location.url}
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <a
-                href={location.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block"
-              >
-                <Image
-                  src={location.image}
-                  alt={location.name}
-                  width={500}
-                  height={500}
-                  className="rounded-t-xl object-cover transition duration-500 group-hover:scale-105 group-hover:shadow-xl"
-                />
-              </a>
+              <Image
+                src={location.image}
+                alt={location.name}
+                width={500}
+                height={500}
+                className="rounded-t-xl object-cover transition duration-500 group-hover:scale-105 group-hover:shadow-xl row-span-4 h-full w-auto"
+              />
               <div className="p-4">
-                <p className="text-gray-800 subheading" style={{textTransform: "capitalize"}}>
+                <p className="text-gray-800 subheading" style={{ textTransform: "capitalize" }}>
                   {location.name}
                 </p>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </div>
