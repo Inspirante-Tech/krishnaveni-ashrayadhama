@@ -264,3 +264,24 @@ export async function fetchAboutPage(locale: string) {
         }))
     }
 }
+
+
+type PricingPage = {
+    rows: {
+        title: string,
+        detail: string,
+    }[]
+}
+
+export async function fetchPricingPage(locale: string) {
+
+    const query = `*[_type == "pricing"][0]{
+            "rows":rows[]{
+                "title":${coalesce("title", locale)},
+                "detail":${coalesce("detail", locale)}
+            }
+        }`
+
+    let page = await client.fetch<PricingPage>(query);
+    return page
+}

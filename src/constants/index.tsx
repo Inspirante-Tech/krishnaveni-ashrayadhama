@@ -16,6 +16,10 @@ export const navigation = [
           id: "rulesRegulations",
           url: "/ashraya-dhama/rules-regulations",
         },
+        {
+          id:"pricing",
+          url:"/ashraya-dhama/pricing"
+        }
       ],
     },
   },

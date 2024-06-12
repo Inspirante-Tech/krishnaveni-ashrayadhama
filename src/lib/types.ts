@@ -57,3 +57,8 @@ export type Message = {
     type: "success" | "error",
     message: string
 }
+
+export type Row = {
+    title: string,
+    detail: string,
+}

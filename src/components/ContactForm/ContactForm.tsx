@@ -7,13 +7,13 @@ import { client } from "~/sanity/lib/client";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3"
 import * as Toast from '@radix-ui/react-toast';
 import { useTranslations } from "next-intl";
-import {type Message } from "~/lib/types";
+import { type Message } from "~/lib/types";
 
 const ContactForm = () => {
   const [open, setOpen] = useState(false);
   const dialogRef = useRef<HTMLDialogElement>(null);
   const { executeRecaptcha } = useGoogleReCaptcha();
-  const messageRef = useRef<Message>({ type: "success", message: "" })
+  const [toastMessage, setToastMessage] = useState<Message>({ type: "success", message: "" })
   const timerRef = useRef(0);
   const t = useTranslations("contact.form")
 
@@ -22,7 +22,7 @@ const ContactForm = () => {
   }, []);
 
   const showToast = (message: Message) => {
-    messageRef.current = message
+    setToastMessage(message)
     setOpen(true);
     window.clearTimeout(timerRef.current);
     timerRef.current = window.setTimeout(() => {
@@ -34,15 +34,31 @@ const ContactForm = () => {
     dialogRef.current?.showModal();
   };
 
+  // async function actionWrapper(data:FormData,action:(data: FormData)=>Promise<Message>) {
+  //   const response = await client.assets.upload("image", data.get("image") as File)
+  //   data.set("image", response._id);
+
+  //   if (executeRecaptcha) {
+  //     const gRecaptchaToken = await executeRecaptcha(`krishnaveni`)
+  //     data.set("captcha", gRecaptchaToken)
+  //     const response = await action(data);
+  //     showToast(response)
+  //   } else {
+  //     showToast({ type: "error", message: "recaptcha not available" })
+  //   }
+
+  //   dialogRef.current?.close()
+  // }
+
   async function testimonialAction(data: FormData) {
     const response = await client.assets.upload("image", data.get("image") as File)
     data.set("image", response._id);
 
     if (executeRecaptcha) {
-      const gRecaptchaToken = await executeRecaptcha(`krishnaveni ${data.get("name")}`)
+      const gRecaptchaToken = await executeRecaptcha(`krishnaveni`)
       data.set("captcha", gRecaptchaToken)
-      const response = uploadTestimonial(data);
-      console.log(response)
+      const response = await uploadTestimonial(data);
+      showToast(response)
     } else {
       showToast({ type: "error", message: "recaptcha not available" })
     }
@@ -54,10 +70,13 @@ const ContactForm = () => {
     if (executeRecaptcha) {
       const gRecaptchaToken = await executeRecaptcha(`krishnaveni`)
       data.set("captcha", gRecaptchaToken)
-      uploadContact(data);
+      const response = await uploadContact(data);
+      showToast(response)
     } else {
-
+      showToast({ type: "error", message: "recaptcha not available" })
     }
+
+    dialogRef.current?.close()
   }
 
   return (
@@ -123,13 +142,13 @@ const ContactForm = () => {
             className="size-5 h-9 rounded-md border-gray-800 bg-white shadow-sm"
           />
           <span className="text-sm text-gray-700">
-          {t("subscribeNote")}
+            {t("subscribeNote")}
           </span>
         </label>
 
         <div className="col-span-6 sm:flex sm:items-center sm:gap-4">
           <Button className="bg-secondary-300 text-action-950 p-4 text-md border hover:border-black hover:bg-primary-50 hover:text-black">
-          {t("submitDetails")}
+            {t("submitDetails")}
           </Button>
 
           {/* <p className="mt-4 text-sm text-gray-500 sm:mt-0">
@@ -154,10 +173,10 @@ const ContactForm = () => {
           action={testimonialAction}
         >
           <h1 className="text-2xl font-bold text-action-950">
-          {t("reviewTitle")}
+            {t("reviewTitle")}
           </h1>
           <p className="text-sm text-gray-500">
-          {t("reviewContent")}
+            {t("reviewContent")}
           </p>
           <label className="block text-sm font-medium text-gray-700">
             <span>{t("name")}</span>
@@ -221,10 +240,10 @@ const ContactForm = () => {
         onOpenChange={setOpen}
       >
         <Toast.Title className="[grid-area:_title] mb-[5px] font-medium text-slate12 text-[15px] capitalize">
-          {messageRef.current.type}
+          {toastMessage.type}
         </Toast.Title>
         <Toast.Description asChild>
-          {messageRef.current.message}
+          {toastMessage.message}
         </Toast.Description>
         <Toast.Action className="[grid-area:_action]" asChild altText="Goto schedule to undo">
           <button className="inline-flex items-center justify-center rounded font-medium text-xs px-[10px] leading-[25px] h-[25px] bg-green2 text-green11 shadow-[inset_0_0_0_1px] shadow-green7 hover:shadow-[inset_0_0_0_1px] hover:shadow-green8 focus:shadow-[0_0_0_2px] focus:shadow-green8">

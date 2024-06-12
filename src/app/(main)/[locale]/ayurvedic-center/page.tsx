@@ -21,10 +21,10 @@ async function page() {
         <p className="body">{pageData.description}</p>
       </section>
       <div className="flex flex-col md:gap-12 gap-6">
-        <p className="heading w-fit">
+        <h2 className="heading w-fit">
         {t("features.heading")}
           <div className="h-1 w-full mt-2 bg-secondary-500 rounded-full"></div>
-        </p>
+        </h2>
         <ZigZag contents={pageData.features} />
       </div>
       <VideoSection videoSrc={pageData.videoLink} />
