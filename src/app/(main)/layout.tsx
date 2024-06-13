@@ -4,6 +4,7 @@ import Footer from "~/components/Footer/Footer";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 
+
 export default async function RootLayout({
   children,
 }: {
@@ -15,8 +16,8 @@ export default async function RootLayout({
 
   return (
     <NextIntlClientProvider messages={messages}>
-      <div className="w-full h-full z-0"
-        style={{ backgroundImage: "url(leafpatten.svg)", backgroundRepeat: "repeat", backgroundSize: "30%" }}
+      <div className="w-full h-full container"
+        // style={{ backgroundImage: "url(leafpatten.svg)", backgroundRepeat: "repeat", backgroundSize: "30%" }}
       >
 
         <div className="bg-gradient-to-t from-primary-200/80 to-primary-50  relative">
