@@ -8,14 +8,37 @@
             "description": "Explore common questions and find answers below. If you don't see what you're looking for, feel free to contact us for assistance.",
             "contactUs": "contact us"
         },
-        "testimonials":{
-            "heading":"testimonials"
+        "testimonials": {
+            "heading": "testimonials"
         },
-        "hero":{
-            "heading":"Krishnaveni Ashrayadhama",
-            "content":"Nurturing legacy, Empowering Well-being",
-            "cta":"Get in Touch"
-        }
+        "hero": {
+            "heading": "Krishnaveni Ashrayadhama",
+            "content": "Nurturing legacy, Empowering Well-being",
+            "cta": "Get in Touch"
+        },
+        "resources": {
+            "heading": "resources",
+            "content":"quick links for anyone interested in our services",
+            "forms": {
+                "heading": "forms",
+                "permanentForm": "permanent Form",
+                "nominationForm": "nomination From"
+            },
+            "links": {
+                "heading": "Links",
+                "aboutUs": "about us",
+                "specialities": "specialities",
+                "ashrayaDhama": "ashraya dhama",
+                "ayurvedicCenter": "ayurvedic center",
+                "events": "events",
+                "gallery": "gallery",
+                "contact": "contact",
+                "rulesRegulations": "rules and regulations",
+                "pricing": "pricing"
+            }
+        },
+        "ourStory":"Our Story",
+        "whoweare":"Who we are"
     },
     "events": {
         "heading": "Events"
@@ -24,61 +47,61 @@
         "heading": "Gallery"
     },
     "links": {
-        "heading":"Links",
+        "heading": "Links",
         "aboutUs": "about us",
         "specialities": "specialities",
-        "ashrayaDhama":"ashraya dhama",
+        "ashrayaDhama": "ashraya dhama",
         "ayurvedicCenter": "ayurvedic center",
         "events": "events",
         "gallery": "gallery",
         "contact": "contact",
-        "rulesRegulations":"rules and regulations",
-        "pricing":"pricing"
+        "rulesRegulations": "rules and regulations",
+        "pricing": "pricing"
     },
-    "ayurvedicCenter":{
-        "heading":"ayurvedic center",
-        "doctors":{
-            "heading":"doctors",
-            "description":""
+    "ayurvedicCenter": {
+        "heading": "ayurvedic center",
+        "doctors": {
+            "heading": "doctors",
+            "description": ""
         },
-        "features":{
-            "heading":"features"
+        "features": {
+            "heading": "features"
         }
     },
-    "vridddhashrama":{
-        "rulesAndRegulation":{
-            "heading":"rules and regulations"
+    "vridddhashrama": {
+        "rulesAndRegulation": {
+            "heading": "rules and regulations"
         },
-        "surrounding":{
-            "heading":"Local Attractions & Surroundings"
+        "surrounding": {
+            "heading": "Local Attractions & Surroundings"
         }
     },
-    "pricing":{
-        "heading":"pricing",
-        "table":{
-            "title":"title",
-            "detail":"detail"
+    "pricing": {
+        "heading": "pricing",
+        "table": {
+            "title": "title",
+            "detail": "detail"
         }
     },
-    "aboutUs":{
-        "heading":"about us"
+    "aboutUs": {
+        "heading": "about us"
     },
-    "contact":{
-        "heading":"Welcome To AshrayaDhama",
-        "content":"Got a question or just want to say hello? Drop us a line below and let's make some magic happen!",
-        "form":{
-            "heading":"Get in Touch",
-            "name":"name",
-            "email":"email",
-            "phoneNo":"Phone Number",
-            "message":"message",
-            "submitDetails":"Submit Details",
-            "submitReview":"Submit Reviews",
-            "profileImage":"Profile Image",
-            "review":"Review",
-            "reviewTitle":"Submit Your Testimonial",
-            "reviewContent":"We value your feedback! Please share your experience with us.",
-            "subscribeNote":"I want to receive emails about events, product updates and company announcements."
+    "contact": {
+        "heading": "Welcome To AshrayaDhama",
+        "content": "Got a question or just want to say hello? Drop us a line below and let's make some magic happen!",
+        "form": {
+            "heading": "Get in Touch",
+            "name": "name",
+            "email": "email",
+            "phoneNo": "Phone Number",
+            "message": "message",
+            "submitDetails": "Submit Details",
+            "submitReview": "Submit Reviews",
+            "profileImage": "Profile Image",
+            "review": "Review",
+            "reviewTitle": "Submit Your Testimonial",
+            "reviewContent": "We value your feedback! Please share your experience with us.",
+            "subscribeNote": "I want to receive emails about events, product updates and company announcements."
         }
     }
 }

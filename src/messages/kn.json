@@ -15,7 +15,30 @@
             "heading":"ಕೃಷ್ಣವೇಣಿ ಆಶ್ರಯಧಾಮ",
             "content":"ಪರಂಪರೆಯ ಪೋಷಣೆ, ಯೋಗಕ್ಷೇಮದ ಸಶಕ್ತೀಕರಣ",
             "cta":"ಸಂಪರ್ಕಿಸಿ"
-        }
+        },
+        "resources": {
+            "heading": "ಸಂಪನ್ಮೂಲಗಳು",
+            "content":"ನಮ್ಮ ಸೇವೆಗಳಲ್ಲಿ ಆಸಕ್ತಿ ಹೊಂದಿರುವ ಯಾರಿಗಾದರೂ ತ್ವರಿತ ಲಿಂಕ್‌ಗಳು",
+            "forms": {
+                "heading": "ಅರ್ಜಿಗಳು",
+                "permanentForm": "ಶಾಶ್ವತ ಅರ್ಜಿ",
+                "nominationForm": "ನಾಮನಿರ್ದೇಶನ ಅರ್ಜಿ"
+            },
+            "links": {
+                "heading": "ಲಿಂಕ್‌ಗಳು",
+                "aboutUs": "ನಮ್ಮ ಬಗ್ಗೆ",
+                "specialities": "ವಿಶೇಷತೆಗಳು",
+                "ashrayaDhama": "ಆಶ್ರಯ ಧಾಮ",
+                "ayurvedicCenter": "ಆಯುರ್ವೇದ ಕೇಂದ್ರ",
+                "events": "ಕಾರ್ಯಕ್ರಮಗಳು",
+                "gallery": "ಗ್ಯಾಲರಿ",
+                "contact": "ಸಂಪರ್ಕಿಸಿ",
+                "rulesRegulations": "ನಿಯಮಗಳು ಮತ್ತು ನಿಬಂಧನೆಗಳು",
+                "pricing": "ಬೆಲೆ"
+            }
+        },
+        "ourStory":"ನಮ್ಮ ಕಥೆ",
+        "whoweare":"ನಾವು ಯಾರು"
     },
     "events": {
         "heading": "ಕಾರ್ಯಕ್ರಮಗಳು"
