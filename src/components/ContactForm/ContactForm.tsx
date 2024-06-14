@@ -95,7 +95,7 @@ const ContactForm = () => {
       </section>
       <form className="mt-8 flex flex-col gap-2" action={contactAction}>
         <label className="block text-sm font-medium text-gray-700">
-          <span>{t("name")}</span>
+          <span className="capitalize">{t("name")}</span>
           <input
             type="text"
             name="name"
@@ -107,7 +107,7 @@ const ContactForm = () => {
 
         <div className="flex gap-2 mt-1">
           <label className="block text-sm font-medium text-gray-700 w-full">
-            <span>{t("email")}</span>
+            <span className="capitalize">{t("email")}</span>
             <input
               type="email"
               name="email"
@@ -116,7 +116,7 @@ const ContactForm = () => {
           </label>
 
           <label className="block text-sm font-medium text-gray-700 w-full">
-            <span>{t("phoneNo")}</span>
+            <span className="capitalize">{t("phoneNo")}</span>
             <input
               type="tel"
               name="phoneNo"
@@ -127,7 +127,7 @@ const ContactForm = () => {
         </div>
 
         <label className="block text-sm font-medium text-gray-700">
-          <span>{t("message")}</span>
+          <span className="capitalize">{t("message")}</span>
           <textarea
             name="message"
             required
@@ -135,27 +135,10 @@ const ContactForm = () => {
           ></textarea>
         </label>
 
-        <label className="flex gap-4 border-gray-500">
-          <input
-            type="checkbox"
-            name="marketing_accept"
-            className="size-5 h-9 rounded-md border-gray-800 bg-white shadow-sm"
-          />
-          <span className="text-sm text-gray-700">
-            {t("subscribeNote")}
-          </span>
-        </label>
-
         <div className="col-span-6 sm:flex sm:items-center sm:gap-4">
           <Button className="bg-secondary-300 text-action-950 p-4 text-md border hover:border-black hover:bg-primary-50 hover:text-black">
             {t("submitDetails")}
           </Button>
-
-          {/* <p className="mt-4 text-sm text-gray-500 sm:mt-0">
-            <Button className="text-gray-700 underline" onClick={openDialog}>
-            {t("submitReview")}
-            </Button>
-          </p> */}
         </div>
       </form>
 
@@ -179,7 +162,7 @@ const ContactForm = () => {
             {t("reviewContent")}
           </p>
           <label className="block text-sm font-medium text-gray-700">
-            <span>{t("name")}</span>
+            <span className="capitalize">{t("name")}</span>
             <input
               type="text"
               name="name"
@@ -188,7 +171,7 @@ const ContactForm = () => {
           </label>
 
           <label className="block text-sm font-medium text-gray-700">
-            <span>{t("email")}</span>
+            <span className="capitalize">{t("email")}</span>
             <input
               type="email"
               name="email"
@@ -197,7 +180,7 @@ const ContactForm = () => {
           </label>
 
           <label className="block text-sm font-medium text-gray-700">
-            <span>{t("phoneNo")}</span>
+            <span className="capitalize">{t("phoneNo")}</span>
             <input
               type="tel"
               name="phoneNo"
@@ -207,7 +190,7 @@ const ContactForm = () => {
           </label>
 
           <label className="block text-sm font-medium text-gray-700">
-            <span>{t("profileImage")}</span>
+            <span className="capitalize">{t("profileImage")}</span>
             <input
               type="file"
               name="image"
@@ -217,7 +200,7 @@ const ContactForm = () => {
           </label>
 
           <label className="block text-sm font-medium text-gray-700">
-            <span>{t("review")}</span>
+            <span className="capitalize">{t("review")}</span>
             <textarea
               name="review"
               className="mt-1 w-full h-32 rounded-md border border-gray-800 bg-white text-sm text-gray-700 shadow-sm p-2"

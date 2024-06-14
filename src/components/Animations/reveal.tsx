@@ -34,7 +34,7 @@ const Reveal = ({ delay = 0, ...props }: Props) => {
   }, []);
 
   return (
-    <div ref={containerRef} className={style.revealContainer} style={{animationDelay:`${delay}s`}}>
+    <div ref={containerRef} className={style.revealContainer} style={{transitionDelay:`${delay}s`}}>
       {props.children}
     </div>
   );

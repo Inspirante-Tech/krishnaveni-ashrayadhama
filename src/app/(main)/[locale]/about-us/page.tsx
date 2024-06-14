@@ -10,8 +10,7 @@ async function About() {
     <main className="flex flex-col md:gap-4 gap-2 min-h-screen content-container">
       <div className="pt-20">
         <div
-          className="text-gray-900 text-left heading w-fit"
-          style={{ textTransform: "capitalize" }}
+          className="text-gray-900 text-left heading w-fit capitalize"
         >
           {t("heading")}
           <div className="h-1 w-full bg-secondary-500 rounded-full mt-2"></div>

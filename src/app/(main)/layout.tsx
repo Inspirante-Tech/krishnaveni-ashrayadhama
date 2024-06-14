@@ -16,11 +16,9 @@ export default async function RootLayout({
 
   return (
     <NextIntlClientProvider messages={messages}>
-      <div className="w-full h-full container"
-        // style={{ backgroundImage: "url(leafpatten.svg)", backgroundRepeat: "repeat", backgroundSize: "30%" }}
+      <div className="pattern-bg"
       >
-
-        <div className="bg-gradient-to-t from-primary-200/80 to-primary-50  relative">
+        <div className="bg-gradient-to-t from-primary-200/90 to-primary-50  relative">
           <Header />
           {children}
           <Footer />
