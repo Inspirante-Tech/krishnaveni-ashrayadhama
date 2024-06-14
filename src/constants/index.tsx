@@ -1,7 +1,19 @@
 export const navigation = [
   {
     id: "aboutUs",
-    url: "/about-us",
+    url: {
+      heading: "aboutUs",
+      urls: [
+        {
+          id: "krishnaveni",
+          url: "/about-us/krishnaveni",
+        },
+        {
+          id: "organisation",
+          url: "/about-us/organisation",
+        },
+      ],
+    },
   },
   {
     id: "specialities",

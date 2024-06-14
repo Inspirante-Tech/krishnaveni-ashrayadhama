@@ -42,12 +42,13 @@ export function Gallery({ images }: { images: ImageType[] }) {
       </h2>
       <div
         className="lg:columns-4 md:columns-3 columns-2 space-y-4"
-        style={{ columnFill:"balance"}}
+        style={{ columnFill: "balance" }}
       >
         {images.map((image, index) => (
-          <Reveal>
+          <Reveal
+            key={image.id}
+          >
             <Photo
-              key={image.id}
               url={image.image}
               alt={image.description}
               callback={() => onSelect(index)}

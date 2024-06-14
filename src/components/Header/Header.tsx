@@ -21,9 +21,9 @@ const Header = () => {
             <Image
               height={100}
               width={100}
-              src={"/logo.png"}
+              src={"/header_logo.png"}
               alt="Logo"
-              className="object-contain object-center h-16 w-16"
+              className="object-contain object-center h-20 w-auto"
             />
           ) : (
             <Image
@@ -55,7 +55,7 @@ const Header = () => {
             return <NestedLink key={item.id} urlObject={item.url} />;
           })}
         </div>
-        <div className="flex gap-4">
+        <div className="flex gap-4 items-center">
           <LocalSwitcher />
           <MobileNav />
         </div>
@@ -133,6 +133,7 @@ function MobileNav() {
           }
           return <NestedLink key={item.id} urlObject={item.url} />;
         })}
+        <LocalSwitcher />
       </div>
     </div>
   );

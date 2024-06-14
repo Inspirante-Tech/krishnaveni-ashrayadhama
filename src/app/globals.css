@@ -143,3 +143,7 @@ dialog[open] {
     linear-gradient(-150deg, var(--_l)) #55897c;
   background-size: calc(0.866 * var(--s)) var(--s);
 }
+
+section,p{
+  text-align: justify;
+}

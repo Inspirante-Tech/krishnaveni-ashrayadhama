@@ -1,19 +1,19 @@
 "use client";
 import { useEffect, useRef } from "react";
-import style from "./reveal.module.css"
+import style from "./resurration.module.css"
 
 interface Props extends React.HTMLProps<HTMLDivElement> {
   delay?: number;
 }
 
-const Reveal = ({ delay = 0, ...props }: Props) => {
+const Heading = ({ delay = 0, ...props }: Props) => {
   const containerRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          containerRef.current?.classList.add(style.reveal)
+          containerRef.current?.classList.add(style.ressurate)
           if (containerRef.current) {
             observer.unobserve(containerRef.current);
           }
@@ -35,10 +35,8 @@ const Reveal = ({ delay = 0, ...props }: Props) => {
   }, []);
 
   return (
-    <div ref={containerRef} className={style.revealContainer} style={{transitionDelay:`${delay}s`}}>
-      {props.children}
-    </div>
+    <h1  ref={containerRef} className={`max-w-min pr-2 ${props.className}`} >{props.children}</h1>
   );
 };
 
-export default Reveal;
+export default Heading;

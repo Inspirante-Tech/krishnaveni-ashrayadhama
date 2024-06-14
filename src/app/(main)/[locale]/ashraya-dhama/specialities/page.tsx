@@ -20,7 +20,7 @@ export default async function Vridddhashrama() {
           {pageData.title}
           <div className="h-1 w-full bg-secondary-500 rounded-full mt-2"></div>
         </div>
-        <p className="body">{pageData.description}</p>
+        <p className="body text-justify">{pageData.description}</p>
       </section>
 
       <ZigZag contents={pageData.features} />

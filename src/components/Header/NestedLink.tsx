@@ -19,12 +19,12 @@ export default function LocalSwitcher({ urlObject }: { urlObject: NestedUrl }) {
     <>
       <div className="hidden md:block lg:py-6  h-min hover:text-secondary-800 hover:scale-105 transition-all duration-150 ease-linear capitalize w-full  group">
         <span
-          className={`w-full block  border-solid border-black multiLink ${active ? "border-b-2" : "border-none"}`}
+          className={`w-full block  border-solid border-black whitespace-nowrap ${active ? "border-b-2" : "border-none"}`}
         >
           {t(urlObject.heading)}
         </span>
 
-        <div className="group-hover:h-max md:absolute h-0 bg-primary-50/95 rounded overflow-hidden  shadow-xl ">
+        <div className="group-hover:h-max md:absolute h-0 bg-primary-50/95 rounded overflow-hidden  shadow-xl group-hover:p-2">
           <div className="flex flex-col gap-1 w-full text-center ">
             {urlObject.urls.map((url) => (
               <LocaleLink

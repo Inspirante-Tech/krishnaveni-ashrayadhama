@@ -1,0 +1,22 @@
+.ressurate {
+    --g: no-repeat linear-gradient(#00DFFC 0 0) 0 0;
+    background: var(--g), var(--g);
+    background-size: 0 100%;
+    background-clip: padding-box, text;
+    box-decoration-break: clone;
+    animation:
+        t 1s 0s both,
+        b 1s .5s both;
+}
+
+@keyframes t {
+    to {
+        background-size: 150% 100%
+    }
+}
+
+@keyframes b {
+    to {
+        background-position: -200% 0, 0 0
+    }
+}
