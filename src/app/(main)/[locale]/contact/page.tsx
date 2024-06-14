@@ -16,16 +16,16 @@ export default  function Contact() {
             alt=""
             width={1000}
             height={1000}
-            src="https://cdn.sanity.io/images/8q1t3fe9/production/9377f533bf2d22287be64f38d09c4130163fcf10-640x360.webp?fit=max&auto=format"
-            className="absolute inset-0 h-full w-full object-cover  opacity-80 rounded-l-xl"
+            src="/contactus.jpg"
+            className="absolute inset-0 h-full w-full object-cover  opacity-80 rounded-l-xl object-right-bottom"
           />
 
           <div className="hidden  lg:relative lg:block lg:p-12 p-1">
-            <h2 className="mt-16 !text-white heading">
+            <h2 className="mt-16 text-gray-800 heading">
             {t("heading")}
             </h2>
 
-            <p className="mt-4 body text-white/90">
+            <p className="mt-4 body text-gray-800">
               {t("content")}
             </p>
           </div>

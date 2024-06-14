@@ -50,9 +50,9 @@ export default function LocalSwitcher({ urlObject }: { urlObject: NestedUrl }) {
   
         <details className={`${styles.dialog} lg:hidden flex`}>
           <summary
-            className={`${styles.summary} multiLink flex flex-row gap-2 items-center`}
+            className={`${styles.summary} multiLink flex flex-row gap-2 items-center justify-center`}
           >
-            <span className="multiLink">{urlObject.heading}</span>
+            <span className="multiLink text-center">{t(urlObject.heading)}</span>
             <ChevronUp
               className={`${styles.marker} multiLink transition-all duration-300 ease-linear rotate-180`}
             />
@@ -62,10 +62,10 @@ export default function LocalSwitcher({ urlObject }: { urlObject: NestedUrl }) {
               <LocaleLink
                 href={url.url}
                 key={url.id}
-                className="body hover:bg-primary-300/50 transition-colors duration-300 rounded-md ease-linear"
+                className="body hover:bg-primary-300/50 transition-colors duration-300 rounded-md ease-linear text-wrap"
               >
-                {url.id}
-              </LocaleLink>
+                {t(url.id)}
+              </LocaleLink >
             ))}
         </div>
       </details>
