@@ -25,7 +25,6 @@
                 "nominationForm": "ನಾಮನಿರ್ದೇಶನ ಅರ್ಜಿ"
             },
             "links": {
-                "home":"ಮನೆ",
                 "heading": "ಲಿಂಕ್‌ಗಳು",
                 "aboutUs": "ನಮ್ಮ ಬಗ್ಗೆ",
                 "specialities": "ವಿಶೇಷತೆಗಳು",
@@ -35,9 +34,7 @@
                 "gallery": "ಗ್ಯಾಲರಿ",
                 "contact": "ಸಂಪರ್ಕಿಸಿ",
                 "rulesRegulations": "ನಿಯಮಗಳು ಮತ್ತು ನಿಬಂಧನೆಗಳು",
-                "pricing": "ಬೆಲೆ",
-                "krishnaveni": "ಕೃಷ್ಣವೇಣಿ",
-                "organisation": "ಸಂಸ್ಥೆ"
+                "pricing": "ಬೆಲೆ"
             }
         },
         "ourStory": "ನಮ್ಮ ಕಥೆ",
@@ -50,6 +47,7 @@
         "heading": "ಗ್ಯಾಲರಿ"
     },
     "links": {
+        "home": "ಮನೆ",
         "heading": "ಲಿಂಕ್‌ಗಳು",
         "aboutUs": "ನಮ್ಮ ಬಗ್ಗೆ",
         "specialities": "ವಿಶೇಷತೆಗಳು",
@@ -59,7 +57,9 @@
         "gallery": "ಗ್ಯಾಲರಿ",
         "contact": "ಸಂಪರ್ಕಿಸಿ",
         "rulesRegulations": "ನಿಯಮಗಳು ಮತ್ತು ನಿಬಂಧನೆಗಳು",
-        "pricing": "ಬೆಲೆ"
+        "pricing": "ಬೆಲೆ",
+        "krishnaveni": "ಕೃಷ್ಣವೇಣಿ",
+        "organisation": "ಸಂಸ್ಥೆ"
     },
     "ayurvedicCenter": {
         "heading": "ಆಯುರ್ವೇದ ಕೇಂದ್ರ",

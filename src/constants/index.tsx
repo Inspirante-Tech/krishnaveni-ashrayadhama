@@ -1,5 +1,9 @@
 export const navigation = [
   {
+    id: "home",
+    "url": "/"
+  },
+  {
     id: "aboutUs",
     url: {
       heading: "aboutUs",
@@ -29,8 +33,8 @@ export const navigation = [
           url: "/ashraya-dhama/rules-regulations",
         },
         {
-          id:"pricing",
-          url:"/ashraya-dhama/pricing"
+          id: "pricing",
+          url: "/ashraya-dhama/pricing"
         }
       ],
     },
