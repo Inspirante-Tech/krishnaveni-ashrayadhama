@@ -8,6 +8,7 @@ import { fetchHomePage } from "~/lib/queries";
 import { getLocale, getTranslations } from "next-intl/server";
 import { FileDown, Link as LinkIcon } from "lucide-react";
 import LocaleLink from "~/components/ui/LocaleLink";
+import Heading from "~/components/Animations/Heading";
 
 export default async function Home() {
   const locale = await getLocale();
@@ -20,11 +21,13 @@ export default async function Home() {
         <Hero carouselImages={data.carosuel} />
         <section className="content-container">
           <div >
-            <h1 className="heading pb-4">{t("resources.heading")}</h1>
+            <Heading className="heading mb-4">
+              {t("resources.heading")}
+            </Heading>
             <p className="pb-8">{t("resources.content")}</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2">
+          <div className="grid grid-cols-1 md:grid-cols-2 capitalize">
             <div className="bg-gradient-to-br from-secondary-300 to-secondary-200/60  hover:shadow-2xl transition-shadow duration-300 p-4 rounded-l-2xl">
               <h2 className="subheading py-4">{t("resources.forms.heading")}</h2>
               <ul className="space-y-2">
@@ -44,12 +47,12 @@ export default async function Home() {
         </section>
         <Story data={data.story} />
         <Facilities facilities={data.facilities} />
-        
+
         <Information data={data.whoweare} />
         <Fqas fqas={data.fqas} />
         <Testimonials testimonials={data.testimonials} />
 
-        
+
       </main>
     </>
   );

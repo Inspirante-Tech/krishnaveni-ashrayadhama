@@ -21,9 +21,9 @@ const Header = () => {
             <Image
               height={100}
               width={100}
-              src={"/logo.png"}
+              src={"/header_logo.png"}
               alt="Logo"
-              className="object-contain object-center h-16 w-16"
+              className="object-contain object-center h-20 w-auto"
             />
           ) : (
             <Image
@@ -55,7 +55,7 @@ const Header = () => {
             return <NestedLink key={item.id} urlObject={item.url} />;
           })}
         </div>
-        <div className="flex gap-4">
+        <div className="flex gap-4 items-center">
           <LocalSwitcher />
           <MobileNav />
         </div>
@@ -73,10 +73,8 @@ function MobileNav() {
 
   useEffect(() => {
     const toggle = (e: MouseEvent) => {
-      console.log((e.target as HTMLElement).classList.contains("multiLink"));
       if (
-        e.target &&
-        !(e.target as HTMLElement).classList.contains("multiLink")
+        e.target && ((e.target as HTMLElement).tagName === "A")
       )
         if (input.current?.checked && e.target !== input.current) {
           setTimeout(() => {
@@ -115,7 +113,7 @@ function MobileNav() {
       </div>
       <div
         id={styles.menu}
-        className="p-8 list-none fixed top-0 right-0 translate-x-full h-screen bg-secondary-50 shadow-2xl flex flex-col text-center justify-center transition-all duration-500 ease-in-out z-10 gap-4 subheading max-w-60 w-full"
+        className="p-8 list-none fixed top-0 right-0 translate-x-full h-screen bg-primary-50/95 shadow-2xl flex flex-col text-center justify-center transition-all duration-500 ease-in-out z-10 gap-4 subheading max-w-60 w-full"
       >
         {navigation.map((item) => {
           if (typeof item.url === "string") {
@@ -135,6 +133,7 @@ function MobileNav() {
           }
           return <NestedLink key={item.id} urlObject={item.url} />;
         })}
+        <LocalSwitcher />
       </div>
     </div>
   );

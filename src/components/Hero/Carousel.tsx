@@ -11,6 +11,7 @@ function Carousel({ children }: Props) {
   const [timerId, setTimerId] = useState<Timer>();
   const carouselRef = useRef<HTMLDivElement>(null);
   const itemCount = React.Children.count(children);
+  
   function move(prvs: boolean, isButtonClick: boolean = false) {
     setCurrentIndex((currentIndex) => {
       let to;

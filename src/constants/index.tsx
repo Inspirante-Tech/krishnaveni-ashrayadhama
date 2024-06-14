@@ -1,7 +1,23 @@
 export const navigation = [
   {
+    id: "home",
+    "url": "/"
+  },
+  {
     id: "aboutUs",
-    url: "/about-us",
+    url: {
+      heading: "aboutUs",
+      urls: [
+        {
+          id: "krishnaveni",
+          url: "/about-us/krishnaveni",
+        },
+        {
+          id: "organisation",
+          url: "/about-us/organisation",
+        },
+      ],
+    },
   },
   {
     id: "specialities",
@@ -17,8 +33,8 @@ export const navigation = [
           url: "/ashraya-dhama/rules-regulations",
         },
         {
-          id:"pricing",
-          url:"/ashraya-dhama/pricing"
+          id: "pricing",
+          url: "/ashraya-dhama/pricing"
         }
       ],
     },

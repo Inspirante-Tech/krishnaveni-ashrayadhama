@@ -6,6 +6,7 @@ import LocaleLink from "../ui/LocaleLink";
 import  "./styles.module.css";
 import { Button } from "../ui/button";
 import { useTranslations } from "next-intl";
+
 function Hero({ carouselImages }: { carouselImages: string[] }) {
   const t= useTranslations("home.hero")
   return (
