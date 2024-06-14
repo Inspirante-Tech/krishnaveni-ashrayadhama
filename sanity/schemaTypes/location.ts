@@ -1,5 +1,3 @@
-
-
 import { defineField, defineType } from 'sanity'
 import { baseLanguage } from './locale'
 

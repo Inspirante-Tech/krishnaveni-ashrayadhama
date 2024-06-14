@@ -24,7 +24,7 @@ export default async function Home() {
             <p className="pb-8">{t("resources.content")}</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2">
+          <div className="grid grid-cols-1 md:grid-cols-2 capitalize">
             <div className="bg-gradient-to-br from-secondary-300 to-secondary-200/60  hover:shadow-2xl transition-shadow duration-300 p-4 rounded-l-2xl">
               <h2 className="subheading py-4">{t("resources.forms.heading")}</h2>
               <ul className="space-y-2">
