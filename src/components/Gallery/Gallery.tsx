@@ -62,7 +62,7 @@ export function Gallery({ images }: { images: ImageType[] }) {
         onClick={onClose}
       >
         <div
-          className="w-full h-full mt-12 md:mt-1"
+          className="w-full h-full md:mt-1"
           onClick={(e) => e.stopPropagation()}
         >
           {selectedImageIndex != null && (

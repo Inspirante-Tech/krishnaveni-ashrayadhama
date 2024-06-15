@@ -1,7 +1,7 @@
 import { useTranslations } from "next-intl";
 import LocaleLink from "../ui/LocaleLink";
 import { usePathname } from "next/navigation";
-import { ChevronUp } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 
 type NestedUrl = {
   heading: string;
@@ -46,7 +46,7 @@ export default function LocalSwitcher({ urlObject }: { urlObject: NestedUrl }) {
           className={`w-full flex justify-between items-center  border-solid border-black cursor-pointer ${active ? "border-b-2" : "border-none"}`}
         >
           <span className="flex-grow">{t(urlObject.heading)}</span>
-          <ChevronUp
+          <ChevronDown
             className={`group-open:rotate-180 transition-all duration-300 ease-linear rotate-0`}
           />
         </summary>

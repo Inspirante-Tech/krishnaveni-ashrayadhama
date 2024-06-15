@@ -15,7 +15,7 @@ function Carousel({ children }: Props) {
   function move(prvs: boolean, isButtonClick: boolean = false) {
     let to;
     if (prvs) {
-      to = (currentIndex.current - 1) % itemCount;
+      to = (currentIndex.current + itemCount - 1) % itemCount;
     } else {
       to = (currentIndex.current + 1) % itemCount;
     }
@@ -34,16 +34,16 @@ function Carousel({ children }: Props) {
   useEffect(() => {
     timerId.current = setInterval(() => {
       move(false);
-    }, 7500)
+    }, 3000)
 
     return () => clearTimeout(timerId.current);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
-    <div className="relative w-screen h-screen max-h-screen overflow-x-hidden">
+    <div className="relative w-full h-screen max-h-screen overflow-x-hidden">
       <div
-        className="flex  w-full h-full overflow-x-scroll scroll-smooth snap-mandatory snap-x no-scrollbar relative pointer-events-none"
+        className="flex  w-screen h-full overflow-x-scroll scroll-smooth snap-mandatory snap-x no-scrollbar relative pointer-events-none"
         ref={carouselRef}
       >
         {children}

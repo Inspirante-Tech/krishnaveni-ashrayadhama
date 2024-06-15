@@ -10,7 +10,6 @@ import NestedLink from "./NestedLink";
 import Image from "next/image";
 
 function isInRoute(curr_path: string, route: string) {
-  console.log(route)
   if (route == "/") {
     return !curr_path.split("/").slice(2).length
   }
