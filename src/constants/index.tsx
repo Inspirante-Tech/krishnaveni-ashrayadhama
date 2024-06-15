@@ -623,3 +623,61 @@ export const aboutContent = [
     image: "https://placehold.co/600x400/png",
   },
 ];
+export const tabData = [
+  {
+    id: 5,
+    title: "Panchakarma Therapist (Male)",
+    jobRole: "Perform Panchakarma treatments, ensure patient comfort during procedures.",
+    eligibility: "Trained in Panchakarma"
+  },
+  {
+    id: 1,
+    title: "Medical Officer",
+    jobRole: "Oversee patient care, prescribe Ayurvedic treatments, and manage the overall wellness programs.",
+    eligibility: "BAMS/MD (Ayu)"
+  },
+  {
+    id: 2,
+    title: "Receptionist",
+    jobRole: "Manage the front desk, handle patient inquiries, schedule appointments, and maintain records.",
+    eligibility: "Any Degree with Computer Knowledge"
+  },
+  {
+    id: 3,
+    title: "Nursing Staff",
+    jobRole: "Provide nursing care to patients, assist in treatments and therapies.",
+    eligibility: "ANM/GNM"
+  },
+  {
+    id: 4,
+    title: "Nursing Assistant",
+    jobRole: "Support nursing staff in patient care, assist in daily tasks and procedures.",
+    eligibility: "PUC"
+  },
+ 
+  {
+    id: 6,
+    title: "Panchakarma Therapist (Female)",
+    jobRole: "Perform Panchakarma treatments, ensure patient comfort during procedures.",
+    eligibility: "Trained in Panchakarma"
+  },
+  {
+    id: 7,
+    title: "Security",
+    jobRole: "Ensure the safety and security of the center, manage entry and exit points.",
+    eligibility: "Relevant experience preferred"
+  },
+  {
+    id: 8,
+    title: "Attender",
+    jobRole: "Assist in the daily operations of the center, help with various tasks as needed.",
+    eligibility: "SSLC/PUC"
+  },
+  {
+    id: 9,
+    title: "House Keeping",
+    jobRole: "Maintain cleanliness and hygiene standards of the center.",
+    eligibility: "Relevant experience preferred"
+  }
+];
+
