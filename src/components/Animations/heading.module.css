@@ -1,23 +1,42 @@
 .ressurate {
-    --g: no-repeat linear-gradient(#00DFFC 0 0) 0 0;
-    background: var(--g), var(--g);
-    background-size: 0 100%;
-    background-clip: padding-box, text;
-    box-decoration-break: clone;
-    animation:
-        t 1s 0s both,
-        b 1s .5s both;
+  --g: no-repeat linear-gradient(#00dffc 0 0) 0 0;
+  background: var(--g), var(--g);
+  background-size: 0 100%;
+  background-clip: padding-box, text;
+  box-decoration-break: clone;
+  animation:
+    t 1s 0s both,
+    b 1s 0.5s both;
+  position: relative;
+  display: inline-block;
 }
 
 @keyframes t {
-    to {
-        background-size: 150% 100%;
-    
-    }
+  to {
+    background-size: 150% 100%;
+  }
 }
 
 @keyframes b {
-    to {
-        background-position: -210% 0;
-    }
+  to {
+    background-position: -210% 0;
+  }
+}
+
+.ressurate::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: rgba(28, 37, 64, 0.644);
+  bottom: -3px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s ease;
+}
+
+.ressurate:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
