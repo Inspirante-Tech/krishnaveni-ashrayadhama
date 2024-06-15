@@ -12,13 +12,13 @@
             "heading": "testimonials"
         },
         "hero": {
-            "heading": "Krishnaveni Ashrayadhama",
+            "heading": "Krishnaveni Ashraya Dhama",
             "content": "Nurturing legacy, Empowering Well-being",
             "cta": "Get in Touch"
         },
         "resources": {
             "heading": "resources",
-            "content":"quick links for anyone interested in our services",
+            "content":"Quick Links for anyone interested in our services",
             "forms": {
                 "heading": "forms",
                 "permanentForm": "permanent Form",
@@ -47,6 +47,7 @@
         "heading": "Gallery"
     },
     "links": {
+        "home":"home",
         "heading": "Links",
         "aboutUs": "about us",
         "specialities": "specialities",
@@ -56,7 +57,9 @@
         "gallery": "gallery",
         "contact": "contact",
         "rulesRegulations": "rules and regulations",
-        "pricing": "pricing"
+        "pricing": "pricing",
+        "krishnaveni":"krishnaveni",
+        "organisation":"organisation"
     },
     "ayurvedicCenter": {
         "heading": "ayurvedic center",
@@ -87,7 +90,7 @@
         "heading": "about us"
     },
     "contact": {
-        "heading": "Welcome To AshrayaDhama",
+        "heading": "Welcome To Ashraya Dhama",
         "content": "Got a question or just want to say hello? Drop us a line below and let's make some magic happen!",
         "form": {
             "heading": "Get in Touch",

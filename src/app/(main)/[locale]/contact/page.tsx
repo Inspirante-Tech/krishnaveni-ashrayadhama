@@ -20,8 +20,8 @@ export default  function Contact() {
             className="absolute inset-0 h-full w-full object-cover  opacity-80 rounded-l-xl object-right-bottom"
           />
 
-          <div className="hidden  lg:relative lg:block lg:p-12 p-1">
-            <h2 className="mt-16 text-gray-800 heading">
+          <div className="hidden  lg:relative lg:block lg:p-4 p-1 bg-white/60 m-4 rounded-lg">
+            <h2 className="text-gray-800 heading">
             {t("heading")}
             </h2>
 

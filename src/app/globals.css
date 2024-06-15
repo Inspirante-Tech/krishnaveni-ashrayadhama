@@ -121,8 +121,8 @@ dialog[open] {
 }
 
 
-.container {
-  --s: 194px; /* control the size */
+.pattern-bg {
+  --s: 194px;
   --c1: #f6edb3;
   --c2: #acc4a3;
 
@@ -140,6 +140,10 @@ dialog[open] {
       var(--c1) 0 300deg,
       var(--c2) 0
     ),
-    linear-gradient(-150deg, var(--_l)) #55897c /* third color here */;
+    linear-gradient(-150deg, var(--_l)) #55897c;
   background-size: calc(0.866 * var(--s)) var(--s);
+}
+
+section,p{
+  text-align: justify;
 }

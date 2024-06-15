@@ -47,7 +47,7 @@ const ThumbnailCarousel: React.FC<PropType> = ({ thumbnails, options, initialInd
     handleSelect();
     emblaMainApi.scrollTo(selectedIndex);
     emblaMainApi.on('select', handleSelect).on('reInit', handleSelect);
-  }, [emblaMainApi, handleSelect, initialIndex]);
+  }, [emblaMainApi, handleSelect, initialIndex,selectedIndex]);
 
   return (
     <div className={`space-y-10 md:space-y-0  flex flex-col gap-4 justify-center h-full ${styles.embla}`}>

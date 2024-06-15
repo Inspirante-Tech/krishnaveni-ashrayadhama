@@ -28,13 +28,14 @@ const Reveal = ({ delay = 0, ...props }: Props) => {
 
     return () => {
       if (containerRef.current) {
+        // eslint-disable-next-line react-hooks/exhaustive-deps
         observer.unobserve(containerRef.current);
       }
     };
   }, []);
 
   return (
-    <div ref={containerRef} className={style.revealContainer} style={{animationDelay:`${delay}s`}}>
+    <div ref={containerRef} className={style.revealContainer} style={{transitionDelay:`${delay}s`}}>
       {props.children}
     </div>
   );

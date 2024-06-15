@@ -6,6 +6,7 @@ import Photo from "./Photo";
 import { useTranslations } from "next-intl";
 import ThumbnailCarousel from "../ThumbnailCarousel/ThumbnailCarousel";
 import { ImageType } from "~/lib/types";
+import Reveal from "../Animations/reveal";
 
 export function Gallery({ images }: { images: ImageType[] }) {
   const t = useTranslations("gallery");
@@ -44,12 +45,15 @@ export function Gallery({ images }: { images: ImageType[] }) {
         style={{ columnFill: "balance" }}
       >
         {images.map((image, index) => (
-          <Photo
+          <Reveal
             key={image.id}
-            url={image.image}
-            alt={image.description}
-            callback={() => onSelect(index)}
-          />
+          >
+            <Photo
+              url={image.image}
+              alt={image.description}
+              callback={() => onSelect(index)}
+            />
+          </Reveal>
         ))}
       </div>
       <dialog
@@ -58,7 +62,7 @@ export function Gallery({ images }: { images: ImageType[] }) {
         onClick={onClose}
       >
         <div
-          className="w-full h-full mt-12 md:mt-1"
+          className="w-full h-full md:mt-1"
           onClick={(e) => e.stopPropagation()}
         >
           {selectedImageIndex != null && (

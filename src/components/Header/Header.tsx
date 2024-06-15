@@ -9,31 +9,29 @@ import { useEffect, useRef } from "react";
 import NestedLink from "./NestedLink";
 import Image from "next/image";
 
+function isInRoute(curr_path: string, route: string) {
+  if (route == "/") {
+    return !curr_path.split("/").slice(2).length
+  }
+  return curr_path.includes(route)
+}
+
 const Header = () => {
   const t = useTranslations("links");
-  const router = usePathname();
+  const path = usePathname();
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-primary-50/95 backdrop-blur-[2px] text-gray-900 shadow-lg">
       <div className="max-w-screen-xl flex flex-row justify-between items-center px-3 md:px-12 mx-auto">
-        <LocaleLink href="/" className="flex items-center">
-          {!router.includes("ayurvedic-center") ? (
-            <Image
-              height={100}
-              width={100}
-              src={"/logo.png"}
-              alt="Logo"
-              className="object-contain object-center h-16 w-16"
-            />
-          ) : (
-            <Image
-              height={100}
-              width={100}
-              src={"/ayurveda-logo.png"}
-              alt="Logo"
-              className="object-contain object-center h-16 w-16"
-            />
-          )}
+        <LocaleLink href="/" className="flex items-center p-1">
+          <Image
+            height={100}
+            width={100}
+            src={path.includes("ayurvedic-center") ? "/ayurveda-logo_cropped.png" : "/header_logo.png"}
+            alt="Logo"
+            className="object-contain object-center h-16 w-auto"
+            priority
+          />
         </LocaleLink>
         <div className="lg:flex flex-row md:gap-4 lg:gap-8 hidden">
           {navigation.map((item) => {
@@ -45,7 +43,7 @@ const Header = () => {
                   className="py-4 lg:py-6 "
                 >
                   <span
-                    className={`block w-max hover:text-secondary-800 hover:scale-105 transition-all duration-150 ease-linear h-full capitalize  border-solid border-black ${router.includes(item.url) ? "border-b-2" : "border-none"}`}
+                    className={`block w-max hover:text-secondary-800 hover:scale-105 transition-all duration-150 ease-linear h-full capitalize  border-solid border-black ${isInRoute(path, item.url) ? "border-b-2" : "border-none"}`}
                   >
                     {t(item.id)}
                   </span>
@@ -55,7 +53,7 @@ const Header = () => {
             return <NestedLink key={item.id} urlObject={item.url} />;
           })}
         </div>
-        <div className="flex gap-4">
+        <div className="flex gap-4 items-center">
           <LocalSwitcher />
           <MobileNav />
         </div>
@@ -73,10 +71,8 @@ function MobileNav() {
 
   useEffect(() => {
     const toggle = (e: MouseEvent) => {
-      console.log((e.target as HTMLElement).classList.contains("multiLink"));
       if (
-        e.target &&
-        !(e.target as HTMLElement).classList.contains("multiLink")
+        e.target && ((e.target as HTMLElement).tagName === "A")
       )
         if (input.current?.checked && e.target !== input.current) {
           setTimeout(() => {
@@ -115,7 +111,7 @@ function MobileNav() {
       </div>
       <div
         id={styles.menu}
-        className="p-8 list-none fixed top-0 right-0 translate-x-full h-screen bg-secondary-50 shadow-2xl flex flex-col text-center justify-center transition-all duration-500 ease-in-out z-10 gap-4 subheading max-w-60 w-full"
+        className="p-8 list-none fixed top-0 right-0 translate-x-full h-screen bg-primary-50/95 shadow-2xl flex flex-col text-center justify-center transition-all duration-500 ease-in-out z-10 gap-4 subheading max-w-60 w-full"
       >
         {navigation.map((item) => {
           if (typeof item.url === "string") {
@@ -126,7 +122,7 @@ function MobileNav() {
                 className={`w-full flex justify-center`}
               >
                 <span
-                  className={`block hover:text-secondary-800 hover:scale-105 transition-all duration-150 ease-linear h-full capitalize pointer-events-none border-solid border-black ${router.includes(item.url) ? "border-b-2" : "border-none"}`}
+                  className={`block hover:text-secondary-800 hover:scale-105 transition-all duration-150 ease-linear h-full capitalize pointer-events-none border-solid border-black ${isInRoute(router, item.url) ? "border-b-2" : "border-none"}`}
                 >
                   {t(item.id)}
                 </span>
