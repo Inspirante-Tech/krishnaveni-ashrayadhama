@@ -15,8 +15,8 @@ function Hero({ carouselImages }: { carouselImages: string[] }) {
         {carouselImages.map((url, index) => (
           <div key={index} className="relative w-full h-full">
             <Image
-              width={600}
-              height={600}
+              width={1000}
+              height={Math.floor(1000*9/16)}
               className="min-w-[100vw] h-full object-cover snap-center"
               src={url}
               alt={`Slide ${index + 1}`}

@@ -1,6 +1,6 @@
-import { defineField } from 'sanity'
+import { defineField, defineType } from 'sanity'
 
-export default {
+export default defineType({
     name: 'vriddhashrama',
     title: 'Ashraya Dhama',
     type: 'document',
@@ -63,8 +63,8 @@ export default {
     preview: {
         prepare() {
             return {
-                title:"Vriddhashrama"
+                title: "Vriddhashrama"
             }
         }
     }
-}
+})
