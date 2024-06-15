@@ -20,9 +20,9 @@ export default function LocalSwitcher() {
     });
   };
   return (
-    <div className="lg:py-6  h-min hover:text-secondary-800 hover:scale-105 transition-all duration-150 ease-linear capitalize w-full group">
-      <button className="p-2 flex gap-2 bg-primary-500 rounded border border-action-700" disabled={isPending}>
-        <Languages size={24} strokeWidth={1.5} /> <span>{locale === "en" ? "English" : "Kannada"}</span>
+    <div className="w-28 capitalize group">
+      <button className="w-full p-2 flex gap-2 items-center bg-primary-500 rounded border border-action-700" disabled={isPending}>
+        <Languages strokeWidth={1.5} className="size-5"/> <span>{locale === "en" ? "English" : "Kannada"}</span>
       </button>
       <div className="group-hover:h-max absolute h-0 bg-primary-50/95 rounded overflow-hidden w-32 p-1 shadow-xl">
 

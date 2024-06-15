@@ -1,12 +1,14 @@
 "use client";
 import { useEffect, useRef } from "react";
-import style from "./resurration.module.css"
+import style from "./heading.module.css"
+import { Separator } from "../ui/separator";
 
 interface Props extends React.HTMLProps<HTMLDivElement> {
   delay?: number;
+  seperatorColor?:"primary"|"secondary"
 }
 
-const Heading = ({ delay = 0, ...props }: Props) => {
+const Heading = ({ delay = 0,seperatorColor, ...props }: Props) => {
   const containerRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -35,7 +37,10 @@ const Heading = ({ delay = 0, ...props }: Props) => {
   }, []);
 
   return (
-    <h1  ref={containerRef} className={`max-w-min pr-2 ${props.className}`} >{props.children}</h1>
+    <div className={` pb-4  ${props.className}`}>
+      <h1 ref={containerRef} className="heading pb-2 max-w-min pr-2" >{props.children}</h1>
+      <Separator color={seperatorColor}/>
+    </div>
   );
 };
 

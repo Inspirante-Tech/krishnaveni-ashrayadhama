@@ -21,7 +21,7 @@ export default async function Home() {
         <Hero carouselImages={data.carosuel} />
         <section className="content-container">
           <div >
-            <Heading className="heading mb-4">
+            <Heading >
               {t("resources.heading")}
             </Heading>
             <p className="pb-8">{t("resources.content")}</p>

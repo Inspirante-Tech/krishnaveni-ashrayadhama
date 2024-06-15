@@ -16,7 +16,7 @@ const FacilityCard = ({
       delay={0.25 * index}
     >
       <div className="h-full flex justify-evenly bg-gradient-to-tr from-secondary-200 to-secondary-100 shadow-lg group-hover:shadow-2xl transition duration-200 ease-out rounded-lg overflow-clip">
-        <div className="relative p-6 py-8 gap-4 flex flex-col">
+        <div className="relative p-6 lg:p-12 py-8 gap-4 flex flex-col">
           <Image
             src={facility.image}
             alt="facility-img"
