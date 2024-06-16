@@ -1,21 +1,21 @@
 "use client";
 import { useEffect, useRef } from "react";
-import style from "./heading.module.css"
+import style from "./heading.module.css";
 import { Separator } from "../ui/separator";
 
 interface Props extends React.HTMLProps<HTMLDivElement> {
   delay?: number;
-  seperatorColor?:"primary"|"secondary"
+  seperatorColor?: "primary" | "secondary";
 }
 
-const Heading = ({ delay = 0,seperatorColor, ...props }: Props) => {
+const Heading = ({ delay = 0, seperatorColor, ...props }: Props) => {
   const containerRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          containerRef.current?.classList.add(style.ressurate)
+          containerRef.current?.classList.add(style.ressurate);
           if (containerRef.current) {
             observer.unobserve(containerRef.current);
           }
@@ -37,9 +37,14 @@ const Heading = ({ delay = 0,seperatorColor, ...props }: Props) => {
   }, []);
 
   return (
-    <div className={` pb-4  ${props.className}`}>
-      <h1 ref={containerRef} className="heading pb-2 max-w-min pr-2" >{props.children}</h1>
-      <Separator color={seperatorColor}/>
+    <div className={`pb-4 ${props.className}`}>
+      <h1
+        ref={containerRef}
+        className={`heading pb-2 max-w-min pr-2 ${style.ressurate}`}
+      >
+        {props.children}
+      </h1>
+      <Separator color={seperatorColor} />
     </div>
   );
 };

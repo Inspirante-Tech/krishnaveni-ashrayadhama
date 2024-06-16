@@ -11,9 +11,9 @@ import Image from "next/image";
 
 function isInRoute(curr_path: string, route: string) {
   if (route == "/") {
-    return !curr_path.split("/").slice(2).length
+    return !curr_path.split("/").slice(2).length;
   }
-  return curr_path.includes(route)
+  return curr_path.includes(route);
 }
 
 const Header = () => {
@@ -27,7 +27,11 @@ const Header = () => {
           <Image
             height={100}
             width={100}
-            src={path.includes("ayurvedic-center") ? "/ayurveda-logo_cropped.png" : "/header_logo.png"}
+            src={
+              path.includes("ayurvedic-center")
+                ? "/ayurveda-logo_cropped.png"
+                : "/header_logo.png"
+            }
             alt="Logo"
             className="object-contain object-center h-16 w-auto"
             priority
@@ -71,9 +75,7 @@ function MobileNav() {
 
   useEffect(() => {
     const toggle = (e: MouseEvent) => {
-      if (
-        e.target && ((e.target as HTMLElement).tagName === "A")
-      )
+      if (e.target && (e.target as HTMLElement).tagName === "A")
         if (input.current?.checked && e.target !== input.current) {
           setTimeout(() => {
             if (input.current) {
