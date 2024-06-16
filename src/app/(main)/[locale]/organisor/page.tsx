@@ -34,7 +34,7 @@ export default function organisor() {
       </div>
       <section className="content-container flex flex-col md:gap-4 gap-2 ">
         <div className="flex flex-row gap-2 ">
-          <h1 className="heading text-gray-900 text-left ">Faculty</h1>
+          <h1 className="heading text-gray-900 text-left ">Organisers</h1>
           <div className="h-1 w-full bg-secondary-500 rounded-full mt-5"></div>
         </div>
 
