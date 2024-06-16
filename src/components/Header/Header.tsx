@@ -8,6 +8,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef } from "react";
 import NestedLink from "./NestedLink";
 import Image from "next/image";
+import ResourceMarquee from "../ResourceMarguee/ResourceMarguee";
 
 function isInRoute(curr_path: string, route: string) {
   if (route == "/") {
@@ -62,6 +63,7 @@ const Header = () => {
           <MobileNav />
         </div>
       </div>
+      <ResourceMarquee />
     </nav>
   );
 };
