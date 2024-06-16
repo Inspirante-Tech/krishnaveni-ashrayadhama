@@ -1,13 +1,8 @@
-import { PortableText } from "@portabletext/react";
-import "./style.css";
+import RichText from "../RichText/RichText";
 
 const RulesandRegulation = ({ rules }: { rules: [any] }) => {
   return (
-    <article>
-      <section className="space-y-4 leading-relaxed">
-        <PortableText value={rules} />
-      </section>
-    </article>
+    <RichText value={rules} className="bg-white/60 p-4 md:p-8 rounded-lg" />
   );
 };
 

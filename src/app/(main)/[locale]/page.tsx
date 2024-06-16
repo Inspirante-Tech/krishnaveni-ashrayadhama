@@ -8,7 +8,7 @@ import { fetchHomePage } from "~/lib/queries";
 import { getLocale, getTranslations } from "next-intl/server";
 import { FileDown, Link as LinkIcon } from "lucide-react";
 import LocaleLink from "~/components/ui/LocaleLink";
-import Heading from "~/components/Animations/Heading";
+import Heading from "~/components/Heading/Heading";
 
 export default async function Home() {
   const locale = await getLocale();

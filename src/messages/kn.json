@@ -47,12 +47,13 @@
         "heading": "ಗ್ಯಾಲರಿ"
     },
     "links": {
-        "home": "ಮನೆ",
+        "home": "ಮುಖಪುಟ",
         "heading": "ಲಿಂಕ್‌ಗಳು",
         "aboutUs": "ನಮ್ಮ ಬಗ್ಗೆ",
         "specialities": "ವಿಶೇಷತೆಗಳು",
         "ashrayaDhama": "ಆಶ್ರಯ ಧಾಮ",
         "ayurvedicCenter": "ಆಯುರ್ವೇದ ಕೇಂದ್ರ",
+        "career":"ವೃತ್ತಿ",
         "events": "ಕಾರ್ಯಕ್ರಮಗಳು",
         "gallery": "ಗ್ಯಾಲರಿ",
         "contact": "ಸಂಪರ್ಕಿಸಿ",
@@ -106,5 +107,10 @@
             "reviewContent": "ನಿಮ್ಮ ಪ್ರತಿಕ್ರಿಯೆಯನ್ನು ನಾವು ಗೌರವಿಸುತ್ತೇವೆ! ದಯವಿಟ್ಟು ನಿಮ್ಮ ಅನುಭವವನ್ನು ನಮ್ಮೊಂದಿಗೆ ಹಂಚಿಕೊಳ್ಳಿ",
             "subscribeNote": "ಈವೆಂಟ್‌ಗಳು, ಉತ್ಪನ್ನ ನವೀಕರಣಗಳು ಮತ್ತು ಕಂಪನಿಯ ಪ್ರಕಟಣೆಗಳ ಕುರಿತು ಇಮೇಲ್‌ಗಳನ್ನು ಸ್ವೀಕರಿಸಲು ನಾನು ಬಯಸುತ್ತೇನೆ"
         }
+    },
+    "organisation": {
+        "heading": "Team of Organizers",
+        "content": "Brings together diverse talents to a resounding success.",
+        "faculty": "faculty"
     }
 }

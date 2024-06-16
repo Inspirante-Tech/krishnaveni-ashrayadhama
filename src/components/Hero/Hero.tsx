@@ -42,7 +42,7 @@ function Hero({ carouselImages }: { carouselImages: string[] }) {
       <div
         className={`absolute bg-gradient-to-t from-black/75 from-25% to-transparent w-full h-3/5 bottom-0 pointer-events-none`}
       ></div>
-      <ScrollDown />
+      <ScrollDown targetId="story"/>
     </div>
   );
 }

@@ -1,26 +1,57 @@
-import { getLocale, getTranslations } from "next-intl/server";
-import ZigZag from "~/components/ZigZag/ZigZag";
-import { fetchAboutPage } from "~/lib/queries";
+import { getTranslations } from "next-intl/server";
+import Image from "next/image";
+import Heading from "~/components/Heading/Heading";
+import ScrollDown from "~/components/Hero/ScrollDown";
+import Profile from "~/components/Profile/Profile";
+import { organisors } from "~/constants";
 
-async function About() {
-  const locale = await getLocale();
-  const t = await getTranslations("aboutUs");
-  const data = await fetchAboutPage(locale);
+export default async function organisor() {
+  const t = await getTranslations("organisation")
   return (
-    <main className="flex flex-col md:gap-4 gap-2 min-h-screen content-container">
-      <div className="pt-20">
-        <div
-          className="text-gray-900 text-left heading w-fit capitalize"
-        >
-          {t("heading")}
-          <div className="h-1 w-full bg-secondary-500 rounded-full mt-2"></div>
+    <div>
+      <div className="relative w-full h-full">
+        <div className="relative w-full h-[500px] overflow-hidden ">
+          <Image
+            layout="fill"
+            objectFit="cover"
+            src="/organisationpage.jpeg"
+            alt="img"
+          />
         </div>
-      </div>
 
-      <div className="space-y-16 md:space-y-20 ">
-        <ZigZag contents={data.sections} />
+        <div className="absolute bottom-28 md:bottom-28 w-full transform z-10 text-white pointer-events-none">
+          <div className="content-container mx-auto flex flex-col gap-4 md:gap-8 items-center text-center">
+            <div className="flex flex-col gap-2 md:gap-4">
+              <h1 className="title">{t("heading")}</h1>
+              <p className="text-gray-200 subheading leading-relaxed text-center">
+                {t("content")}
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          className={`absolute bg-gradient-to-t from-black/75 from-25% to-transparent w-full h-3/5 bottom-0 pointer-events-none`}
+        ></div>
+        <ScrollDown targetId="faculty" />
       </div>
-    </main>
+      <section className="content-container flex flex-col md:gap-4 gap-2 " id="faculty">
+        <Heading seperatorColor="secondary">
+          {t("faculty")}
+        </Heading>
+
+        <div className="flex flex-wrap justify-center gap-4 w-full md:space-x-3 md:space-y-4">
+          {organisors.map((facility, index) => (
+            <Profile
+              name={facility.title}
+              image={facility.image}
+              position={facility.description}
+              index={index}
+              key={index}
+              className="bg-secondary-400 w-52"
+            />
+          ))}
+        </div>
+      </section>
+    </div>
   );
 }
-export default About;

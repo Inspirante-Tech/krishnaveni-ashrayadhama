@@ -1,30 +1,29 @@
 "use client";
 import { CircleX } from "lucide-react";
 import { useRef, useState } from "react";
-
 import Photo from "./Photo";
 import { useTranslations } from "next-intl";
 import ThumbnailCarousel from "../ThumbnailCarousel/ThumbnailCarousel";
 import { ImageType } from "~/lib/types";
 import Reveal from "../Animations/reveal";
+import Dialog, { DialogRef } from "../ui/Dialog";
 
 export function Gallery({ images }: { images: ImageType[] }) {
   const t = useTranslations("gallery");
   const [selectedImageIndex, setSelectedImageIndex] = useState<
-    number | null | undefined
+    number | null
   >(null);
-  const dialogRef = useRef<HTMLDialogElement>(null);
+  const dialogRef = useRef<DialogRef>(null);
 
   const onSelect = (index: number) => {
+    console.log("open")
     setSelectedImageIndex(index);
-    dialogRef.current && dialogRef.current.showModal();
-    document.body.classList.add("prevent-scroll");
+    dialogRef.current?.open();
   };
 
   const onClose = () => {
+    console.log("close")
     setSelectedImageIndex(null);
-    dialogRef.current && dialogRef.current.close();
-    document.body.classList.remove("prevent-scroll");
   };
 
   const thumbnails = images.map((image) => ({
@@ -56,14 +55,15 @@ export function Gallery({ images }: { images: ImageType[] }) {
           </Reveal>
         ))}
       </div>
-      <dialog
+
+      <Dialog
+        closeCallback={onClose}
         ref={dialogRef}
         className="w-[100%] h-[100%] md:w-[90%] p-2 md:p-15 rounded-xl eventdialog overflow-hidden"
-        onClick={onClose}
+        onClick={() => dialogRef.current?.close()}
       >
         <div
           className="w-full h-full md:mt-1"
-          onClick={(e) => e.stopPropagation()}
         >
           {selectedImageIndex != null && (
             <ThumbnailCarousel
@@ -73,12 +73,14 @@ export function Gallery({ images }: { images: ImageType[] }) {
             />
           )}
           <form method="dialog" className="absolute top-0 right-0 z-10">
-            <button className="m-4" onClick={onClose}>
+            <button className="m-4">
               <CircleX className="text-red-700" size={32} />
             </button>
           </form>
         </div>
-      </dialog>
+      </Dialog>
     </section>
+
+
   );
 }

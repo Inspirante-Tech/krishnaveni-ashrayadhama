@@ -1,10 +1,9 @@
 "use client";
-import Image from "next/image";
-import React from "react";
 import { Carousel, CarouselContent, CarouselItem } from "../ui/carousel";
 import AutoScroll from "embla-carousel-auto-scroll";
 import { DoctorType } from "~/lib/types";
 import { useTranslations } from "next-intl";
+import Profile from "../Profile/Profile";
 
 function Doctors({ doctors }: { doctors: DoctorType[] }) {
   const t = useTranslations("ayurvedicCenter.doctors");
@@ -24,21 +23,12 @@ function Doctors({ doctors }: { doctors: DoctorType[] }) {
                 key={index}
                 className="flex-none p-2 md:p-3 lg:p-4 xl:p-6"
               >
-                <div className="flex flex-col gap-3 items-center justify-center">
-                  <div className="">
-                    <Image
-                      width={120}
-                      height={120}
-                      alt="doctorImage"
-                      src={doctor.image}
-                      className="rounded-full object-cover aspect-square"
-                    />
-                  </div>
-                  <div className="flex flex-col gap-2 items-center">
-                    <p className="body">{doctor.name}</p>
-                    <p className="caption">{doctor.qualification}</p>
-                  </div>
-                </div>
+                <Profile
+                  name={doctor.name}
+                  image={doctor.image}
+                  position={doctor.qualification}
+                  index={index}
+                />
               </CarouselItem>
             ))}
           </CarouselContent>

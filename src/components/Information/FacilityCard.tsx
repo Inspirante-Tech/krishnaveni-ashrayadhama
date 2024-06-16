@@ -1,5 +1,4 @@
 import Image from "next/image";
-import React, { FC } from "react";
 import type { FacilityType } from "~/lib/types";
 import Reveal from "../Animations/reveal";
 

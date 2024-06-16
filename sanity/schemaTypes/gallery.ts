@@ -1,8 +1,8 @@
 import { ImagesIcon } from '@sanity/icons'
-import {defineField } from 'sanity'
+import {defineField, defineType } from 'sanity'
 import { baseLanguage } from './locale'
 
-export default {
+export default defineType({
   name: 'gallery',
   title: 'Gallery',
   type: 'document',
@@ -27,4 +27,4 @@ export default {
       media: 'image',
     }
   },
-}
+})

@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef } from "react";
 import style from "./reveal.module.css"
+import { cn } from "~/lib/utils";
 
 interface Props extends React.HTMLProps<HTMLDivElement> {
   delay?: number;
@@ -35,7 +36,7 @@ const Reveal = ({ delay = 0, ...props }: Props) => {
   }, []);
 
   return (
-    <div ref={containerRef} className={style.revealContainer} style={{transitionDelay:`${delay}s`}}>
+    <div ref={containerRef} className={cn(style.revealContainer,props.className)} style={{transitionDelay:`${delay}s`}}>
       {props.children}
     </div>
   );

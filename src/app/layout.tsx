@@ -1,5 +1,4 @@
 import { Noto_Sans } from "next/font/google";
-import Script from "next/script";
 
 export const metadata = {
   title: "Krishnaveni AshrayaDhama",

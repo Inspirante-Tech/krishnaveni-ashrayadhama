@@ -5,16 +5,16 @@ import Autoplay from "embla-carousel-autoplay";
 import { TestimonialType } from "~/lib/types";
 import { Carousel, CarouselContent, CarouselItem } from "../ui/carousel";
 import { useTranslations } from "next-intl";
-import { Separator } from "../ui/separator";
+import Heading from "../Heading/Heading";
 
 function Testimonials({ testimonials }: { testimonials: TestimonialType[] }) {
   const t = useTranslations("home.testimonials");
   return (
     <section className="relative">
       <div className="content-container flex flex-col gap-8">
-        <div className="flex flex-col md:gap-4 gap-2">
-          <h2 className="heading text-gray-900">{t("heading")}</h2>
-        </div>
+        <Heading>
+          {t("heading")}
+        </Heading>
         <div className="w-full flex justify-center">
           <Carousel
             opts={{ loop: true, dragFree: false, watchDrag: false }}

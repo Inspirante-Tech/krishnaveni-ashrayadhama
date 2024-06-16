@@ -1,6 +1,6 @@
 import { getLocale, getTranslations } from "next-intl/server";
+import Heading from "~/components/Heading/Heading";
 import NearbyPlaces from "~/components/NearbyPlaces/NearbyPlaces";
-import { Separator } from "~/components/ui/separator";
 import VideoSection from "~/components/VideoSection/VideoSection";
 import ZigZag from "~/components/ZigZag/ZigZag";
 import { fetchVriddhashramaPage } from "~/lib/queries";
@@ -13,13 +13,9 @@ export default async function Vridddhashrama() {
   return (
     <main className="content-container mx-auto space-y-16 md:space-y-20">
       <section className="mt-12 flex flex-col gap-2 md:gap-4">
-        <div
-          className="heading text-gray-900 w-fit"
-          style={{ textTransform: "capitalize" }}
-        >
+        <Heading seperatorColor='secondary'>
           {pageData.title}
-          <div className="h-1 w-full bg-secondary-500 rounded-full mt-2"></div>
-        </div>
+        </Heading>
         <p className="body text-justify">{pageData.description}</p>
       </section>
 

@@ -52,6 +52,10 @@ export const navigation = [
     url: "/gallery",
   },
   {
+    id: "career",
+    url: "/careers",
+  },
+  {
     id: "contact",
     url: "/contact",
   },
