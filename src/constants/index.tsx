@@ -680,4 +680,62 @@ export const tabData = [
     eligibility: "Relevant experience preferred"
   }
 ];
+export const organisors= [
+  {
+    id: 1,
+    title: " Organisor 1",
+    image: "/kitchen.jpg",
+    description:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores, reprehenderit",
+  },
+  {
+    id: 2,
+    title: "Organisor 2",
+    image: "/facilities.jpg",
+    description:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores, reprehenderit",
+  },
+  {
+    id: 3,
+    title: "Organisor 3",
+    image: "/facilities.jpg",
+    description:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores, reprehenderit",
+  },
+  {
+    id: 4,
+    title: "Organisor 4",
+    image: "/kitchen.jpg",
+    description:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores, reprehenderit",
+  },
+  {
+    id: 5,
+    title: " Organisor 5",
+    image: "/kitchen.jpg",
+    description:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores, reprehenderit",
+  },
+  {
+    id: 6,
+    title: "Organisor 6",
+    image: "/facilities.jpg",
+    description:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores, reprehenderit",
+  },
+  {
+    id: 7,
+    title: "Organisor 7",
+    image: "/facilities.jpg",
+    description:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores, reprehenderit",
+  },
+  {
+    id: 8,
+    title: "Organisor 8",
+    image: "/kitchen.jpg",
+    description:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores, reprehenderit",
+  },
+];
 

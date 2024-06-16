@@ -12,7 +12,7 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "~/components/ui/drawer";
-import Image from "next/image";
+
 
 const RolesAndDescriptions = () => {
   const [selectedTab, setSelectedTab] = useState<string | null>(null);
