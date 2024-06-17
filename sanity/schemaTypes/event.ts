@@ -1,10 +1,12 @@
 import { defineField, defineType } from 'sanity'
 import { baseLanguage } from './locale'
+import {TaskIcon} from '@sanity/icons'
 
 export default defineType({
   name: 'events',
   title: 'Event',
   type: 'document',
+  icon:TaskIcon,
   fields: [
     defineField({
       name: 'title',

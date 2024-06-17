@@ -11,11 +11,11 @@ const FacilityCard = ({
 }) => {
   return (
     <Reveal
-      className="w-full basis-auto md:basis-[45%] lg:basis-auto lg:max-w-64 transition duration-200 ease-out group hover:-translate-y-2"
+      className="w-full basis-auto md:basis-[45%] lg:basis-auto lg:max-w-64 group"
       delay={0.25 * index}
     >
       <div className="h-full flex justify-evenly bg-gradient-to-tr from-secondary-200 to-secondary-100 shadow-lg group-hover:shadow-2xl transition duration-200 ease-out rounded-lg overflow-clip">
-        <div className="relative p-6 lg:p-12 py-8 gap-4 flex flex-col">
+        <div className="relative p-6 lg:p-12 py-8 gap-4 flex flex-col transition duration-200 ease-out group-hover:-translate-y-2">
           <Image
             src={facility.image}
             alt="facility-img"

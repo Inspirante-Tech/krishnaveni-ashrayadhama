@@ -1,10 +1,12 @@
 import { defineField, defineType } from 'sanity'
- import {baseLanguage} from './locale'
+import { baseLanguage } from './locale'
+import { CommentIcon } from '@sanity/icons'
 
 export default defineType({
     name: 'testimonial',
     title: 'Testimonial',
     type: 'document',
+    icon: CommentIcon,
     fields: [
         defineField({
             name: 'name',

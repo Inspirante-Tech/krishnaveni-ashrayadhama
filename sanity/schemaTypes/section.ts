@@ -20,7 +20,7 @@ export default defineType({
         defineField({
             name: 'content',
             title: 'Content',
-            type: 'localeText',
+            type: 'localeBlockArray',
             validation: (Rule) => Rule.required(),
         }),
     ],

@@ -14,7 +14,7 @@ export default defineType({
         defineField({
             name: 'description',
             title: 'description',
-            type: 'localeText',
+            type: 'localeBlockArray',
             validation: (Rule) => Rule.required(),
         }),
         defineField({

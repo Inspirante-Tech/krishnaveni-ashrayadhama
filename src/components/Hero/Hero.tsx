@@ -28,7 +28,7 @@ function Hero({ carouselImages }: { carouselImages: string[] }) {
         <div className="content-container mx-auto flex flex-col gap-4 md:gap-8 items-center text-center">
           <div className="flex flex-col gap-2 md:gap-4">
             <h1 className="title">{t("heading")}</h1>
-            <p className="text-gray-200 subheading leading-relaxed">
+            <p className="text-gray-200 subheading leading-relaxed text-center">
             {t("content")}
             </p>
           </div>

@@ -13,21 +13,20 @@ const ResourceMarquee = () => {
       className="lg:fixed bg-primary-100 py-2  text-sm font-bold text-gray-800"
       pauseOnHover
     >
-      {[...resources,...resources].map((link, index) => (
-        <div key={index} className="  gap-1 flex items-center mr-10  ">
+      {[...resources, ...resources].map((link, index) => (
+        <div key={index} className="gap-1 flex items-center mr-10 capitalize hover:underline underline-offset-2">
           {link.type === "doc" ? (
             <>
-              <FileDown />
+              <FileDown size={14} />
               <a href={link.href} target="_blank" >
                 {t(link.id)}
               </a>
             </>
           ) : (
             <>
-              <LinkIcon />
+              <LinkIcon size={14} />
               <LocaleLink
                 href={link.href}
-                className="align-middle  h-full block"
               >
                 {t(link.id)}
               </LocaleLink>

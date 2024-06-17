@@ -114,9 +114,9 @@
         "faculty": "faculty"
     },
     "resources": {
-        "rulesRegulations": "ನಿಯಮಗಳು ಮತ್ತು ನಿಬಂಧನೆಗಳು",
-        "pricing": "ಬೆಲೆ",
-        "permanentForm": "ಶಾಶ್ವತ ಅರ್ಜಿ",
-        "nominationForm": "ನಾಮನಿರ್ದೇಶನ ಅರ್ಜಿ"
+        "rulesRegulations": "rules and Regulations",
+        "pricing": "pricing",
+        "permanentForm": "permanent Form",
+        "nominationForm": "nomination Form"
     }
 }

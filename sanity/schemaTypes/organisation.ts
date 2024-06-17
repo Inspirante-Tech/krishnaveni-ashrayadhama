@@ -1,10 +1,11 @@
 import { defineField, defineType } from 'sanity'
-import { baseLanguage } from './locale'
+import {UsersIcon} from '@sanity/icons'
 
 export default defineType({
     name: 'organisation',
     title: 'Organisation',
     type: 'document',
+    icon:UsersIcon,
     fields: [
         defineField({
             name: 'members',
@@ -22,8 +23,7 @@ export default defineType({
     ],
     preview: {
         select: {
-            title: `name.${baseLanguage!.id}`,
-            media: 'image',
+            title: `Organisation`,
         }
     },
 })
