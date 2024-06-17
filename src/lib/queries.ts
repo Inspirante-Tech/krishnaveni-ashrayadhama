@@ -220,7 +220,7 @@ export async function fetchRules(locale: string) {
     const query = `*[_type == "vriddhashrama"][0]{
           "rules":${coalesce("rules", locale)},
       }`
-    return await client.fetch<[any]>(query);
+    return await client.fetch<{rules:[any]}>(query);
 }
 
 

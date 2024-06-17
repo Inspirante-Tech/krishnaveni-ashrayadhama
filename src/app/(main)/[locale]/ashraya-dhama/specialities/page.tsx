@@ -11,8 +11,8 @@ export default async function Vridddhashrama() {
   const pageData = await fetchVriddhashramaPage(locale);
 
   return (
-    <main className="content-container mx-auto space-y-16 md:space-y-20">
-      <section className="mt-12 flex flex-col gap-2 md:gap-4">
+    <main className="content-container mx-auto space-y-16 md:space-y-20 mt-24">
+      <section className="flex flex-col gap-2 md:gap-4">
         <Heading seperatorColor='secondary'>
           {pageData.title}
         </Heading>

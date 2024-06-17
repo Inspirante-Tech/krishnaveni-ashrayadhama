@@ -5,7 +5,7 @@ import { fetchRules } from "~/lib/queries";
 
 async function page() {
   const locale = await getLocale();
-  const rules = await fetchRules(locale);
+  const data = await fetchRules(locale);
   const t = await getTranslations("vridddhashrama.rulesAndRegulation");
   return (
     <main className="content-container space-y-16 md:space-y-20 mt-20 ">
@@ -13,7 +13,7 @@ async function page() {
         {t("heading")}
       </Heading>
 
-      <RulesandRegulation rules={rules} />
+      <RulesandRegulation rules={data.rules} />
     </main>
   );
 }

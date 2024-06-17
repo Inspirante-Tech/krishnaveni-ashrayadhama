@@ -9,8 +9,8 @@ async function page() {
   const pageData = await fetchAyrvedicCenterPage(loacle);
   const t = await getTranslations("ayurvedicCenter");
   return (
-    <main className="content-container space-y-8">
-      <section className="flex md:gap-4 gap-2 flex-col pt-20">
+    <main className="content-container space-y-8 mt-24">
+      <section className="flex md:gap-4 gap-2 flex-col">
         <h2
           className="text-gray-900 text-left heading w-fit"
           style={{ textTransform: "capitalize" }}
