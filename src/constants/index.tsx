@@ -61,6 +61,29 @@ export const navigation = [
   },
 ];
 
+export const resources = [
+  {
+    type: "doc",
+    id: "nominationForm",
+    href: "/Nomination form.pdf",
+  },
+  {
+    type: "doc",
+    id: "permanentForm",
+    href: "/Permanent form.pdf",
+  },
+  {
+    type: "link",
+    id: "rulesRegulations",
+    href: "/ashraya-dhama/rules-regulations",
+  },
+  {
+    type: "link",
+    id: "pricing",
+    href: "/ashraya-dhama/pricing",
+  },
+];
+
 // export const testimonials = [
 //   {
 //     image:

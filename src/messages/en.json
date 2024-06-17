@@ -112,5 +112,11 @@
         "heading": "Team of Organizers",
         "content": "Brings together diverse talents to a resounding success.",
         "faculty": "faculty"
+    },
+    "resources": {
+        "rulesRegulations": "ನಿಯಮಗಳು ಮತ್ತು ನಿಬಂಧನೆಗಳು",
+        "pricing": "ಬೆಲೆ",
+        "permanentForm": "ಶಾಶ್ವತ ಅರ್ಜಿ",
+        "nominationForm": "ನಾಮನಿರ್ದೇಶನ ಅರ್ಜಿ"
     }
 }

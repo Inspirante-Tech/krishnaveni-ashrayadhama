@@ -17,7 +17,7 @@ export default function LocalSwitcher({ urlObject }: { urlObject: NestedUrl }) {
   const t = useTranslations("links")
   return (
     <>
-      <div className="hidden md:block lg:py-6  h-min hover:text-secondary-800 hover:scale-105 transition-all duration-150 ease-linear capitalize w-full  group">
+      <div className="hidden md:block lg:py-6  h-min hover:text-secondary-800 hover:scale-105 transition-all duration-150 ease-linear capitalize w-full  group z-10">
         <span
           className={`w-full block  border-solid border-black whitespace-nowrap ${active ? "border-b-2" : "border-none"}`}
         >

@@ -1,6 +1,6 @@
-import { defineField } from 'sanity'
+import { defineField, defineType } from 'sanity'
 
-export default {
+export default defineType({
     name: 'ayurvedic_center',
     title: 'Ayurvedic Center',
     type: 'document',
@@ -56,4 +56,4 @@ export default {
             }
         }
     }
-}
+})

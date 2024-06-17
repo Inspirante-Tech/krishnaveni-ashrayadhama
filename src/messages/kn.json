@@ -53,7 +53,7 @@
         "specialities": "ವಿಶೇಷತೆಗಳು",
         "ashrayaDhama": "ಆಶ್ರಯ ಧಾಮ",
         "ayurvedicCenter": "ಆಯುರ್ವೇದ ಕೇಂದ್ರ",
-        "career":"ವೃತ್ತಿ",
+        "career": "ವೃತ್ತಿ",
         "events": "ಕಾರ್ಯಕ್ರಮಗಳು",
         "gallery": "ಗ್ಯಾಲರಿ",
         "contact": "ಸಂಪರ್ಕಿಸಿ",
@@ -112,5 +112,11 @@
         "heading": "Team of Organizers",
         "content": "Brings together diverse talents to a resounding success.",
         "faculty": "faculty"
+    },
+    "resources": {
+        "rulesRegulations": "ನಿಯಮಗಳು ಮತ್ತು ನಿಬಂಧನೆಗಳು",
+        "pricing": "ಬೆಲೆ",
+        "permanentForm": "ಶಾಶ್ವತ ಅರ್ಜಿ",
+        "nominationForm": "ನಾಮನಿರ್ದೇಶನ ಅರ್ಜಿ"
     }
 }

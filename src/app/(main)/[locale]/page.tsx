@@ -18,8 +18,8 @@ export default async function Home() {
   return (
     <>
       <main className="space-y-8">
-        <Hero carouselImages={data.carosuel} /> 
-        <section className="content-container">
+        <Hero carouselImages={data.carosuel} />
+        {/* <section className="content-container">
           <div>
             <Heading>{t("resources.heading")}</Heading>
             <p className="pb-8">{t("resources.content")}</p>
@@ -31,7 +31,6 @@ export default async function Home() {
                 {t("resources.forms.heading")}
               </h2>
               <ul className="space-y-2">
-                {/* <li className="flex gap-2 items-center"> <FileDown className="inline" size={16} /> <a href="/pre_admission_rules.pdf">Pre admission rules</a></li> */}
                 <li className="flex gap-2 items-center">
                   {" "}
                   <FileDown className="inline" size={16} />{" "}
@@ -70,7 +69,7 @@ export default async function Home() {
               </ul>
             </div>
           </div>
-        </section>
+        </section> */}
         <Story data={data.story} />
         <Facilities facilities={data.facilities} />
 
