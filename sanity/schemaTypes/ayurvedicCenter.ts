@@ -1,6 +1,6 @@
-import { defineField } from 'sanity'
+import { defineField, defineType } from 'sanity'
 
-export default {
+export default defineType({
     name: 'ayurvedic_center',
     title: 'Ayurvedic Center',
     type: 'document',
@@ -14,7 +14,7 @@ export default {
         defineField({
             name: 'description',
             title: 'description',
-            type: 'localeText',
+            type: 'localeBlockArray',
             validation: (Rule) => Rule.required(),
         }),
         defineField({
@@ -56,4 +56,4 @@ export default {
             }
         }
     }
-}
+})

@@ -174,7 +174,6 @@ interface VriddhashramaCenter {
         description: string
 
     }[]
-    rules: [any],
     surrounding_detail: [any],
     locations: {
         name: string,
@@ -194,7 +193,6 @@ export async function fetchVriddhashramaPage(locale: string) {
             image,
             "description":${coalesce("description", locale)},
           },
-          "rules":${coalesce("rules", locale)},
           "surrounding_detail":${coalesce("surrounding_detail", locale)},
           "locations":locations[]{
             "name":${coalesce("name", locale)},
@@ -215,6 +213,14 @@ export async function fetchVriddhashramaPage(locale: string) {
             image: urlForImage(location.image)
         }))
     }
+}
+
+export async function fetchRules(locale: string) {
+
+    const query = `*[_type == "vriddhashrama"][0]{
+          "rules":${coalesce("rules", locale)},
+      }`
+    return await client.fetch<{rules:[any]}>(query);
 }
 
 

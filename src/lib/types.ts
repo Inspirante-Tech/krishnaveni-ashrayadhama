@@ -62,3 +62,9 @@ export type Row = {
     title: string,
     detail: string,
 }
+
+export type LocaleParamProp = {
+    params: {
+        locale: "kn" | "en"
+    }
+}

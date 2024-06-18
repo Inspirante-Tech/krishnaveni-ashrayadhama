@@ -8,7 +8,7 @@ import { fetchHomePage } from "~/lib/queries";
 import { getLocale, getTranslations } from "next-intl/server";
 import { FileDown, Link as LinkIcon } from "lucide-react";
 import LocaleLink from "~/components/ui/LocaleLink";
-import Heading from "~/components/Animations/Heading";
+import Heading from "~/components/Heading/Heading";
 
 export default async function Home() {
   const locale = await getLocale();
@@ -19,7 +19,11 @@ export default async function Home() {
     <>
       <main className="space-y-8">
         <Hero carouselImages={data.carosuel} />
+<<<<<<< HEAD
         <section className="content-container">
+=======
+        {/* <section className="content-container">
+>>>>>>> 9d0740afc8715aad9cee5b531f09263169a6e90c
           <div>
             <Heading>{t("resources.heading")}</Heading>
             <p className="pb-8">{t("resources.content")}</p>
@@ -31,7 +35,6 @@ export default async function Home() {
                 {t("resources.forms.heading")}
               </h2>
               <ul className="space-y-2">
-                {/* <li className="flex gap-2 items-center"> <FileDown className="inline" size={16} /> <a href="/pre_admission_rules.pdf">Pre admission rules</a></li> */}
                 <li className="flex gap-2 items-center">
                   {" "}
                   <FileDown className="inline" size={16} />{" "}
@@ -70,7 +73,7 @@ export default async function Home() {
               </ul>
             </div>
           </div>
-        </section>
+        </section> */}
         <Story data={data.story} />
         <Facilities facilities={data.facilities} />
 

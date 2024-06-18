@@ -1,19 +1,19 @@
 import { getLocale, getTranslations } from "next-intl/server";
+import Heading from "~/components/Heading/Heading";
 import RulesandRegulation from "~/components/RulesandRegulation/RulesandRegulation";
-import { fetchVriddhashramaPage } from "~/lib/queries";
+import { fetchRules } from "~/lib/queries";
 
 async function page() {
   const locale = await getLocale();
-  const pageData = await fetchVriddhashramaPage(locale);
-  const t = await getTranslations("vridddhashrama");
+  const data = await fetchRules(locale);
+  const t = await getTranslations("vridddhashrama.rulesAndRegulation");
   return (
-    <main className="content-container mx-auto space-y-16 md:space-y-20">
-      <h2 className="heading capitalize mt-10  text-action-950 w-fit">
-        {t("rulesAndRegulation.heading")}
-        <div className="h-1 w-full mt-2 bg-secondary-500 rounded-full"></div>
-      </h2>
+    <main className="content-container space-y-16 md:space-y-20 mt-20 ">
+      <Heading>
+        {t("heading")}
+      </Heading>
 
-      <RulesandRegulation rules={pageData.rules} />
+      <RulesandRegulation rules={data.rules} />
     </main>
   );
 }

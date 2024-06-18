@@ -1,14 +1,16 @@
 import { defineType, defineField } from 'sanity'
+import { HomeIcon } from '@sanity/icons'
 
 export default defineType({
     title: "Home",
     name: "Home",
     type: "document",
+    icon: HomeIcon,
     fields: [
         defineField({
             name: "story",
             title: "Content Section 1",
-            type: "localeText",
+            type: "localeBlockArray",
             validation: (Rule) => Rule.required(),
         }),
         defineField({
@@ -35,7 +37,7 @@ export default defineType({
         defineField({
             name: "whoweare",
             title: "Content Section 2",
-            type: "localeText",
+            type: "localeBlockArray",
             validation: (Rule) => Rule.required(),
         }),
         defineField({
@@ -58,7 +60,7 @@ export default defineType({
                     name: 'testimonial',
                     type: 'reference',
                     weak: true,
-                    to: [{type: 'testimonial'}],
+                    to: [{ type: 'testimonial' }],
                 })
             ],
             validation: Rule => Rule.unique()

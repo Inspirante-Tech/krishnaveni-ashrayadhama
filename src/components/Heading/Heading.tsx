@@ -37,14 +37,9 @@ const Heading = ({ delay = 0, seperatorColor, ...props }: Props) => {
   }, []);
 
   return (
-    <div className={`pb-4 ${props.className}`}>
-      <h1
-        ref={containerRef}
-        className={`heading pb-2 max-w-min pr-2 ${style.ressurate}`}
-      >
-        {props.children}
-      </h1>
-      <Separator color={seperatorColor} />
+    <div className={` pb-4 w-fit ${props.className} group`}>
+      <h1 ref={containerRef} className="heading pb-2  pr-2 text-left" >{props.children}</h1>
+      <Separator color={seperatorColor}/>
     </div>
   );
 };

@@ -1,5 +1,5 @@
 .ressurate {
-  --g: no-repeat linear-gradient(#00dffc 0 0) 0 0;
+  --g: no-repeat linear-gradient(#00dffc7b 0 0) 0 0;
   background: var(--g), var(--g);
   background-size: 0 100%;
   background-clip: padding-box, text;
@@ -23,7 +23,7 @@
   }
 }
 
-.ressurate::after {
+/* .ressurate::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -39,4 +39,4 @@
 .ressurate:hover::after {
   transform: scaleX(1);
   transform-origin: left;
-}
+} */

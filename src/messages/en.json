@@ -18,7 +18,7 @@
         },
         "resources": {
             "heading": "resources",
-            "content":"Quick Links for anyone interested in our services",
+            "content": "Quick Links for anyone interested in our services",
             "forms": {
                 "heading": "forms",
                 "permanentForm": "permanent Form",
@@ -37,8 +37,8 @@
                 "pricing": "pricing"
             }
         },
-        "ourStory":"Our Story",
-        "whoweare":"Who we are"
+        "ourStory": "Our Story",
+        "whoweare": "Who we are"
     },
     "events": {
         "heading": "Events"
@@ -47,19 +47,20 @@
         "heading": "Gallery"
     },
     "links": {
-        "home":"home",
+        "home": "home",
         "heading": "Links",
         "aboutUs": "about us",
         "specialities": "specialities",
         "ashrayaDhama": "ashraya dhama",
         "ayurvedicCenter": "ayurvedic center",
         "events": "events",
+        "career": "career",
         "gallery": "gallery",
         "contact": "contact",
         "rulesRegulations": "rules and regulations",
         "pricing": "pricing",
-        "krishnaveni":"krishnaveni",
-        "organisation":"organisation"
+        "krishnaveni": "krishnaveni",
+        "organisation": "organisation"
     },
     "ayurvedicCenter": {
         "heading": "ayurvedic center",
@@ -106,5 +107,16 @@
             "reviewContent": "We value your feedback! Please share your experience with us.",
             "subscribeNote": "I want to receive emails about events, product updates and company announcements."
         }
+    },
+    "organisation": {
+        "heading": "Team of Organizers",
+        "content": "Brings together diverse talents to a resounding success.",
+        "faculty": "faculty"
+    },
+    "resources": {
+        "rulesRegulations": "rules and Regulations",
+        "pricing": "pricing",
+        "permanentForm": "permanent Form",
+        "nominationForm": "nomination Form"
     }
 }

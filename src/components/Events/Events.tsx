@@ -7,10 +7,12 @@ import { formatDate } from "~/lib/utils";
 import { useTranslations } from "next-intl";
 import ThumbnailCarousel from "../ThumbnailCarousel/ThumbnailCarousel";
 import Reveal from "../Animations/reveal";
+import Heading from "../Heading/Heading";
+import Dialog, { DialogRef } from "../ui/Dialog";
 
 function Events({ events }: { events: EventType[] }) {
   const t = useTranslations("events");
-  const dialogRef = useRef<HTMLDialogElement>(null);
+  const dialogRef = useRef<DialogRef>(null);
   const [selectedEventIndex, setSelectedEventIndex] = useState<number | null>(
     null
   );
@@ -24,23 +26,19 @@ function Events({ events }: { events: EventType[] }) {
 
   const openDialog = (index: number) => {
     setSelectedEventIndex(index);
-    dialogRef.current && dialogRef.current.showModal();
-    document.body.classList.add("prevent-scroll");
+    dialogRef.current && dialogRef.current.open();
   };
 
-  const closeDialog = () => {
-    dialogRef.current && dialogRef.current.close();
+  const onClose = () => {
     setSelectedEventIndex(null);
-    document.body.classList.remove("prevent-scroll");
   };
 
   return (
     <section className="content-container rounded p-8">
+      <Heading>
+        {t("heading")}
+      </Heading>
       <Reveal>
-        <h1 className=" heading space-y-2 w-fit">
-          {t("heading")}
-          <div className="h-1 w-full mt-2 bg-secondary-500 rounded-full"></div>
-        </h1>
         <div className="lg:columns-4 md:columns-3 columns-2 space-y-4 body">
           {events.map((event, index) => (
             <div
@@ -57,24 +55,23 @@ function Events({ events }: { events: EventType[] }) {
               />
               <div className="bg-white p-4 sm:p-6">
                 <time
-                  dateTime="2022-10-10"
+                  dateTime={formatDate(event.date)}
                   className="block text-xs text-gray-500"
                 >
-                  {" "}
                   {formatDate(event.date)}
                 </time>
-                <a href="#">
-                  <h3 className="mt-0.5 text-lg text-gray-900">{event.title}</h3>
-                </a>
+                <h3 className="mt-0.5 text-lg text-gray-900">{event.title}</h3>
               </div>
             </div>
           ))}
         </div>
       </Reveal>
-      <dialog
+
+      <Dialog
         ref={dialogRef}
         className="w-[80%] h-[100%] p-2 md:p-15 bg-gray-100 rounded-xl  eventdialog overflow-hidden"
-        onClick={closeDialog}
+        onClick={()=>dialogRef.current?.close()}
+        closeCallback={onClose}
       >
         {(selectedEventIndex !== null) && (
           <div
@@ -86,13 +83,13 @@ function Events({ events }: { events: EventType[] }) {
               initialIndex={selectedEventIndex}
             />
             <form method="dialog" className="absolute top-0 right-0 z-10">
-              <button className="m-4" onClick={closeDialog}>
+              <button className="m-4">
                 <CircleX className="text-red-700" size={32} />
               </button>
             </form>
           </div>
         )}
-      </dialog>
+      </Dialog>
     </section>
   );
 }

@@ -6,6 +6,7 @@ import { FqaType } from "~/lib/types";
 import { useTranslations } from "next-intl";
 import LocaleLink from "../ui/LocaleLink";
 import Reveal from "../Animations/reveal";
+import Heading from "../Heading/Heading";
 
 const QuestionAnswer = ({
   question,
@@ -20,9 +21,8 @@ const QuestionAnswer = ({
 
   return (
     <section
-      className={`  group border-s-4 border-primary-800/80 bg-gray-50 p-3 transform transition-opacity duration-500 ${
-        isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"
-      }`}
+      className={`  group border-s-4 border-primary-800/80 bg-gray-50 p-3 transform transition-opacity duration-500 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"
+        }`}
     >
       <summary
         className="flex cursor-pointer items-center justify-between gap-1.5"
@@ -32,9 +32,8 @@ const QuestionAnswer = ({
         <span className="shrink-0 rounded-full bg-primary-200 p-1.5 text-gray-900 sm:p-3">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className={`size-5 shrink-0 transition-transform duration-300 ${
-              isOpen ? "rotate-45" : ""
-            }`}
+            className={`size-5 shrink-0 transition-transform duration-300 ${isOpen ? "rotate-45" : ""
+              }`}
             viewBox="0 0 20 20"
             fill="currentColor"
           >
@@ -47,9 +46,8 @@ const QuestionAnswer = ({
         </span>
       </summary>
       <div
-        className={`transition-all duration-500 ease-in-out overflow-hidden ${
-          isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-        }`}
+        className={`transition-all duration-500 ease-in-out overflow-hidden ${isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+          }`}
         style={{ maxHeight: isOpen ? "500px" : "0" }}
       >
         <p className="mt-2 leading-relaxed text-gray-700">{answer}</p>
@@ -79,8 +77,9 @@ const Fqas = ({ fqas }: { fqas: FqaType[] }) => {
     <section className="">
       <div className="relative grid grid-cols-1 gap-8 lg:grid-cols-3 lg:items-center lg:gap-16 justify-between content-container">
         <div className="sm:mx-auto lg:col-span-1 flex flex-col md:gap-4 gap-2">
-          <h2 className="heading text-gray-900">{t("heading")}</h2>
-          <div className="h-1 w-14 bg-primary-800/80 rounded-full"></div>
+          <Heading>
+            {t("heading")}
+          </Heading>
           <div className="flex flex-col gap-4">
             <p className="body text-gray-700">{t("description")}</p>
             <LocaleLink href={"/contact"}>

@@ -1,7 +1,8 @@
 import { getTranslations } from "next-intl/server";
-import { PortableText } from "next-sanity";
 import Image from "next/image";
 import { LocationType } from "~/lib/types";
+import Heading from "../Heading/Heading";
+import RichText from "../RichText/RichText";
 
 const NearbyPlaces = async ({
   detail,
@@ -15,13 +16,10 @@ const NearbyPlaces = async ({
     <section className="">
       <div className="mx-auto max-w-screen-xl ">
         <div className="mx-auto flex flex-col md:gap-4 gap-2">
-          <h2 className="text-left text-gray-950 heading">
+          <Heading>
             {t("heading")}
-          </h2>
-
-          <article className="body md:text-left leading-relaxed space-y-4">
-            <PortableText value={detail}/>
-          </article>
+          </Heading>
+          <RichText value={detail} className="body md:text-left leading-relaxed" />
         </div>
 
         <div className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">

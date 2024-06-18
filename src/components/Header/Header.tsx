@@ -8,7 +8,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef } from "react";
 import NestedLink from "./NestedLink";
 import Image from "next/image";
-import ResourceMarquee from "../ResourceMarguee/ResourceMarguee";
+import ResourceMarquee from "../ResourceMarquee/ResourceMarquee";
 
 function isInRoute(curr_path: string, route: string) {
   if (route == "/") {

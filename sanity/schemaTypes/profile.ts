@@ -1,12 +1,10 @@
 import { defineField, defineType } from 'sanity'
 import { baseLanguage } from './locale'
-import { CommentIcon } from '@sanity/icons'
 
 export default defineType({
-    name: 'testimonial',
-    title: 'Testimonial',
-    type: 'document',
-    icon: CommentIcon,
+    name: 'profile',
+    title: 'Profile',
+    type: 'object',
     fields: [
         defineField({
             name: 'name',
@@ -16,28 +14,19 @@ export default defineType({
         }),
         defineField({
             name: 'image',
-            title: 'Profile Image',
+            title: 'Image',
             type: 'image',
+            validation: (Rule) => Rule.required(),
             options: {
                 hotspot: true,
             }
         }),
         defineField({
-            name: 'email',
-            title: 'Email',
-            type: 'string',
-        }),
-        defineField({
-            name: 'phoneNo',
-            title: 'Phone Number',
-            type: 'string',
-        }),
-        defineField({
-            name: 'statement',
-            title: 'Statement',
+            name: 'position',
+            title: 'Position',
             type: 'localeString',
             validation: (Rule) => Rule.required(),
-        })
+        }),
     ],
     preview: {
         select: {
