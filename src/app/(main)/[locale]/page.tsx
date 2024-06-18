@@ -18,7 +18,7 @@ export default async function Home() {
   return (
     <>
       <main className="space-y-8">
-        <Hero carouselImages={data.carosuel} /> 
+        <Hero carouselImages={data.carosuel} />
         <section className="content-container">
           <div>
             <Heading>{t("resources.heading")}</Heading>
