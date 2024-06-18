@@ -56,7 +56,7 @@ export async function fetchEvents(locale: string) {
 
 interface AyurvedicCenter {
     title: string,
-    description: string,
+    description: [any],
     videoLink: string,
     features: {
         image: Image,
@@ -105,8 +105,8 @@ export async function fetchAyrvedicCenterPage(locale: string) {
 
 
 interface Home {
-    story: string,
-    whoweare: string,
+    story: [any],
+    whoweare: [any],
     fqas: {
         question: string,
         answer: string
@@ -166,7 +166,7 @@ export async function fetchHomePage(locale: string) {
 
 interface VriddhashramaCenter {
     title: string,
-    description: string,
+    description: [any],
     videoLink: string,
     features: {
         image: Image,
@@ -220,7 +220,7 @@ export async function fetchRules(locale: string) {
     const query = `*[_type == "vriddhashrama"][0]{
           "rules":${coalesce("rules", locale)},
       }`
-    return await client.fetch<{rules:[any]}>(query);
+    return await client.fetch<{ rules: [any] }>(query);
 }
 
 
@@ -246,7 +246,7 @@ export async function fetchContactDetails(locale: string) {
 type AboutPage = {
     sections: {
         title: string,
-        description: string,
+        description: [any],
         image: Image
     }[]
 }
@@ -290,4 +290,33 @@ export async function fetchPricingPage(locale: string) {
 
     let page = await client.fetch<PricingPage>(query);
     return page
+}
+
+
+type Organisation = {
+    members: {
+        name: string,
+        position: string,
+        image: Image
+    }[]
+}
+
+export async function fetchOrganisationPage(locale: string) {
+    const query = `*[_type == "organisation"][0]{
+            "members":members[]{
+                "name":${coalesce("name", locale)},
+                "position":${coalesce("position", locale)},
+                image
+            }
+        }`
+
+    let page = await client.fetch<Organisation>(query);
+
+    return {
+        ...page,
+        members: page.members.map(member => ({
+            ...member,
+            image: urlForImage(member.image)
+        }))
+    }
 }

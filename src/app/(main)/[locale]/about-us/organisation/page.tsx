@@ -1,12 +1,14 @@
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import Image from "next/image";
 import Heading from "~/components/Heading/Heading";
 import ScrollDown from "~/components/Hero/ScrollDown";
 import Profile from "~/components/Profile/Profile";
-import { organisors } from "~/constants";
+import { fetchOrganisationPage } from "~/lib/queries";
 
 export default async function organisor() {
   const t = await getTranslations("organisation")
+  const locale = await getLocale();
+  const data = await fetchOrganisationPage(locale);
   return (
     <div>
       <div className="relative w-full h-full">
@@ -39,15 +41,13 @@ export default async function organisor() {
           {t("faculty")}
         </Heading>
 
-        <div className="flex flex-wrap justify-center gap-4 w-full md:space-x-3 md:space-y-4">
-          {organisors.map((facility, index) => (
+        <div className="flex flex-wrap justify-center gap-4 w-full">
+          {data.members.map((member, index) => (
             <Profile
-              name={facility.title}
-              image={facility.image}
-              position={facility.description}
+              {...member}
               index={index}
               key={index}
-              className="bg-secondary-400 w-52"
+              className="bg-secondary-300 w-52"
             />
           ))}
         </div>
