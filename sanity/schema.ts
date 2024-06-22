@@ -20,7 +20,9 @@ import pricing from './schemaTypes/pricing'
 import row from './schemaTypes/row'
 import profile from './schemaTypes/profile'
 import organisation from './schemaTypes/organisation'
+import career from './schemaTypes/career'
+import role from './schemaTypes/role'
 
 export const schema: { types: SchemaTypeDefinition[] } = {
-  types: [localeString,contact,localeText,localeBlockArray, location,gallery,event,ayurvedicCenter,features,vriddhashrama, doctor,Home,fqa,facility,testimonial,section,aboutus,row,pricing,organisation,profile],
+  types: [localeString,contact,localeText,localeBlockArray,role,location,gallery,event,ayurvedicCenter,career,features,vriddhashrama, doctor,Home,fqa,facility,testimonial,section,aboutus,row,pricing,organisation,profile],
 }

@@ -74,3 +74,16 @@ export type Member = {
     position:string,
     image:string
 }
+
+export type CareerType = {
+    title: string,
+    description: [any],
+    roles: Role[],
+    howtoapply: string
+};
+
+export type Role = {
+    title: string,
+    description: string,
+    eligibility: string
+};

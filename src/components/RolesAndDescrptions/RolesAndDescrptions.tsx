@@ -1,6 +1,4 @@
-
 import React, { useState, useEffect, useRef } from "react";
-import { tabData } from "~/constants";
 import { Button } from "~/components/ui/button";
 import {
   Drawer,
@@ -10,13 +8,15 @@ import {
   DrawerFooter,
   DrawerHeader,
   DrawerTitle,
-  DrawerTrigger,
 } from "~/components/ui/drawer";
+import { CareerType } from "~/lib/types";
+import { useTranslations } from "next-intl";
 
-const RolesAndDescriptions = () => {
+export default function RolesAndDescriptions({ data }: { data: CareerType }) {
   const [selectedTab, setSelectedTab] = useState<string | null>(null);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const drawerRef = useRef<HTMLDivElement>(null);
+  const t = useTranslations("career");
 
   const openDrawer = (tabTitle: string) => {
     setSelectedTab(tabTitle);
@@ -34,6 +34,13 @@ const RolesAndDescriptions = () => {
     const email = "info@kvdhama.com";
     window.location.href = `mailto:${email}`;
   };
+
+  const tabData = data.roles.map((role, index) => ({
+    id: index,
+    title: role.title,
+    jobRole: role.description,
+    eligibility: role.eligibility
+  }));
 
   useEffect(() => {
     const handleEscapeKey = (event: KeyboardEvent) => {
@@ -77,7 +84,7 @@ const RolesAndDescriptions = () => {
         ))}
       </div>
       <Drawer open={isDrawerOpen} onClose={closeDrawer}>
-        <DrawerContent ref={drawerRef} className="bg-primary-100 leading-relaxed">
+        <DrawerContent ref={drawerRef} className="bg-primary-100 leading-relaxed max-h-full ">
           {selectedTab && (
             <div className="mx-auto w-full max-w-lg">
               <DrawerHeader>
@@ -86,17 +93,17 @@ const RolesAndDescriptions = () => {
                   - {tabData.find((item) => item.title === selectedTab)?.jobRole}
                 </DrawerDescription>
                 <div className="flex flex-col md:flex-row items-center gap-2 border border-black p-2 rounded-2xl">
-                  <h1 className="font-bold text-lg">Eligibility:</h1>
+                  <h1 className="font-bold text-lg">{t("eligibility")}</h1>
                   <h2 className="text-md">
                     {tabData.find((item) => item.title === selectedTab)?.eligibility}
                   </h2>
                 </div>
               </DrawerHeader>
               <DrawerFooter>
-                <Button onClick={sendEmail}>Send Email</Button>
+                <Button onClick={sendEmail}>{t("buttons.send")}</Button>
                 <DrawerClose asChild>
                   <Button onClick={closeDrawer} className="border border-black bg-white hover:bg-gray-300">
-                    Close
+                    {t("buttons.close")}
                   </Button>
                 </DrawerClose>
               </DrawerFooter>
@@ -106,6 +113,6 @@ const RolesAndDescriptions = () => {
       </Drawer>
     </section>
   );
-};
+}
 
-export default RolesAndDescriptions;
+

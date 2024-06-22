@@ -320,3 +320,32 @@ export async function fetchOrganisationPage(locale: string) {
         }))
     }
 }
+
+
+interface CareerPage {
+    title: string,
+    description: [any],
+    roles: {
+        title: string,
+        description: string,
+        eligibility: string
+    }[],
+    howtoapply: string
+}
+
+export async function fetchCareerPage(locale: string) {
+    const query = `*[_type == "career"][0]{
+        "title": ${coalesce("title", locale)},
+        "description": ${coalesce("description", locale)},
+        "roles":roles[]{
+            "title":${coalesce("title", locale)},
+            "description":${coalesce("description", locale)},
+            "eligibility":${coalesce("eligibility", locale)}
+          },
+        "howtoapply": ${coalesce("howtoapply", locale)}
+    }`;
+
+    let page = await client.fetch<CareerPage>(query);
+    return page;
+}
+
