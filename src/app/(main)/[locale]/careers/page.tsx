@@ -9,7 +9,7 @@ export default function Careers() {
 
   return (
     <>
-      <main className="content-container space-y-8">
+      <main className="content-container  space-y-8">
         <section className="flex md:gap-4 gap-2 flex-col pt-20">
           <h2
             className="text-gray-900 text-left heading w-fit capitalize"

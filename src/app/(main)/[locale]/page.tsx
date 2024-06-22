@@ -19,11 +19,7 @@ export default async function Home() {
     <>
       <main className="space-y-8">
         <Hero carouselImages={data.carosuel} />
-<<<<<<< HEAD
-        <section className="content-container">
-=======
         {/* <section className="content-container">
->>>>>>> 9d0740afc8715aad9cee5b531f09263169a6e90c
           <div>
             <Heading>{t("resources.heading")}</Heading>
             <p className="pb-8">{t("resources.content")}</p>
