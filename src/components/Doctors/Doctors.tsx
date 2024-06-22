@@ -28,6 +28,7 @@ function Doctors({ doctors }: { doctors: DoctorType[] }) {
                   image={doctor.image}
                   position={doctor.qualification}
                   index={index}
+                  className="p-0"
                 />
               </CarouselItem>
             ))}

@@ -1,6 +1,7 @@
 import { getLocale, getTranslations } from "next-intl/server";
 import Heading from "~/components/Heading/Heading";
 import NearbyPlaces from "~/components/NearbyPlaces/NearbyPlaces";
+import RichText from "~/components/RichText/RichText";
 import VideoSection from "~/components/VideoSection/VideoSection";
 import ZigZag from "~/components/ZigZag/ZigZag";
 import { fetchVriddhashramaPage } from "~/lib/queries";
@@ -16,7 +17,7 @@ export default async function Vridddhashrama() {
         <Heading seperatorColor='secondary'>
           {pageData.title}
         </Heading>
-        <p className="body text-justify">{pageData.description}</p>
+        <RichText value={pageData.description}/>
       </section>
 
       <ZigZag contents={pageData.features} />

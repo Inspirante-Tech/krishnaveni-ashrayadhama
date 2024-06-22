@@ -16,7 +16,7 @@ function Profile({ index, name, image, position, ...props }: Props) {
         >
             <div
                 {...props}
-                className={cn("flex flex-col gap-3 items-center p-4 justify-center basis-auto md:basis-[45%] lg:basis-auto transition duration-200 ease-in-out hover:-translate-y-2 rounded-lg", props.className ?? "")}
+                className={cn("flex flex-col gap-3 items-center py-6 px-4 justify-center basis-auto md:basis-[45%] lg:basis-auto transition duration-200 ease-in-out hover:-translate-y-2 rounded-lg", props.className ?? "")}
 
             >
                 <ImageWithFallback

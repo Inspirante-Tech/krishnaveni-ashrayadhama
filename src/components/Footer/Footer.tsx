@@ -79,10 +79,14 @@ async function Footer() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col justify-center items-center text-center  p-5 bg-secondary-950">
-        <h1 className="text-gray-300 font-semibold">
-          &copy; 2023-2024 All rights reserved
+      <div className="flex flex-col justify-center items-center text-center p-5 bg-secondary-950">
+        <h1 className="text-gray-300 font-semibold mb-4">
+          <a href="https://inspirantech.in/" className="hover:text-blue-500">
+            Powered by Inspirante Technologies Pvt. Ltd.
+          </a>
         </h1>
+
+        <h1>&copy; 2023-2024 All rights reserved</h1>
       </div>
     </footer>
   );

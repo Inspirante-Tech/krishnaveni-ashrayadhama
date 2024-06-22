@@ -3,7 +3,7 @@ import "./style.css"
 import { cn } from '~/lib/utils'
 
 interface Props extends React.HTMLProps<HTMLDivElement> {
-    value: [any],
+    value: any,
 }
 
 function RichText({ value, ...props }: Props) {

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { SectionType } from "~/lib/types";
+import RichText from "../RichText/RichText";
 
 export default function ZigZag({ contents }: { contents: SectionType[] }) {
   return (
@@ -25,9 +26,15 @@ export default function ZigZag({ contents }: { contents: SectionType[] }) {
             >
               {content.title}
             </p>
-            <p className="body text-justify  leading-relaxed ">
-              {content.description}
-            </p>
+
+            {(Array.isArray(content.description)) ? (
+              <RichText value={content.description} />
+            ) : (
+              <p className="body text-justify  leading-relaxed ">
+                {content.description}
+              </p>
+            )
+            }
           </div>
         </section>
       ))}

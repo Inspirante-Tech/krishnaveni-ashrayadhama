@@ -43,7 +43,7 @@ export type FeatureType = {
 
 export type SectionType = {
     title: string,
-    description: string,
+    description: string | [any],
     image: string
 }
 
@@ -67,4 +67,10 @@ export type LocaleParamProp = {
     params: {
         locale: "kn" | "en"
     }
+}
+
+export type Member = {
+    name:string,
+    position:string,
+    image:string
 }

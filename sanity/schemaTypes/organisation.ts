@@ -22,8 +22,10 @@ export default defineType({
         })
     ],
     preview: {
-        select: {
-            title: `Organisation`,
+        prepare() {
+            return {
+                title: `Organisation`
+            }
         }
-    },
+    }
 })

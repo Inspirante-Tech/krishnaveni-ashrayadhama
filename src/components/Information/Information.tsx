@@ -4,8 +4,9 @@ import Reveal from "../Animations/reveal";
 import ScrollLag from "../Animations/scrollLag";
 import { useTranslations } from "next-intl";
 import Heading from "../Heading/Heading";
+import RichText from "../RichText/RichText";
 
-const Information: React.FC<{ data: string }> = ({ data }) => {
+const Information: React.FC<{ data: [any] }> = ({ data }) => {
   const t = useTranslations("home")
   return (
     <section
@@ -18,11 +19,7 @@ const Information: React.FC<{ data: string }> = ({ data }) => {
               <Heading seperatorColor="secondary">
                 {t("whoweare")}
               </Heading>
-              {[data].map((info, index) => (
-                <p className="body" key={index}>
-                  {info}
-                </p>
-              ))}
+              <RichText value={data}/>
             </div>
           </div>
         </Reveal>
