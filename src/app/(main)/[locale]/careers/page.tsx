@@ -7,7 +7,7 @@ export default async function page() {
   const data = await fetchCareerPage(locale);
   return (
     <main className='mt-5 min-h-screen mb-8 '>
-        <Career data={data}/>
+      <Career data={data} />
     </main>
   )
 }
