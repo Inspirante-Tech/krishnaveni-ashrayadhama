@@ -12,9 +12,12 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "~/components/ui/drawer";
+import { CareerType } from "~/lib/types";
+import { useTranslations } from "next-intl";
 
 
-const RolesAndDescriptions = () => {
+
+export default function RolesAndDescriptions({ data }: { data: CareerType }) {
   const [selectedTab, setSelectedTab] = useState<string | null>(null);
 
   const openDrawer = (tabTitle: string) => {
@@ -27,6 +30,15 @@ const RolesAndDescriptions = () => {
     const email = "info@kvdhama.com";
     window.location.href = `mailto:${email}`;
   };
+
+    const tabData = data.roles.map((role, index) => ({
+    id: index,
+    title: role.title,
+    jobRole: role.description,
+    eligibility: role.eligibility
+  }));
+
+  const t = useTranslations("career");
 
   return (
     <section className="flex gap-1">
@@ -70,13 +82,13 @@ const RolesAndDescriptions = () => {
                 </DrawerHeader>
 
                 <DrawerFooter>
-                  <Button onClick={sendEmail}>Send Email</Button>
+                  <Button onClick={sendEmail}>{t("buttons.send")}</Button>
                   <DrawerClose asChild>
                     <Button
                       onClick={closeDrawer}
                       className="border border-black bg-white hover:bg-gray-300"
                     >
-                      Close
+                      {t("buttons.close")}
                     </Button>
                   </DrawerClose>
                 </DrawerFooter>
@@ -89,4 +101,3 @@ const RolesAndDescriptions = () => {
   );
 };
 
-export default RolesAndDescriptions;

@@ -109,14 +109,27 @@
         }
     },
     "organisation": {
-        "heading": "Team of Organizers",
-        "content": "Brings together diverse talents to a resounding success.",
-        "faculty": "faculty"
+        "heading": "ಸಂಘಟಕರ ತಂಡ",
+        "content": "ವೈವಿಧ್ಯಮಯ ಪ್ರತಿಭೆಗಳನ್ನು ಒಟ್ಟುಗೂಡಿಸಿ ಅದ್ಭುತ ಯಶಸ್ಸನ್ನು ತರುತ್ತದೆ",
+        "faculty": "ಸಿಬ್ಬಂದಿ"
     },
     "resources": {
         "rulesRegulations": "ನಿಯಮಗಳು ಮತ್ತು ನಿಬಂಧನೆಗಳು",
         "pricing": "ಬೆಲೆ",
         "permanentForm": "ಶಾಶ್ವತ ಅರ್ಜಿ",
         "nominationForm": "ನಾಮನಿರ್ದೇಶನ ಅರ್ಜಿ"
+    },
+    "career":{
+        "heading":"ಪಾತ್ರ ಮತ್ತು ಜವಾಬ್ದಾರಿಗಳು",
+        "question": "ಅರ್ಜಿ ಸಲ್ಲಿಸುವುದು ಹೇಗೆ ಎಂದು ತಿಳಿಯಬೇಕೇ?",
+        "dialog":
+        {
+            "heading": "ಅರ್ಜಿ ಸಲ್ಲಿಸುವುದು ಹೇಗೆ?"
+        },
+        "buttons":
+        {
+            "send": "ಇಮೇಲ್ ಕಳುಹಿಸಿ",
+            "close": "ಮುಚ್ಚಿ"
+        }
     }
 }
