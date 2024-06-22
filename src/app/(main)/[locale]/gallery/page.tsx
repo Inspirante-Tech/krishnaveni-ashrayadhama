@@ -7,7 +7,7 @@ export default async function page() {
   const images = await fetchGalleryImages(locale);
   return (
     <main className="min-h-screen ">
-      <div className="pt-20">
+      <div className="pt-24">
         <Gallery images={images} />
       </div>
     </main>

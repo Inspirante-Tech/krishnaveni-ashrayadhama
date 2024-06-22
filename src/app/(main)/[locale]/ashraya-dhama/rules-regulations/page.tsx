@@ -8,7 +8,7 @@ async function page() {
   const data = await fetchRules(locale);
   const t = await getTranslations("vridddhashrama.rulesAndRegulation");
   return (
-    <main className="content-container space-y-16 md:space-y-20 mt-20 ">
+    <main className="content-container space-y-5 md:space-y-15 mt-24 ">
       <Heading>
         {t("heading")}
       </Heading>

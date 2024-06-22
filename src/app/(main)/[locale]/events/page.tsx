@@ -6,7 +6,7 @@ export default async function page() {
   const locale = await getLocale();
   const events = await fetchEvents(locale);
   return (
-    <main className='mt-20 min-h-screen mb-8 '>
+    <main className='mt-24 min-h-screen mb-8 '>
         <Events events={events}/>
     </main>
   )
