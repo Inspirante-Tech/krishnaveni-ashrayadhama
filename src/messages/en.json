@@ -118,5 +118,18 @@
         "pricing": "pricing",
         "permanentForm": "permanent Form",
         "nominationForm": "nomination Form"
+    },
+    "career":{
+        "heading": "Want To Work With Us?",
+        "question": "Want to know how to apply?",
+        "dialog":
+        {
+            "heading": "How to Apply"
+        },
+        "buttons":
+        {
+            "send": "Send Email",
+            "close": "Close"
+        }
     }
 }
