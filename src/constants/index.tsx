@@ -74,8 +74,8 @@ export const resources = [
   },
   {
     type: "doc",
-    id: "tempForm",
-    href: "/Temp form.pdf",
+    id: "temporaryForm",
+    href: "/Temporary form.pdf",
   },
   {
     type: "link",
