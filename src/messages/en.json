@@ -1,136 +1,135 @@
 {
-    "home": {
-        "facilities": {
-            "heading": "Facilities"
-        },
-        "fqas": {
-            "heading": "Frequently Asked Questions...",
-            "description": "Explore common questions and find answers below. If you don't see what you're looking for, feel free to contact us for assistance.",
-            "contactUs": "contact us"
-        },
-        "testimonials": {
-            "heading": "testimonials"
-        },
-        "hero": {
-            "heading": "Krishnaveni Ashraya Dhama",
-            "content": "Nurturing legacy, Empowering Well-being",
-            "cta": "Get in Touch"
-        },
-        "resources": {
-            "heading": "resources",
-            "content": "Quick Links for anyone interested in our services",
-            "forms": {
-                "heading": "forms",
-                "permanentForm": "permanent Form",
-                "nominationForm": "nomination From"
-            },
-            "links": {
-                "heading": "Links",
-                "aboutUs": "about us",
-                "specialities": "specialities",
-                "ashrayaDhama": "ashraya dhama",
-                "ayurvedicCenter": "ayurvedic center",
-                "events": "events",
-                "gallery": "gallery",
-                "contact": "contact",
-                "rulesRegulations": "rules and regulations",
-                "pricing": "pricing"
-            }
-        },
-        "ourStory": "Our Story",
-        "whoweare": "Who we are"
+  "home": {
+    "facilities": {
+      "heading": "Facilities"
     },
-    "events": {
-        "heading": "Events"
+    "fqas": {
+      "heading": "Frequently Asked Questions...",
+      "description": "Explore common questions and find answers below. If you don't see what you're looking for, feel free to contact us for assistance.",
+      "contactUs": "contact us"
     },
-    "gallery": {
-        "heading": "Gallery"
+    "testimonials": {
+      "heading": "testimonials"
     },
-    "links": {
-        "home": "home",
+    "hero": {
+      "heading": "Krishnaveni Ashraya Dhama",
+      "content": "Nurturing legacy, Empowering Well-being",
+      "cta": "Get in Touch"
+    },
+    "resources": {
+      "heading": "resources",
+      "content": "Quick Links for anyone interested in our services",
+      "forms": {
+        "heading": "forms",
+        "permanentForm": "permanent Form",
+        "nominationForm": "nomination From"
+      },
+      "links": {
         "heading": "Links",
         "aboutUs": "about us",
         "specialities": "specialities",
         "ashrayaDhama": "ashraya dhama",
         "ayurvedicCenter": "ayurvedic center",
         "events": "events",
-        "career": "career",
         "gallery": "gallery",
         "contact": "contact",
         "rulesRegulations": "rules and regulations",
-        "pricing": "pricing",
-        "krishnaveni": "krishnaveni",
-        "organisation": "organisation"
+        "pricing": "pricing"
+      }
     },
-    "ayurvedicCenter": {
-        "heading": "ayurvedic center",
-        "doctors": {
-            "heading": "doctors",
-            "description": ""
-        },
-        "features": {
-            "heading": "features"
-        }
+    "ourStory": "Our Story",
+    "whoweare": "Who we are"
+  },
+  "events": {
+    "heading": "Events"
+  },
+  "gallery": {
+    "heading": "Gallery"
+  },
+  "links": {
+    "home": "home",
+    "heading": "Links",
+    "aboutUs": "about us",
+    "specialities": "specialities",
+    "ashrayaDhama": "ashraya dhama",
+    "ayurvedicCenter": "ayurvedic center",
+    "events": "events",
+    "career": "career",
+    "gallery": "gallery",
+    "contact": "contact",
+    "rulesRegulations": "rules and regulations",
+    "pricing": "pricing",
+    "krishnaveni": "krishnaveni",
+    "organisation": "organisation"
+  },
+  "ayurvedicCenter": {
+    "heading": "ayurvedic center",
+    "doctors": {
+      "heading": "doctors",
+      "description": ""
     },
-    "vridddhashrama": {
-        "rulesAndRegulation": {
-            "heading": "rules and regulations"
-        },
-        "surrounding": {
-            "heading": "Local Attractions & Surroundings"
-        }
-    },
-    "pricing": {
-        "heading": "pricing",
-        "table": {
-            "title": "title",
-            "detail": "detail"
-        }
-    },
-    "aboutUs": {
-        "heading": "about us"
-    },
-    "contact": {
-        "heading": "Welcome To Ashraya Dhama",
-        "content": "Got a question or just want to say hello? Drop us a line below and let's make some magic happen!",
-        "form": {
-            "heading": "Get in Touch",
-            "name": "name",
-            "email": "email",
-            "phoneNo": "Phone Number",
-            "message": "message",
-            "submitDetails": "Submit Details",
-            "submitReview": "Submit Reviews",
-            "profileImage": "Profile Image",
-            "review": "Review",
-            "reviewTitle": "Submit Your Testimonial",
-            "reviewContent": "We value your feedback! Please share your experience with us.",
-            "subscribeNote": "I want to receive emails about events, product updates and company announcements."
-        }
-    },
-    "organisation": {
-        "heading": "Team of Organizers",
-        "content": "Brings together diverse talents to a resounding success.",
-        "faculty": "faculty"
-    },
-    "resources": {
-        "rulesRegulations": "rules and Regulations",
-        "pricing": "pricing",
-        "permanentForm": "permanent Form",
-        "nominationForm": "nomination Form"
-    },
-    "career":{
-        "heading": "Want To Work With Us?",
-        "question": "Want to know how to apply?",
-        "dialog":
-        {
-            "heading": "How to Apply"
-        },
-        "buttons":
-        {
-            "send": "Send Email",
-            "close": "Close"
-        },
-        "elegibility": "Elegibility"
+    "features": {
+      "heading": "features"
     }
+  },
+  "vridddhashrama": {
+    "rulesAndRegulation": {
+      "heading": "rules and regulations"
+    },
+    "surrounding": {
+      "heading": "Local Attractions & Surroundings"
+    }
+  },
+  "pricing": {
+    "heading": "pricing",
+    "table": {
+      "title": "title",
+      "detail": "detail"
+    }
+  },
+  "aboutUs": {
+    "heading": "about us"
+  },
+  "contact": {
+    "heading": "Welcome To Ashraya Dhama",
+    "content": "Got a question or just want to say hello? Drop us a line below and let's make some magic happen!",
+    "form": {
+      "heading": "Get in Touch",
+      "name": "name",
+      "email": "email",
+      "phoneNo": "Phone Number",
+      "message": "message",
+      "submitDetails": "Submit Details",
+      "submitReview": "Submit Reviews",
+      "profileImage": "Profile Image",
+      "review": "Review",
+      "reviewTitle": "Submit Your Testimonial",
+      "reviewContent": "We value your feedback! Please share your experience with us.",
+      "subscribeNote": "I want to receive emails about events, product updates and company announcements."
+    }
+  },
+  "organisation": {
+    "heading": "Team of Organizers",
+    "content": "Brings together diverse talents to a resounding success.",
+    "Trustee": "trustee",
+    "faculty": "faculty"
+  },
+  "resources": {
+    "rulesRegulations": "rules and Regulations",
+    "pricing": "pricing",
+    "permanentForm": "permanent Form",
+    "nominationForm": "nomination Form"
+  },
+  "career": {
+    "heading": "Want To Work With Us?",
+    "question": "Want to know how to apply?",
+    "dialog": {
+      "heading": "How to Apply"
+    },
+    "buttons": {
+      "send": "Send Email",
+      "close": "Close"
+    },
+    "elegibility": "Elegibility"
+  }
 }
