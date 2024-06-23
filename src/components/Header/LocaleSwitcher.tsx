@@ -24,7 +24,7 @@ export default function LocalSwitcher() {
       <button className="w-full p-2 flex gap-2 items-center bg-primary-500 rounded border border-action-700" disabled={isPending}>
         <Languages strokeWidth={1.5} className="size-5"/> <span className="mx-auto">{locale === "en" ? "English" : "ಕನ್ನಡ"}</span>
       </button>
-      <div className="group-hover:h-max absolute h-0 bg-primary-50 rounded overflow-hidden w-32 p-1 shadow-xl z-10">
+      <div className="group-hover:h-max absolute h-0 bg-primary-50 rounded overflow-hidden w-32 hover:p-1 shadow-xl z-10">
 
         <div className="flex flex-col gap-1">
           {
