@@ -93,7 +93,7 @@ export default function RolesAndDescriptions({ data }: { data: CareerType }) {
                   - {tabData.find((item) => item.title === selectedTab)?.jobRole}
                 </DrawerDescription>
                 <div className="flex flex-col md:flex-row items-center gap-2 border border-black p-2 rounded-2xl">
-                  <h1 className="font-bold text-lg">{t("eligibility")}</h1>
+                  <h1 className="font-bold text-lg">{t("elegibility")}:</h1>
                   <h2 className="text-md">
                     {tabData.find((item) => item.title === selectedTab)?.eligibility}
                   </h2>
