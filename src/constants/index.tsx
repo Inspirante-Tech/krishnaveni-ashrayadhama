@@ -1,7 +1,7 @@
 export const navigation = [
   {
     id: "home",
-    url: "/"
+    url: "/",
   },
   {
     id: "aboutUs",
@@ -34,8 +34,8 @@ export const navigation = [
         },
         {
           id: "pricing",
-          url: "/ashraya-dhama/pricing"
-        }
+          url: "/ashraya-dhama/pricing",
+        },
       ],
     },
   },
@@ -71,6 +71,11 @@ export const resources = [
     type: "doc",
     id: "permanentForm",
     href: "/Permanent form.pdf",
+  },
+  {
+    type: "doc",
+    id: "temporaryForm",
+    href: "/Temporary form.pdf",
   },
   {
     type: "link",
@@ -654,60 +659,68 @@ export const tabData = [
   {
     id: 5,
     title: "Panchakarma Therapist (Male)",
-    jobRole: "Perform Panchakarma treatments, ensure patient comfort during procedures.",
-    eligibility: "Trained in Panchakarma"
+    jobRole:
+      "Perform Panchakarma treatments, ensure patient comfort during procedures.",
+    eligibility: "Trained in Panchakarma",
   },
   {
     id: 1,
     title: "Medical Officer",
-    jobRole: "Oversee patient care, prescribe Ayurvedic treatments, and manage the overall wellness programs.",
-    eligibility: "BAMS/MD (Ayu)"
+    jobRole:
+      "Oversee patient care, prescribe Ayurvedic treatments, and manage the overall wellness programs.",
+    eligibility: "BAMS/MD (Ayu)",
   },
   {
     id: 2,
     title: "Receptionist",
-    jobRole: "Manage the front desk, handle patient inquiries, schedule appointments, and maintain records.",
-    eligibility: "Any Degree with Computer Knowledge"
+    jobRole:
+      "Manage the front desk, handle patient inquiries, schedule appointments, and maintain records.",
+    eligibility: "Any Degree with Computer Knowledge",
   },
   {
     id: 3,
     title: "Nursing Staff",
-    jobRole: "Provide nursing care to patients, assist in treatments and therapies.",
-    eligibility: "ANM/GNM"
+    jobRole:
+      "Provide nursing care to patients, assist in treatments and therapies.",
+    eligibility: "ANM/GNM",
   },
   {
     id: 4,
     title: "Nursing Assistant",
-    jobRole: "Support nursing staff in patient care, assist in daily tasks and procedures.",
-    eligibility: "PUC"
+    jobRole:
+      "Support nursing staff in patient care, assist in daily tasks and procedures.",
+    eligibility: "PUC",
   },
- 
+
   {
     id: 6,
     title: "Panchakarma Therapist (Female)",
-    jobRole: "Perform Panchakarma treatments, ensure patient comfort during procedures.",
-    eligibility: "Trained in Panchakarma"
+    jobRole:
+      "Perform Panchakarma treatments, ensure patient comfort during procedures.",
+    eligibility: "Trained in Panchakarma",
   },
   {
     id: 7,
     title: "Security",
-    jobRole: "Ensure the safety and security of the center, manage entry and exit points.",
-    eligibility: "Relevant experience preferred"
+    jobRole:
+      "Ensure the safety and security of the center, manage entry and exit points.",
+    eligibility: "Relevant experience preferred",
   },
   {
     id: 8,
     title: "Attender",
-    jobRole: "Assist in the daily operations of the center, help with various tasks as needed.",
-    eligibility: "SSLC/PUC"
+    jobRole:
+      "Assist in the daily operations of the center, help with various tasks as needed.",
+    eligibility: "SSLC/PUC",
   },
   {
     id: 9,
     title: "House Keeping",
     jobRole: "Maintain cleanliness and hygiene standards of the center.",
-    eligibility: "Relevant experience preferred"
-  }
+    eligibility: "Relevant experience preferred",
+  },
 ];
-export const organisors= [
+export const organisors = [
   {
     id: 1,
     title: " Organisor 1",
@@ -765,4 +778,3 @@ export const organisors= [
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores, reprehenderit",
   },
 ];
-
