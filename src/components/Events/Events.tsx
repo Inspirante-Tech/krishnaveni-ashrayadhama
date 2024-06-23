@@ -60,7 +60,7 @@ function Events({ events }: { events: EventType[] }) {
                 >
                   {formatDate(event.date)}
                 </time>
-                <h3 className="mt-0.5 text-lg text-gray-900">{event.title}</h3>
+                <h3 className="mt-0.5 text-gray-900 text-left ">{event.title}</h3>
               </div>
             </div>
           ))}
@@ -75,7 +75,7 @@ function Events({ events }: { events: EventType[] }) {
       >
         {(selectedEventIndex !== null) && (
           <div
-            className="w-full h-full mt-12 md:mt-1"
+            className="w-full h-full"
             onClick={(e) => e.stopPropagation()}
           >
             <ThumbnailCarousel

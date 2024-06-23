@@ -47,10 +47,10 @@ const ThumbnailCarousel: React.FC<PropType> = ({ thumbnails, options, initialInd
     handleSelect();
     emblaMainApi.scrollTo(selectedIndex);
     emblaMainApi.on('select', handleSelect).on('reInit', handleSelect);
-  }, [emblaMainApi, handleSelect, initialIndex,selectedIndex]);
+  }, [emblaMainApi, handleSelect, initialIndex, selectedIndex]);
 
   return (
-    <div className={`space-y-10 md:space-y-0  flex flex-col gap-4 justify-center h-full ${styles.embla}`}>
+    <div className={`flex flex-col gap-4 justify-center h-full items-center max-w-full`}>
       <div className={`${styles.embla__viewport} flex-grow`} ref={emblaMainRef}>
         <div className={`${styles.embla__container} h-full`}>
           {thumbnails.map((thumbnail, index) => (
@@ -60,12 +60,10 @@ const ThumbnailCarousel: React.FC<PropType> = ({ thumbnails, options, initialInd
                 width={500}
                 height={500}
                 alt={thumbnail.alt}
-                className={`rounded h-full object-contain w-auto ${index === selectedIndex ? styles.selected : ''}`}
+                className={`rounded flex-grow h-[90%] object-contain w-auto ${index === selectedIndex ? styles.selected : ''}`}
                 priority={false}
               />
-              <div className="p-2">
-                <h2 className="text-2xl font-bold">{thumbnail.title}</h2>
-              </div>
+              <h2 className="text-xl font-bold text-left">{thumbnail.title}</h2>
             </div>
           ))}
         </div>
@@ -74,7 +72,7 @@ const ThumbnailCarousel: React.FC<PropType> = ({ thumbnails, options, initialInd
         <div className={styles.emblaThumbs__viewport} ref={emblaThumbsRef}>
           <div className={styles.emblaThumbs__container}>
             {thumbnails.map((thumbnail, index) => (
-              <div key={thumbnail.id} onClick={() => onThumbClick(index)} className={`${styles.emblaThumbs__slide} ${selectedIndex === index  ? styles.emblaThumbs__slide__selected : ''} `}>
+              <div key={thumbnail.id} onClick={() => onThumbClick(index)} className={`${styles.emblaThumbs__slide} ${selectedIndex === index ? styles.emblaThumbs__slide__selected : ''} `}>
                 <Image
                   src={thumbnail.image}
                   width={50}
