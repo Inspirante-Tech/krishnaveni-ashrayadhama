@@ -130,6 +130,7 @@
         {
             "send": "Send Email",
             "close": "Close"
-        }
+        },
+        "elegibility": "Elegibility"
     }
 }
