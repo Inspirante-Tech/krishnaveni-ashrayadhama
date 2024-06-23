@@ -2,6 +2,7 @@
 import * as v from "valibot";
 import { assertValue } from "~/lib/utils";
 import { type Message } from "~/lib/types";
+import { mailOptions, transporter } from "~/lib/mailer";
 
 const ProjectID = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID
 const DatasetName = process.env.NEXT_PUBLIC_SANITY_DATASET
@@ -14,26 +15,26 @@ async function postToSanity(mutations: { [key: string]: any }[]) {
         headers: {
             'Content-type': 'application/json',
             Authorization: `Bearer ${API_KEY}`
-        },
+    },
         body: JSON.stringify({ mutations })
     })
 }
 
 const ContactSchema = v.object({
-    name: v.string(),
-    email: v.optional(v.pipe(v.string(), v.email())),
-    phoneNo: v.pipe(v.string(), v.length(10)),
-    message: v.string(),
+    name: v.string("name is needed"),
+    email: v.optional(v.pipe(v.string("email must be valid email"), v.email("email must be valid email"))),
+    phoneNo: v.pipe(v.string("invalid phone no"), v.length(10, "phone number must only contain 10 numbers")),
+    message: v.string("message should not be blank"),
     captcha: v.string()
 
 })
 
 const TestimonialSchema = v.object({
-    name: v.string(),
-    email: v.optional(v.pipe(v.string(), v.email())),
-    phoneNo: v.pipe(v.string(), v.length(10)),
-    image: v.string(),
-    review: v.string(),
+    name: v.string("name is needed"),
+    email: v.optional(v.pipe(v.string("email must be valid email"), v.email("email must be valid email"))),
+    phoneNo: v.pipe(v.string("invalid phone no"), v.length(10, "phone no must contain 10 numbers")),
+    image: v.optional(v.string()),
+    review: v.string("message should not be blank"),
     captcha: v.string()
 })
 
@@ -54,13 +55,21 @@ async function verifyRecaptcha(captcha: string) {
 }
 
 export async function uploadContact(formData: FormData): Promise<Message> {
-    const data = v.parse(ContactSchema, Object.fromEntries(formData.entries()));
-
-    if (!verifyRecaptcha(data.captcha)) {
-        return { type: "error", message: "could not verify recaptcha" }
+    let data;
+    try {
+        data = v.parse(ContactSchema, Object.fromEntries(formData.entries()));
+    } catch (err) {
+        if (err instanceof v.ValiError) {
+            return { type: "error", message: err.issues.map(issue => issue.message).join("") }
+        }
+        return { type: "error", message: "something went wrong" }
     }
 
     try {
+        if (!verifyRecaptcha(data.captcha)) {
+            return { type: "error", message: "could not verify recaptcha" }
+        }
+
         const mutations = [
             {
                 create: {
@@ -71,15 +80,46 @@ export async function uploadContact(formData: FormData): Promise<Message> {
         ]
 
         await postToSanity(mutations)
+
+        await transporter.sendMail({
+            ...mailOptions,
+            subject: "Contact Form from KVDhama",
+            text: `message from ${data.name}`, // plain text body
+            html: `<div>
+                    <h1>Name: ${data.name}</h1>
+                    <div>
+                        <strong>Email:</strong>
+                        <p> ${data.email ?? "Not specified"}</p>
+                    </div>
+
+                    <div>
+                        <strong>Phone:</strong>
+                        <p> ${data.phoneNo ?? "Not specified"}</p>
+                    </div>
+
+                    <strong>Message</strong>
+                    <p>
+                        ${data.message}
+                    </p>
+                </div>`
+        })
     } catch (error) {
         console.error(error)
         return { type: "error", message: "something went wrong" }
     }
-    return { type: "success", message: "sucessfully submitted" }
+    return { type: "success", message: "contact form sucessfully submitted" }
 }
 
 export async function uploadTestimonial(formData: FormData): Promise<Message> {
-    const data = v.parse(TestimonialSchema, Object.fromEntries(formData.entries()));
+    let data;
+    try {
+        data = v.parse(TestimonialSchema, Object.fromEntries(formData.entries()));
+    } catch (err) {
+        if (err instanceof v.ValiError) {
+            return { type: "error", message: err.issues.map(issue => issue.message).join("") }
+        }
+        return { type: "error", message: "something went wrong" }
+    }
 
     if (!verifyRecaptcha(data.captcha)) {
         return { type: "error", message: "could not verify recaptcha" }
@@ -113,5 +153,5 @@ export async function uploadTestimonial(formData: FormData): Promise<Message> {
         console.error(error)
         return { type: "error", message: "something went wrong" }
     }
-    return { type: "success", message: "sucessfully submitted" }
+    return { type: "success", message: "testimonial sucessfully submitted" }
 }

@@ -26,6 +26,10 @@ export function formatDate(date: string) {
   return new Intl.DateTimeFormat('en-US').format(new Date(date))
 }
 
+export function exhaustiveMatchingGaurd(_: never): never {
+  throw new Error("SHould not have reached here; all the cases must be handled")
+}
+
 export function createYoutubeEmbeddedLink(videoUrl: string) {
   const v = new URL(videoUrl).searchParams.get('v');
   return `https://www.youtube.com/embed/${v}`

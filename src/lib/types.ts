@@ -53,8 +53,10 @@ export type ImageType = {
     description: string
 }
 
+export type MessageType = "success" | "error"
+
 export type Message = {
-    type: "success" | "error",
+    type: MessageType,
     message: string
 }
 
@@ -70,9 +72,9 @@ export type LocaleParamProp = {
 }
 
 export type Member = {
-    name:string,
-    position:string,
-    image:string
+    name: string,
+    position: string,
+    image: string
 }
 
 export type CareerType = {
