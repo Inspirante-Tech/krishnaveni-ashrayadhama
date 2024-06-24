@@ -91,8 +91,8 @@
     "heading": "about us"
   },
   "contact": {
-    "heading": "Welcome To Ashraya Dhama",
-    "content": "Got a question or just want to say hello? Drop us a line below and let's make some magic happen!",
+    "heading": "Welcome",
+    "content": "We would love to hear from you. Please fill out the form below with your questions or comments, and we will get back to you as soon as possible.",
     "form": {
       "heading": "Get in Touch",
       "name": "name",
@@ -112,7 +112,7 @@
   "organisation": {
     "heading": "Team of Organizers",
     "content": "Brings together diverse talents to a resounding success.",
-    "Trustee": "trustee",
+    "Trustee": "Trustees",
     "faculty": "faculty"
   },
   "resources": {

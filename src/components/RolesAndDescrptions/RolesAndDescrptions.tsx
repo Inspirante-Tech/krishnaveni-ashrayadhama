@@ -75,7 +75,7 @@ export default function RolesAndDescriptions({ data }: { data: CareerType }) {
         {tabData.map((tab) => (
           <div key={tab.id} className="flex justify-center m-1">
             <button
-              className="p-2 border border-black rounded-md w-max text-md md:text-2xl font-bold bg-primary-200 hover:bg-primary-100 hover:shadow-lg focus:outline-none transform hover:scale-105 transition duration-300"
+              className="p-2 border border-black rounded-md w-max text-md font-bold bg-primary-200 hover:bg-primary-100 hover:shadow-lg focus:outline-none transform hover:scale-105 transition duration-300"
               onClick={() => openDrawer(tab.title)}
             >
               {tab.title}
