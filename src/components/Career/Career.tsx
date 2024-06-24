@@ -21,7 +21,6 @@ export default function Career({ data }: { data: CareerType }) {
             {data.title}
             <div className="h-1 w-full bg-secondary-500 rounded-full mt-2"></div>
           </h2>
-          
             <RichText value={data.description} />
           
           <span onClick={() => dialogRef.current?.open()} className="text-blue-600 underline cursor-pointer">{t("question")}</span>
