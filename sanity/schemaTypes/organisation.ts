@@ -8,6 +8,19 @@ export default defineType({
     icon:UsersIcon,
     fields: [
         defineField({
+            name: 'trustees',
+            title: 'Trustees',
+            type: 'array',
+            validation: (Rule) => Rule.required(),
+            of: [
+                defineField({
+                    name: "trustee",
+                    title: "Trustee",
+                    type: "trustee"
+                })
+            ]
+        }),
+        defineField({
             name: 'members',
             title: 'Members',
             type: 'array',
