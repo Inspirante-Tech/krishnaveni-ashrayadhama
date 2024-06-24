@@ -1,5 +1,6 @@
 import { getLocale, getTranslations } from "next-intl/server";
 import Doctors from "~/components/Doctors/Doctors";
+import Heading from "~/components/Heading/Heading";
 import RichText from "~/components/RichText/RichText";
 import VideoSection from "~/components/VideoSection/VideoSection";
 import ZigZag from "~/components/ZigZag/ZigZag";
@@ -12,20 +13,11 @@ async function page() {
   return (
     <main className="content-container space-y-8 mt-24">
       <section className="flex md:gap-4 gap-2 flex-col">
-        <h2
-          className="text-gray-900 text-left heading w-fit"
-          style={{ textTransform: "capitalize" }}
-        >
-          {pageData.title}
-          <div className="h-1 w-full bg-secondary-500 rounded-full mt-2"></div>
-        </h2>
+        <Heading seperatorColor="secondary">{pageData.title}</Heading>
         <RichText value={pageData.description} />
       </section>
       <div className="flex flex-col md:gap-12 gap-6">
-        <h2 className="heading w-fit">
-          {t("features.heading")}
-          <div className="h-1 w-full mt-2 bg-secondary-500 rounded-full"></div>
-        </h2>
+        <Heading seperatorColor="secondary">{t("features.heading")}</Heading>
         <ZigZag contents={pageData.features} />
       </div>
       <VideoSection videoSrc={pageData.videoLink} />
