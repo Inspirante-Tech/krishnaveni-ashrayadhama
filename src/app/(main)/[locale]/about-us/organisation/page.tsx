@@ -6,15 +6,14 @@ import Profile from "~/components/Profile/Profile";
 import { fetchOrganisationPage } from "~/lib/queries";
 import Reveal from "~/components/Animations/reveal";
 
-export default async function organisor() {
+export default async function page() {
   const t = await getTranslations("organisation");
   const locale = await getLocale();
   const data = await fetchOrganisationPage(locale);
-  console.log(data);
 
   return (
-    <div>
-      <div className="relative w-full h-full">
+    <main>
+      <section className="relative w-full h-full">
         <div className="relative w-full h-[500px] overflow-hidden">
           <Image
             layout="fill"
@@ -35,38 +34,41 @@ export default async function organisor() {
         </div>
         <div className="absolute bg-gradient-to-t from-black/75 from-25% to-transparent w-full h-3/5 bottom-0 pointer-events-none"></div>
         <ScrollDown targetId="faculty" />
-      </div>
+      </section>
+
       <section
         className="content-container flex flex-col md:gap-4 gap-2"
         id="faculty"
       >
-        
-        
         <Heading seperatorColor="secondary">{t("Trustee")}</Heading>
         <div className="flex flex-col w-full items-center md:items-start gap-10">
           {data.trustees.map((trustee, index) => (
-            <div className="w-full flex flex-col md:flex-row items-center md:items-start justify-center gap-2 md:gap-6">
-            <Profile
+            <Reveal
               key={index}
-              index={index}
-              name={trustee.name}
-              image={trustee.image}
-              position={trustee.position}
-              layout="horizontal" // Use horizontal layout for trustee
-              className="w-full md:px-20 bg-secondary-300"
-            />
-            <Reveal delay={0.2 * index}>
-              <div className="body w-full">
-                {trustee.description}
+              className={`px-4 py-8 flex flex-col md:flex-row items-center md:items-start justify-center gap-2 md:gap-6  ${index % 2 === 0 ? "bg-gradient-to-br from-secondary-300/50 to-secondary-100/30" : "bg-gradient-to-bl from-primary-300/50 to-primary-100/30"} rounded-2xl`}
+              delay={0.2 * index}>
+              <Image
+                src={trustee.image}
+                alt={trustee.name}
+                width={80}
+                height={80}
+                priority={false}
+                className="aspect-square rounded-full w-full max-w-40 object-cover object-center"
+              />
+              <div className="flex flex-col gap-2">
+                <strong className="text-xl">{trustee.name}</strong>
+                <span className="text-gray-800 font-semibold text-lg">{trustee.position}</span>
+                <p className="body">
+                  {trustee.description}
+                </p>
               </div>
             </Reveal>
-            </div>
-            
           ))}
         </div>
-        
-        
-        
+      </section>
+
+
+      <section className="content-container">
         <Heading seperatorColor="secondary">{t("faculty")}</Heading>
         <div className="flex flex-wrap justify-center gap-4 w-full">
           {data.members.map((member, index) => (
@@ -82,6 +84,6 @@ export default async function organisor() {
           ))}
         </div>
       </section>
-    </div>
+    </main>
   );
 }

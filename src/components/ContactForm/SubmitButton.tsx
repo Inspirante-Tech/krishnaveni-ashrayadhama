@@ -1,3 +1,4 @@
+"use client"
 import React, { HTMLAttributes } from 'react'
 import { Button } from '../ui/button'
 import { useFormStatus } from 'react-dom'
