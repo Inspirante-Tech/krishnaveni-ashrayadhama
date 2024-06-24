@@ -22,7 +22,8 @@ import profile from './schemaTypes/profile'
 import organisation from './schemaTypes/organisation'
 import career from './schemaTypes/career'
 import role from './schemaTypes/role'
+import trustee from './schemaTypes/trustee'
 
 export const schema: { types: SchemaTypeDefinition[] } = {
-  types: [localeString,contact,localeText,localeBlockArray,role,location,gallery,event,ayurvedicCenter,career,features,vriddhashrama, doctor,Home,fqa,facility,testimonial,section,aboutus,row,pricing,organisation,profile],
+  types: [localeString,contact,localeText,localeBlockArray,role,location,gallery,event,ayurvedicCenter,career,features,vriddhashrama, doctor,Home,fqa,facility,testimonial,section,aboutus,row,pricing,organisation,profile,trustee],
 }

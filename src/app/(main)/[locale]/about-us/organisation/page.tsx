@@ -9,6 +9,7 @@ export default async function organisor() {
   const t = await getTranslations("organisation");
   const locale = await getLocale();
   const data = await fetchOrganisationPage(locale);
+  console.log(data);
 
   return (
     <div>
@@ -38,6 +39,8 @@ export default async function organisor() {
         className="content-container flex flex-col md:gap-4 gap-2"
         id="faculty"
       >
+        
+        
         <Heading seperatorColor="secondary">{t("Trustee")}</Heading>
         <div className="flex flex-col md:flex-row gap-4 w-full items-center md:items-start">
           {data.members.slice(0, 1).map((member, index) => (
@@ -55,9 +58,12 @@ export default async function organisor() {
             <p className="text-gray-700">{t("trusteeDescription")}</p>
           </div>
         </div>
+        
+        
+        
         <Heading seperatorColor="secondary">{t("faculty")}</Heading>
         <div className="flex flex-wrap justify-center gap-4 w-full">
-          {data.members.slice(1).map((member, index) => (
+          {data.members.map((member, index) => (
             <Profile
               key={index}
               index={index}

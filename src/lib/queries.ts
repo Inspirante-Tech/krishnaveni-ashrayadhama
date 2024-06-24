@@ -294,6 +294,12 @@ export async function fetchPricingPage(locale: string) {
 
 
 type Organisation = {
+    trustees: {
+        name: string,
+        position: string,
+        image: Image,
+        description: string
+    }[],
     members: {
         name: string,
         position: string,
@@ -303,6 +309,12 @@ type Organisation = {
 
 export async function fetchOrganisationPage(locale: string) {
     const query = `*[_type == "organisation"][0]{
+            "trustees":trustees[]{
+                "name":${coalesce("name", locale)},
+                "position":${coalesce("position", locale)},
+                image,
+                "description":${coalesce("description",locale)}
+            },
             "members":members[]{
                 "name":${coalesce("name", locale)},
                 "position":${coalesce("position", locale)},
@@ -314,6 +326,10 @@ export async function fetchOrganisationPage(locale: string) {
 
     return {
         ...page,
+        trustees: page.trustees.map(trustee => ({
+            ...trustee,
+            image: urlForImage(trustee.image)
+        })),
         members: page.members.map(member => ({
             ...member,
             image: urlForImage(member.image)
