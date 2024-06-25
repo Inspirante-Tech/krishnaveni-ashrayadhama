@@ -36,11 +36,11 @@ export default function Career({ data }: { data: CareerType }) {
 
       <Dialog
         ref={dialogRef}
-        className="max-w-80 rounded m-auto p-4 outline-none"
+        className="md:max-w-sm lg:max-w-md max-w-80 rounded mx-auto p-4 md:p-6 md:px-8 outline-none"
       >
         <div>
           <h2 className="heading mb-4 ">{t("dialog.heading")}</h2>
-          <p className="text-gray-400  font-bold">{data.howtoapply} </p>
+          <p className="text-gray-600 font-semibold">{data.howtoapply} </p>
         </div>
       </Dialog>
     </>

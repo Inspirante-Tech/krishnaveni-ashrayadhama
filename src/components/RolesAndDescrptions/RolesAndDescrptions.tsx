@@ -78,7 +78,7 @@ export default function RolesAndDescriptions({ data }: { data: CareerType }) {
         {tabData.map((tab) => (
           <div key={tab.id} className="flex justify-center m-1">
             <button
-              className="p-2 border border-black rounded-md w-max text-md font-bold bg-primary-200 hover:bg-primary-100 hover:shadow-lg focus:outline-none transform hover:scale-105 transition duration-300"
+              className="p-2 px-4 border border-black rounded-md w-max text-md font-medium tracking-wide bg-primary-200 hover:bg-primary-100 hover:shadow-lg focus:outline-none transform hover:scale-105 transition duration-300"
               onClick={() => openDrawer(tab.title)}
             >
               {tab.title}
@@ -95,8 +95,7 @@ export default function RolesAndDescriptions({ data }: { data: CareerType }) {
             <div className="mx-auto w-full max-w-lg">
               <DrawerHeader>
                 <DrawerTitle className="title">{selectedTab}</DrawerTitle>
-                <DrawerDescription className="text-md font-semibold">
-                  -{" "}
+                <DrawerDescription className="body">
                   {tabData.find((item) => item.title === selectedTab)?.jobRole}
                 </DrawerDescription>
                 <div className="flex flex-col md:flex-row items-center gap-2 border border-black p-2 rounded-2xl">
