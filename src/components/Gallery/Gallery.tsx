@@ -7,22 +7,23 @@ import ThumbnailCarousel from "../ThumbnailCarousel/ThumbnailCarousel";
 import { ImageType } from "~/lib/types";
 import Reveal from "../Animations/reveal";
 import Dialog, { DialogRef } from "../ui/Dialog";
+import Heading from "../Heading/Heading";
 
 export function Gallery({ images }: { images: ImageType[] }) {
   const t = useTranslations("gallery");
-  const [selectedImageIndex, setSelectedImageIndex] = useState<
-    number | null
-  >(null);
+  const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(
+    null
+  );
   const dialogRef = useRef<DialogRef>(null);
 
   const onSelect = (index: number) => {
-    console.log("open")
+    console.log("open");
     setSelectedImageIndex(index);
     dialogRef.current?.open();
   };
 
   const onClose = () => {
-    console.log("close")
+    console.log("close");
     setSelectedImageIndex(null);
   };
 
@@ -35,18 +36,13 @@ export function Gallery({ images }: { images: ImageType[] }) {
 
   return (
     <section className="content-container flex flex-col gap-2 md:gap-4">
-      <h2 className="heading spcae-y-2 w-fit">
-        {t("heading")}
-        <div className="h-1 w-full mt-2 bg-secondary-500 rounded-full"></div>
-      </h2>
+      <Heading seperatorColor="secondary">{t("heading")}</Heading>
       <div
         className="lg:columns-4 md:columns-3 columns-2 space-y-4"
         style={{ columnFill: "balance" }}
       >
         {images.map((image, index) => (
-          <Reveal
-            key={image.id}
-          >
+          <Reveal key={image.id}>
             <Photo
               url={image.image}
               alt={image.description}
@@ -62,9 +58,7 @@ export function Gallery({ images }: { images: ImageType[] }) {
         className="w-[100%] h-[100%] md:w-[90%] p-2 md:p-15 rounded-xl eventdialog overflow-hidden"
         onClick={() => dialogRef.current?.close()}
       >
-        <div
-          className="w-full h-full md:mt-1"
-        >
+        <div className="w-full h-full md:mt-1">
           {selectedImageIndex != null && (
             <ThumbnailCarousel
               thumbnails={thumbnails}
@@ -80,7 +74,5 @@ export function Gallery({ images }: { images: ImageType[] }) {
         </div>
       </Dialog>
     </section>
-
-
   );
 }

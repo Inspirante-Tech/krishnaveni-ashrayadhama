@@ -50,8 +50,8 @@ export default async function page() {
               <Image
                 src={trustee.image}
                 alt={trustee.name}
-                width={80}
-                height={80}
+                width={200}
+                height={200}
                 priority={false}
                 className="aspect-square rounded-full w-full max-w-40 object-cover object-center"
               />

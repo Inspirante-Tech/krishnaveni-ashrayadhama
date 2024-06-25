@@ -9,9 +9,7 @@ async function About({ params }: LocaleParamProp) {
   const data = await fetchAboutPage(params.locale);
   return (
     <main className="flex flex-col md:gap-4 gap-2 min-h-screen content-container mt-24">
-      <Heading>
-        {t("heading")}
-      </Heading>
+      <Heading>{t("heading")}</Heading>
 
       <div className="space-y-16 md:space-y-20 ">
         <ZigZag contents={data.sections} />

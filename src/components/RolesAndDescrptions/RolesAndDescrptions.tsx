@@ -21,13 +21,13 @@ export default function RolesAndDescriptions({ data }: { data: CareerType }) {
   const openDrawer = (tabTitle: string) => {
     setSelectedTab(tabTitle);
     setIsDrawerOpen(true);
-    document.body.classList.add('overflow-hidden');
+    document.body.classList.add("overflow-hidden");
   };
 
   const closeDrawer = () => {
     setSelectedTab(null);
     setIsDrawerOpen(false);
-    document.body.classList.remove('overflow-hidden');
+    document.body.classList.remove("overflow-hidden");
   };
 
   const sendEmail = () => {
@@ -39,18 +39,21 @@ export default function RolesAndDescriptions({ data }: { data: CareerType }) {
     id: index,
     title: role.title,
     jobRole: role.description,
-    eligibility: role.eligibility
+    eligibility: role.eligibility,
   }));
 
   useEffect(() => {
     const handleEscapeKey = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') {
+      if (event.key === "Escape") {
         closeDrawer();
       }
     };
 
     const handleOutsideClick = (event: MouseEvent) => {
-      if (drawerRef.current && !drawerRef.current.contains(event.target as Node)) {
+      if (
+        drawerRef.current &&
+        !drawerRef.current.contains(event.target as Node)
+      ) {
         closeDrawer();
       }
     };
@@ -75,7 +78,7 @@ export default function RolesAndDescriptions({ data }: { data: CareerType }) {
         {tabData.map((tab) => (
           <div key={tab.id} className="flex justify-center m-1">
             <button
-              className="p-2 border border-black rounded-md w-max text-md md:text-2xl font-bold bg-primary-200 hover:bg-primary-100 hover:shadow-lg focus:outline-none transform hover:scale-105 transition duration-300"
+              className="p-2 border border-black rounded-md w-max text-md font-bold bg-primary-200 hover:bg-primary-100 hover:shadow-lg focus:outline-none transform hover:scale-105 transition duration-300"
               onClick={() => openDrawer(tab.title)}
             >
               {tab.title}
@@ -84,25 +87,35 @@ export default function RolesAndDescriptions({ data }: { data: CareerType }) {
         ))}
       </div>
       <Drawer open={isDrawerOpen} onClose={closeDrawer}>
-        <DrawerContent ref={drawerRef} className="bg-primary-100 leading-relaxed max-h-full ">
+        <DrawerContent
+          ref={drawerRef}
+          className="bg-primary-100 leading-relaxed max-h-full "
+        >
           {selectedTab && (
             <div className="mx-auto w-full max-w-lg">
               <DrawerHeader>
                 <DrawerTitle className="title">{selectedTab}</DrawerTitle>
                 <DrawerDescription className="text-md font-semibold">
-                  - {tabData.find((item) => item.title === selectedTab)?.jobRole}
+                  -{" "}
+                  {tabData.find((item) => item.title === selectedTab)?.jobRole}
                 </DrawerDescription>
                 <div className="flex flex-col md:flex-row items-center gap-2 border border-black p-2 rounded-2xl">
                   <h1 className="font-bold text-lg">{t("elegibility")}:</h1>
                   <h2 className="text-md">
-                    {tabData.find((item) => item.title === selectedTab)?.eligibility}
+                    {
+                      tabData.find((item) => item.title === selectedTab)
+                        ?.eligibility
+                    }
                   </h2>
                 </div>
               </DrawerHeader>
               <DrawerFooter>
                 <Button onClick={sendEmail}>{t("buttons.send")}</Button>
                 <DrawerClose asChild>
-                  <Button onClick={closeDrawer} className="border border-black bg-white hover:bg-gray-300">
+                  <Button
+                    onClick={closeDrawer}
+                    className="border border-black bg-white hover:bg-gray-300"
+                  >
                     {t("buttons.close")}
                   </Button>
                 </DrawerClose>
@@ -114,5 +127,3 @@ export default function RolesAndDescriptions({ data }: { data: CareerType }) {
     </section>
   );
 }
-
-
