@@ -47,7 +47,8 @@ export default async function page() {
             <Reveal
               key={index}
               className={`px-4 py-8 flex flex-col md:flex-row items-center md:items-start justify-center gap-2 md:gap-6  ${index % 2 === 0 ? "bg-gradient-to-br from-secondary-300/50 to-secondary-100/30" : "bg-gradient-to-bl from-primary-300/50 to-primary-100/30"} rounded-2xl`}
-              delay={0.2 * index}>
+              delay={0.2 * index}
+            >
               <Image
                 src={trustee.image}
                 alt={trustee.name}
@@ -56,12 +57,14 @@ export default async function page() {
                 priority={false}
                 className="aspect-square rounded-full w-full max-w-40 object-cover object-center"
               />
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-2 md:pr-5">
                 <strong className="text-xl">{trustee.name}</strong>
-                <span className="text-gray-800 font-semibold text-lg">{trustee.position}</span>
-                <p className="body">
-                  {trustee.description}
-                </p>
+                {trustee.position !== "Position" && (
+                  <span className="text-gray-800 font-semibold text-lg">
+                    {trustee.position}
+                  </span>
+                )}
+                <p className="body">{trustee.description}</p>
               </div>
             </Reveal>
           ))}
@@ -74,7 +77,6 @@ export default async function page() {
         <Heading seperatorColor="secondary">{t("doctor")}</Heading>
         <Doctors doctors={data.doctors} />
       </section>
-
 
       <section className="content-container">
         <Heading seperatorColor="secondary">{t("faculty")}</Heading>
