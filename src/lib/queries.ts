@@ -3,11 +3,9 @@ import type { Image } from 'sanity'
 import { urlForImage } from "~/sanity/lib/image";
 import { defaultLocale } from "./env";
 
-
 function coalesce(key: string, locale: string) {
     return `coalesce(${key}.${locale}, ${key}.${defaultLocale},"missing")`
 }
-
 interface GalleryResponse {
     id: string
     image: Image,
@@ -105,8 +103,16 @@ export async function fetchAyrvedicCenterPage(locale: string) {
 
 
 interface Home {
-    story: [any],
-    whoweare: [any],
+    section1: {
+        title: string;
+        description: [any];
+        image: Image;
+    },
+    section2: {
+        title: string;
+        description: [any];
+        image: Image;
+    },
     fqas: {
         question: string,
         answer: string
@@ -128,8 +134,16 @@ interface Home {
 export async function fetchHomePage(locale: string) {
 
     const query = `*[_type == "Home"][0]{
-        "story":${coalesce("story", locale)},
-        "whoweare":${coalesce("whoweare", locale)},  
+        "section1":section1{
+            "title":${coalesce("title", locale)},
+            image,
+            "description":${coalesce("content", locale)}
+        },
+        "section2":section2{
+            "title":${coalesce("title", locale)},
+            image,
+            "description":${coalesce("content", locale)}
+        },  
         "fqas":fqas[]{
           "question":${coalesce("question", locale)},
           "answer":${coalesce("answer", locale)},
@@ -148,9 +162,17 @@ export async function fetchHomePage(locale: string) {
       }`
 
     let page = await client.fetch<Home>(query);
-
+    
     return {
         ...page,
+        section1: {
+            ...page.section1,
+            image: urlForImage(page.section1.image)
+        },
+        section2: {
+            ...page.section2,
+            image: urlForImage(page.section2.image)
+        },
         facilities: page.facilities.map(facility => ({
             ...facility,
             image: urlForImage(facility.image)
@@ -352,7 +374,6 @@ export async function fetchOrganisationPage(locale: string) {
         }))
     }
 }
-
 
 interface CareerPage {
     title: string,

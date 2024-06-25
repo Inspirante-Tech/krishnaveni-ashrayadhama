@@ -6,10 +6,12 @@ import Reveal from '../Animations/reveal';
 import Image from 'next/image';
 import ImageWithFallback from '../ui/ImageWithFallback';
 import { CircleX } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 function Doctors({ doctors }: { doctors: OrganisationDoctorType[] }) {
     const dialogRef = useRef<DialogRef>(null);
     const [selectedDoctor, setSelectedDoctor] = useState<OrganisationDoctorType | null>(null);
+    const t = useTranslations("organisation");
     return (
         <>
             <div className="flex flex-col w-full items-center md:items-start gap-10">
@@ -33,12 +35,12 @@ function Doctors({ doctors }: { doctors: OrganisationDoctorType[] }) {
                                     {doctor.qualification}
                                 </span>
                                 <button
-                                    className='group-hover:bg-primary-500 border-2 border-primary-500 rounded-full py-1 px-4 text-base mt-4 transition-colors duration-150' 
+                                    className='group-hover:bg-primary-500 border-2 border-primary-500 rounded-full py-1 px-4 text-base mt-4 transition-colors duration-150'
                                     onClick={() => {
                                         setSelectedDoctor(doctor)
                                         dialogRef.current?.open()
                                     }}
-                                >Read More</button>
+                                >{t("knowMore")}</button>
                             </div>
                         </div>
                     </Reveal>
@@ -48,7 +50,7 @@ function Doctors({ doctors }: { doctors: OrganisationDoctorType[] }) {
             <Dialog
                 ref={dialogRef}
                 closeCallback={() => setSelectedDoctor(null)}
-                className='transition-opacity eventdialog max-w-[50rem] p-4 w-full rounded'
+                className='eventdialog max-w-[50rem] p-4 w-full rounded'
             >
                 {
                     selectedDoctor && (
@@ -74,9 +76,9 @@ function Doctors({ doctors }: { doctors: OrganisationDoctorType[] }) {
                     )
                 }
 
-                <button 
-                className="absolute m-4 right-0 top-0"
-                onClick={()=>dialogRef.current?.close()}
+                <button
+                    className="absolute m-4 right-0 top-0"
+                    onClick={() => dialogRef.current?.close()}
                 >
                     <CircleX className="text-red-700" size={28} />
                 </button>
