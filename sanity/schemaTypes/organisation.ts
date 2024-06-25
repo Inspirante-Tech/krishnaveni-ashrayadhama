@@ -21,6 +21,19 @@ export default defineType({
             ]
         }),
         defineField({
+            name: 'doctors',
+            title: 'Doctors',
+            type: 'array',
+            validation: (Rule) => Rule.required(),
+            of: [
+                defineField({
+                    name: "doctor",
+                    title: "Doctor",
+                    type: "doctor"
+                })
+            ]
+        }),
+        defineField({
             name: 'members',
             title: 'Members',
             type: 'array',

@@ -300,6 +300,12 @@ type Organisation = {
         image: Image,
         description: string
     }[],
+    doctors: {
+        name: string,
+        qualification: string,
+        image: Image,
+        detail: string
+    }[],
     members: {
         name: string,
         position: string,
@@ -313,7 +319,13 @@ export async function fetchOrganisationPage(locale: string) {
                 "name":${coalesce("name", locale)},
                 "position":${coalesce("position", locale)},
                 image,
-                "description":${coalesce("description",locale)}
+                "description":${coalesce("description", locale)}
+            },
+            "doctors":doctors[]{
+                "name":${coalesce("name", locale)},
+                "qualification":${coalesce("qualification", locale)},
+                image,
+                "detail":${coalesce("detail", locale)}
             },
             "members":members[]{
                 "name":${coalesce("name", locale)},
@@ -329,6 +341,10 @@ export async function fetchOrganisationPage(locale: string) {
         trustees: page.trustees.map(trustee => ({
             ...trustee,
             image: urlForImage(trustee.image)
+        })),
+        doctors: page.doctors.map(doctor => ({
+            ...doctor,
+            image: urlForImage(doctor.image)
         })),
         members: page.members.map(member => ({
             ...member,

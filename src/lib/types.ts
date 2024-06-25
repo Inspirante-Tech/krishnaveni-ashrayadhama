@@ -89,3 +89,11 @@ export type Role = {
     description: string,
     eligibility: string
 };
+
+
+export type OrganisationDoctorType = {
+    name: string,
+    image: string,
+    qualification: string,
+    detail: string
+}

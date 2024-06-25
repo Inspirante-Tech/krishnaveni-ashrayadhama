@@ -5,6 +5,7 @@ import ScrollDown from "~/components/Hero/ScrollDown";
 import Profile from "~/components/Profile/Profile";
 import { fetchOrganisationPage } from "~/lib/queries";
 import Reveal from "~/components/Animations/reveal";
+import Doctors from "~/components/Doctor/Doctors";
 
 export default async function page() {
   const t = await getTranslations("organisation");
@@ -65,6 +66,13 @@ export default async function page() {
             </Reveal>
           ))}
         </div>
+      </section>
+
+      <section
+        className="content-container flex flex-col md:gap-4 gap-2"
+      >
+        <Heading seperatorColor="secondary">{t("doctor")}</Heading>
+        <Doctors doctors={data.doctors} />
       </section>
 
 

@@ -96,6 +96,21 @@ dialog[open] {
   }
 }
 
+
+.doctordialog[open] {
+  animation: appear 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 .photodialog[open] {
   animation: scaleup 200ms cubic-bezier(0.23, 1, 0.32, 1);
 }

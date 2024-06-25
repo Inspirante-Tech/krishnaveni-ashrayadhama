@@ -1,4 +1,4 @@
-import {defineField, defineType} from 'sanity'
+import { defineField, defineType } from 'sanity'
 import { baseLanguage } from './locale'
 
 export default defineType({
@@ -25,6 +25,12 @@ export default defineType({
       name: 'qualification',
       title: 'Qualification',
       type: 'localeString',
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: 'detail',
+      title: 'Detail',
+      type: 'localeText',
       validation: (Rule) => Rule.required(),
     }),
   ],
