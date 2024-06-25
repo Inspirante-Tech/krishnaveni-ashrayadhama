@@ -14,10 +14,10 @@ type NestedUrl = {
 export default function LocalSwitcher({ urlObject }: { urlObject: NestedUrl }) {
   const pathname = usePathname();
   const active = urlObject.urls.some((e) => pathname.includes(e.url));
-  const t = useTranslations("links")
+  const t = useTranslations("links");
   return (
     <>
-      <div className="hidden md:block lg:py-6  h-min hover:text-secondary-800 hover:scale-105 transition-all duration-150 ease-linear capitalize w-full  group z-10">
+      <div className="hidden md:block lg:py-6  h-min hover:text-secondary-800 hover:scale-105 transition-all duration-150 ease-linear capitalize w-full  group z-10 cursor-pointer">
         <span
           className={`w-full block  border-solid border-black whitespace-nowrap ${active ? "border-b-2" : "border-none"}`}
         >
@@ -30,7 +30,7 @@ export default function LocalSwitcher({ urlObject }: { urlObject: NestedUrl }) {
               <LocaleLink
                 href={url.url}
                 key={url.id}
-                className="p-2 min-w-max w-full body hover:bg-primary-300/50 transition-colors duration-300 rounded-md ease-linear multiLink "
+                className="p-2 min-w-max w-full hover:bg-primary-300/50 transition-colors duration-300 rounded-md ease-linear multiLink "
               >
                 {t(url.id)}
               </LocaleLink>
@@ -39,9 +39,7 @@ export default function LocalSwitcher({ urlObject }: { urlObject: NestedUrl }) {
         </div>
       </div>
 
-      <details
-        className="md:hidden h-min hover:text-secondary-800 hover:scale-105 transition-all duration-150 ease-linear capitalize w-full group"
-      >
+      <details className="md:hidden h-min hover:text-secondary-800 hover:scale-105 transition-all duration-150 ease-linear capitalize w-full group">
         <summary
           className={`w-full flex justify-between items-center  border-solid border-black cursor-pointer ${active ? "border-b-2" : "border-none"}`}
         >

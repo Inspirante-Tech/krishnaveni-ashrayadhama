@@ -48,7 +48,7 @@ const Header = () => {
                   className="py-4 lg:py-6 "
                 >
                   <span
-                    className={`block w-max hover:text-secondary-800 hover:scale-105 transition-all duration-150 ease-linear h-full capitalize  border-solid border-black ${isInRoute(path, item.url) ? "border-b-2" : "border-none"}`}
+                    className={`block w-max hover:text-secondary-800 hover:scale-105 transition-all duration-150 ease-linear h-full capitalize border-solid border-black ${isInRoute(path, item.url) ? "border-b-2" : "border-none"}`}
                   >
                     {t(item.id)}
                   </span>
