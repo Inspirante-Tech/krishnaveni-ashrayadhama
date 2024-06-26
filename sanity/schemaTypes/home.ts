@@ -8,9 +8,9 @@ export default defineType({
     icon: HomeIcon,
     fields: [
         defineField({
-            name: "story",
-            title: "Content Section 1",
-            type: "localeBlockArray",
+            name: "section1",
+            title: "Section 1",
+            type: "section",
             validation: (Rule) => Rule.required(),
         }),
         defineField({
@@ -35,9 +35,9 @@ export default defineType({
             ]
         }),
         defineField({
-            name: "whoweare",
-            title: "Content Section 2",
-            type: "localeBlockArray",
+            name: "section2",
+            title: "Section 2",
+            type: "section",
             validation: (Rule) => Rule.required(),
         }),
         defineField({

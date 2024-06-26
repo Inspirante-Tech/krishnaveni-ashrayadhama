@@ -1,13 +1,11 @@
-"use client";
 import Image from "next/image";
 import Reveal from "../Animations/reveal";
 import ScrollLag from "../Animations/scrollLag";
-import { useTranslations } from "next-intl";
 import Heading from "../Heading/Heading";
 import RichText from "../RichText/RichText";
+import { SectionType } from "~/lib/types";
 
-const Information: React.FC<{ data: [any] }> = ({ data }) => {
-  const t = useTranslations("home")
+const Information: React.FC<{ data: SectionType }> = ({ data }) => {
   return (
     <section
       className={`transition-opacity duration-1000 transform bg-secondary-100 md:bg-transparent text-justify`}
@@ -17,16 +15,16 @@ const Information: React.FC<{ data: [any] }> = ({ data }) => {
           <div className="relative xl:max-w-4xl md:shadow-xl rounded-2xl z-0">
             <div className="relative md:bg-gradient-to-tl md:from-secondary-200 md:to-secondary-100 rounded-2xl flex md:gap-4 gap-2 flex-col xl:p-16 lg:p-24 md:p-12">
               <Heading seperatorColor="secondary">
-                {t("whoweare")}
+                {data.title}
               </Heading>
-              <RichText value={data}/>
+              <RichText value={data.description} />
             </div>
           </div>
         </Reveal>
         <Reveal delay={0.35}>
           <ScrollLag speed={50}>
             <Image
-              src={"/whoweare.jpg"}
+              src={data.image}
               alt="Story"
               height={500}
               width={500}

@@ -15,30 +15,7 @@
       "heading": "Krishnaveni Ashraya Dhama",
       "content": "Nurturing legacy, Empowering Well-being",
       "cta": "Get in Touch"
-    },
-    "resources": {
-      "heading": "resources",
-      "content": "Quick Links for anyone interested in our services",
-      "forms": {
-        "heading": "forms",
-        "permanentForm": "permanent Form",
-        "nominationForm": "nomination From"
-      },
-      "links": {
-        "heading": "Links",
-        "aboutUs": "about us",
-        "specialities": "specialities",
-        "ashrayaDhama": "ashraya dhama",
-        "ayurvedicCenter": "ayurvedic center",
-        "events": "events",
-        "gallery": "gallery",
-        "contact": "contact",
-        "rulesRegulations": "rules and regulations",
-        "pricing": "pricing"
-      }
-    },
-    "ourStory": "Our Story",
-    "whoweare": "Who we are"
+    }
   },
   "events": {
     "heading": "Events"
@@ -65,8 +42,7 @@
   "ayurvedicCenter": {
     "heading": "ayurvedic center",
     "doctors": {
-      "heading": "doctors",
-      "description": ""
+      "heading": "doctors"
     },
     "features": {
       "heading": "features"
@@ -113,7 +89,9 @@
     "heading": "Team of Management",
     "content": "Brings together diverse talents to a resounding success.",
     "Trustee": "Trustees",
-    "faculty": "Staffs"
+    "faculty": "Staffs",
+    "doctor":"doctor",
+    "knowMore":"know more"
   },
   "resources": {
     "rulesRegulations": "rules and Regulations",
