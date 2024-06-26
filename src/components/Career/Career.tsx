@@ -15,7 +15,7 @@ export default function Career({ data }: { data: CareerType }) {
       <main className="content-container space-y-8">
         <section className="flex md:gap-4 gap-2 flex-col pt-20">
           <h2 className="text-gray-900 text-left heading w-fit capitalize">
-            <Heading className="w-max">{data.title}</Heading>
+            <Heading>{data.title}</Heading>
           </h2>
           <RichText value={data.description} />
 
