@@ -60,7 +60,7 @@
     "rulesRegulations": "rules and regulations",
     "pricing": "pricing",
     "krishnaveni": "krishnaveni",
-    "organisation": "organisation"
+    "organisation": "governance"
   },
   "ayurvedicCenter": {
     "heading": "ayurvedic center",
@@ -110,7 +110,7 @@
     }
   },
   "organisation": {
-    "heading": "Team of Organizers",
+    "heading": "Team of Management",
     "content": "Brings together diverse talents to a resounding success.",
     "Trustee": "Trustees",
     "faculty": "Staffs"

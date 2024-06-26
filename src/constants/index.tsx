@@ -14,7 +14,7 @@ export const navigation = [
         },
         {
           id: "organisation",
-          url: "/about-us/organisation",
+          url: "/about-us/governance",
         },
       ],
     },
