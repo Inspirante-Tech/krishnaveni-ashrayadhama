@@ -1,76 +1,74 @@
 import { client } from "~/sanity/lib/client";
-import type { Image } from 'sanity'
+import type { Image } from "sanity";
 import { urlForImage } from "~/sanity/lib/image";
 import { defaultLocale } from "./env";
 
 function coalesce(key: string, locale: string) {
-    return `coalesce(${key}.${locale}, ${key}.${defaultLocale},"missing")`
+  return `coalesce(${key}.${locale}, ${key}.${defaultLocale},"missing")`;
 }
 interface GalleryResponse {
-    id: string
-    image: Image,
-    description: string
+  id: string;
+  image: Image;
+  description: string;
 }
 
 export async function fetchGalleryImages(locale: string) {
-    const query = `
+  const query = `
         *[_type == "gallery"]{
             'id':_id,
             "description":${coalesce("short_description", locale)},
             image
         }
-    `
-    let gallery_images = await client.fetch<GalleryResponse[]>(query);
-    return gallery_images.map(gallery_image => ({
-        ...gallery_image,
-        image: urlForImage(gallery_image.image)
-    }))
+    `;
+  let gallery_images = await client.fetch<GalleryResponse[]>(query);
+  return gallery_images.map((gallery_image) => ({
+    ...gallery_image,
+    image: urlForImage(gallery_image.image),
+  }));
 }
 
 interface EventResponse {
-    id: string,
-    title: string,
-    image: Image,
-    description: string,
-    date: string,
-    alt: string
+  id: string;
+  title: string;
+  image: Image;
+  description: string;
+  date: string;
+  alt: string;
 }
 
 export async function fetchEvents(locale: string) {
-    const query = `*[_type == "events"]{
+  const query = `*[_type == "events"]{
         'id':_id,
         "title":${coalesce("title", locale)},
         date,
         "description":${coalesce("description", locale)},
         image,
-    }`
-    let events = await client.fetch<EventResponse[]>(query);
-    return events.map(event => ({
-        ...event,
-        image: urlForImage(event.image)
-    }))
+    }`;
+  let events = await client.fetch<EventResponse[]>(query);
+  return events.map((event) => ({
+    ...event,
+    image: urlForImage(event.image),
+  }));
 }
 
-
 interface AyurvedicCenter {
-    title: string,
-    description: [any],
-    videoLink: string,
-    features: {
-        image: Image,
-        title: string,
-        description: string
-    }[],
-    doctors: {
-        name: string,
-        qualification: string,
-        image: Image
-    }[]
+  title: string;
+  description: [any];
+  videoLink: string;
+  features: {
+    image: Image;
+    title: string;
+    description: string;
+  }[];
+  doctors: {
+    name: string;
+    qualification: string;
+    image: Image;
+  }[];
 }
 
 export async function fetchAyrvedicCenterPage(locale: string) {
-
-    const query = `*[_type == "ayurvedic_center"][0]{
+  const query = `*[_type == "ayurvedic_center"][0]{
         "title":${coalesce("title", locale)},
         "description":${coalesce("description", locale)},
           videoLink,
@@ -84,56 +82,53 @@ export async function fetchAyrvedicCenterPage(locale: string) {
             image,
             "qualification":${coalesce("qualification", locale)}
         }
-      }`
+      }`;
 
-    let page = await client.fetch<AyurvedicCenter>(query);
+  let page = await client.fetch<AyurvedicCenter>(query);
 
-    return {
-        ...page,
-        features: page.features.map(feature => ({
-            ...feature,
-            image: urlForImage(feature.image)
-        })),
-        doctors: page.doctors.map(doctor => ({
-            ...doctor,
-            image: urlForImage(doctor.image)
-        }))
-    }
+  return {
+    ...page,
+    features: page.features.map((feature) => ({
+      ...feature,
+      image: urlForImage(feature.image),
+    })),
+    doctors: page.doctors.map((doctor) => ({
+      ...doctor,
+      image: urlForImage(doctor.image),
+    })),
+  };
 }
 
-
 interface Home {
-    section1: {
-        title: string;
-        description: [any];
-        image: Image;
-    },
-    section2: {
-        title: string;
-        description: [any];
-        image: Image;
-    },
-    fqas: {
-        question: string,
-        answer: string
-    }[],
-    facilities: {
-        image: Image,
-        title: string,
-        description: string
-    }[],
-    testimonials: {
-        image: Image,
-        name: string,
-        statement: string
-    }[],
-    carosuel: Image[]
-
+  section1: {
+    title: string;
+    description: [any];
+    image: Image;
+  };
+  section2: {
+    title: string;
+    description: [any];
+    image: Image;
+  };
+  fqas: {
+    question: string;
+    answer: string;
+  }[];
+  facilities: {
+    image: Image;
+    title: string;
+    description: string;
+  }[];
+  testimonials: {
+    image: Image;
+    name: string;
+    statement: string;
+  }[];
+  carosuel: Image[];
 }
 
 export async function fetchHomePage(locale: string) {
-
-    const query = `*[_type == "Home"][0]{
+  const query = `*[_type == "Home"][0]{
         "section1":section1{
             "title":${coalesce("title", locale)},
             image,
@@ -159,54 +154,51 @@ export async function fetchHomePage(locale: string) {
           "statement":${coalesce("statement", locale)},
         },
         carosuel
-      }`
+      }`;
 
-    let page = await client.fetch<Home>(query);
-    
-    return {
-        ...page,
-        section1: {
-            ...page.section1,
-            image: urlForImage(page.section1.image)
-        },
-        section2: {
-            ...page.section2,
-            image: urlForImage(page.section2.image)
-        },
-        facilities: page.facilities.map(facility => ({
-            ...facility,
-            image: urlForImage(facility.image)
-        })),
-        testimonials: page.testimonials.map(testimonial => ({
-            ...testimonial,
-            image: urlForImage(testimonial.image)
-        })),
-        carosuel: page.carosuel.map(image => urlForImage(image))
-    }
+  let page = await client.fetch<Home>(query);
+
+  return {
+    ...page,
+    section1: {
+      ...page.section1,
+      image: urlForImage(page.section1.image),
+    },
+    section2: {
+      ...page.section2,
+      image: urlForImage(page.section2.image),
+    },
+    facilities: page.facilities.map((facility) => ({
+      ...facility,
+      image: urlForImage(facility.image),
+    })),
+    testimonials: page.testimonials.map((testimonial) => ({
+      ...testimonial,
+      image: urlForImage(testimonial.image),
+    })),
+    carosuel: page.carosuel.map((image) => urlForImage(image)),
+  };
 }
 
-
 interface VriddhashramaCenter {
-    title: string,
-    description: [any],
-    videoLink: string,
-    features: {
-        image: Image,
-        title: string,
-        description: string
-
-    }[]
-    surrounding_detail: [any],
-    locations: {
-        name: string,
-        image: Image,
-        url: string
-    }[]
+  title: string;
+  description: [any];
+  videoLink: string;
+  features: {
+    image: Image;
+    title: string;
+    description: string;
+  }[];
+  surrounding_detail: [any];
+  locations: {
+    name: string;
+    image: Image;
+    url: string;
+  }[];
 }
 
 export async function fetchVriddhashramaPage(locale: string) {
-
-    const query = `*[_type == "vriddhashrama"][0]{
+  const query = `*[_type == "vriddhashrama"][0]{
         "title":${coalesce("title", locale)},
         "description":${coalesce("description", locale)},
           videoLink,
@@ -221,122 +213,114 @@ export async function fetchVriddhashramaPage(locale: string) {
             image,
             url
           }
-      }`
+      }`;
 
-    let page = await client.fetch<VriddhashramaCenter>(query);
-    return {
-        ...page,
-        features: page.features.map(feature => ({
-            ...feature,
-            image: urlForImage(feature.image)
-        })),
-        locations: page.locations.map(location => ({
-            ...location,
-            image: urlForImage(location.image)
-        }))
-    }
+  let page = await client.fetch<VriddhashramaCenter>(query);
+  return {
+    ...page,
+    features: page.features.map((feature) => ({
+      ...feature,
+      image: urlForImage(feature.image),
+    })),
+    locations: page.locations.map((location) => ({
+      ...location,
+      image: urlForImage(location.image),
+    })),
+  };
 }
 
 export async function fetchRules(locale: string) {
-
-    const query = `*[_type == "vriddhashrama"][0]{
+  const query = `*[_type == "vriddhashrama"][0]{
           "rules":${coalesce("rules", locale)},
-      }`
-    return await client.fetch<{ rules: [any] }>(query);
+      }`;
+  return await client.fetch<{ rules: [any] }>(query);
 }
-
 
 type ContactDetails = {
-    address: [any],
-    email: string,
-    phoneNo: string
-}
+  address: [any];
+  email: string;
+  phoneNo: string;
+};
 
 export async function fetchContactDetails(locale: string) {
-
-    const query = `*[_type == "contactDetail"][0]{
+  const query = `*[_type == "contactDetail"][0]{
         "address":${coalesce("address", locale)},
         email,
         phoneNo
-      }`
+      }`;
 
-    let data = await client.fetch<ContactDetails>(query);
-    return data
+  let data = await client.fetch<ContactDetails>(query);
+  return data;
 }
-
 
 type AboutPage = {
-    sections: {
-        title: string,
-        description: [any],
-        image: Image
-    }[]
-}
+  sections: {
+    title: string;
+    description: [any];
+    image: Image;
+  }[];
+};
 
 export async function fetchAboutPage(locale: string) {
-
-    const query = `*[_type == "aboutUs"][0]{
+  const query = `*[_type == "aboutUs"][0]{
         "sections":sections[]{
             "title":${coalesce("title", locale)},
             image,
             "description":${coalesce("content", locale)}
         }
-      }`
+      }`;
 
-    let page = await client.fetch<AboutPage>(query);
-    return {
-        ...page,
-        sections: page.sections.map(section => ({
-            ...section,
-            image: urlForImage(section.image)
-        }))
-    }
+  let page = await client.fetch<AboutPage>(query);
+  return {
+    ...page,
+    sections: page.sections.map((section) => ({
+      ...section,
+      image: urlForImage(section.image),
+    })),
+  };
 }
-
 
 type PricingPage = {
-    rows: {
-        title: string,
-        detail: string,
-    }[]
-}
+  rows: {
+    title: string;
+    detail: string;
+  }[];
+};
 
 export async function fetchPricingPage(locale: string) {
-
-    const query = `*[_type == "pricing"][0]{
+  const query = `*[_type == "pricing"][0]{
             "rows":rows[]{
                 "title":${coalesce("title", locale)},
                 "detail":${coalesce("detail", locale)}
             }
-        }`
+        }`;
 
-    let page = await client.fetch<PricingPage>(query);
-    return page
+  let page = await client.fetch<PricingPage>(query);
+  return page;
 }
-
 
 type Organisation = {
-    trustees: {
-        name: string,
-        position: string,
-        image: Image,
-        description: string
-    }[],
-    doctors: {
-        name: string,
-        qualification: string,
-        image: Image,
-        detail: string
-    }[],
-    members: {
-        name: string,
-        position: string,
-        image: Image
-    }[]
-}
+  trustees: {
+    name: string;
+    position: string;
+    image: Image;
+    description: string;
+  }[];
+  doctors: {
+    name: string;
+    qualification: string;
+    image: Image;
+    detail: string;
+  }[];
+  members: {
+    name: string;
+    position: string;
+    image: Image;
+  }[];
+};
 
 export async function fetchOrganisationPage(locale: string) {
-    const query = `*[_type == "organisation"][0]{
+  const query = `*[_type == "organisation"][0]{
             "trustees":trustees[]{
                 "name":${coalesce("name", locale)},
                 "position":${coalesce("position", locale)},
@@ -354,40 +338,40 @@ export async function fetchOrganisationPage(locale: string) {
                 "position":${coalesce("position", locale)},
                 image
             }
-        }`
+        }`;
 
-    let page = await client.fetch<Organisation>(query);
+  let page = await client.fetch<Organisation>(query);
 
-    return {
-        ...page,
-        trustees: page.trustees.map(trustee => ({
-            ...trustee,
-            image: urlForImage(trustee.image)
-        })),
-        doctors: page.doctors.map(doctor => ({
-            ...doctor,
-            image: urlForImage(doctor.image)
-        })),
-        members: page.members.map(member => ({
-            ...member,
-            image: urlForImage(member.image)
-        }))
-    }
+  return {
+    ...page,
+    trustees: page.trustees.map((trustee) => ({
+      ...trustee,
+      image: urlForImage(trustee.image),
+    })),
+    doctors: page.doctors.map((doctor) => ({
+      ...doctor,
+      image: urlForImage(doctor.image),
+    })),
+    members: page.members.map((member) => ({
+      ...member,
+      image: urlForImage(member.image),
+    })),
+  };
 }
 
 interface CareerPage {
-    title: string,
-    description: [any],
-    roles: {
-        title: string,
-        description: string,
-        eligibility: string
-    }[],
-    howtoapply: string
+  title: string;
+  description: [any];
+  roles: {
+    title: string;
+    description: string;
+    eligibility: string;
+  }[];
+  howtoapply: string;
 }
 
 export async function fetchCareerPage(locale: string) {
-    const query = `*[_type == "career"][0]{
+  const query = `*[_type == "career"][0]{
         "title": ${coalesce("title", locale)},
         "description": ${coalesce("description", locale)},
         "roles":roles[]{
@@ -398,7 +382,25 @@ export async function fetchCareerPage(locale: string) {
         "howtoapply": ${coalesce("howtoapply", locale)}
     }`;
 
-    let page = await client.fetch<CareerPage>(query);
-    return page;
+  let page = await client.fetch<CareerPage>(query);
+  return page;
 }
 
+type TherapyInfo = {
+  therapy: {
+    title: string;
+    detail: string;
+  }[];
+};
+
+export async function fetchTherapyInfo(locale: string) {
+  const query = `*[_type == "therapyinfo"][0]{
+            "therapy":therapy[]{
+                "title":${coalesce("title", locale)},
+                "detail":${coalesce("detail", locale)}
+            }
+        }`;
+
+  let page = await client.fetch<TherapyInfo>(query);
+  return page;
+}
