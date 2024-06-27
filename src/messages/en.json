@@ -70,8 +70,17 @@
     "table": {
       "title": "title",
       "detail": "details",
-      "days":"days",
-      "package":"package"
+      "days": "days",
+      "package": "package"
+    }
+  },
+  "tariff": {
+    "heading": "INDIVIDUAL TREATMENT CHARGES: (Excluding Medicines)",
+    "table": {
+      "procedure": "Procedure",
+      "duration": "Duration",
+      "charges": "Charges",
+      "discount": "Discount"
     }
   },
   "aboutUs": {

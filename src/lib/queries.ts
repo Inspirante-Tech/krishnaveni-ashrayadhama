@@ -390,11 +390,11 @@ type TherapyPage = {
   therapy: {
     title: string;
     detail: string;
-  }[],
+  }[];
   treatmentPackages: {
     title: string;
     detail: string;
-    days: string
+    days: string;
   }[];
 };
 
@@ -412,5 +412,30 @@ export async function fetchTherapyPage(locale: string) {
         }`;
 
   let page = await client.fetch<TherapyPage>(query);
+  return page;
+}
+
+type TariffPage = {
+  info: any;
+  tariff: {
+    procedure: string;
+    duration: string;
+    charges: number;
+    discount: number;
+  }[];
+};
+
+export async function fetchTariffPage(locale: string) {
+  const query = `*[_type == "ttariff"][0]{
+                    "info": ${coalesce("info", locale)},
+                    "tariff":tariff[]{
+                        "procedure": ${coalesce("procedure", locale)},
+                        "duration": ${coalesce("duration", locale)},
+                        charges,
+                        discount
+          }
+    }`;
+
+  let page = await client.fetch<TariffPage>(query);
   return page;
 }
