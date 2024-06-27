@@ -69,7 +69,9 @@
     "heading": "Therapy information",
     "table": {
       "title": "title",
-      "detail": "details"
+      "detail": "details",
+      "days":"days",
+      "package":"package"
     }
   },
   "aboutUs": {

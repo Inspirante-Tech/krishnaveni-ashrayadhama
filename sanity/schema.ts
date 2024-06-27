@@ -27,7 +27,8 @@ import organisation from "./schemaTypes/organisation";
 import career from "./schemaTypes/career";
 import role from "./schemaTypes/role";
 import trustee from "./schemaTypes/trustee";
-import therapyInfo from "./schemaTypes/therapy-info";
+import therapyInfo from "./schemaTypes/therapyinfo";
+import treatmentPackage from "./schemaTypes/treatmentPackage";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -56,5 +57,6 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     profile,
     trustee,
     therapyInfo,
+    treatmentPackage,
   ],
 };

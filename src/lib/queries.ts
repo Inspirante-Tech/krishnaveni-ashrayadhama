@@ -386,21 +386,31 @@ export async function fetchCareerPage(locale: string) {
   return page;
 }
 
-type TherapyInfo = {
+type TherapyPage = {
   therapy: {
     title: string;
     detail: string;
+  }[],
+  treatmentPackages: {
+    title: string;
+    detail: string;
+    days: string
   }[];
 };
 
-export async function fetchTherapyInfo(locale: string) {
+export async function fetchTherapyPage(locale: string) {
   const query = `*[_type == "therapyinfo"][0]{
             "therapy":therapy[]{
                 "title":${coalesce("title", locale)},
-                "detail":${coalesce("detail", locale)}
+                "detail":${coalesce("detail", locale)},
+            },
+            "treatmentPackages":treatmentPackages[]{
+                "title":${coalesce("title", locale)},
+                "detail":${coalesce("detail", locale)},
+                days
             }
         }`;
 
-  let page = await client.fetch<TherapyInfo>(query);
+  let page = await client.fetch<TherapyPage>(query);
   return page;
 }

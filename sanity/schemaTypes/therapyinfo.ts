@@ -1,7 +1,7 @@
 import { defineType, defineField } from "sanity";
 
 export default defineType({
-  title: "Therapy - info",
+  title: "Therapy Details",
   name: "therapyinfo",
   type: "document",
   fields: [
@@ -17,11 +17,23 @@ export default defineType({
         }),
       ],
     }),
+    defineField({
+      name: "treatmentPackages",
+      title: "Treatment Packages",
+      type: "array",
+      validation: (Rule) => Rule.required(),
+      of: [
+        defineField({
+          name: "treatmentPackage",
+          type: "treatmentPackage",
+        }),
+      ],
+    }),
   ],
   preview: {
     prepare() {
       return {
-        title: `Therapy - info`,
+        title: `Therapy Details`,
       };
     },
   },
