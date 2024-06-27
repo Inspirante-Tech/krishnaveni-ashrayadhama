@@ -1,5 +1,4 @@
 import { getLocale, getTranslations } from "next-intl/server";
-import Doctors from "~/components/Doctors/Doctors";
 import Heading from "~/components/Heading/Heading";
 import RichText from "~/components/RichText/RichText";
 import VideoSection from "~/components/VideoSection/VideoSection";

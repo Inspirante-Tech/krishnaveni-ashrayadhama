@@ -37,7 +37,9 @@
     "rulesRegulations": "rules and regulations",
     "pricing": "pricing",
     "krishnaveni": "krishnaveni",
-    "organisation": "governance"
+    "organisation": "governance",
+    "therapyInformation":"therapyInformation",
+    "therapyTariff":"therapyTariff"
   },
   "ayurvedicCenter": {
     "heading": "ayurvedic center",

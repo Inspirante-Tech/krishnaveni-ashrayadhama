@@ -41,7 +41,23 @@ export const navigation = [
   },
   {
     id: "ayurvedicCenter",
-    url: "/ayurvedic-center",
+    url: {
+      heading: "ayurvedicCenter",
+      urls: [
+        {
+          id: "specialities",
+          url: "/ayurvedic-center/specialities",
+        },
+        {
+          id: "therapyInformation",
+          url: "/ayurvedic-center/therapy-information",
+        },
+        {
+          id: "therapyTariff",
+          url: "/ayurvedic-center/therapy-tariff",
+        },
+      ],
+    },
   },
   {
     id: "events",

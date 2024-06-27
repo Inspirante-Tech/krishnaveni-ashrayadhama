@@ -37,7 +37,9 @@
     "rulesRegulations": "ನಿಯಮಗಳು ಮತ್ತು ನಿಬಂಧನೆಗಳು",
     "pricing": "ಬೆಲೆ",
     "krishnaveni": "ಕೃಷ್ಣವೇಣಿ",
-    "organisation": "ಆಡಳಿತ"
+    "organisation": "ಆಡಳಿತ",
+    "therapyInformation":"therapyInformation",
+    "therapyTariff":"therapyTariff"
   },
   "ayurvedicCenter": {
     "heading": "ಆಯುರ್ವೇದ ಕೇಂದ್ರ",
