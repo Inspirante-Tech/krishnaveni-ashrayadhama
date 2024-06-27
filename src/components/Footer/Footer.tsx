@@ -42,6 +42,9 @@ async function Footer() {
               Salmara House,
               <br /> P O Shankerpura, Kaup Tq,
               <br /> Udupi Dist. - 574115.
+              <br />
+              <br />
+              Ph No: 9036171652
             </p>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d970.869550119516!2d74.7761448!3d13.2580298!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbcb1390d9b0a71%3A0x130bf0a7a489d0dc!2sSalmara%20House!5e0!3m2!1sen!2sin!4v1718015280201!5m2!1sen!2sin"
