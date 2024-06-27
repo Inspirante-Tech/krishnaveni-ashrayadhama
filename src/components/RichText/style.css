@@ -1,10 +1,17 @@
 article {
+  @apply prose-lg;
 
   h1,
   h2,
   h3 {
     @apply text-gray-900 my-4;
-    @apply text-lg lg:text-xl;
+    @apply text-2xl lg:text-3xl;
+    @apply font-bold;
+    text-transform: capitalize;
+  }
+
+  h5 {
+    @apply text-base lg:text-lg;
     @apply font-semibold;
     text-transform: capitalize;
   }
@@ -17,5 +24,9 @@ article {
     @apply leading-relaxed tracking-wide text-justify mb-2;
     @apply text-base lg:text-lg;
     @apply font-extralight;
+  }
+
+  strong {
+    @apply font-medium;
   }
 }

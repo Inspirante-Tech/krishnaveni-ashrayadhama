@@ -21,9 +21,6 @@ async function page() {
         <ZigZag contents={pageData.features} />
       </div>
       <VideoSection videoSrc={pageData.videoLink} />
-      <div className="flex justify-center bg-gradient-to-b from-primary-200 to-teal-100/50 rounded-2xl">
-        <Doctors doctors={pageData.doctors} />
-      </div>
     </main>
   );
 }
