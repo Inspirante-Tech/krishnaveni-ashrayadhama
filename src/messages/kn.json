@@ -38,8 +38,8 @@
     "pricing": "ಬೆಲೆ",
     "krishnaveni": "ಕೃಷ್ಣವೇಣಿ",
     "organisation": "ಆಡಳಿತ",
-    "therapyInformation":"therapyInformation",
-    "therapyTariff":"therapyTariff"
+    "therapyInformation": "therapyInformation",
+    "therapyTariff": "therapyTariff"
   },
   "ayurvedicCenter": {
     "heading": "ಆಯುರ್ವೇದ ಕೇಂದ್ರ",
@@ -63,6 +63,13 @@
     "table": {
       "title": "ಶೀರ್ಷಿಕೆ",
       "detail": "ವಿವರ"
+    }
+  },
+  "therapyinfo": {
+    "heading": "Therapy information",
+    "table": {
+      "title": "title",
+      "detail": "details"
     }
   },
   "aboutUs": {
@@ -92,8 +99,8 @@
     "content": "ವೈವಿಧ್ಯಮಯ ಪ್ರತಿಭೆಗಳನ್ನು ಒಟ್ಟುಗೂಡಿಸಿ ಅದ್ಭುತ ಯಶಸ್ಸನ್ನು ತರುತ್ತದೆ",
     "Trustee": "ಟ್ರಸ್ಟಿಗಳು",
     "faculty": "ಸಿಬ್ಬಂದಿಗಳು",
-    "doctor":"ವೈದ್ಯರು",
-    "knowMore":"ಹೆಚ್ಚು ತಿಳಿಯಿರಿ"
+    "doctor": "ವೈದ್ಯರು",
+    "knowMore": "ಹೆಚ್ಚು ತಿಳಿಯಿರಿ"
   },
   "resources": {
     "rulesRegulations": "ನಿಯಮಗಳು ಮತ್ತು ನಿಬಂಧನೆಗಳು",

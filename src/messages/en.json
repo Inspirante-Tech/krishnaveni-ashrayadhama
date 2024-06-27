@@ -38,8 +38,8 @@
     "pricing": "pricing",
     "krishnaveni": "krishnaveni",
     "organisation": "governance",
-    "therapyInformation":"therapyInformation",
-    "therapyTariff":"therapyTariff"
+    "therapyInformation": "therapyInformation",
+    "therapyTariff": "therapyTariff"
   },
   "ayurvedicCenter": {
     "heading": "ayurvedic center",
@@ -63,6 +63,13 @@
     "table": {
       "title": "title",
       "detail": "detail"
+    }
+  },
+  "therapyinfo": {
+    "heading": "Therapy information",
+    "table": {
+      "title": "title",
+      "detail": "details"
     }
   },
   "aboutUs": {
@@ -92,8 +99,8 @@
     "content": "Brings together diverse talents to a resounding success.",
     "Trustee": "Trustees",
     "faculty": "Staffs",
-    "doctor":"doctor",
-    "knowMore":"know more"
+    "doctor": "doctor",
+    "knowMore": "know more"
   },
   "resources": {
     "rulesRegulations": "rules and Regulations",
@@ -102,6 +109,7 @@
     "nominationForm": "nomination Form",
     "temporaryForm": "Temporary form"
   },
+
   "career": {
     "heading": "Want To Work With Us?",
     "question": "Want to know how to apply?",
