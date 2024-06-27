@@ -66,12 +66,12 @@
     }
   },
   "therapyinfo": {
-    "heading": "Therapy information",
+    "heading": "ಥೆರಪಿ ಮಾಹಿತಿ",
     "table": {
-      "title": "title",
-      "detail": "details",
-      "days":"days",
-      "package":"package"
+      "title": "ಶೀರ್ಷಿಕೆ",
+      "detail": "ವಿವರ",
+      "days": "ದಿನಗಳು",
+      "package": "ಪ್ಯಾಕೇಜ್"
     }
   },
   "aboutUs": {
