@@ -29,6 +29,8 @@ import role from "./schemaTypes/role";
 import trustee from "./schemaTypes/trustee";
 import therapyInfo from "./schemaTypes/therapyinfo";
 import treatmentPackage from "./schemaTypes/treatmentPackage";
+import tariff from "./schemaTypes/tariff";
+import tariffRow from "./schemaTypes/tariffRow";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -58,5 +60,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     trustee,
     therapyInfo,
     treatmentPackage,
+    tariff,
+    tariffRow,
   ],
 };
