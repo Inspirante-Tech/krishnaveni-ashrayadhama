@@ -59,8 +59,11 @@ function Hero({
           {t("announcements.heading")}
         </div>
         <Marquee className="body py-4" pauseOnHover autoFill>
-          {data.map((announcement) => (
-            <span className="flex gap-2 items-center mx-4 md:mx-6 font-semibold">
+          {data.map((announcement, index) => (
+            <span
+              className="flex gap-2 items-center mx-4 md:mx-6 font-semibold"
+              key={index}
+            >
               <BadgeAlert size={24} color="#8a0000" />
               <span>
                 <Link
