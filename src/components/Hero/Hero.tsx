@@ -46,9 +46,11 @@ function Hero({ carouselImages }: { carouselImages: string[] }) {
         className={`absolute bg-gradient-to-t from-black/75 from-25% to-transparent w-full h-3/5 bottom-0 pointer-events-none`}
       ></div>
       <ScrollDown targetId="story" />
-
-      <div className="bg-secondary-200 py-4 flex flex-col gap-4 justify-center absolute top-full w-full">
-        <Marquee className="body" pauseOnHover>
+      <div className="bg-secondary-200 flex gap-4 justify-center absolute top-full w-full">
+        <div className="hidden md:flex text-xl font-extrabold px-4 bg-secondary-500 items-center">
+          Announcements
+        </div>
+        <Marquee className="body py-4" pauseOnHover>
           <span className="flex gap-2 items-center mx-4 md:mx-6 font-semibold">
             <BadgeAlert size={24} color="#8a0000" />
             <span>
