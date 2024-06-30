@@ -100,6 +100,10 @@ export async function fetchAyrvedicCenterPage(locale: string) {
 }
 
 interface Home {
+  announcements: {
+    title: string;
+    link: string;
+  }[];
   section1: {
     title: string;
     description: [any];
@@ -129,6 +133,10 @@ interface Home {
 
 export async function fetchHomePage(locale: string) {
   const query = `*[_type == "Home"][0]{
+        "announcements":announcements[]{
+            "title": ${coalesce("title", locale)},
+            link,
+        },
         "section1":section1{
             "title":${coalesce("title", locale)},
             image,
