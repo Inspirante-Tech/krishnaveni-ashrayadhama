@@ -54,7 +54,7 @@ function Hero({
         className={`absolute bg-gradient-to-t from-black/75 from-25% to-transparent w-full h-3/5 bottom-0 pointer-events-none`}
       ></div>
       <ScrollDown targetId="story" />
-      <div className="bg-secondary-200 flex gap-4 justify-center absolute top-full w-full">
+      <div className="bg-secondary-200 flex gap-1 justify-center absolute top-full w-full">
         <div className="text-sm flex md:text-xl font-extrabold px-4 bg-secondary-500 items-center text-white">
           {t("announcements.heading")}
         </div>
