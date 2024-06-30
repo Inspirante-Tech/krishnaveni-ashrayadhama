@@ -10,9 +10,10 @@ import { getLocale } from "next-intl/server";
 export default async function Home() {
   const locale = await getLocale();
   const data = await fetchHomePage(locale);
+
   return (
     <main className="space-y-8">
-      <Hero carouselImages={data.carosuel} />
+      <Hero carouselImages={data.carosuel} data={data.announcements} />
       <Story data={data.section1} />
       <Facilities facilities={data.facilities} />
       <Information data={data.section2} />
