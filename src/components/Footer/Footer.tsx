@@ -3,7 +3,6 @@ import { Instagram, Linkedin, Twitter, Youtube } from "lucide-react";
 import LocaleLink from "../ui/LocaleLink";
 import { getLocale, getTranslations } from "next-intl/server";
 import Image from "next/image";
-import Link from "next/link";
 
 async function Footer() {
   const t = await getTranslations("links");
@@ -14,8 +13,8 @@ async function Footer() {
         <div className="content-container flex md:flex-row flex-col justify-around items-start">
           <div className="p-5 ">
             <ul className="flex flex-col justify-center items-center gap-4">
-              <Link
-                href={`/${locale}/about-us/krishnaveni#logo`}
+              <LocaleLink
+                href={"/about-us/krishnaveni#logo"}
                 className="flex gap-2 bg-primary-100 rounded-full justify-between items-center px-4 py-2"
               >
                 <Image
@@ -32,7 +31,7 @@ async function Footer() {
                   alt="Logo"
                   className="object-center object-contain"
                 />
-              </Link>
+              </LocaleLink>
 
               <div className="flex gap-6 pb-5">
                 <Instagram className="text-2xl cursor-pointer transition-colors duration-150 hover:text-secondary-300" />
