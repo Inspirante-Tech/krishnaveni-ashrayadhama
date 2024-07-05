@@ -19,7 +19,7 @@ async function About({ params }: LocaleParamProp) {
         {/* logo description */}
         <section
           className="flex flex-col-reverse gap-6 md:flex-row md:gap-10 hover:shadow-2xl transition-shadow duration-300 bg-gradient-to-bl from-primary-300/50 to-primary-100/30"
-          id="logodescription"
+          id="logo"
         >
           <div className="md:basis-1/2 basis-auto flex flex-col  gap-2 md:gap-4 px-10 md:py-12 pb-8">
             <p

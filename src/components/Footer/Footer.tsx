@@ -14,7 +14,7 @@ async function Footer() {
           <div className="p-5 ">
             <ul className="flex flex-col justify-center items-center gap-4">
               <Link
-                href={"/kn/about-us/krishnaveni#logodescription"}
+                href={"/kn/about-us/krishnaveni#logo"}
                 className="flex gap-2 bg-primary-100 rounded-full justify-between items-center px-4 py-2"
               >
                 <Image
