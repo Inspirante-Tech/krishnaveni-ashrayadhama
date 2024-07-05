@@ -1,12 +1,13 @@
 import { navigation } from "~/constants";
 import { Instagram, Linkedin, Twitter, Youtube } from "lucide-react";
 import LocaleLink from "../ui/LocaleLink";
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import Image from "next/image";
 import Link from "next/link";
 
 async function Footer() {
   const t = await getTranslations("links");
+  const locale = await getLocale();
   return (
     <footer className="text-white mt-10">
       <div className="bg-secondary-900 h-1/2 w-full ">
@@ -14,7 +15,7 @@ async function Footer() {
           <div className="p-5 ">
             <ul className="flex flex-col justify-center items-center gap-4">
               <Link
-                href={"/kn/about-us/krishnaveni#logo"}
+                href={`/${locale}/about-us/krishnaveni#logo`}
                 className="flex gap-2 bg-primary-100 rounded-full justify-between items-center px-4 py-2"
               >
                 <Image
