@@ -87,7 +87,8 @@
     }
   },
   "aboutUs": {
-    "heading": "about us"
+    "heading": "about us",
+    "logo": "Our Logo"
   },
   "contact": {
     "heading": "Welcome",

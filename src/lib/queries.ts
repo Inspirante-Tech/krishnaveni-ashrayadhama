@@ -262,20 +262,26 @@ export async function fetchContactDetails(locale: string) {
 }
 
 type AboutPage = {
+  logodescription: [any];
   sections: {
     title: string;
     description: [any];
     image: Image;
   }[];
+  logo1: Image;
+  logo2: Image;
 };
 
 export async function fetchAboutPage(locale: string) {
   const query = `*[_type == "aboutUs"][0]{
+        "logodescription":${coalesce("logodescription", locale)},
         "sections":sections[]{
             "title":${coalesce("title", locale)},
             image,
             "description":${coalesce("content", locale)}
-        }
+        },
+            logo1,
+            logo2
       }`;
 
   let page = await client.fetch<AboutPage>(query);
@@ -285,6 +291,8 @@ export async function fetchAboutPage(locale: string) {
       ...section,
       image: urlForImage(section.image),
     })),
+    logo1: urlForImage(page.logo1),
+    logo2: urlForImage(page.logo2),
   };
 }
 
