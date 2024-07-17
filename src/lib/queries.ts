@@ -104,6 +104,9 @@ interface Home {
     title: string;
     link: string;
   }[];
+  videos: {
+    video: string;
+  }[];
   section1: {
     title: string;
     description: [any];
@@ -136,6 +139,9 @@ export async function fetchHomePage(locale: string) {
         "announcements":announcements[]{
             "title": ${coalesce("title", locale)},
             link,
+        },
+        "videos":videos[]{
+          video,
         },
         "section1":section1{
             "title":${coalesce("title", locale)},
