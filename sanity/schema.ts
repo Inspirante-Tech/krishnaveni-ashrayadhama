@@ -32,6 +32,7 @@ import treatmentPackage from "./schemaTypes/treatmentPackage";
 import tariff from "./schemaTypes/tariff";
 import tariffRow from "./schemaTypes/tariffRow";
 import announcement from "./schemaTypes/announcement";
+import video from "./schemaTypes/video";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -64,5 +65,6 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     tariff,
     tariffRow,
     announcement,
+    video,
   ],
 };

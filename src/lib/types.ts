@@ -51,6 +51,10 @@ export type SectionType = {
   image: string;
 };
 
+export type VideoType = {
+  video: string;
+};
+
 export type ImageType = {
   image: string;
   id: string;
