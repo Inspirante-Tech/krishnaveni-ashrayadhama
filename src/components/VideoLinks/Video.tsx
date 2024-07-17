@@ -8,10 +8,7 @@ export default async function Video({ videos }: { videos: string[] }) {
       {videos.slice(-3).map((item, index) => (
         <div key={index}>
           <iframe
-            className="w-full h-full"
             src={item}
-            height={510}
-            width={300}
             title="YouTube video player"
             referrerPolicy="no-referrer"
             allowFullScreen
