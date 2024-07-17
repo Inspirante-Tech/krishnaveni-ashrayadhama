@@ -25,7 +25,8 @@
     }
   },
   "events": {
-    "heading": "Events"
+    "heading": "Events",
+    "videos": "Videos"
   },
   "gallery": {
     "heading": "Gallery"

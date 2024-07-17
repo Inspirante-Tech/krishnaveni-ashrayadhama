@@ -4,21 +4,19 @@ import Heading from "../Heading/Heading";
 import { createYoutubeEmbeddedLink } from "~/lib/utils";
 import Reveal from "../Animations/reveal";
 import Video from "./Video";
-import { getTranslations } from "next-intl/server";
+import { useTranslations } from "next-intl";
 
-const VideoLinks: React.FC<{ data: VideoType[] }> = async ({ data }) => {
+const VideoLinks: React.FC<{ data: VideoType[] }> = ({ data }) => {
   const embeddedData = data.map((item) =>
     createYoutubeEmbeddedLink(item.video)
   );
-  const t = await getTranslations("home.video");
+  const t = useTranslations("home.video");
   return (
     <section className="relative">
       <Reveal>
         <Heading className="mx-auto">{t("heading")}</Heading>
-        <div className="content-container flex flex-col md:gap-4 gap-2 items-center">
-          <div className="flex flex-wrap gap-4 justify-center w-full px-4 md:px-0 ">
-            <Video videos={embeddedData} />
-          </div>
+        <div className=" content-container flex flex-wrap gap-4 justify-center w-full px-4 md:px-0 ">
+          <Video videos={embeddedData} />
         </div>
       </Reveal>
     </section>

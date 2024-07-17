@@ -1,8 +1,8 @@
 import LocaleLink from "../ui/LocaleLink";
-import { getTranslations } from "next-intl/server";
+import { useTranslations } from "next-intl";
 
 export default async function Video({ videos }: { videos: string[] }) {
-  const t = await getTranslations("home.video");
+  const t = useTranslations("home.video");
   return (
     <>
       {videos.slice(-3).map((item, index) => (
