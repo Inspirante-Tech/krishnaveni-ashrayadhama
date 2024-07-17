@@ -11,6 +11,7 @@ export default async function Video({ videos }: { videos: string[] }) {
             src={item}
             title="YouTube video player"
             referrerPolicy="no-referrer"
+            className="rounded-lg"
             allowFullScreen
           ></iframe>
           {index === videos.length - 1 && (
