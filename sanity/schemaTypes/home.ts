@@ -21,6 +21,19 @@ export default defineType({
       ],
     }),
     defineField({
+      name: "videos",
+      title: "Event Videos",
+      type: "array",
+      of: [
+        defineField({
+          name: "video",
+          title: "Video Link",
+          type: "videolink",
+          validation: (Rule) => Rule.required(),
+        }),
+      ],
+    }),
+    defineField({
       name: "section1",
       title: "Section 1",
       type: "section",

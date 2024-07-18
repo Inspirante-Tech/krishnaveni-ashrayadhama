@@ -18,10 +18,15 @@
     },
     "announcements": {
       "heading": "Announcements"
+    },
+    "video": {
+      "heading": "Watch Us",
+      "more": "View more"
     }
   },
   "events": {
-    "heading": "Events"
+    "heading": "Events",
+    "videos": "Videos"
   },
   "gallery": {
     "heading": "Gallery"
