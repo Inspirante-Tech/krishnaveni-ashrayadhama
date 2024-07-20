@@ -9,7 +9,7 @@ export default function EventVideos({
 }) {
   const t = useTranslations("events");
   return (
-    <section className="content-container">
+    <section className="content-container" id="videos">
       <Heading className="mx-auto">{t("videos")}</Heading>
       <Reveal>
         <div className="flex flex-wrap gap-4 items-center justify-center">

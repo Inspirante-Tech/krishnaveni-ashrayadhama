@@ -20,7 +20,7 @@ function Events({ events, data }: { events: EventType[]; data: VideoType[] }) {
 
   const thumbnails = events.map((event) => ({
     id: event.id,
-    image: event.image,
+    image: event.images[0],
     title: event.title,
     alt: event.title,
   }));
@@ -43,21 +43,21 @@ function Events({ events, data }: { events: EventType[]; data: VideoType[] }) {
       <section className="content-container rounded p-8">
         <Heading>{t("heading")}</Heading>
         <Reveal>
-          <div className="lg:columns-4 md:columns-3 columns-2 space-y-4 body">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 body">
             {events.map((event, index) => (
               <div
                 key={event.id}
                 onClick={() => openDialog(index)}
-                className="overflow-hidden rounded-lg shadow transition hover:shadow-lg cursor-pointer"
+                className="overflow-hidden rounded-lg shadow transition hover:shadow-lg cursor-pointer grid grid-rows-6 h-80"
               >
                 <Image
-                  src={event.image}
-                  width={250}
-                  height={250}
+                  src={event.images[0]}
+                  width={500}
+                  height={500}
                   alt={event.title}
-                  className="rounded w-full object-cover"
+                  className="rounded w-full object-cover row-span-4 h-full"
                 />
-                <div className="bg-white p-4 sm:p-6">
+                <div className="bg-white p-4 sm:p-6 h-full  row-start-5 row-span-2">
                   <time
                     dateTime={formatDate(event.date)}
                     className="block text-xs text-gray-500"

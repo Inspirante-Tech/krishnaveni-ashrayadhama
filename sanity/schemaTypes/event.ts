@@ -1,45 +1,51 @@
-import { defineField, defineType } from 'sanity'
-import { baseLanguage } from './locale'
-import {TaskIcon} from '@sanity/icons'
+import { defineField, defineType } from "sanity";
+import { baseLanguage } from "./locale";
+import { TaskIcon } from "@sanity/icons";
 
 export default defineType({
-  name: 'events',
-  title: 'Event',
-  type: 'document',
-  icon:TaskIcon,
+  name: "events",
+  title: "Event",
+  type: "document",
+  icon: TaskIcon,
   fields: [
     defineField({
-      name: 'title',
-      title: 'Title',
-      type: 'localeString',
+      name: "title",
+      title: "Title",
+      type: "localeString",
       validation: (Rule) => Rule.required(),
     }),
     defineField({
-      name: 'image',
-      title: 'image',
-      type: 'image',
+      name: "images",
+      title: "Event Images",
+      type: "array",
+      of: [
+        {
+          type: "image",
+          name: "Image",
+          options: {
+            hotspot: true,
+          },
+        },
+      ],
       validation: (Rule) => Rule.required(),
-      options: {
-        hotspot: true,
-      },
     }),
     defineField({
-      name: 'date',
-      title: 'date',
-      type: 'datetime',
+      name: "date",
+      title: "date",
+      type: "datetime",
       validation: (Rule) => Rule.required(),
     }),
     defineField({
-      name: 'description',
-      title: 'description',
-      type: 'localeString',
+      name: "description",
+      title: "description",
+      type: "localeString",
       validation: (Rule) => Rule.required(),
-    })
+    }),
   ],
   preview: {
     select: {
       title: `title.${baseLanguage!.id}`,
-      media: 'image',
-    }
+      media: "image",
+    },
   },
-})
+});

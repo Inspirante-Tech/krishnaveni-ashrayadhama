@@ -38,7 +38,7 @@ const Header = () => {
             priority
           />
         </LocaleLink>
-        <div className="lg:flex flex-row md:gap-4 lg:gap-8 hidden">
+        <div className="lg:flex flex-row md:gap-4 lg:gap-8 hidden px-4">
           {navigation.map((item) => {
             if (typeof item.url === "string") {
               return (

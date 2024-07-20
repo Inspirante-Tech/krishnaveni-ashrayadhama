@@ -30,24 +30,29 @@ export async function fetchGalleryImages(locale: string) {
 interface EventResponse {
   id: string;
   title: string;
-  image: Image;
+  images: Image[];
   description: string;
   date: string;
   alt: string;
 }
 
-export async function fetchEvents(locale: string) {
-  const query = `*[_type == "events"]{
+export async function fetchEvents(
+  locale: string,
+  start: number = 0,
+  count: number = 15
+) {
+  const query = `*[_type == "events"][${start}...${start + count}]{
         'id':_id,
         "title":${coalesce("title", locale)},
         date,
         "description":${coalesce("description", locale)},
-        image,
+        images,
     }`;
+  console.log(query);
   let events = await client.fetch<EventResponse[]>(query);
   return events.map((event) => ({
     ...event,
-    image: urlForImage(event.image),
+    images: event.images.map((image) => urlForImage(image)),
   }));
 }
 
