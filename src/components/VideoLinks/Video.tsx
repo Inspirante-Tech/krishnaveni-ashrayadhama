@@ -1,3 +1,4 @@
+import { Button } from "../ui/button";
 import LocaleLink from "../ui/LocaleLink";
 import { useTranslations } from "next-intl";
 
@@ -17,7 +18,7 @@ export default async function Video({ videos }: { videos: string[] }) {
           {index === videos.length - 1 && (
             <div className="flex justify-end">
               <LocaleLink href="/events" className="underline body pt-2">
-                {t("more")}
+                <Button>{t("more")}</Button>
               </LocaleLink>
             </div>
           )}
