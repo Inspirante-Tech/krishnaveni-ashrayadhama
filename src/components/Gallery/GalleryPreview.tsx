@@ -14,7 +14,7 @@ export default async function GalleryPreview() {
   const data = await fetchHomePage(locale);
   return (
     <section className="content-container">
-      <div className="flex flex-col justify-center items-center space-y-8 rounded-2xl bg-gradient-radial xl:p-16 sm:p-12 p-4">
+      <div className="flex flex-col justify-center items-center space-y-8 rounded-2xl md:bg-gradient-radial xl:p-16 sm:p-12 p-4">
         <Heading>{t("heading")}</Heading>
         <Reveal>
           <div className="flex flex-wrap gap-3 justify-center w-full px-4 md:px-0">
