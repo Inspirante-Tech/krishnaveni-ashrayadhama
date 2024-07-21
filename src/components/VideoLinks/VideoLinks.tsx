@@ -1,6 +1,5 @@
 import { VideoType } from "~/lib/types";
 import React from "react";
-import Heading from "../Heading/Heading";
 import { createYoutubeEmbeddedLink } from "~/lib/utils";
 import Reveal from "../Animations/reveal";
 import Video from "./Video";

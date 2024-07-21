@@ -1,4 +1,4 @@
-import { getLocale } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import { fetchGalleryImages, fetchHomePage } from "~/lib/queries";
 import Image from "next/image";
 import Heading from "../Heading/Heading";
@@ -9,12 +9,13 @@ import { Button } from "../ui/button";
 
 export default async function GalleryPreview() {
   const locale = await getLocale();
+  const t = await getTranslations("home.video");
   const images = await fetchGalleryImages(locale);
   const data = await fetchHomePage(locale);
   return (
     <section className="content-container">
       <div className="flex flex-col justify-center items-center space-y-8 rounded-2xl bg-gradient-radial xl:p-16 sm:p-12 p-4">
-        <Heading>Gallery</Heading>
+        <Heading>{t("heading")}</Heading>
         <Reveal>
           <div className="flex flex-wrap gap-3 justify-center w-full px-4 md:px-0">
             {images.slice(0, 4).map((item, index) => (
@@ -23,8 +24,8 @@ export default async function GalleryPreview() {
                   <Image
                     src={item.image}
                     alt={item.description}
-                    height={220}
-                    width={220}
+                    height={240}
+                    width={240}
                     className="hover:scale-105 transform transition-transform duration-500  rounded-lg"
                   />
                 </div>
@@ -32,7 +33,7 @@ export default async function GalleryPreview() {
                 {index === 3 && (
                   <div className="flex justify-center md:justify-end">
                     <LocaleLink href="/gallery" className="underline body pt-2">
-                      <Button>View more</Button>
+                      <Button>{t("view")}</Button>
                     </LocaleLink>
                   </div>
                 )}

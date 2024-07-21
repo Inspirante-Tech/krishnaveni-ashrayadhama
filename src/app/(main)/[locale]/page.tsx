@@ -2,7 +2,6 @@ import Hero from "~/components/Hero/Hero";
 import Story from "~/components/Information/Story";
 import Information from "~/components/Information/Information";
 import Facilities from "~/components/Information/Facilities";
-import VideoLinks from "~/components/VideoLinks/VideoLinks";
 import Testimonials from "~/components/Testimonials/page";
 import Fqas from "~/components/Fqas/Fqas";
 import { fetchHomePage } from "~/lib/queries";

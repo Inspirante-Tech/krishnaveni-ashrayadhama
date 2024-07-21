@@ -18,7 +18,7 @@ export default async function Video({ videos }: { videos: string[] }) {
           {index === videos.length - 1 && (
             <div className="flex justify-center md:justify-end">
               <LocaleLink href="/events#videos" className="underline body pt-2">
-                <Button>{t("more")}</Button>
+                <Button>{t("watch")}</Button>
               </LocaleLink>
             </div>
           )}
