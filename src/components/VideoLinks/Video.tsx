@@ -7,7 +7,7 @@ export default async function Video({ videos }: { videos: string[] }) {
   return (
     <>
       {videos.slice(-3).map((item, index) => (
-        <div key={index}>
+        <div key={index} className="aspect-video">
           <iframe
             src={item}
             title="YouTube video player"
@@ -16,8 +16,8 @@ export default async function Video({ videos }: { videos: string[] }) {
             allowFullScreen
           ></iframe>
           {index === videos.length - 1 && (
-            <div className="flex justify-end">
-              <LocaleLink href="/events" className="underline body pt-2">
+            <div className="flex justify-center md:justify-end">
+              <LocaleLink href="/events#videos" className="underline body pt-2">
                 <Button>{t("more")}</Button>
               </LocaleLink>
             </div>

@@ -14,8 +14,7 @@ const VideoLinks: React.FC<{ data: VideoType[] }> = ({ data }) => {
   return (
     <section className="relative">
       <Reveal>
-        <Heading className="mx-auto">{t("heading")}</Heading>
-        <div className=" content-container flex flex-wrap gap-4 justify-center w-full px-4 md:px-0 ">
+        <div className="flex flex-wrap gap-4 justify-center md:px-8 ">
           <Video videos={embeddedData} />
         </div>
       </Reveal>

@@ -7,6 +7,7 @@ import Testimonials from "~/components/Testimonials/page";
 import Fqas from "~/components/Fqas/Fqas";
 import { fetchHomePage } from "~/lib/queries";
 import { getLocale } from "next-intl/server";
+import GalleryPreview from "~/components/Gallery/GalleryPreview";
 
 export default async function Home() {
   const locale = await getLocale();
@@ -18,7 +19,7 @@ export default async function Home() {
       <Story data={data.section1} />
       <Facilities facilities={data.facilities} />
       <Information data={data.section2} />
-      <VideoLinks data={data.videos} />
+      <GalleryPreview />
       <Fqas fqas={data.fqas} />
       <Testimonials testimonials={data.testimonials} />
     </main>
