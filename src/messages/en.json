@@ -20,8 +20,9 @@
       "heading": "Announcements"
     },
     "video": {
-      "heading": "Watch Us",
-      "more": "View more"
+      "heading": "Gallery",
+      "view": "View more",
+      "watch": "Watch more"
     }
   },
   "events": {

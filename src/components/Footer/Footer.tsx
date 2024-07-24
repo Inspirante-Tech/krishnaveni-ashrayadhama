@@ -51,8 +51,14 @@ async function Footer() {
               <br />
               Ph No: 9036171652
             </p>
-            <iframe
+            {/* <iframe
               src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d970.869550119516!2d74.7761448!3d13.2580298!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbcb1390d9b0a71%3A0x130bf0a7a489d0dc!2sSalmara%20House!5e0!3m2!1sen!2sin!4v1718015280201!5m2!1sen!2sin"
+              style={{ border: 0 }}
+              className="rounded-lg"
+              aria-hidden="false"
+            ></iframe> */}
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3883.4756580430058!2d74.77799!3d13.258189!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTPCsDE1JzI5LjUiTiA3NMKwNDYnNDAuOCJF!5e0!3m2!1sen!2sin!4v1721503110138!5m2!1sen!2sin"
               style={{ border: 0 }}
               className="rounded-lg"
               aria-hidden="false"

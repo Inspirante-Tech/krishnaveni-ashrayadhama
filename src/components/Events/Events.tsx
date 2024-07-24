@@ -94,7 +94,9 @@ function Events({ events, data }: { events: EventType[]; data: VideoType[] }) {
           )}
         </Dialog>
       </section>
-      <EventVideos embeddedData={embeddedData} />
+      <div id="videos">
+        <EventVideos embeddedData={embeddedData} />
+      </div>
     </>
   );
 }
