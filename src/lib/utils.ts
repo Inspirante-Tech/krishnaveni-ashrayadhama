@@ -24,8 +24,13 @@ export function assertValue<T>(v: T | undefined, errorMessage: string): T {
   return v;
 }
 
-export function formatDate(date: string) {
-  return new Intl.DateTimeFormat("en-US").format(new Date(date));
+export function formatDate(date: string,locale?:string) {
+  const lang = locale=="kn"?"kn":"en-US"
+  return new Intl.DateTimeFormat(lang,{
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  }).format(new Date(date),);
 }
 
 export function exhaustiveMatchingGaurd(_: never): never {

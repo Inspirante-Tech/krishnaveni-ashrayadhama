@@ -31,6 +31,7 @@ interface EventResponse {
   id: string;
   title: string;
   image: Image;
+  images:Image[];
   description: string;
   date: string;
   alt: string;
@@ -43,11 +44,13 @@ export async function fetchEvents(locale: string) {
         date,
         "description":${coalesce("description", locale)},
         image,
+        images,
     }`;
   let events = await client.fetch<EventResponse[]>(query);
   return events.map((event) => ({
     ...event,
     image: urlForImage(event.image),
+    images:event.images.map(i=>urlForImage(i)) ,
   }));
 }
 
@@ -460,4 +463,46 @@ export async function fetchTariffPage(locale: string) {
 
   let page = await client.fetch<TariffPage>(query);
   return page;
+}
+
+
+type PaginatedEventsResponse = {
+  totalEvents:number,
+  events:{
+    id: string;
+    title: string;
+    image: Image;
+    images:Image[];
+    description: string;
+    date: string;
+    alt: string;
+  }[]
+}
+
+export async function fetchEvents2(locale:string,pageNo=0){
+  const count = 16;
+  const start = pageNo*count;
+  const query = `
+    {
+    "totalEvents":count(*[_type == "events"]),
+    "events":*[_type == "events"] | order(date) [${start}...${start+count}]{
+        'id':_id,
+        "title":${coalesce("title", locale)},
+        date,
+        "description":${coalesce("description", locale)},
+        image,
+        images,
+    }
+  }
+  `;
+
+  let response = await client.fetch<PaginatedEventsResponse>(query);
+  return {
+    ...response,
+    events:response.events.map((event) => ({
+      ...event,
+      image: urlForImage(event.image),
+      images:event.images.map(i=>urlForImage(i)) ,
+    }))
+  };
 }

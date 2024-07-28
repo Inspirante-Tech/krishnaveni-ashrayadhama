@@ -61,7 +61,7 @@ export const navigation = [
   },
   {
     id: "events",
-    url: "/events",
+    url: "/events/1",
   },
   {
     id: "gallery",
