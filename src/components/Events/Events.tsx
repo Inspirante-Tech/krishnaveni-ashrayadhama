@@ -72,7 +72,7 @@ function Events({ events, data,pageCount,pageNo }: { events: EventType[]; data: 
 
         <Dialog
           ref={dialogRef}
-          className="w-[80%] h-[100%] p-2 md:p-15 bg-gray-100 rounded-xl  eventdialog overflow-y-scroll"
+          className="w-[80%] h-full p-2 md:p-15 bg-gray-100 rounded-xl  eventdialog"
           onClick={() => dialogRef.current?.close()}
           closeCallback={onClose}
         >
