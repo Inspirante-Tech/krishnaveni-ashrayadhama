@@ -11,17 +11,17 @@ export default function Event({ event }: { event: EventType }) {
 
     return (
         <div className="relative w-full h-full flex flex-col md:flex-row gap-4 p-4 md:overflow-y-scroll">
-            <div className="md:sticky md:top-0 flex flex-col gap-4 items-center justify-betweent md:basis-1/2 md:h-[80vh] h-1/4">
+            <div className="md:sticky md:top-0 flex flex-col gap-4 items-center justify-between md:basis-1/2">
                 <Image
                     src={selectedImage!}
                     width={500}
                     height={500}
                     alt={event.title}
-                    className="rounded object-contain object-center basis-4/5 h-full"
+                    className="rounded object-contain object-center basis-5/6 h-full"
                     priority={false}
                 />
 
-                <div className="flex gap-2 basis-1/5">
+                <div className="flex gap-2 basis-1/6">
                     {event.images.map((image, idx) => (
                         <button onClick={() => setSelectedImage(image)} key={`image-${idx}`} className="h-full">
                             <Image
@@ -29,7 +29,7 @@ export default function Event({ event }: { event: EventType }) {
                                 width={100}
                                 height={100}
                                 alt={event.title}
-                                className={`rounded h-24 w-full aspect-square object-cover caption ${selectedImage==image?"border-2 border-black":""}`}
+                                className={`rounded h-16 w-full aspect-square object-cover caption ${selectedImage==image?"border-2 border-black":""}`}
                                 priority={false}
                             />
                         </button>
