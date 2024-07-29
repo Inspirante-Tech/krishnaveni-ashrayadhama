@@ -9,7 +9,7 @@ export default function EventVideos({
 }) {
   const t = useTranslations("events");
   return (
-    <section className="content-container">
+    <section className="content-container" id="videos">
       <Heading className="mx-auto">{t("videos")}</Heading>
       <Reveal>
         <div className="flex flex-wrap gap-4 items-center justify-center">
@@ -20,7 +20,7 @@ export default function EventVideos({
                 title="YouTube video player"
                 referrerPolicy="no-referrer"
                 allowFullScreen
-                className="rounded-lg aspect-video"
+                className="rounded-lg aspect-video h-56"
               ></iframe>
             </div>
           ))}

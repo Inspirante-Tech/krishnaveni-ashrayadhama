@@ -1,3 +1,6 @@
+export const EVENTS_PER_PAGE = 12;
+export const IMAGES_PER_PAGE = 12;
+
 export const navigation = [
   {
     id: "home",
@@ -61,11 +64,11 @@ export const navigation = [
   },
   {
     id: "events",
-    url: "/events",
+    url: "/events/1",
   },
   {
     id: "gallery",
-    url: "/gallery",
+    url: "/gallery/1",
   },
   {
     id: "career",

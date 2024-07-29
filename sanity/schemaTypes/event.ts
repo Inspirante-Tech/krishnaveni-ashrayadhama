@@ -1,12 +1,12 @@
 import { defineField, defineType } from 'sanity'
 import { baseLanguage } from './locale'
-import {TaskIcon} from '@sanity/icons'
+import { TaskIcon } from '@sanity/icons'
 
 export default defineType({
   name: 'events',
   title: 'Event',
   type: 'document',
-  icon:TaskIcon,
+  icon: TaskIcon,
   fields: [
     defineField({
       name: 'title',
@@ -22,6 +22,20 @@ export default defineType({
       options: {
         hotspot: true,
       },
+    }),
+    defineField({
+      name: 'images',
+      title: 'Images',
+      type: 'array',
+      validation: (Rule) => Rule.required(),
+      of: [
+        defineField({
+          name: 'image',
+          title: 'image',
+          type: 'image',
+          validation: (Rule) => Rule.required(),
+        }),
+      ]
     }),
     defineField({
       name: 'date',

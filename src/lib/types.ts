@@ -1,14 +1,30 @@
 import { fetchEvents, fetchGalleryImages } from "./queries";
 
-type ResolvedType<T> = T extends Promise<infer R> ? R : never;
-type ArrayElementType<T> = T extends (infer U)[] ? U : never;
+// type ResolvedType<T> = T extends Promise<infer R> ? R : never;
+// type ArrayElementType<T> = T extends (infer U)[] ? U : never;
 
-export type EventType = ArrayElementType<
-  ResolvedType<ReturnType<typeof fetchEvents>>
->;
-export type GalleryType = ArrayElementType<
-  ResolvedType<ReturnType<typeof fetchGalleryImages>>
->;
+// export type EventType = ArrayElementType<
+//   ResolvedType<ReturnType<typeof fetchEvents>>
+// >;
+// export type GalleryType = ArrayElementType<
+//   ResolvedType<ReturnType<typeof fetchGalleryImages>>
+// >;
+
+export type GalleryType = {
+  id: string;
+  image: string;
+  description: string;
+};
+
+export type EventType = {
+  id: string;
+  title: string;
+  image: string;
+  images: string[];
+  description: string;
+  date: string;
+  alt: string;
+}
 
 export type FacilityType = {
   image: string;
