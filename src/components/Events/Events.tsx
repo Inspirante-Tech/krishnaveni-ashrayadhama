@@ -13,7 +13,7 @@ import Event from "./Event";
 import Pagination from "../ui/Pagination";
 import { useRouter } from "next/navigation";
 
-function Events({ events, data,pageCount,pageNo }: { events: EventType[]; data: VideoType[],pageCount:number,pageNo:number }) {
+function Events({ events, videos,pageCount,pageNo }: { events: EventType[]; videos: VideoType[],pageCount:number,pageNo:number }) {
   const locale = useLocale();
   const router = useRouter();
   const t = useTranslations("events");
@@ -31,7 +31,7 @@ function Events({ events, data,pageCount,pageNo }: { events: EventType[]; data: 
     setSelectedEventIndex(null);
   };
 
-  const embeddedData = data.map((item) =>
+  const embeddedData = videos.map((item) =>
     createYoutubeEmbeddedLink(item.video)
   );
 
@@ -40,7 +40,7 @@ function Events({ events, data,pageCount,pageNo }: { events: EventType[]; data: 
       <section className="content-container rounded p-8">
         <Heading>{t("heading")}</Heading>
         <Reveal>
-          <div className="lg:columns-4 md:columns-3 columns-2 space-y-4 body">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {events.map((event, index) => (
               <div
                 key={event.id}

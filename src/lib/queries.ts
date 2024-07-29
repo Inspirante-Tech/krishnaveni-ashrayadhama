@@ -2,6 +2,8 @@ import { client } from "~/sanity/lib/client";
 import type { Image } from "sanity";
 import { urlForImage } from "~/sanity/lib/image";
 import { defaultLocale } from "./env";
+import { EVENTS_PER_PAGE, IMAGES_PER_PAGE } from "~/constants";
+import { VideoType } from "./types";
 
 function coalesce(key: string, locale: string) {
   return `coalesce(${key}.${locale}, ${key}.${defaultLocale},"missing")`;
@@ -31,13 +33,13 @@ interface EventResponse {
   id: string;
   title: string;
   image: Image;
-  images:Image[];
+  images: Image[];
   description: string;
   date: string;
   alt: string;
 }
 
-export async function fetchEvents(locale: string) {
+export async function fetchEventsOld(locale: string) {
   const query = `*[_type == "events"]{
         'id':_id,
         "title":${coalesce("title", locale)},
@@ -50,7 +52,7 @@ export async function fetchEvents(locale: string) {
   return events.map((event) => ({
     ...event,
     image: urlForImage(event.image),
-    images:event.images.map(i=>urlForImage(i)) ,
+    images: event.images.map(i => urlForImage(i)),
   }));
 }
 
@@ -467,25 +469,30 @@ export async function fetchTariffPage(locale: string) {
 
 
 type PaginatedEventsResponse = {
-  totalEvents:number,
-  events:{
+  totalEvents: number,
+  events: {
     id: string;
     title: string;
     image: Image;
-    images:Image[];
+    images: Image[];
     description: string;
     date: string;
     alt: string;
-  }[]
+  }[],
+  videos: {
+    video: string;
+  }[];
 }
 
-export async function fetchEvents2(locale:string,pageNo=0){
-  const count = 16;
-  const start = pageNo*count;
+export async function fetchEvents(locale: string, pageNo = 0) {
+  const start = pageNo * EVENTS_PER_PAGE;
   const query = `
     {
     "totalEvents":count(*[_type == "events"]),
-    "events":*[_type == "events"] | order(date) [${start}...${start+count}]{
+    "videos":*[_type == "Home"][0].videos[]{
+          video,
+    },
+    "events":*[_type == "events"] | order(date) [${start}...${start + EVENTS_PER_PAGE}]{
         'id':_id,
         "title":${coalesce("title", locale)},
         date,
@@ -499,10 +506,53 @@ export async function fetchEvents2(locale:string,pageNo=0){
   let response = await client.fetch<PaginatedEventsResponse>(query);
   return {
     ...response,
-    events:response.events.map((event) => ({
+    events: response.events.map((event) => ({
       ...event,
       image: urlForImage(event.image),
-      images:event.images.map(i=>urlForImage(i)) ,
+      images: event.images.map(i => urlForImage(i)),
     }))
   };
+}
+
+
+interface PaginatedGalleryResponse {
+  totalImages: number,
+  gallery: {
+    id: string;
+    image: Image;
+    description: string;
+  }[]
+}
+
+export async function fetchGallery(locale: string, pageNo = 0) {
+  const start = pageNo * IMAGES_PER_PAGE;
+  const query = `
+    {
+        "totalImages":count(*[_type == "gallery"]),
+        "gallery":*[_type == "gallery"] | order(_updatedAt) [${start}...${start + IMAGES_PER_PAGE}]{
+            'id':_id,
+            "description":${coalesce("short_description", locale)},
+            image
+        }
+    }
+    `;
+
+  let response = await client.fetch<PaginatedGalleryResponse>(query);
+  return {
+    ...response,
+    gallery: response.gallery.map(i => ({
+      ...i,
+      image: urlForImage(i.image)
+    }))
+  }
+}
+
+export async function fetchVideos(count?: number) {
+  const limitString = count ? `[0...${count}]` : "[]"
+  const query = `
+  *[_type == "Home"][0].videos${limitString}{
+          video,
+    }
+  `
+  return await client.fetch<VideoType[]>(query);
 }
