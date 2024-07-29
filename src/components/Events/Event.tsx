@@ -21,9 +21,11 @@ export default function Event({ event }: { event: EventType }) {
                     priority={false}
                 />
 
-                <div className="flex gap-2 basis-1/6">
-                    {event.images.map((image, idx) => (
-                        <button onClick={() => setSelectedImage(image)} key={`image-${idx}`} className="h-full">
+                <div className="flex gap-2 overflow-hidden">
+                    {event.images.map((image,index) => (
+                        <button
+                        key={index} 
+                        onClick={() => setSelectedImage(image)}>
                             <Image
                                 src={image}
                                 width={100}
